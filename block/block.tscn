@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh7oqvs1u6546"]
+
+[ext_resource type="Material" uid="uid://cs33uyahx6x65" path="res://materials/floor_material - Copy (3).tres" id="1_if7to"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_giuwc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_etnw0"]
+
+[node name="RigidBody3D" type="RigidBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_if7to")
+mesh = SubResource("BoxMesh_giuwc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_etnw0")
+metadata/_edit_group_ = true

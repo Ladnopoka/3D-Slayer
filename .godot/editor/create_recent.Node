@@ -1,0 +1,10 @@
+CollisionShape3D
+MeshInstance3D
+StaticBody3D
+Node3D
+Camera3D
+SubViewport
+SubViewportContainer
+CharacterBody3D
+RigidBody3D
+DirectionalLight3D

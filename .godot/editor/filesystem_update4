@@ -1,0 +1,7 @@
+res://level/level_1.tscn
+res://materials/floor_material.tres
+res://materials/floor_material - Copy (3).tres
+res://materials/wall_material.tres
+res://block/block.tscn
+res://player/player.tscn
+res://player/camera_rig.tscn
