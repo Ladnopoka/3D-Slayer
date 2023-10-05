@@ -9,3 +9,8 @@ res://player/player.tscn
 res://player/camera_rig.tscn
 res://addons/main-screen/main-screen.tscn
 res://block/block-generator.gd
+res://shooting/shooting.tscn
+res://shooting/gun.tscn
+res://player/GunController.gd
+res://shooting/gun.gd
+res://shooting/bullet.tscn

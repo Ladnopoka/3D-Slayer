@@ -1,3 +1,7 @@
+Marker3D
+MeshInstance3D
+Node
+Node3D
 Button
 Label3D
 Label
@@ -8,9 +12,7 @@ Control
 Panel
 BoxContainer
 CollisionShape3D
-MeshInstance3D
 StaticBody3D
-Node3D
 Camera3D
 SubViewport
 SubViewportContainer
