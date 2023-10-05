@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scripts/globals/game_manager.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/main-screen/plugin.cfg")

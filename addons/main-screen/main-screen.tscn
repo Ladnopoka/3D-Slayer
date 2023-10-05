@@ -11,17 +11,31 @@ grow_vertical = 2
 size_flags_vertical = 3
 script = ExtResource("1_ijd2w")
 
-[node name="Button1" type="Button" parent="."]
+[node name="RandomNameContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="RandomNameContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Random name "
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="LineEdit" type="LineEdit" parent="RandomNameContainer"]
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="HBoxContainer"]
+[node name="Button2" type="Button" parent="RandomNameContainer"]
 layout_mode = 2
 text = "Copy name"
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
+[node name="SpawnBlockContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
+
+[node name="Button3" type="Button" parent="SpawnBlockContainer"]
+layout_mode = 2
+text = "Block near Player"
+
+[node name="SpawnBlockContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="SpawnBlockContainer2"]
+layout_mode = 2
+text = "Block in Center"

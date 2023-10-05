@@ -3,6 +3,7 @@ extends EditorPlugin
 
 
 const MainPanel = preload("res://addons/main-screen/main-screen.tscn")
+const BlockScene = preload("res://block/block.tscn")
 var main_panel_instance
 
 func _enter_tree():

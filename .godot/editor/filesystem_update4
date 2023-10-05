@@ -1,11 +1,11 @@
-res://addons/main-screen/main-screen.tscn
+res://level/level_1.tscn
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material.tres
 res://materials/floor_material - Copy (3).tres
 res://materials/wall_material.tres
 res://addons/main-screen/control.gd
-res://player/player.tscn
-res://level/level_1.tscn
 res://block/block.tscn
+res://player/player.tscn
 res://player/camera_rig.tscn
-res://scripts/player/player.gd
+res://addons/main-screen/main-screen.tscn
+res://block/block-generator.gd
