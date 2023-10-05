@@ -6,7 +6,7 @@ var equipped_weapon : Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	hand = $"../Hand"
+	hand = $"../Visuals/player/Armature/Skeleton3D/Hand"
 
 	if StartingWeapon:
 		equip_weapon(StartingWeapon)
@@ -23,3 +23,7 @@ func equip_weapon(weapon_to_equip):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func shoot():
+	if equipped_weapon:
+		equipped_weapon.shoot()		

@@ -29,4 +29,9 @@ mesh = SubResource("BoxMesh_btmmi")
 surface_material_override/0 = SubResource("StandardMaterial3D_flhcy")
 
 [node name="Muzzle" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.312958, 0, -1.36798e-08)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.319057, -0.00264263, -0.016428)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

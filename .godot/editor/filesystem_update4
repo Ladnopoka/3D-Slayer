@@ -14,3 +14,5 @@ res://shooting/gun.tscn
 res://player/GunController.gd
 res://shooting/gun.gd
 res://shooting/bullet.tscn
+res://shooting/bullet.gd
+res://scripts/player/player.gd
