@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scripts/globals/game_manager.gd"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/main-screen/plugin.cfg")
+
 [input]
 
 forward={

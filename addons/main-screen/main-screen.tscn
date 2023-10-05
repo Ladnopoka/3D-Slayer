@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl6xhx5ypu3ae"]
+
+[ext_resource type="Script" path="res://addons/main-screen/control.gd" id="1_ijd2w"]
+
+[node name="Control" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_ijd2w")
+
+[node name="Button1" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Random name "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Copy name"
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
+layout_mode = 2

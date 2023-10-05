@@ -17,7 +17,9 @@ func _ready():
 	GameManager.set_player(self)
 	animation_player.set_blend_time("idle", "walk", 0.2)
 	animation_player.set_blend_time("walk", "idle", 0.2)
-
+	$Label3D.text = NameGenerator.new_name()
+	
+	
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
