@@ -7,8 +7,9 @@ const BlockScene = preload("res://block/block.tscn")
 func _ready():
 	$RandomNameContainer/Button1.connect("pressed", _on_button_1_pressed)
 	$RandomNameContainer/Button2.connect("pressed", _on_copy_pressed)
-	$SpawnBlockContainer/Button3.connect("pressed", _on_spawn_block_pressed)
-
+	$SpawnBlockContainer/Button3.connect("pressed", _on_spawn_block_pressed_under)
+	$SpawnBlockContainer2/Button4.connect("pressed", _on_spawn_block_pressed_origin)
+	
 
 func _on_button_1_pressed():
 	var new_name = NameGenerator.new_name()
@@ -21,9 +22,11 @@ func _on_copy_pressed():
 	var content = $RandomNameContainer/LineEdit.text
 	DisplayServer.clipboard_set(content)
 
-func _on_spawn_block_pressed():
-	#spawn_block_at_origin()
+func _on_spawn_block_pressed_under():
 	spawn_block_next_to_player()
+	
+func _on_spawn_block_pressed_origin():
+	spawn_block_at_origin()
 	
 	
 func spawn_block_next_to_player():
@@ -42,10 +45,10 @@ func spawn_block_at_origin():
 	# Create an instance of the block
 	var block_instance = BlockScene.instantiate()
 	
-	# Set the block's position to the origin
-	block_instance.global_transform.origin = Vector3(0, 0, 0)
-	
 	# Add the block to the current scene
 	get_tree().current_scene.add_child(block_instance)
+	
+	# Set the block's position to the origin
+	block_instance.global_transform.origin = Vector3(0, 0, 0)
 
 	print("Block should be spawned at origin now.")
