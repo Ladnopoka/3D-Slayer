@@ -4,6 +4,7 @@ const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 
 @onready var camera_point = $camera_point
+@onready var GunController = $GunController
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -17,7 +18,9 @@ func _ready():
 	GameManager.set_player(self)
 	animation_player.set_blend_time("idle", "walk", 0.2)
 	animation_player.set_blend_time("walk", "idle", 0.2)
-
+	$Label3D.text = NameGenerator.new_name()
+	
+	
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -49,3 +52,7 @@ func _physics_process(delta):
 			animation_player.play("idle")
 
 	move_and_slide()
+	
+	#shoot shoot code
+	if Input.is_action_pressed("primary_action"):
+		GunController.shoot()

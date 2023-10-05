@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=9 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="Material" uid="uid://eu7vg7rmd34u" path="res://materials/floor_material.tres" id="1_uni18"]
 [ext_resource type="PackedScene" uid="uid://bh7oqvs1u6546" path="res://block/block.tscn" id="1_y8s6b"]
 [ext_resource type="PackedScene" uid="uid://bnlcpcm87jaqt" path="res://player/player.tscn" id="2_v78n6"]
 [ext_resource type="Material" uid="uid://4gts0kp3qe5p" path="res://materials/wall_material.tres" id="2_y53nv"]
 [ext_resource type="PackedScene" uid="uid://cxcn28m8cf2ck" path="res://player/camera_rig.tscn" id="5_jkxt3"]
+[ext_resource type="PackedScene" uid="uid://cl6xhx5ypu3ae" path="res://addons/main-screen/main-screen.tscn" id="6_737tb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4c4jb"]
 size = Vector3(20, 1, 200)
@@ -71,3 +72,5 @@ mesh = SubResource("BoxMesh_4c4jb")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WallR"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88587e-08, 1.11776, 0)
 shape = SubResource("BoxShape3D_bncj7")
+
+[node name="Control" parent="." instance=ExtResource("6_737tb")]
