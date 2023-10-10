@@ -1,8 +1,11 @@
+VisibleOnScreenEnabler3D
+CollisionShape3D
+Node3D
+CharacterBody3D
 Timer
 Marker3D
 MeshInstance3D
 Node
-Node3D
 Button
 Label3D
 Label
@@ -12,11 +15,9 @@ VBoxContainer
 Control
 Panel
 BoxContainer
-CollisionShape3D
 StaticBody3D
 Camera3D
 SubViewport
 SubViewportContainer
-CharacterBody3D
 RigidBody3D
 DirectionalLight3D
