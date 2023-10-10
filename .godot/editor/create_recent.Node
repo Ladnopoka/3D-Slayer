@@ -1,10 +1,12 @@
+Timer
+PathFollow3D
+Path3D
+MeshInstance3D
+Node3D
 VisibleOnScreenEnabler3D
 CollisionShape3D
-Node3D
 CharacterBody3D
-Timer
 Marker3D
-MeshInstance3D
 Node
 Button
 Label3D
