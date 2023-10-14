@@ -1,17 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697233501
+::res://::1697318872
 icon.svg::CompressedTexture2D::3540083071793652844::1696269644::1696269648::1::::<><>::
 Ideas.txt::TextFile::-1::1696545826::0::1::::<><>::
 ::res://addons/::1697231683
 ::res://addons/button/::1696546082
 Button.gd::GDScript::-1::1696546082::0::1::::<>Button<>::
-::res://addons/editor-plugin/::1697233456
-plugin.cfg::TextFile::-1::1697232809::0::1::::<><>::
-plugin.gd::GDScript::-1::1697233456::0::1::::<>EditorPlugin<>::
-::res://addons/main-screen/::1697233384
+::res://addons/editor-plugin/::1697318650
+Button1.gd::GDScript::-1::1697317377::0::1::::<>Button<>::
+panel.tscn::PackedScene::5401244366276246444::1697318650::0::1::::<><>::
+plugin.cfg::TextFile::-1::1697236752::0::1::::<><>::
+plugin.gd::GDScript::-1::1697318650::0::1::::<>EditorPlugin<>::
+::res://addons/main-screen/::1697318650
 control.gd::GDScript::-1::1696546082::0::1::::<>VBoxContainer<>::
-main-screen.gd::GDScript::-1::1697232778::0::1::::<>EditorPlugin<>::
-main-screen.tscn::PackedScene::5610324604663873796::1697233384::0::1::::<><>::res://addons/main-screen/control.gd
+main-screen.gd::GDScript::-1::1697318650::0::1::::<>EditorPlugin<>::
+main-screen.tscn::PackedScene::5610324604663873796::1697309654::0::1::::<><>::res://addons/main-screen/control.gd
 name-generator.gd::GDScript::-1::1696546082::0::1::::NameGenerator<>Node<>::
 plugin.cfg::TextFile::-1::1696546082::0::1::::<><>::
 ::res://assets/::1696965451
@@ -179,35 +181,35 @@ texture_10.png::CompressedTexture2D::8570079865474445569::1696273712::1696273815
 texture_11.png::CompressedTexture2D::4392107632789018158::1696273712::1696273815::1::::<><>::
 texture_12.png::CompressedTexture2D::7405814550732683109::1696273712::1696273815::1::::<><>::
 texture_13.png::CompressedTexture2D::250732858032967120::1696273712::1696273815::1::::<><>::
-::res://block/::1697233383
+::res://block/::1697309654
 block-generator.gd::GDScript::-1::1696546081::0::1::::BlockGenerator<>Node<>::
-block.tscn::PackedScene::2944682419896583785::1697233383::0::1::::<><>::uid://cs33uyahx6x65::::res://materials/floor_material - Copy (3).tres
-::res://level/::1697233476
+block.tscn::PackedScene::2944682419896583785::1697309654::0::1::::<><>::uid://cs33uyahx6x65
+::res://level/::1697309720
 level_1.gd::GDScript::-1::1696968684::0::1::::<>Node3D<>::
-level_1.tscn::PackedScene::5486766862100485142::1697233476::0::1::::<><>::res://level/level_1.gd<>uid://eu7vg7rmd34u::::res://materials/floor_material.tres<>uid://bh7oqvs1u6546::::res://block/block.tscn<>uid://bnlcpcm87jaqt::::res://player/player.tscn<>uid://bjyid4wq2c55a::::res://mob/mob.tscn<>uid://4gts0kp3qe5p::::res://materials/wall_material.tres<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://cl6xhx5ypu3ae::::res://addons/main-screen/main-screen.tscn
-::res://materials/::1697232778
+level_1.tscn::PackedScene::5486766862100485142::1697309720::0::1::::<><>::res://level/level_1.gd<>uid://eu7vg7rmd34u
+::res://materials/::1697318650
 floor_material - Copy (2).tres::StandardMaterial3D::4941683408885706279::1696282164::0::1::::<><>::uid://bpn2xpuu8u7ps
-floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1697232778::0::1::::<><>::uid://1mldiopb0fop::::res://assets/textures/Orange/texture_05.png
+floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1697318650::0::1::::<><>::uid://1mldiopb0fop::::res://assets/textures/Orange/texture_05.png
 floor_material - Copy (4).tres::StandardMaterial3D::6326398115674201070::1696282121::0::1::::<><>::uid://bhcqo5inf8ft5
 floor_material - Copy.tres::StandardMaterial3D::6506583956968400161::1696282164::0::1::::<><>::uid://c24xbijughc4w
-floor_material.tres::StandardMaterial3D::324023740436286422::1697232778::0::1::::<><>::uid://crj4j4bysdb1e::::res://assets/textures/Dark/texture_04.png
-wall_material.tres::StandardMaterial3D::2049049828431529787::1697232778::0::1::::<><>::uid://cwajncyw48ps0::::res://assets/textures/Green/texture_11.png
-::res://mob/::1697233384
+floor_material.tres::StandardMaterial3D::324023740436286422::1697318650::0::1::::<><>::uid://crj4j4bysdb1e::::res://assets/textures/Dark/texture_04.png
+wall_material.tres::StandardMaterial3D::2049049828431529787::1697318650::0::1::::<><>::uid://cwajncyw48ps0::::res://assets/textures/Green/texture_11.png
+::res://mob/::1697309654
 mob.gd::GDScript::-1::1696967203::0::1::::<>CharacterBody3D<>::
-mob.tscn::PackedScene::3068157993782687028::1697233384::0::1::::<><>::uid://bgmf4rruf41yq::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Knight.glb<>res://mob/mob.gd
-::res://player/::1697233384
-camera_rig.tscn::PackedScene::6392152817220939938::1697233384::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
-GunController.gd::GDScript::-1::1697232778::0::1::::<>Node<>::
+mob.tscn::PackedScene::3068157993782687028::1697309654::0::1::::<><>::uid://bgmf4rruf41yq
+::res://player/::1697318650
+camera_rig.tscn::PackedScene::6392152817220939938::1697309654::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
+GunController.gd::GDScript::-1::1697318650::0::1::::<>Node<>::
 player.gd::GDScript::-1::1696272990::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::3321732152303125275::1697233383::0::1::::<><>::res://scripts/player/player.gd<>res://player/GunController.gd<>uid://bwtgotu6ltg7q::::res://shooting/gun.tscn
+player.tscn::PackedScene::3321732152303125275::1697309654::0::1::::<><>::res://scripts/player/player.gd<>res://player/GunController.gd<>uid://bwtgotu6ltg7q
 ::res://scripts/::1696523766
 ::res://scripts/globals/::1696468433
 game_manager.gd::GDScript::-1::1696468433::0::1::::<>Node<>::
 ::res://scripts/player/::1696546082
 camera_rig.gd::GDScript::-1::1696546082::0::1::::<>Node3D<>::
 player.gd::GDScript::-1::1696546082::0::1::::<>CharacterBody3D<>::
-::res://shooting/::1697233384
+::res://shooting/::1697309654
 bullet.gd::GDScript::-1::1696546082::0::1::::<>Node3D<>::
-bullet.tscn::PackedScene::1053457791512271113::1697233384::0::1::::<><>::res://shooting/bullet.gd
+bullet.tscn::PackedScene::1053457791512271113::1697309654::0::1::::<><>::res://shooting/bullet.gd
 gun.gd::GDScript::-1::1696546082::0::1::::<>Node3D<>::
-gun.tscn::PackedScene::3970188754391910288::1697233384::0::1::::<><>::res://shooting/gun.gd<>uid://pakkccuwqwnx::::res://shooting/bullet.tscn
+gun.tscn::PackedScene::3970188754391910288::1697309654::0::1::::<><>::res://shooting/gun.gd<>uid://pakkccuwqwnx

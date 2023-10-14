@@ -1,14 +1,9 @@
-res://level/level_1.tscn
-res://materials/floor_material - Copy (3).tres
+res://addons/editor-plugin/panel.tscn
+res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
+res://materials/floor_material - Copy (3).tres
 res://player/GunController.gd
 res://materials/floor_material.tres
 res://materials/wall_material.tres
-res://addons/editor-plugin/plugin.gd
-res://block/block.tscn
-res://player/player.tscn
-res://player/camera_rig.tscn
-res://addons/main-screen/main-screen.tscn
-res://shooting/gun.tscn
-res://shooting/bullet.tscn
-res://mob/mob.tscn
+res://addons/editor-plugin/button1.gd
+res://addons/editor-plugin/Button1.gd

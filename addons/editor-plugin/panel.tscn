@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci7nx8wfe8vdk"]
+
+[ext_resource type="Script" path="res://addons/editor-plugin/Button1.gd" id="1_1wfc1"]
+
+[node name="Panel" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button1" type="Button" parent="."]
+layout_mode = 2
+text = "Button 1"
+script = ExtResource("1_1wfc1")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = "Button 2"
+
+[connection signal="pressed" from="Button1" to="Button1" method="_on_pressed"]
