@@ -1,9 +1,7 @@
-res://player/player.tscn
+res://mob/mob.tscn
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
 res://player/GunController.gd
 res://materials/floor_material.tres
 res://materials/wall_material.tres
-res://addons/editor-plugin/panel.tscn
-res://addons/editor-plugin/Button1.gd
