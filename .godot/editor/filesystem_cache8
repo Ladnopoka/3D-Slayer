@@ -1,19 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698347356
+::res://::1698350742
 icon.svg::CompressedTexture2D::3540083071793652844::1696269644::1696269648::1::::<><>::
-Ideas.txt::TextFile::-1::1698332170::0::1::::<><>::
-::res://addons/::1697821203
+Ideas.txt::TextFile::-1::1698350494::0::1::::<><>::
+::res://addons/::1698350494
 ::res://addons/button/::1696546082
 Button.gd::GDScript::-1::1696546082::0::1::::<>Button<>::
-::res://addons/editor-plugin/::1698347333
-panel.tscn::PackedScene::5401244366276246444::1698339946::0::1::::<><>::
-plugin.cfg::TextFile::-1::1697821203::0::1::::<><>::
-plugin.gd::GDScript::-1::1698347333::0::1::::<>EditorPlugin<>::
-::res://addons/editor-plugin/room_template/::1698346492
-room_template.tscn::PackedScene::1473403741818640738::1698346492::0::1::::<><>::
-::res://addons/main-screen/::1698345759
+::res://addons/editor-plugin/::1698350627
+panel.tscn::PackedScene::5401244366276246444::1698350627::0::1::::<><>::
+plugin.cfg::TextFile::-1::1698350494::0::1::::<><>::
+plugin.gd::GDScript::-1::1698350627::0::1::::<>EditorPlugin<>::
+::res://addons/editor-plugin/room_template/::1698350627
+room_template.tscn::PackedScene::1473403741818640738::1698350627::0::1::::<><>::
+::res://addons/main-screen/::1698347931
 control.gd::GDScript::-1::1696546082::0::1::::<>VBoxContainer<>::
-main-screen.gd::GDScript::-1::1698345759::0::1::::<>EditorPlugin<>::
+main-screen.gd::GDScript::-1::1698347931::0::1::::<>EditorPlugin<>::
 main-screen.tscn::PackedScene::5610324604663873796::1697536952::0::1::::<><>::res://addons/main-screen/control.gd
 name-generator.gd::GDScript::-1::1696546082::0::1::::NameGenerator<>Node<>::
 plugin.cfg::TextFile::-1::1696546082::0::1::::<><>::
@@ -65,7 +65,7 @@ barbarian_texture.png::CompressedTexture2D::8740070791548076579::1697821204::169
 knight_texture.png::CompressedTexture2D::4082466936979725701::1697821204::1697821204::1::::<><>::
 mage_texture.png::CompressedTexture2D::1152170716718806194::1697821204::1697821204::1::::<><>::
 rogue_texture.png::CompressedTexture2D::2318211081326860614::1697821204::1697821204::1::::<><>::
-::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/::1697821204
+::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/::1698350721
 Barbarian.glb::PackedScene::7033820882166817364::1697821204::1697821204::1::::<><>::
 Barbarian_barbarian_texture.png::CompressedTexture2D::3853446841709691035::1697821204::1697821204::1::::<><>::
 barbarian_texture.png::CompressedTexture2D::7123164923511664285::1697821204::1697821204::1::::<><>::
@@ -77,7 +77,7 @@ Mage_mage_texture.png::CompressedTexture2D::1806178039105899539::1697821204::169
 mage_texture.png::CompressedTexture2D::4345387340633350464::1697821204::1697821204::1::::<><>::
 Rogue.glb::PackedScene::2009639218979541814::1697821204::1697821204::1::::<><>::
 Rogue_Hooded.glb::PackedScene::7282812134977618606::1697821204::1697821204::1::::<><>::
-Rogue_Hooded_rogue_texture.png::CompressedTexture2D::6637277537007390163::1697821204::1697821204::1::::<><>::
+Rogue_Hooded_rogue_texture.png::CompressedTexture2D::6637277537007390163::1697821204::1698350721::1::::<><>::
 Rogue_rogue_texture.png::CompressedTexture2D::8959681159051178872::1697821204::1697821204::1::::<><>::
 rogue_texture.png::CompressedTexture2D::1340427993877415583::1697821204::1697821204::1::::<><>::
 ::res://assets/KayKit_Adventurers_1.0_FREE/Samples/::1697821205
@@ -185,26 +185,26 @@ texture_13.png::CompressedTexture2D::250732858032967120::1696273712::1696273815:
 ::res://block/::1698338132
 block-generator.gd::GDScript::-1::1696546081::0::1::::BlockGenerator<>Node<>::
 block.tscn::PackedScene::2944682419896583785::1698338132::0::1::::<><>::uid://cs33uyahx6x65
-::res://level/::1698338729
+::res://level/::1698350721
 level_1.gd::GDScript::-1::1697821205::0::1::::<>Node3D<>::
-level_1.tscn::PackedScene::5486766862100485142::1698338729::0::1::::<><>::res://level/level_1.gd<>uid://eu7vg7rmd34u
-::res://materials/::1698345759
+level_1.tscn::PackedScene::5486766862100485142::1698350721::0::1::::<><>::res://level/level_1.gd<>uid://eu7vg7rmd34u::::res://materials/floor_material.tres<>uid://bh7oqvs1u6546::::res://block/block.tscn<>uid://bnlcpcm87jaqt::::res://player/player.tscn<>uid://bjyid4wq2c55a::::res://mob/mob.tscn<>uid://4gts0kp3qe5p::::res://materials/wall_material.tres<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://cl6xhx5ypu3ae::::res://addons/main-screen/main-screen.tscn<>uid://u8y0kqmdkdgk::::res://addons/editor-plugin/room_template/room_template.tscn
+::res://materials/::1698347931
 floor_material - Copy (2).tres::StandardMaterial3D::4941683408885706279::1696282164::0::1::::<><>::uid://bpn2xpuu8u7ps
-floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1698345759::0::1::::<><>::uid://1mldiopb0fop::::res://assets/textures/Orange/texture_05.png
+floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1698347931::0::1::::<><>::uid://1mldiopb0fop::::res://assets/textures/Orange/texture_05.png
 floor_material - Copy (4).tres::StandardMaterial3D::6326398115674201070::1696282121::0::1::::<><>::uid://bhcqo5inf8ft5
 floor_material - Copy.tres::StandardMaterial3D::6506583956968400161::1696282164::0::1::::<><>::uid://c24xbijughc4w
-floor_material.tres::StandardMaterial3D::324023740436286422::1698345759::0::1::::<><>::uid://crj4j4bysdb1e::::res://assets/textures/Dark/texture_04.png
-wall_material.tres::StandardMaterial3D::2049049828431529787::1698345759::0::1::::<><>::uid://cwajncyw48ps0::::res://assets/textures/Green/texture_11.png
+floor_material.tres::StandardMaterial3D::324023740436286422::1698347931::0::1::::<><>::uid://crj4j4bysdb1e::::res://assets/textures/Dark/texture_04.png
+wall_material.tres::StandardMaterial3D::2049049828431529787::1698347931::0::1::::<><>::uid://cwajncyw48ps0::::res://assets/textures/Green/texture_11.png
 ::res://mob/::1698338133
 mob.gd::GDScript::-1::1697821205::0::1::::<>CharacterBody3D<>::
 mob.tscn::PackedScene::3068157993782687028::1698338133::0::1::::<><>::uid://bgmf4rruf41yq
-::res://player/::1698345759
+::res://player/::1698350721
 camera_rig.tscn::PackedScene::6392152817220939938::1698338133::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
-GunController.gd::GDScript::-1::1698345759::0::1::::<>Node<>::
+GunController.gd::GDScript::-1::1698347931::0::1::::<>Node<>::
 player.gd::GDScript::-1::1696272990::0::1::::<>CharacterBody3D<>::
 player.tscn::PackedScene::3321732152303125275::1698338133::0::1::::<><>::res://scripts/player/player.gd<>res://player/GunController.gd<>uid://bwtgotu6ltg7q
-::res://playground/::1698347333
-playground.tscn::PackedScene::714749942661595729::1698347333::0::1::::<><>::
+::res://playground/::1698350627
+playground.tscn::PackedScene::714749942661595729::1698350627::0::1::::<><>::
 ::res://scripts/::1696523766
 ::res://scripts/globals/::1696468433
 game_manager.gd::GDScript::-1::1696468433::0::1::::<>Node<>::
