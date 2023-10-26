@@ -1,9 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://u8y0kqmdkdgk"]
+[gd_scene load_steps=5 format=3 uid="uid://u8y0kqmdkdgk"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5jfiv"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_8i0kr"]
-size = Vector3(10, 4, 0.1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_hibp0"]
 size = Vector3(10, 4, 0.1)
@@ -14,19 +11,11 @@ size = Vector3(0.1, 4, 10)
 [sub_resource type="BoxMesh" id="BoxMesh_bqnli"]
 size = Vector3(0.1, 4, 10)
 
-[sub_resource type="BoxMesh" id="BoxMesh_tg6r2"]
-size = Vector3(2, 3, 0.1)
-
 [node name="RoomTemplate" type="Node3D"]
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("PlaneMesh_5jfiv")
-
-[node name="FrontWall" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -5)
-visible = false
-mesh = SubResource("BoxMesh_8i0kr")
 
 [node name="BackWall" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 5)
@@ -39,11 +28,6 @@ mesh = SubResource("BoxMesh_sncqx")
 [node name="RightWall" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0)
 mesh = SubResource("BoxMesh_bqnli")
-
-[node name="Door" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5.05)
-visible = false
-mesh = SubResource("BoxMesh_tg6r2")
 
 [node name="FrontWallWithHole" type="CSGCombiner3D" parent="."]
 
