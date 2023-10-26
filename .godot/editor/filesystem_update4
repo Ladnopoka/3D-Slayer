@@ -5,3 +5,4 @@ res://materials/floor_material - Copy (3).tres
 res://player/GunController.gd
 res://materials/floor_material.tres
 res://materials/wall_material.tres
+res://room_template/room_template.tscn
