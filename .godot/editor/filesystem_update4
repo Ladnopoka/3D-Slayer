@@ -4,3 +4,8 @@ res://materials/floor_material - Copy (3).tres
 res://player/GunController.gd
 res://materials/floor_material.tres
 res://materials/wall_material.tres
+res://player/rogue_hooded.tscn
+res://level/level_1.tscn
+res://player/player.tscn
+res://player/rogue_hooded.gd
+res://level/level_1.gd
