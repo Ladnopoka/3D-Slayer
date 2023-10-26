@@ -48,11 +48,10 @@ func create_wall():
 	cube_mesh.size = Vector3(4, 2, 0.2) # adjust size as per your requirements
 	wall.mesh = cube_mesh
 
-	# Name the wall instance
-	wall.name = "Wall"
-
 	var current_scene = get_editor_interface().get_edited_scene_root()
 	if current_scene:
+				# Name the box instance with counting already existing boxes
+		wall.name = "Wall_" + str(current_scene.get_child_count())
 		# Begin a new action called "Create Box"
 		undo_redo.create_action("Create Wall")
 		
@@ -66,6 +65,7 @@ func create_wall():
 		
 		# Commit the action with execution
 		undo_redo.commit_action(true)
+		wall.owner = current_scene
 	else:
 		print("No active scene!")
 		
@@ -80,11 +80,10 @@ func create_box():
 	var cube_mesh = BoxMesh.new()
 	box.mesh = cube_mesh
 
-	# Name the box instance
-	box.name = "Box"
-
 	var current_scene = get_editor_interface().get_edited_scene_root()
 	if current_scene:
+		# Name the box instance with counting already existing boxes
+		box.name = "Box_" + str(current_scene.get_child_count())
 		# Begin a new action called "Create Box"
 		undo_redo.create_action("Create Box")
 		
@@ -98,5 +97,6 @@ func create_box():
 		
 		# Commit the action with execution
 		undo_redo.commit_action(true)
+		box.owner = current_scene
 	else:
 		print("No active scene!")
