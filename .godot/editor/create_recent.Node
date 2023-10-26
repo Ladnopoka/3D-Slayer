@@ -1,5 +1,9 @@
-StaticBody3D
+Camera3D
+SpringArm3D
 CollisionShape3D
+AnimationTree
+CharacterBody3D
+StaticBody3D
 Node3D
 MeshInstance3D
 CSGBox3D
@@ -12,7 +16,6 @@ Timer
 PathFollow3D
 Path3D
 VisibleOnScreenEnabler3D
-CharacterBody3D
 Marker3D
 Node
 Label3D
@@ -20,7 +23,6 @@ LineEdit
 HBoxContainer
 Control
 BoxContainer
-Camera3D
 SubViewport
 SubViewportContainer
 RigidBody3D

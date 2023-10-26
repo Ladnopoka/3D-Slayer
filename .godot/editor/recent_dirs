@@ -1,4 +1,4 @@
-res://room_template
+res://player
 res://addons/editor-plugin
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin
 res://mob
@@ -7,7 +7,6 @@ res://addons/button
 C:/Users/ladno/Documents/3D Slayer/addons
 res://scripts/globals
 res://scripts/player
-res://player
 res://materials
 res://block
 res://level
