@@ -26,7 +26,11 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/main-screen/plugin.cfg")
+enabled=PackedStringArray("res://addons/editor-plugin/plugin.cfg", "res://addons/main-screen/plugin.cfg")
+
+[filesystem]
+
+import/fbx/enabled=false
 
 [input]
 
