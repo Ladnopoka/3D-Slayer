@@ -43,8 +43,5 @@ func _physics_process(delta):
 		
 		if walking:
 			walking = false
-			
-	if walking:
-		model.rotation.y = direction
 
 	move_and_slide()
