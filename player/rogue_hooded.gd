@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-const ROTATION_SPEED = 5
+const ROTATION_SPEED = 7
 const ACCELERATION = 8
 
 @onready var camera_point = $camera_point
@@ -18,8 +18,7 @@ var target_angle
 
 func _ready():
 	GameManager.set_player(self)
-	anim_tree.active = true
-	
+	anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
 	
 func _physics_process(delta):
 	# Add the gravity.
@@ -44,6 +43,10 @@ func _physics_process(delta):
 		model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
 		model.rotation.y = model_rotation
 		
+		# Set the blend position in the IWR blend space
+		var vl = velocity * model.transform.basis
+		anim_tree.set("parameters/IWR/blend_position", Vector2(vl.x, -vl.z) / SPEED)
+		
 		if !walking:
 			walking = true
 	else:
@@ -51,6 +54,7 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 		if walking:
+			anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0)) # Reset to Idle position
 			walking = false
 			
 	move_and_slide()

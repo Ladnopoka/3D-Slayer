@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ck1ytggnsaw5j"
+path="res://.godot/imported/shelf_small_candles.obj-4be884c00a88fa2f06d8a666495c05f7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shelf_small_candles.obj-4be884c00a88fa2f06d8a666495c05f7.mesh"]
+
+source_file="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/obj/shelf_small_candles.obj"
+dest_files=["res://.godot/imported/shelf_small_candles.obj-4be884c00a88fa2f06d8a666495c05f7.mesh", "res://.godot/imported/shelf_small_candles.obj-4be884c00a88fa2f06d8a666495c05f7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
