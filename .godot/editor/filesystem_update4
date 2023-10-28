@@ -2,7 +2,6 @@ res://player/camera_rig.tscn
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
-res://player/GunController.gd
 res://player/rogue_hooded.tscn
 res://playground/playground.tscn
 res://level/level2/hideout.tscn

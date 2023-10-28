@@ -1,7 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cs33uyahx6x65"]
 
-[ext_resource type="Texture2D" uid="uid://1mldiopb0fop" path="res://assets/textures/Orange/texture_05.png" id="1_s61p5"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sete7"]
+load_path = "res://.godot/imported/texture_05.png-acf3f8183d0fbf191b80bbb6f62eebd0.s3tc.ctex"
 
 [resource]
-albedo_texture = ExtResource("1_s61p5")
+albedo_texture = SubResource("CompressedTexture2D_sete7")
 uv1_triplanar = true
