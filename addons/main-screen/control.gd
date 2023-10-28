@@ -35,7 +35,7 @@ func spawn_block_next_to_player():
 	var block_instance = BlockScene.instantiate()
 	get_tree().current_scene.add_child(block_instance)
 	
-	var player = get_tree().current_scene.get_node("Player")
+	var player = get_tree().current_scene.get_node("Rogue_Hooded")
 	block_instance.global_transform.origin = player.global_transform.origin + Vector3(0, 0, 0)
 
 

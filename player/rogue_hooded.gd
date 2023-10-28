@@ -1,8 +1,9 @@
 extends CharacterBody3D
 
-const SPEED = 3.0
+const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-const ROTATION_SPEED = 12
+const ROTATION_SPEED = 7
+const ACCELERATION = 8
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
@@ -13,10 +14,11 @@ const ROTATION_SPEED = 12
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 var walking = false
+var target_angle
 
 func _ready():
 	GameManager.set_player(self)
-	
+	anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
 	
 func _physics_process(delta):
 	# Add the gravity.
@@ -26,14 +28,24 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
+
+	var model_rotation = model.rotation.y
+	if direction.length() > 0.01:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+
+		var target_angle = atan2(-direction.x, -direction.z)
+		model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
+		model.rotation.y = model_rotation
+		
+		# Set the blend position in the IWR blend space
+		var vl = velocity * model.transform.basis
+		anim_tree.set("parameters/IWR/blend_position", Vector2(vl.x, -vl.z) / SPEED)
 		
 		if !walking:
 			walking = true
@@ -42,9 +54,7 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 		if walking:
+			anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0)) # Reset to Idle position
 			walking = false
 			
-	if walking:
-		model.rotation.y = direction
-
 	move_and_slide()

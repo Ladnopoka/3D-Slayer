@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dsq1ldu1kg48p"
+path="res://.godot/imported/coin_stack_small.obj-5fcfd91642e89817e76ab1c5a2722665.mesh"
+
+[deps]
+
+files=["res://.godot/imported/coin_stack_small.obj-5fcfd91642e89817e76ab1c5a2722665.mesh"]
+
+source_file="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/obj/coin_stack_small.obj"
+dest_files=["res://.godot/imported/coin_stack_small.obj-5fcfd91642e89817e76ab1c5a2722665.mesh", "res://.godot/imported/coin_stack_small.obj-5fcfd91642e89817e76ab1c5a2722665.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
