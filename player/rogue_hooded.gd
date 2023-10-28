@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
-const SPEED = 3.0
+const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-const ROTATION_SPEED = 12
+const ROTATION_SPEED = 4
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
@@ -13,6 +13,7 @@ const ROTATION_SPEED = 12
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 var walking = false
+var target_angle
 
 func _ready():
 	GameManager.set_player(self)
@@ -34,6 +35,8 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		
+		model.look_at(direction + position)
 		
 		if !walking:
 			walking = true
