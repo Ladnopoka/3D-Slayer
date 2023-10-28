@@ -2,7 +2,8 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-const ROTATION_SPEED = 4
+const ROTATION_SPEED = 5
+const ACCELERATION = 8
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
@@ -17,6 +18,7 @@ var target_angle
 
 func _ready():
 	GameManager.set_player(self)
+	anim_tree.active = true
 	
 	
 func _physics_process(delta):
@@ -27,16 +29,20 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
+
+	var model_rotation = model.rotation.y
+	if direction.length() > 0.01:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		
-		model.look_at(direction + position)
+
+		var target_angle = atan2(-direction.x, -direction.z)
+		model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
+		model.rotation.y = model_rotation
 		
 		if !walking:
 			walking = true
@@ -46,5 +52,5 @@ func _physics_process(delta):
 		
 		if walking:
 			walking = false
-
+			
 	move_and_slide()
