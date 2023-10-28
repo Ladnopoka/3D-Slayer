@@ -9,3 +9,8 @@ res://player/rogue_hooded.gd
 res://player/camera_rig.tscn
 res://player/rogue_hooded.tscn
 res://playground/playground.tscn
+res://level/level2/hideout.tscn
+res://level/level2/level_2.tscn
+res://portal/portal.tscn
+res://portal/portal.gd
+res://mob/mob.tscn

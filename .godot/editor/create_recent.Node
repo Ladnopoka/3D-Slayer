@@ -1,7 +1,8 @@
+CollisionShape3D
+Area3D
 AnimationTree
 Camera3D
 SpringArm3D
-CollisionShape3D
 CharacterBody3D
 StaticBody3D
 Node3D
