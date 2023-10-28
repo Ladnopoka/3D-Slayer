@@ -1,5 +1,10 @@
-res://level/level_1.tscn
+res://player/camera_rig.tscn
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
-res://level/level_1.gd
+res://player/rogue_hooded.tscn
+res://playground/playground.tscn
+res://level/level2/hideout.tscn
+res://portal/portal.tscn
+res://level/level2/level_2.tscn
+res://level/level_1.tscn
