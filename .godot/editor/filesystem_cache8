@@ -1,19 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698511882
+::res://::1698512485
 icon.svg::CompressedTexture2D::3540083071793652844::1696269644::1696269648::1::::<><>::
 Ideas.txt::TextFile::-1::1698350494::0::1::::<><>::
 ::res://addons/::1698350494
 ::res://addons/button/::1696546082
 Button.gd::GDScript::-1::1696546082::0::1::::<>Button<>::
-::res://addons/editor-plugin/::1698511874
+::res://addons/editor-plugin/::1698512467
 panel.tscn::PackedScene::5401244366276246444::1698350627::0::1::::<><>::
 plugin.cfg::TextFile::-1::1698350494::0::1::::<><>::
-plugin.gd::GDScript::-1::1698511874::0::1::::<>EditorPlugin<>::
+plugin.gd::GDScript::-1::1698512467::0::1::::<>EditorPlugin<>::
 ::res://addons/editor-plugin/room_template/::1698350627
 room_template.tscn::PackedScene::1473403741818640738::1698350627::0::1::::<><>::
-::res://addons/main-screen/::1698511874
+::res://addons/main-screen/::1698512467
 control.gd::GDScript::-1::1698509047::0::1::::<>VBoxContainer<>::
-main-screen.gd::GDScript::-1::1698511874::0::1::::<>EditorPlugin<>::
+main-screen.gd::GDScript::-1::1698512467::0::1::::<>EditorPlugin<>::
 main-screen.tscn::PackedScene::5610324604663873796::1697536952::0::1::::<><>::res://addons/main-screen/control.gd
 name-generator.gd::GDScript::-1::1696546082::0::1::::NameGenerator<>Node<>::
 plugin.cfg::TextFile::-1::1696546082::0::1::::<><>::
@@ -748,31 +748,31 @@ forground_shader_2.gdshader::Shader::-1::1698510610::0::1::::<><>::
 ::res://block/::1698338132
 block-generator.gd::GDScript::-1::1696546081::0::1::::BlockGenerator<>Node<>::
 block.tscn::PackedScene::2944682419896583785::1698338132::0::1::::<><>::uid://cs33uyahx6x65
-::res://level/::1698511874
-level_1.gd::GDScript::-1::1698355316::0::1::::<>Node3D<>::
-level_1.tscn::PackedScene::5486766862100485142::1698511874::0::1::::<><>::res://level/level_1.gd<>uid://bjyid4wq2c55a::::res://mob/mob.tscn<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://ci7p6fwa6jxd::::res://portal/portal.tscn
-::res://level/level2/::1698511151
-hideout.tscn::PackedScene::6805561760561017034::1698511150::0::1::::<><>::uid://bg21syiad1wtc
-level_2.tscn::PackedScene::2347473302513341459::1698511151::0::1::::<><>::uid://c37wuwytgsx2i
-::res://materials/::1698511874
+::res://level/::1698512467
+level_1.gd::GDScript::-1::1698512467::0::1::::<>Node3D<>::
+level_1.tscn::PackedScene::5486766862100485142::1698512467::0::1::::<><>::res://level/level_1.gd<>uid://bjyid4wq2c55a::::res://mob/mob.tscn<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://ci7p6fwa6jxd::::res://portal/portal.tscn
+::res://level/level2/::1698511887
+hideout.tscn::PackedScene::6805561760561017034::1698511887::0::1::::<><>::uid://bg21syiad1wtc
+level_2.tscn::PackedScene::2347473302513341459::1698511887::0::1::::<><>::uid://c37wuwytgsx2i
+::res://materials/::1698512467
 floor_material - Copy (2).tres::StandardMaterial3D::4941683408885706279::1698510610::0::1::::<><>::uid://bpn2xpuu8u7ps
-floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1698511874::0::1::::<><>::
+floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1698512467::0::1::::<><>::
 floor_material - Copy (4).tres::StandardMaterial3D::6326398115674201070::1698510610::0::1::::<><>::uid://bhcqo5inf8ft5
 floor_material - Copy.tres::StandardMaterial3D::6506583956968400161::1698510610::0::1::::<><>::uid://c24xbijughc4w
 floor_material.tres::StandardMaterial3D::324023740436286422::1698510697::0::1::::<><>::uid://crj4j4bysdb1e
 wall_material.tres::StandardMaterial3D::2049049828431529787::1698510697::0::1::::<><>::uid://cwajncyw48ps0
-::res://mob/::1698511591
+::res://mob/::1698511887
 mob.gd::GDScript::-1::1698511591::0::1::::<>CharacterBody3D<>::
-mob.tscn::PackedScene::3068157993782687028::1698511591::0::1::::<><>::uid://bgmf4rruf41yq
-::res://player/::1698511150
-camera_rig.tscn::PackedScene::6392152817220939938::1698511150::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
+mob.tscn::PackedScene::3068157993782687028::1698511887::0::1::::<><>::uid://bgmf4rruf41yq
+::res://player/::1698511887
+camera_rig.tscn::PackedScene::6392152817220939938::1698511887::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
 rogue_hooded.gd::GDScript::-1::1698511149::0::1::::<>CharacterBody3D<>::
-rogue_hooded.tscn::PackedScene::6069684257656594730::1698511150::0::1::::<><>::uid://db0337ymkwxhu
-::res://playground/::1698511150
-playground.tscn::PackedScene::714749942661595729::1698511150::0::1::::<><>::
-::res://portal/::1698511150
+rogue_hooded.tscn::PackedScene::6069684257656594730::1698511887::0::1::::<><>::uid://db0337ymkwxhu
+::res://playground/::1698511887
+playground.tscn::PackedScene::714749942661595729::1698511887::0::1::::<><>::
+::res://portal/::1698511887
 portal.gd::GDScript::-1::1698506997::0::1::::<>Area3D<>::
-portal.tscn::PackedScene::158864076934328749::1698511150::0::1::::<><>::uid://bk25ugh0l31sm
+portal.tscn::PackedScene::158864076934328749::1698511887::0::1::::<><>::uid://bk25ugh0l31sm
 ::res://scripts/::1696523766
 ::res://scripts/globals/::1696468433
 game_manager.gd::GDScript::-1::1696468433::0::1::::<>Node<>::
