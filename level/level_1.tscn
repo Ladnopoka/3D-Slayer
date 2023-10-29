@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=6 format=3 uid="uid://ckf3ipmwutb47"]
 
-[ext_resource type="PackedScene" uid="uid://cxcn28m8cf2ck" path="res://player/camera_rig.tscn" id="5_jkxt3"]
 [ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue_hooded.tscn" id="10_h0cyu"]
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
 
@@ -18,9 +17,6 @@ size = Vector3(2, 2, 0)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
 shadow_enabled = true
-
-[node name="camera_rig" parent="." instance=ExtResource("5_jkxt3")]
-visible = false
 
 [node name="Floor2" type="StaticBody3D" parent="."]
 

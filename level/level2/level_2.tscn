@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://8peso6o0rjkd"]
+[gd_scene load_steps=6 format=3 uid="uid://8peso6o0rjkd"]
 
 [ext_resource type="PackedScene" uid="uid://c37wuwytgsx2i" path="res://level/level2/hideout.tscn" id="1_865yb"]
 [ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue_hooded.tscn" id="2_tshh2"]
-[ext_resource type="PackedScene" uid="uid://cxcn28m8cf2ck" path="res://player/camera_rig.tscn" id="3_pxpx8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdyj3"]
 albedo_color = Color(0.0784314, 0.239216, 0.0627451, 1)
@@ -31,8 +30,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2"]
 transform = Transform3D(30, 0, 0, 0, -1.31134e-06, 30, 0, -30, -1.31134e-06, 0, 0, 0)
 shape = SubResource("BoxShape3D_imstk")
-
-[node name="camera_rig" parent="." instance=ExtResource("3_pxpx8")]
 
 [node name="Rogue_Hooded" parent="." instance=ExtResource("2_tshh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.7442)
