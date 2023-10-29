@@ -15,6 +15,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 var walking = false
 var target_angle
+var attacks
 
 func _ready():
 	GameManager.set_player(self)
@@ -58,3 +59,7 @@ func _physics_process(delta):
 			walking = false
 			
 	move_and_slide()
+
+
+func _on_skeleton_3d_bone_pose_changed(bone_idx):
+	pass # Replace with function body.
