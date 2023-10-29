@@ -10,7 +10,7 @@ const ACCELERATION = 8
 @onready var anim_tree = $AnimationTree
 @onready var anim_state = $AnimationTree.get("parameters/playback")
 @onready var camera_rig = $camera_rig
-
+@onready var crossbow = $"Rig/Skeleton3D/2H_Crossbow"
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -27,6 +27,9 @@ var rayOrigin
 var rayEnd
 var mouse_position
 var attack_direction
+
+var arrow = load("res://shooting/arrow.tscn")
+var arrow_instance
 
 func _ready():
 	GameManager.set_player(self)
@@ -91,3 +94,8 @@ func attack():
 		model.look_at(Vector3(pos.x, pos.y, pos.z), Vector3(0,1,0))
 		
 	anim_state.travel(attacks[3])
+	arrow_instance = arrow.instantiate()
+	arrow_instance.position = crossbow.global_position
+	arrow_instance.transform.basis = crossbow.global_transform.basis
+	arrow_instance.transform.basis.z *= -1
+	get_parent().add_child(arrow_instance)
