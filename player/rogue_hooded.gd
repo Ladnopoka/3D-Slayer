@@ -9,12 +9,27 @@ const ACCELERATION = 8
 @onready var model = $Rig
 @onready var anim_tree = $AnimationTree
 @onready var anim_state = $AnimationTree.get("parameters/playback")
+@onready var camera_rig = $camera_rig
+@onready var crossbow = $"Rig/Skeleton3D/2H_Crossbow"
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 var walking = false
 var target_angle
+var attacks = [
+	"2H_Ranged_Aiming",
+	"2H_Ranged_Reload",
+	"2H_Ranged_Shoot",
+	"2H_Ranged_Shooting"
+]
+var rayOrigin
+var rayEnd
+var mouse_position
+var attack_direction
+
+var arrow = load("res://shooting/arrow.tscn")
+var arrow_instance
 
 func _ready():
 	GameManager.set_player(self)
@@ -39,7 +54,7 @@ func _physics_process(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 
-		var target_angle = atan2(-direction.x, -direction.z)
+		target_angle = atan2(-direction.x, -direction.z)
 		model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
 		model.rotation.y = model_rotation
 		
@@ -58,3 +73,31 @@ func _physics_process(delta):
 			walking = false
 			
 	move_and_slide()
+	if Input.is_action_just_pressed("primary_action"):
+		attack()
+	
+func attack():
+	if walking:
+		return
+	
+	var space_state = get_world_3d().direct_space_state
+	mouse_position = get_viewport().get_mouse_position()
+	
+	rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position) # set the ray end point
+	rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000 # set the ray end point
+	
+	var query = PhysicsRayQueryParameters3D.create(rayOrigin, rayEnd); 
+	var intersection = space_state.intersect_ray(query)
+	
+	if intersection.size() > 0:
+		var pos = intersection.position
+		model.look_at(Vector3(pos.x, pos.y, pos.z), Vector3(0,1,0))
+		
+	anim_state.travel(attacks[3])
+
+	arrow_instance = arrow.instantiate()
+	arrow_instance.position = crossbow.global_position
+	arrow_instance.transform.basis = crossbow.global_transform.basis
+	arrow_instance.rotate(Vector3(0, 1, 0), deg_to_rad(180))
+
+	get_parent().add_child(arrow_instance)
