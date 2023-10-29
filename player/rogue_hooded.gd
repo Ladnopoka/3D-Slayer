@@ -9,6 +9,7 @@ const ACCELERATION = 8
 @onready var model = $Rig
 @onready var anim_tree = $AnimationTree
 @onready var anim_state = $AnimationTree.get("parameters/playback")
+@onready var camera_rig = $camera_rig
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -22,7 +23,9 @@ var attacks = [
 	"2H_Ranged_Shoot",
 	"2H_Ranged_Shooting"
 ]
-
+var rayOrigin
+var rayEnd
+var mouse_position
 var attack_direction
 
 func _ready():
@@ -71,14 +74,20 @@ func _physics_process(delta):
 		attack()
 	
 func attack():
-	var mouse_position = get_viewport().get_mouse_position()
-#	#var world_mouse_position = camera_rig.unproject_position(mouse_position)
-#
-#	var direction = world_mouse_position - model.global_transform.origin
-#	direction.y = 0 # Since we're not considering the y-axis.
-#	direction = direction.normalized()
-#
-#	var target_angle = atan2(direction.x, direction.z)
-#	model.rotation.y = target_angle
+	if walking:
+		return
 	
+	var space_state = get_world_3d().direct_space_state
+	mouse_position = get_viewport().get_mouse_position()
+	
+	rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position) # set the ray end point
+	rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000 # set the ray end point
+	
+	var query = PhysicsRayQueryParameters3D.create(rayOrigin, rayEnd); 
+	var intersection = space_state.intersect_ray(query)
+	
+	if intersection.size() > 0:
+		var pos = intersection.position
+		model.look_at(Vector3(pos.x, pos.y, pos.z), Vector3(0,1,0))
+		
 	anim_state.travel(attacks[3])
