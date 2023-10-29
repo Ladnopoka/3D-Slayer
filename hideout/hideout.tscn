@@ -1,0 +1,335 @@
+[gd_scene load_steps=31 format=3 uid="uid://dh7eqkenjyvhp"]
+
+[ext_resource type="PackedScene" uid="uid://dawwbik4sgvk7" path="res://player/barbarian.tscn" id="1_1hty5"]
+[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage.tscn" id="2_asybh"]
+[ext_resource type="PackedScene" uid="uid://bhqof1t0bm717" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bed_floor.gltf.glb" id="4_qix14"]
+[ext_resource type="PackedScene" uid="uid://dwbaq4uhjquy5" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_green.gltf.glb" id="5_1p201"]
+[ext_resource type="PackedScene" uid="uid://j24ungbtfvlc" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_labeled_brown.gltf.glb" id="6_bw0ek"]
+[ext_resource type="PackedScene" uid="uid://bdp6tutkxnjpy" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_C_brown.gltf.glb" id="7_ge4rr"]
+[ext_resource type="PackedScene" uid="uid://casqreq25pifw" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_large.gltf.glb" id="8_r77bm"]
+[ext_resource type="PackedScene" uid="uid://0qo5pqlgjtx1" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small.gltf.glb" id="9_suiex"]
+[ext_resource type="PackedScene" uid="uid://bpadbu3mlppok" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small_decorated.gltf.glb" id="10_kxfqy"]
+[ext_resource type="PackedScene" uid="uid://b0s1pm13gntfy" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_stacked.gltf.glb" id="11_gj15b"]
+[ext_resource type="PackedScene" uid="uid://cbuhnr0vvr062" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chair.gltf.glb" id="16_bkh8d"]
+[ext_resource type="PackedScene" uid="uid://brjuqiht77plh" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chest.glb" id="17_7j42t"]
+[ext_resource type="PackedScene" uid="uid://d2buip5jlkbok" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/coin.gltf.glb" id="19_tql3k"]
+[ext_resource type="PackedScene" uid="uid://835kbutn2rfy" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_large.gltf.glb" id="23_0cu80"]
+[ext_resource type="PackedScene" uid="uid://dmfsqhc4dmoja" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_large_rocky.gltf.glb" id="24_qx5br"]
+[ext_resource type="PackedScene" uid="uid://b2ggx6v8a0fah" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/keg_decorated.gltf.glb" id="30_feps7"]
+[ext_resource type="PackedScene" uid="uid://chnbfpgsef1t4" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_A.gltf.glb" id="33_afpv2"]
+[ext_resource type="PackedScene" uid="uid://v0g3wjjembau" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_B.gltf.glb" id="34_easjq"]
+[ext_resource type="PackedScene" uid="uid://dguci4kg4lvkn" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_large.gltf.glb" id="35_qthep"]
+[ext_resource type="PackedScene" uid="uid://bx1h7nu55x7g2" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_half.gltf.glb" id="36_ushfv"]
+[ext_resource type="PackedScene" uid="uid://dbqe4ok0o5jgm" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/shelf_small.gltf.glb" id="38_wu83v"]
+[ext_resource type="PackedScene" uid="uid://bpkc4doatcokf" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_C.gltf.glb" id="39_6ejr4"]
+[ext_resource type="PackedScene" uid="uid://cbvkgdxcy2odg" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stool.gltf.glb" id="40_oadnc"]
+[ext_resource type="PackedScene" uid="uid://ckwf8jm55ofeq" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_D.gltf.glb" id="41_1r38l"]
+[ext_resource type="PackedScene" uid="uid://c8l0ndly1fhbw" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_weeds.gltf.glb" id="42_5cd5u"]
+[ext_resource type="PackedScene" uid="uid://cnoqyh6t6jkvf" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_long_decorated_A.gltf.glb" id="42_ybcda"]
+[ext_resource type="PackedScene" uid="uid://b1dnt7amvfebe" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_medium_tablecloth_decorated_B.gltf.glb" id="43_6ycrb"]
+[ext_resource type="PackedScene" uid="uid://cti6h2pnckd5n" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_small_decorated_A.gltf.glb" id="44_shijx"]
+[ext_resource type="PackedScene" uid="uid://b0a83hrm81gfq" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_B.gltf.glb" id="46_okv17"]
+[ext_resource type="PackedScene" uid="uid://dp584c61xh6q4" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_A.gltf.glb" id="47_yc8c1"]
+
+[node name="Hideout" type="Node3D"]
+
+[node name="Characters" type="Node3D" parent="."]
+
+[node name="Barbarian" parent="Characters" instance=ExtResource("1_1hty5")]
+transform = Transform3D(-0.756059, 0, 0.654503, 0, 1, 0, -0.654503, 0, -0.756059, -1.21663, 0, -0.41308)
+
+[node name="Mage" parent="Characters" instance=ExtResource("2_asybh")]
+transform = Transform3D(-0.585453, 0, -0.810706, 0, 1, 0, 0.810706, 0, -0.585453, 6.89846, 0, -5.62155)
+
+[node name="Boxes" type="Node3D" parent="."]
+
+[node name="box_large_gltf" parent="Boxes" instance=ExtResource("8_r77bm")]
+transform = Transform3D(0.996254, 0, -0.0864776, 0, 1, 0, 0.0864776, 0, 0.996254, 5.69263, 0, 4.089)
+
+[node name="box_small_gltf" parent="Boxes" instance=ExtResource("9_suiex")]
+transform = Transform3D(0.996254, 0, -0.0864776, 0, 1, 0, 0.0864776, 0, 0.996254, 2.54489, 0, 3.21316)
+
+[node name="box_small_decorated_gltf" parent="Boxes" instance=ExtResource("10_kxfqy")]
+transform = Transform3D(-0.703035, 0, -0.711155, 0, 1, 0, 0.711155, 0, -0.703035, 5.59938, 0, 1.35822)
+
+[node name="box_stacked_gltf" parent="Boxes" instance=ExtResource("11_gj15b")]
+transform = Transform3D(0.996254, 0, -0.0864776, 0, 1, 0, 0.0864776, 0, 0.996254, 3.44383, -4.76837e-07, 5.27008)
+
+[node name="box_large_gltf2" parent="Boxes" instance=ExtResource("8_r77bm")]
+transform = Transform3D(0.550743, 0, -0.834675, 0, 1, 0, 0.834675, 0, 0.550743, 7.0809, 0, 2.57885)
+
+[node name="box_small_gltf2" parent="Boxes" instance=ExtResource("9_suiex")]
+transform = Transform3D(0.996254, 0, -0.0864776, 0, 1, 0, 0.0864776, 0, 0.996254, 1.19842, 0, 4.82846)
+
+[node name="box_small_decorated_gltf2" parent="Boxes" instance=ExtResource("10_kxfqy")]
+transform = Transform3D(-0.980778, 0, 0.195125, 0, 1, 0, -0.195125, 0, -0.980778, 4.16963, 0, 0.639243)
+
+[node name="box_stacked_gltf2" parent="Boxes" instance=ExtResource("11_gj15b")]
+transform = Transform3D(-0.961377, 0, -0.275235, 0, 1, 0, 0.275235, 0, -0.961377, 7.67836, -4.76837e-07, 0.318132)
+
+[node name="box_small_decorated_gltf3" parent="Boxes" instance=ExtResource("10_kxfqy")]
+transform = Transform3D(-0.335221, 0, 0.942139, 0, 1, 0, -0.942139, 0, -0.335221, 4.15011, 0, 2.4081)
+
+[node name="chest" parent="Boxes" instance=ExtResource("17_7j42t")]
+transform = Transform3D(-1.04864, 0, -0.583401, 0, 1.2, 0, 0.583401, 0, -1.04864, 5.01702, 0, -1.41214)
+
+[node name="coin_gltf" parent="Boxes" instance=ExtResource("19_tql3k")]
+transform = Transform3D(0.996254, 0, -0.0864776, 0, 1, 0, 0.0864776, 0, 0.996254, 3.11804, 0, 0.356994)
+
+[node name="trunk_large_B_gltf" parent="Boxes" instance=ExtResource("46_okv17")]
+transform = Transform3D(0.923358, 0, 0.383941, 0, 1, 0, -0.383941, 0, 0.923358, 0.958082, 0, 2.86981)
+
+[node name="trunk_large_A_gltf" parent="Boxes" instance=ExtResource("47_yc8c1")]
+transform = Transform3D(0.996254, 0, -0.0864776, 0, 1, 0, 0.0864776, 0, 0.996254, 2.24882, 0, 1.46911)
+
+[node name="bottle_A_green_gltf" parent="Boxes" instance=ExtResource("5_1p201")]
+transform = Transform3D(-0.762894, 0, 0.646523, 0, 1, 0, -0.646523, 0, -0.762894, 2.03999, 0, -0.316759)
+
+[node name="bottle_A_labeled_brown_gltf" parent="Boxes" instance=ExtResource("6_bw0ek")]
+transform = Transform3D(-0.762894, 0, 0.646523, 0, 1, 0, -0.646523, 0, -0.762894, 2.7251, 0, -0.126734)
+
+[node name="bottle_C_brown_gltf" parent="Boxes" instance=ExtResource("7_ge4rr")]
+transform = Transform3D(-0.762894, 0, 0.646523, 0, 1, 0, -0.646523, 0, -0.762894, 2.19761, 0, 0.415312)
+
+[node name="Floor" type="Node3D" parent="."]
+transform = Transform3D(-0.439234, 0, 0.898373, 0, 1, 0, -0.898373, 0, -0.439234, 31.2151, 0, 23.0945)
+
+[node name="floor_dirt_large_gltf2" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8862, 0, -23.6046)
+
+[node name="floor_dirt_large_gltf7" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8862, 0, -8.58574)
+
+[node name="floor_dirt_large_gltf11" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6834, 0, -19.4995)
+
+[node name="floor_dirt_large_gltf8" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9715, 0, -22.1623)
+
+[node name="floor_dirt_large_gltf9" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.7492, 0, -21.292)
+
+[node name="floor_dirt_large_gltf10" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3439, 0, -8.58574)
+
+[node name="floor_dirt_small_C_gltf" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.3053, 0, -9.32585)
+
+[node name="floor_dirt_small_C_gltf2" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1942, 0, -8.40417)
+
+[node name="floor_dirt_small_C_gltf3" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0012, 0, -16.6627)
+
+[node name="floor_dirt_small_C_gltf4" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0012, 0, -18.9098)
+
+[node name="floor_dirt_small_C_gltf5" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0012, 0, -18.313)
+
+[node name="floor_dirt_small_C_gltf6" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0012, 0, -18.313)
+
+[node name="floor_dirt_small_C_gltf7" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0012, 0, -20.7482)
+
+[node name="floor_dirt_small_C_gltf8" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(0.766101, 0, 0.642721, 0, 1, 0, -0.642721, 0, 0.766101, 43.6398, 0, -21.7077)
+
+[node name="floor_dirt_small_C_gltf18" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(0.766101, 0, 0.642721, 0, 1, 0, -0.642721, 0, 0.766101, 27.706, 0, -12.0857)
+
+[node name="floor_dirt_small_C_gltf19" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(0.766101, 0, 0.642721, 0, 1, 0, -0.642721, 0, 0.766101, 26.8949, 0, -13.2959)
+
+[node name="floor_dirt_small_C_gltf9" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(0.766101, 0, 0.642721, 0, 1, 0, -0.642721, 0, 0.766101, 41.6264, 0, -21.7077)
+
+[node name="floor_dirt_small_C_gltf10" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(0.766101, 0, 0.642721, 0, 1, 0, -0.642721, 0, 0.766101, 42.5769, 0, -22.9938)
+
+[node name="floor_dirt_small_C_gltf11" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(0.766101, 0, 0.642721, 0, 1, 0, -0.642721, 0, 0.766101, 41.0825, 0, -22.9938)
+
+[node name="floor_dirt_small_C_gltf12" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(0.766101, 0, 0.642721, 0, 1, 0, -0.642721, 0, 0.766101, 41.0825, 0, -24.1947)
+
+[node name="floor_dirt_small_C_gltf13" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(0.766101, 0, 0.642721, 0, 1, 0, -0.642721, 0, 0.766101, 38.3435, 0, -24.1947)
+
+[node name="floor_dirt_small_C_gltf14" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(0.766101, 0, 0.642721, 0, 1, 0, -0.642721, 0, 0.766101, 39.388, 0, -24.1947)
+
+[node name="floor_dirt_small_C_gltf15" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(-0.996421, 0, -0.0845301, 0, 1, 0, 0.0845301, 0, -0.996421, 38.5921, 0, -25.0276)
+
+[node name="floor_dirt_small_C_gltf16" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(-0.996421, 0, -0.0845301, 0, 1, 0, 0.0845301, 0, -0.996421, 40.5921, 0, -25.0276)
+
+[node name="floor_dirt_small_C_gltf17" parent="Floor" instance=ExtResource("39_6ejr4")]
+transform = Transform3D(-0.996421, 0, -0.0845301, 0, 1, 0, 0.0845301, 0, -0.996421, 40.5921, 0, -25.0276)
+
+[node name="floor_dirt_small_D_gltf" parent="Floor" instance=ExtResource("41_1r38l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6225, 0, -9.62804)
+
+[node name="floor_dirt_small_D_gltf2" parent="Floor" instance=ExtResource("41_1r38l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6225, 0, -20.2365)
+
+[node name="floor_dirt_small_weeds_gltf" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8563, 0, -14.5649)
+
+[node name="floor_dirt_small_weeds_gltf2" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8563, 0, -12.9224)
+
+[node name="floor_dirt_small_weeds_gltf3" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.9985, 0, -11.6094)
+
+[node name="floor_dirt_small_weeds_gltf4" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(0.800554, 0, -0.599261, 0, 1, 0, 0.599261, 0, 0.800554, 42.1202, 0, -10.1354)
+
+[node name="floor_dirt_small_weeds_gltf5" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(0.800554, 0, -0.599261, 0, 1, 0, 0.599261, 0, 0.800554, 42.9038, 0, -11.575)
+
+[node name="floor_dirt_small_weeds_gltf6" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(0.237584, 0, -0.971367, 0, 1, 0, 0.971367, 0, 0.237584, 44.1355, 0, -11.1217)
+
+[node name="floor_dirt_small_weeds_gltf7" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(0.237584, 0, -0.971367, 0, 1, 0, 0.971367, 0, 0.237584, 38.3738, 0, -7.71515)
+
+[node name="floor_dirt_small_weeds_gltf8" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(0.237584, 0, -0.971367, 0, 1, 0, 0.971367, 0, 0.237584, 29.8138, 0, -12.1125)
+
+[node name="floor_dirt_small_weeds_gltf9" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(0.237584, 0, -0.971367, 0, 1, 0, 0.971367, 0, 0.237584, 30.2882, 0, -10.525)
+
+[node name="floor_dirt_small_weeds_gltf10" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(0.237584, 0, -0.971367, 0, 1, 0, 0.971367, 0, 0.237584, 29.8802, 0, -8.82645)
+
+[node name="floor_dirt_small_weeds_gltf11" parent="Floor" instance=ExtResource("42_5cd5u")]
+transform = Transform3D(0.237584, 0, -0.971367, 0, 1, 0, 0.971367, 0, 0.237584, 28.5254, 0, -10.8978)
+
+[node name="floor_dirt_large_rocky_gltf3" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4291, -9.53674e-07, -15.8602)
+
+[node name="floor_dirt_large_rocky_gltf4" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4786, -9.53674e-07, -12.0408)
+
+[node name="floor_dirt_large_rocky_gltf5" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.0555, -9.53674e-07, -13.9529)
+
+[node name="floor_dirt_large_rocky_gltf6" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(0.794499, 0, -0.607265, 0, 1, 0, 0.607265, 0, 0.794499, 41.4827, -9.53674e-07, -16.4033)
+
+[node name="floor_dirt_large_rocky_gltf7" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.1166, -9.53674e-07, -13.9529)
+
+[node name="floor_dirt_large_rocky_gltf8" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(0.613321, 0, -0.789834, 0, 1, 0, 0.789834, 0, 0.613321, 39.1166, -9.53674e-07, -10.1739)
+
+[node name="floor_dirt_large_gltf" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7745, 0, -12.3724)
+
+[node name="floor_dirt_large_rocky_gltf11" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(-0.928971, 0, 0.370152, 0, 1, 0, -0.370152, 0, -0.928971, 31.4536, -9.53674e-07, -14.3083)
+
+[node name="floor_dirt_large_rocky_gltf12" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(-0.928971, 0, 0.370152, 0, 1, 0, -0.370152, 0, -0.928971, 32.8214, -9.53674e-07, -17.8746)
+
+[node name="floor_dirt_large_rocky_gltf13" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(-0.928971, 0, 0.370152, 0, 1, 0, -0.370152, 0, -0.928971, 26.0039, -9.53674e-07, -18.5329)
+
+[node name="floor_dirt_large_rocky_gltf14" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(-0.513287, 0, 0.858217, 0, 1, 0, -0.858217, 0, -0.513287, 26.558, -9.53674e-07, -15.6743)
+
+[node name="floor_dirt_large_rocky_gltf15" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(-0.928971, 0, 0.370152, 0, 1, 0, -0.370152, 0, -0.928971, 29.6631, -9.53674e-07, -17.0749)
+
+[node name="floor_dirt_large_rocky_gltf16" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(-0.277399, 0, 0.960755, 0, 1, 0, -0.960755, 0, -0.277399, 31.0619, -9.53674e-07, -20.5854)
+
+[node name="floor_dirt_large_gltf6" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(-0.928971, 0, 0.370152, 0, 1, 0, -0.370152, 0, -0.928971, 36.1397, 0, -16.1956)
+
+[node name="floor_dirt_large_gltf3" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7745, 0, -12.3724)
+
+[node name="floor_dirt_large_rocky_gltf9" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(0.626441, 0, 0.779469, 0, 1, 0, -0.779469, 0, 0.626441, 35.1072, -9.53674e-07, -20.2504)
+
+[node name="floor_dirt_large_rocky_gltf10" parent="Floor" instance=ExtResource("24_qx5br")]
+transform = Transform3D(0.99986, 0, -0.0167195, 0, 1, 0, 0.0167195, 0, 0.99986, 38.0528, -9.53674e-07, -17.8831)
+
+[node name="floor_dirt_large_gltf4" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(0.626441, 0, 0.779469, 0, 1, 0, -0.779469, 0, 0.626441, 32.3662, 0, -14.3169)
+
+[node name="floor_dirt_large_gltf5" parent="Floor" instance=ExtResource("23_0cu80")]
+transform = Transform3D(0.626441, 0, 0.779469, 0, 1, 0, -0.779469, 0, 0.626441, 32.3662, 0, -14.3169)
+
+[node name="rubble_half_gltf2" parent="Floor" instance=ExtResource("36_ushfv")]
+transform = Transform3D(0.650324, 0, 0.759657, 0, 1, 0, -0.759657, 0, 0.650324, 24.6978, 0, -13.1031)
+
+[node name="rubble_large_gltf" parent="Floor" instance=ExtResource("35_qthep")]
+transform = Transform3D(-0.516115, 0, 0.856519, 0, 1, 0, -0.856519, 0, -0.516115, 25.7173, 0, -11.8181)
+
+[node name="rubble_half_gltf" parent="Floor" instance=ExtResource("36_ushfv")]
+transform = Transform3D(0.94011, 0, 0.340872, 0, 1, 0, -0.340872, 0, 0.94011, 33.0982, 0, -5.76536)
+
+[node name="rubble_large_gltf2" parent="Floor" instance=ExtResource("35_qthep")]
+transform = Transform3D(-0.953895, 0, 0.30014, 0, 1, 0, -0.30014, 0, -0.953895, 29.8054, 0, -7.36936)
+
+[node name="rubble_half_gltf3" parent="Floor" instance=ExtResource("36_ushfv")]
+transform = Transform3D(0.817678, 0, -0.575676, 0, 1, 0, 0.575676, 0, 0.817678, 30.8252, 0, -25.3543)
+
+[node name="rubble_large_gltf3" parent="Floor" instance=ExtResource("35_qthep")]
+transform = Transform3D(0.80395, 0, 0.594697, 0, 1, 0, -0.594697, 0, 0.80395, 29.8892, 0, -22.5669)
+
+[node name="rubble_half_gltf4" parent="Floor" instance=ExtResource("36_ushfv")]
+transform = Transform3D(0.428131, 0, -0.903717, 0, 1, 0, 0.903717, 0, 0.428131, 24.3136, 0, -16.2985)
+
+[node name="rubble_large_gltf4" parent="Floor" instance=ExtResource("35_qthep")]
+transform = Transform3D(0.208714, 0, 0.977977, 0, 1, 0, -0.977977, 0, 0.208714, 25.5995, 0, -19.728)
+
+[node name="rubble_large_gltf5" parent="Floor" instance=ExtResource("35_qthep")]
+transform = Transform3D(0.983477, 0, 0.181034, 0, 1, 0, -0.181034, 0, 0.983477, 36.4742, 0, -25.8587)
+
+[node name="rubble_large_gltf6" parent="Floor" instance=ExtResource("35_qthep")]
+transform = Transform3D(0.617146, 0, 0.786849, 0, 1, 0, -0.786849, 0, 0.617146, 31.3733, 0, -25.193)
+
+[node name="Food" type="Node3D" parent="."]
+
+[node name="chair_gltf" parent="Food" instance=ExtResource("16_bkh8d")]
+transform = Transform3D(0.958467, 0, -0.285203, 0, 1, 0, 0.285203, 0, 0.958467, -2.85596, 0, -0.0577674)
+
+[node name="shelf_small_gltf" parent="Food" instance=ExtResource("38_wu83v")]
+transform = Transform3D(0.575933, 0, -0.817497, 0, 1, 0, 0.817497, 0, 0.575933, -6.30477, 0, -3.12885)
+
+[node name="stool_gltf" parent="Food" instance=ExtResource("40_oadnc")]
+transform = Transform3D(0.311904, 0, -0.950114, 0, 1, 0, 0.950114, 0, 0.311904, -4.10766, 4.76837e-07, -1.07847)
+
+[node name="table_long_decorated_A_gltf" parent="Food" instance=ExtResource("42_ybcda")]
+transform = Transform3D(0.795632, 0, 0.60578, 0, 1, 0, -0.60578, 0, 0.795632, -4.94767, 0, 0.680516)
+
+[node name="table_medium_tablecloth_decorated_B_gltf" parent="Food" instance=ExtResource("43_6ycrb")]
+transform = Transform3D(0.311904, 0, -0.950114, 0, 1, 0, 0.950114, 0, 0.311904, -7.636, 0, -1.91213)
+
+[node name="keg_decorated_gltf" parent="Food" instance=ExtResource("30_feps7")]
+transform = Transform3D(0.121783, 0, 0.992557, 0, 1, 0, -0.992557, 0, 0.121783, -9.84829, 0, -3.12116)
+
+[node name="Bed1" type="Node3D" parent="."]
+
+[node name="bed_floor_gltf" parent="Bed1" instance=ExtResource("4_qix14")]
+transform = Transform3D(-0.832892, 0, 0.553435, 0, 1, 0, -0.553435, 0, -0.832892, -1.14508, 4.76837e-07, 2.5779)
+
+[node name="plate_food_A_gltf" parent="Bed1" instance=ExtResource("33_afpv2")]
+transform = Transform3D(-0.322547, 0, -0.946554, 0, 1, 0, 0.946554, 0, -0.322547, -2.65889, 0, 2.25484)
+
+[node name="plate_food_B_gltf" parent="Bed1" instance=ExtResource("34_easjq")]
+transform = Transform3D(-0.322547, 0, -0.946554, 0, 1, 0, 0.946554, 0, -0.322547, -3.19125, 0, 3.24484)
+
+[node name="Bed2" type="Node3D" parent="."]
+
+[node name="bed_floor_gltf2" parent="Bed2" instance=ExtResource("4_qix14")]
+transform = Transform3D(-0.591901, 0, -0.806011, 0, 1, 0, 0.806011, 0, -0.591901, 6.4852, 0, -2.97518)
+
+[node name="table_small_decorated_A_gltf" parent="Bed2" instance=ExtResource("44_shijx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.36943, 0, -3.82223)

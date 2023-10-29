@@ -1,13 +1,14 @@
+res://player/camera_rig.tscn
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
-res://shooting/arrow.tscn
-res://shooting/arrow.gd
-res://player/rogue_hooded.tscn
-res://player/rogue_hooded.gd
-res://player/camera_rig.tscn
 res://playground/playground.tscn
 res://level/level2/hideout.tscn
 res://portal/portal.tscn
 res://level/level_1.tscn
 res://level/level2/level_2.tscn
+res://player/rogue_hooded.tscn
+res://shooting/arrow.tscn
+res://player/barbarian.tscn
+res://player/mage.tscn
+res://hideout/hideout.tscn

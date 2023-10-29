@@ -1,12 +1,14 @@
+Node3D
+AnimatableBody2D
+PathFollow3D
+AnimationTree
 RayCast3D
 CollisionShape3D
 Area3D
-AnimationTree
 Camera3D
 SpringArm3D
 CharacterBody3D
 StaticBody3D
-Node3D
 MeshInstance3D
 CSGBox3D
 Button
@@ -15,7 +17,6 @@ Panel
 VBoxContainer
 Label
 Timer
-PathFollow3D
 Path3D
 VisibleOnScreenEnabler3D
 Marker3D
