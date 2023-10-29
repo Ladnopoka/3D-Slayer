@@ -15,7 +15,12 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 var walking = false
 var target_angle
-var attacks
+var attacks = [
+	"2H_Ranged_Aiming",
+	"2H_Ranged_Reload",
+	"2H_Ranged_Shoot",
+	"2H_Ranged_Shooting"
+]
 
 func _ready():
 	GameManager.set_player(self)
@@ -59,7 +64,9 @@ func _physics_process(delta):
 			walking = false
 			
 	move_and_slide()
-
-
-func _on_skeleton_3d_bone_pose_changed(bone_idx):
-	pass # Replace with function body.
+	if Input.is_action_just_pressed("primary_action"):
+		attack()
+	
+func attack():
+	anim_state.travel(attacks[3])
+	
