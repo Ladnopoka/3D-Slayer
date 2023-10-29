@@ -94,8 +94,10 @@ func attack():
 		model.look_at(Vector3(pos.x, pos.y, pos.z), Vector3(0,1,0))
 		
 	anim_state.travel(attacks[3])
+
 	arrow_instance = arrow.instantiate()
 	arrow_instance.position = crossbow.global_position
 	arrow_instance.transform.basis = crossbow.global_transform.basis
-	arrow_instance.transform.basis.z *= -1
+	arrow_instance.rotate(Vector3(0, 1, 0), deg_to_rad(180))
+
 	get_parent().add_child(arrow_instance)
