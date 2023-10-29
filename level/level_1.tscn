@@ -20,6 +20,7 @@ transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0
 shadow_enabled = true
 
 [node name="camera_rig" parent="." instance=ExtResource("5_jkxt3")]
+visible = false
 
 [node name="Floor2" type="StaticBody3D" parent="."]
 

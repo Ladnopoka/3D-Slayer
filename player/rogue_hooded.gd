@@ -10,6 +10,7 @@ const ACCELERATION = 8
 @onready var anim_tree = $AnimationTree
 @onready var anim_state = $AnimationTree.get("parameters/playback")
 
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
@@ -21,6 +22,8 @@ var attacks = [
 	"2H_Ranged_Shoot",
 	"2H_Ranged_Shooting"
 ]
+
+var attack_direction
 
 func _ready():
 	GameManager.set_player(self)
@@ -68,5 +71,14 @@ func _physics_process(delta):
 		attack()
 	
 func attack():
-	anim_state.travel(attacks[3])
+	var mouse_position = get_viewport().get_mouse_position()
+#	#var world_mouse_position = camera_rig.unproject_position(mouse_position)
+#
+#	var direction = world_mouse_position - model.global_transform.origin
+#	direction.y = 0 # Since we're not considering the y-axis.
+#	direction = direction.normalized()
+#
+#	var target_angle = atan2(direction.x, direction.z)
+#	model.rotation.y = target_angle
 	
+	anim_state.travel(attacks[3])
