@@ -1,0 +1,130 @@
+[gd_scene load_steps=6 format=3 uid="uid://muq1yk7w0c1h"]
+
+[ext_resource type="Texture2D" uid="uid://befbx2j60m08y" path="res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Bonus_Level_Base.png" id="1_ijdx3"]
+[ext_resource type="Texture2D" uid="uid://ddk1b7fdnqiry" path="res://assets/HealthGlobe/Globe_Red.png" id="2_aaqas"]
+[ext_resource type="Texture2D" uid="uid://v43dje64fmy4" path="res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Main_Button_Overlay.png" id="3_hk3rv"]
+[ext_resource type="Texture2D" uid="uid://lphqff08vli7" path="res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Corner.png" id="4_cqeql"]
+[ext_resource type="Texture2D" uid="uid://b4l1kwkjr5ar3" path="res://assets/HealthGlobe/Globe_Blue.png" id="5_xyk6f"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="HealthGlobe" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -250.0
+offset_right = 250.0
+grow_vertical = 0
+
+[node name="GlobeFull" type="TextureRect" parent="HealthGlobe"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -235.0
+offset_bottom = 235.0
+grow_horizontal = 0
+texture = ExtResource("1_ijdx3")
+expand_mode = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HealthGlobe/GlobeFull"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.5
+offset_top = -117.5
+offset_right = 119.5
+offset_bottom = 118.5
+grow_horizontal = 2
+grow_vertical = 2
+value = 70.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_progress = ExtResource("2_aaqas")
+
+[node name="GlobeTransparent" type="TextureRect" parent="HealthGlobe"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -235.0
+offset_bottom = 235.0
+grow_horizontal = 0
+texture = ExtResource("3_hk3rv")
+
+[node name="DecoCorner" type="TextureRect" parent="HealthGlobe"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -185.0
+offset_right = 185.0
+grow_vertical = 0
+texture = ExtResource("4_cqeql")
+expand_mode = 1
+flip_v = true
+
+[node name="ManaGlobe" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -250.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="GlobeFull" type="TextureRect" parent="ManaGlobe"]
+layout_mode = 1
+offset_right = 235.0
+offset_bottom = 235.0
+texture = ExtResource("1_ijdx3")
+expand_mode = 1
+flip_h = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="ManaGlobe/GlobeFull"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.5
+offset_top = -117.5
+offset_right = 119.5
+offset_bottom = 118.5
+grow_horizontal = 2
+grow_vertical = 2
+value = 70.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_progress = ExtResource("5_xyk6f")
+
+[node name="GlobeTransparent" type="TextureRect" parent="ManaGlobe"]
+layout_mode = 1
+offset_right = 235.0
+offset_bottom = 235.0
+texture = ExtResource("3_hk3rv")
+flip_h = true
+
+[node name="DecoCorner" type="TextureRect" parent="ManaGlobe"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -185.0
+offset_top = -185.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_cqeql")
+expand_mode = 1
+flip_h = true
+flip_v = true
