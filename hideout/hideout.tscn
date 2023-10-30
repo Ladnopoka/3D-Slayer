@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dh7eqkenjyvhp"]
+[gd_scene load_steps=30 format=3 uid="uid://dh7eqkenjyvhp"]
 
 [ext_resource type="PackedScene" uid="uid://dawwbik4sgvk7" path="res://player/barbarian.tscn" id="1_1hty5"]
 [ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage.tscn" id="2_asybh"]
@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://v0g3wjjembau" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_B.gltf.glb" id="34_easjq"]
 [ext_resource type="PackedScene" uid="uid://dguci4kg4lvkn" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_large.gltf.glb" id="35_qthep"]
 [ext_resource type="PackedScene" uid="uid://bx1h7nu55x7g2" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_half.gltf.glb" id="36_ushfv"]
-[ext_resource type="PackedScene" uid="uid://dbqe4ok0o5jgm" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/shelf_small.gltf.glb" id="38_wu83v"]
 [ext_resource type="PackedScene" uid="uid://bpkc4doatcokf" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_C.gltf.glb" id="39_6ejr4"]
 [ext_resource type="PackedScene" uid="uid://cbvkgdxcy2odg" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stool.gltf.glb" id="40_oadnc"]
 [ext_resource type="PackedScene" uid="uid://ckwf8jm55ofeq" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_D.gltf.glb" id="41_1r38l"]
@@ -299,9 +298,6 @@ transform = Transform3D(0.617146, 0, 0.786849, 0, 1, 0, -0.786849, 0, 0.617146, 
 
 [node name="chair_gltf" parent="Food" instance=ExtResource("16_bkh8d")]
 transform = Transform3D(0.958467, 0, -0.285203, 0, 1, 0, 0.285203, 0, 0.958467, -2.85596, 0, -0.0577674)
-
-[node name="shelf_small_gltf" parent="Food" instance=ExtResource("38_wu83v")]
-transform = Transform3D(0.575933, 0, -0.817497, 0, 1, 0, 0.817497, 0, 0.575933, -6.30477, 0, -3.12885)
 
 [node name="stool_gltf" parent="Food" instance=ExtResource("40_oadnc")]
 transform = Transform3D(0.311904, 0, -0.950114, 0, 1, 0, 0.950114, 0, 0.311904, -4.10766, 4.76837e-07, -1.07847)

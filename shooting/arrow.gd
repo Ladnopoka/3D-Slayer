@@ -1,6 +1,6 @@
 extends Node3D
 
-const SPEED = 40.0
+const SPEED = 20.0
 const SPIN_SPEED = 720
 
 @onready var arrow_2 = $arrow2
