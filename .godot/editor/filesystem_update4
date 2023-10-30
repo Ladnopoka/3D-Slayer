@@ -9,6 +9,6 @@ res://level/level_1.tscn
 res://level/level2/level_2.tscn
 res://player/rogue_hooded.tscn
 res://shooting/arrow.tscn
+res://hideout/hideout.tscn
 res://player/barbarian.tscn
 res://player/mage.tscn
-res://hideout/hideout.tscn
