@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7qmfsolb52kj"
+path="res://.godot/imported/eyes_broken.obj-8e0df08f4d78f13b5e4262b45c23ed29.mesh"
+
+[deps]
+
+files=["res://.godot/imported/eyes_broken.obj-8e0df08f4d78f13b5e4262b45c23ed29.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/assets/obj/eyes_broken.obj"
+dest_files=["res://.godot/imported/eyes_broken.obj-8e0df08f4d78f13b5e4262b45c23ed29.mesh", "res://.godot/imported/eyes_broken.obj-8e0df08f4d78f13b5e4262b45c23ed29.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

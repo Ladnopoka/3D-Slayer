@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ko40ppmonhvc"
+path="res://.godot/imported/shield_arrows.obj-b020a6c852ab17cbde9613cd6639be16.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shield_arrows.obj-b020a6c852ab17cbde9613cd6639be16.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/assets/obj/shield_arrows.obj"
+dest_files=["res://.godot/imported/shield_arrows.obj-b020a6c852ab17cbde9613cd6639be16.mesh", "res://.godot/imported/shield_arrows.obj-b020a6c852ab17cbde9613cd6639be16.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

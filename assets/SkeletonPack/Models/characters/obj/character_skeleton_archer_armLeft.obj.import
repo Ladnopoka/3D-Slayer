@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3lxylmsn5goc"
+path="res://.godot/imported/character_skeleton_archer_armLeft.obj-bcb384ac44de4419c3bc31be56ff73da.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_skeleton_archer_armLeft.obj-bcb384ac44de4419c3bc31be56ff73da.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/characters/obj/character_skeleton_archer_armLeft.obj"
+dest_files=["res://.godot/imported/character_skeleton_archer_armLeft.obj-bcb384ac44de4419c3bc31be56ff73da.mesh", "res://.godot/imported/character_skeleton_archer_armLeft.obj-bcb384ac44de4419c3bc31be56ff73da.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

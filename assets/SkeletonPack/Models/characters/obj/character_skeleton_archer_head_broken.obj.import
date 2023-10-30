@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://biht0stbm1vhs"
+path="res://.godot/imported/character_skeleton_archer_head_broken.obj-14f436c86800863b08b258f5b1ba65bf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_skeleton_archer_head_broken.obj-14f436c86800863b08b258f5b1ba65bf.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/characters/obj/character_skeleton_archer_head_broken.obj"
+dest_files=["res://.godot/imported/character_skeleton_archer_head_broken.obj-14f436c86800863b08b258f5b1ba65bf.mesh", "res://.godot/imported/character_skeleton_archer_head_broken.obj-14f436c86800863b08b258f5b1ba65bf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

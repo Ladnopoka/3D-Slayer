@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dk2sr062xmy4q"
+path="res://.godot/imported/character_skeleton_archer_jaw_broken.obj-539ff9070be4215d3aef49b38fd7b57d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_skeleton_archer_jaw_broken.obj-539ff9070be4215d3aef49b38fd7b57d.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/characters/obj/character_skeleton_archer_jaw_broken.obj"
+dest_files=["res://.godot/imported/character_skeleton_archer_jaw_broken.obj-539ff9070be4215d3aef49b38fd7b57d.mesh", "res://.godot/imported/character_skeleton_archer_jaw_broken.obj-539ff9070be4215d3aef49b38fd7b57d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

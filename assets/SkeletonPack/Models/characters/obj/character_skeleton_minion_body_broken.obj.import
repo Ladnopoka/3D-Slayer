@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://571yw4x6whg3"
+path="res://.godot/imported/character_skeleton_minion_body_broken.obj-46faffdc5c86612f42368ed83b9ecde9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_skeleton_minion_body_broken.obj-46faffdc5c86612f42368ed83b9ecde9.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/characters/obj/character_skeleton_minion_body_broken.obj"
+dest_files=["res://.godot/imported/character_skeleton_minion_body_broken.obj-46faffdc5c86612f42368ed83b9ecde9.mesh", "res://.godot/imported/character_skeleton_minion_body_broken.obj-46faffdc5c86612f42368ed83b9ecde9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

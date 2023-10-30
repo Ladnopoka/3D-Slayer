@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c17va40jgyr0v"
+path="res://.godot/imported/arrow_purple_half.obj-192fd9ea494be34143f2b75989fb5a93.mesh"
+
+[deps]
+
+files=["res://.godot/imported/arrow_purple_half.obj-192fd9ea494be34143f2b75989fb5a93.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/assets/obj/arrow_purple_half.obj"
+dest_files=["res://.godot/imported/arrow_purple_half.obj-192fd9ea494be34143f2b75989fb5a93.mesh", "res://.godot/imported/arrow_purple_half.obj-192fd9ea494be34143f2b75989fb5a93.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

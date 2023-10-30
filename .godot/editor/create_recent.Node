@@ -1,3 +1,5 @@
+CollisionShape3D
+CharacterBody3D
 TextureProgressBar
 TextureRect
 Control
@@ -8,11 +10,9 @@ AnimatableBody2D
 PathFollow3D
 AnimationTree
 RayCast3D
-CollisionShape3D
 Area3D
 Camera3D
 SpringArm3D
-CharacterBody3D
 StaticBody3D
 CSGBox3D
 Button
@@ -30,4 +30,3 @@ LineEdit
 HBoxContainer
 BoxContainer
 SubViewport
-SubViewportContainer

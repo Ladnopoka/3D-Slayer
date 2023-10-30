@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dq68ysp5rixf5"
+path="res://.godot/imported/bone.obj-fac50c093c25542f15926949bf45b78d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bone.obj-fac50c093c25542f15926949bf45b78d.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/assets/obj/bone.obj"
+dest_files=["res://.godot/imported/bone.obj-fac50c093c25542f15926949bf45b78d.mesh", "res://.godot/imported/bone.obj-fac50c093c25542f15926949bf45b78d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
