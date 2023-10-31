@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dxg8j6ib58m4w"
+path="res://.godot/imported/sword_broken_half.obj-2ec29004af720d7ec54170afa64fc693.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sword_broken_half.obj-2ec29004af720d7ec54170afa64fc693.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/assets/obj/sword_broken_half.obj"
+dest_files=["res://.godot/imported/sword_broken_half.obj-2ec29004af720d7ec54170afa64fc693.mesh", "res://.godot/imported/sword_broken_half.obj-2ec29004af720d7ec54170afa64fc693.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

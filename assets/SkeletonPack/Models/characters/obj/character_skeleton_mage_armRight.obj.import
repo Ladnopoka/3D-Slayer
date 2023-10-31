@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://m6j60ka0hj10"
+path="res://.godot/imported/character_skeleton_mage_armRight.obj-a7b8d475faff62690600901d8041f512.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_skeleton_mage_armRight.obj-a7b8d475faff62690600901d8041f512.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/characters/obj/character_skeleton_mage_armRight.obj"
+dest_files=["res://.godot/imported/character_skeleton_mage_armRight.obj-a7b8d475faff62690600901d8041f512.mesh", "res://.godot/imported/character_skeleton_mage_armRight.obj-a7b8d475faff62690600901d8041f512.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

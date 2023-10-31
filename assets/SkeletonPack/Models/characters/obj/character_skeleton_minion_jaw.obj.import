@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://db1h1wumnk2vs"
+path="res://.godot/imported/character_skeleton_minion_jaw.obj-a1dc61cf1609f7819374563e7794d86e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_skeleton_minion_jaw.obj-a1dc61cf1609f7819374563e7794d86e.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/characters/obj/character_skeleton_minion_jaw.obj"
+dest_files=["res://.godot/imported/character_skeleton_minion_jaw.obj-a1dc61cf1609f7819374563e7794d86e.mesh", "res://.godot/imported/character_skeleton_minion_jaw.obj-a1dc61cf1609f7819374563e7794d86e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

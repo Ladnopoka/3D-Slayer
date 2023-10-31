@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drefi45bmpy2b"
+path="res://.godot/imported/character_skeleton_warrior_armLeft_broken.obj-b06b1abd1fe07b8c36b4f05d2a29b228.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_skeleton_warrior_armLeft_broken.obj-b06b1abd1fe07b8c36b4f05d2a29b228.mesh"]
+
+source_file="res://assets/SkeletonPack/Models/characters/obj/character_skeleton_warrior_armLeft_broken.obj"
+dest_files=["res://.godot/imported/character_skeleton_warrior_armLeft_broken.obj-b06b1abd1fe07b8c36b4f05d2a29b228.mesh", "res://.godot/imported/character_skeleton_warrior_armLeft_broken.obj-b06b1abd1fe07b8c36b4f05d2a29b228.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

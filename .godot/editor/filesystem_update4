@@ -12,6 +12,9 @@ res://shooting/arrow.tscn
 res://hideout/hideout.tscn
 res://player/barbarian.tscn
 res://player/mage.tscn
-res://shooting/arrow.gd
-res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Readme.txt
 res://ui/ui.tscn
+res://mob/knight.tscn
+res://mob/knight.gd
+res://player/rogue_hooded.gd
+res://level/level2/level_2.gd
+res://addons/main-screen/main-screen.tscn
