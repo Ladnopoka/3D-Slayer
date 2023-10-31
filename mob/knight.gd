@@ -23,8 +23,7 @@ func _process(delta):
 			navigation_agent.set_target_position(player.global_transform.origin)
 			var next_nav_point = navigation_agent.get_next_path_position()
 			velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
-			look_at(Vector3(global_position.x + velocity.x, global_position.y, 
-							global_position.z + velocity.z), Vector3.UP)
+			rotation.y = lerp_angle(rotation.y, atan2(-velocity.x, -velocity.z), delta*10)
 		"1H_Melee_Attack_Chop":
 			look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	
