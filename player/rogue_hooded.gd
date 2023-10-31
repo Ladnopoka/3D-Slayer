@@ -96,8 +96,6 @@ func _physics_process(delta):
 		anim_state.travel("IWR")
 		attacking = false
 	
-	print("Walking: ", walking)
-	print("Idle: ", idling)
 	anim_tree.set("parameters/conditions/run", walking)
 	
 	
@@ -120,7 +118,12 @@ func attack():
 	
 	if intersection.size() > 0:
 		var pos = intersection.position
-		model.look_at(Vector3(pos.x, pos.y, pos.z), Vector3(0,1,0))
+		var direction_to_pos = pos - model.global_position
+		
+		if direction_to_pos.length() > 0.5:
+			direction_to_pos.y = 0  # Reset the vertical component to prevent shooting into the sky in isometric view.
+			var look_at_pos = model.global_position + direction_to_pos
+			model.look_at(look_at_pos, Vector3(0, 1, 0))
 
 	arrow_instance = arrow.instantiate()
 	arrow_instance.position = crossbow.global_position
