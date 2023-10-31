@@ -11,7 +11,7 @@ const HIT_STAGGER = 25.0
 @onready var anim_tree = $AnimationTree
 @onready var anim_state = $AnimationTree.get("parameters/playback")
 @onready var camera_rig = $camera_rig
-@onready var crossbow = $"Rig/Skeleton3D/2H_Crossbow"
+@onready var crossbow = $"Rig/Skeleton3D/2H_Crossbow/2H_Crossbow/RayCast3D"
 
 #signal
 signal player_hit
@@ -77,7 +77,7 @@ func _physics_process(delta):
 			walking = false
 			
 	move_and_slide()
-	if Input.is_action_just_pressed("primary_action"):
+	if Input.is_action_pressed("primary_action"):
 		attack()
 	
 func attack():

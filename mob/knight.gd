@@ -3,7 +3,7 @@ extends CharacterBody3D
 var player = null
 var state_machine
 
-const SPEED = 3.0
+const SPEED = 7.0
 const ATTACK_RANGE = 2
 
 @export var player_path := "/root/Level2/Rogue_Hooded"
