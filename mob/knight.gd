@@ -2,9 +2,11 @@ extends CharacterBody3D
 
 var player = null
 const SPEED = 3.0
+const ATTACK_RANGE = 2.5
 
 @export var player_path : NodePath
 @onready var navigation_agent = $NavigationAgent3D
+@onready var animation_tree = $AnimationTree
 
 func _ready():
 	player = $"../../Rogue_Hooded"
@@ -19,5 +21,10 @@ func _process(delta):
 	
 	look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	
-	move_and_slide()
+	#conditions
+	animation_tree.set("parameters/conditions/attack", _target_in_range())
 	
+	move_and_slide()
+
+func _target_in_range():
+	return global_position.distance_to(player.global_position) < ATTACK_RANGE
