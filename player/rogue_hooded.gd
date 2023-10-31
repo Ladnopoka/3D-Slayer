@@ -72,22 +72,21 @@ func _physics_process(delta):
 		var vl = velocity * model.transform.basis
 		target_blend_position = Vector2(vl.x, -vl.z) / SPEED
 		
-		current_blend_position = current_blend_position.lerp(target_blend_position, blend_lerp_speed * delta)
-		anim_tree.set("parameters/IWR/blend_position", current_blend_position)
-		
-		if !walking:
-			walking = true
-			idling = false
+		walking = true
+		idling = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 		if walking:
-			anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0)) # Reset to Idle position
+			target_blend_position = Vector2(0, 0) # Reset to Idle position
 			walking = false
 			idling = true
-			
+	
+	current_blend_position = current_blend_position.lerp(target_blend_position, blend_lerp_speed * delta)
+	anim_tree.set("parameters/IWR/blend_position", current_blend_position)
 	move_and_slide()
+	
 	if Input.is_action_pressed("primary_action"):
 		attack()
 	
