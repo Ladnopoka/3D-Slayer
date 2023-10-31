@@ -66,4 +66,41 @@ offset_right = 587.0
 offset_bottom = 321.0
 color = Color(1, 0, 0, 0.478431)
 
+[node name="Spawns" type="Node3D" parent="."]
+
+[node name="Spawn1" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5215, 0, -24.7986)
+
+[node name="Spawn2" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5215, 0, -8.63223)
+
+[node name="Spawn3" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6632, 0, -24.6978)
+
+[node name="Spawn4" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82736, 0, -24.6978)
+
+[node name="Spawn5" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82736, 0, -10.0263)
+
+[node name="Spawn6" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82736, 0, 10.7148)
+
+[node name="Spawn7" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7794, 0, 10.7148)
+
+[node name="Spawn8" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7794, 0, 24.5392)
+
+[node name="Spawn9" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5029, 0, 24.5392)
+
+[node name="Spawn10" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5029, 0, 24.5392)
+
+[node name="KnightSpawnTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [connection signal="player_hit" from="Rogue_Hooded" to="." method="_on_rogue_hooded_player_hit"]
+[connection signal="timeout" from="KnightSpawnTimer" to="." method="_on_knight_spawn_timer_timeout"]

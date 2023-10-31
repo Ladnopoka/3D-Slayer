@@ -1,3 +1,5 @@
+Timer
+Node3D
 ColorRect
 Control
 AnimationTree
@@ -9,7 +11,6 @@ TextureProgressBar
 TextureRect
 CanvasLayer
 MeshInstance3D
-Node3D
 AnimatableBody2D
 PathFollow3D
 RayCast3D
@@ -23,11 +24,9 @@ CSGCombiner3D
 Panel
 VBoxContainer
 Label
-Timer
 Path3D
 VisibleOnScreenEnabler3D
 Marker3D
 Node
 Label3D
 LineEdit
-HBoxContainer
