@@ -5,7 +5,7 @@ const JUMP_VELOCITY = 4.5
 const ROTATION_SPEED = 7
 const ACCELERATION = 8
 const HIT_STAGGER = 25.0
-const CROSSFADE_TIME = 0.2
+const CROSSFADE_TIME = 0.1
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
