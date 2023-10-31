@@ -20,6 +20,7 @@ signal player_hit
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 var walking = false
+var idling = false
 var target_angle
 var attacks = [
 	"2H_Ranged_Aiming",
@@ -68,6 +69,7 @@ func _physics_process(delta):
 		
 		if !walking:
 			walking = true
+			idling = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -75,12 +77,16 @@ func _physics_process(delta):
 		if walking:
 			anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0)) # Reset to Idle position
 			walking = false
+			idling = true
 			
 	move_and_slide()
 	if Input.is_action_pressed("primary_action"):
 		attack()
 	
+	print("Walking: ", walking)
+	print("Idle: ", idling)
 	anim_tree.set("parameters/conditions/run", walking)
+	
 	
 func attack():
 	if walking:
