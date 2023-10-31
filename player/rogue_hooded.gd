@@ -104,35 +104,37 @@ func _physics_process(delta):
 func attack():
 	if walking:
 		return
-	
-	#var current_time = Time.get_ticks_msec() / 1000.0
-	
-	#if current_time - arrow_last_shot_time < arrow_cooldown_time:
-		#return
-		
-	if not attacking:
-		anim_state.travel(attacks[3])
-		attacking = true
-	
-	#arrow_last_shot_time = current_time # Update the last shot time.
-	
+	# Always update orientation, regardless of cooldown
+	update_orientation()
+
+	var current_time = Time.get_ticks_msec() / 1000.0
+	if current_time - arrow_last_shot_time >= arrow_cooldown_time:
+		shoot_arrow()
+		arrow_last_shot_time = current_time
+
+func update_orientation():
+	# All the logic related to updating the character's orientation goes here
 	var space_state = get_world_3d().direct_space_state
 	mouse_position = get_viewport().get_mouse_position()
-	
-	rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position) # set the ray end point
-	rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000 # set the ray end point
-	
+
+	rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position)
+	rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000
+
 	var query = PhysicsRayQueryParameters3D.create(rayOrigin, rayEnd); 
 	var intersection = space_state.intersect_ray(query)
-	
+
 	if intersection.size() > 0:
 		var pos = intersection.position
 		var direction_to_pos = pos - model.global_position
-		
+
 		if direction_to_pos.length() > 0.5:
-			direction_to_pos.y = 0  # Reset the vertical component to prevent shooting into the sky in isometric view.
+			direction_to_pos.y = 0
 			var look_at_pos = model.global_position + direction_to_pos
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
+
+func shoot_arrow():
+	# The logic related to shooting an arrow goes here
+	anim_state.travel(attacks[3])
 
 	arrow_instance = arrow.instantiate()
 	arrow_instance.position = crossbow.global_position
