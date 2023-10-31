@@ -4,6 +4,7 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 const ROTATION_SPEED = 7
 const ACCELERATION = 8
+const HIT_STAGGER = 25.0
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
@@ -11,6 +12,9 @@ const ACCELERATION = 8
 @onready var anim_state = $AnimationTree.get("parameters/playback")
 @onready var camera_rig = $camera_rig
 @onready var crossbow = $"Rig/Skeleton3D/2H_Crossbow"
+
+#signal
+signal player_hit
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -101,3 +105,7 @@ func attack():
 	arrow_instance.rotate(Vector3(0, 1, 0), deg_to_rad(180))
 
 	get_parent().add_child(arrow_instance)
+	
+func hit(dir):
+	emit_signal("player_hit")
+	velocity += dir * HIT_STAGGER

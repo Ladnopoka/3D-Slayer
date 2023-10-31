@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://8peso6o0rjkd"]
+[gd_scene load_steps=9 format=3 uid="uid://8peso6o0rjkd"]
 
 [ext_resource type="PackedScene" uid="uid://c37wuwytgsx2i" path="res://level/level2/hideout.tscn" id="1_865yb"]
+[ext_resource type="Script" path="res://level/level2/level_2.gd" id="1_q2mgw"]
 [ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue_hooded.tscn" id="2_tshh2"]
 [ext_resource type="PackedScene" uid="uid://cchcp636iid71" path="res://mob/knight.tscn" id="3_wudel"]
 
@@ -19,6 +20,7 @@ material = SubResource("StandardMaterial3D_fdyj3")
 size = Vector3(2, 2, 0)
 
 [node name="Level2" type="Node3D"]
+script = ExtResource("1_q2mgw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
@@ -48,3 +50,20 @@ shape = SubResource("BoxShape3D_imstk")
 
 [node name="Rogue_Hooded" parent="." instance=ExtResource("2_tshh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.9577)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = -127.0
+offset_top = -76.0
+offset_right = 587.0
+offset_bottom = 321.0
+color = Color(1, 0, 0, 0.478431)
+
+[connection signal="player_hit" from="Rogue_Hooded" to="." method="_on_rogue_hooded_player_hit"]
