@@ -6,7 +6,7 @@ var state_machine
 const SPEED = 3.0
 const ATTACK_RANGE = 2
 
-@export var player_path : NodePath
+@export var player_path := "/root/Level2/Rogue_Hooded"
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
 
