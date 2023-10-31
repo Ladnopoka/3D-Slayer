@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698677340
+::res://::1698770989
 icon.svg::CompressedTexture2D::3540083071793652844::1696266044::1696266048::1::::<><>::
 Ideas.txt::TextFile::-1::1698346894::0::1::::<><>::
 ::res://addons/::1698509331
@@ -112,11 +112,11 @@ barbarian_texture.png::CompressedTexture2D::8740070791548076579::1698509331::169
 knight_texture.png::CompressedTexture2D::4082466936979725701::1698509331::1698509331::1::::<><>::
 mage_texture.png::CompressedTexture2D::1152170716718806194::1698509331::1698509331::1::::<><>::
 rogue_texture.png::CompressedTexture2D::2318211081326860614::1698509331::1698509331::1::::<><>::
-::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/::1698614412
+::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/::1698683156
 Barbarian.glb::PackedScene::7033820882166817364::1698509331::1698614404::1::::<><>::uid://bu5vyax1pl572
 Barbarian_barbarian_texture.png::CompressedTexture2D::3853446841709691035::1698509331::1698509331::1::::<><>::
 barbarian_texture.png::CompressedTexture2D::7123164923511664285::1698509331::1698509331::1::::<><>::
-Knight.glb::PackedScene::2832682571632275360::1698509331::1698509331::1::::<><>::
+Knight.glb::PackedScene::2832682571632275360::1698509331::1698683156::1::::<><>::
 Knight_knight_texture.png::CompressedTexture2D::7067964899635790780::1698509331::1698509331::1::::<><>::
 knight_texture.png::CompressedTexture2D::6259559182657034391::1698509331::1698509331::1::::<><>::
 Mage.glb::PackedScene::5371010841288481735::1698509331::1698614412::1::::<><>::uid://0y6quu11guul
@@ -784,7 +784,7 @@ forground_shader_2.gdshader::Shader::-1::1698507010::0::1::::<><>::
 ::res://assets/SkeletonPack/::1698679644
 ::res://assets/SkeletonPack/Models/::1698679644
 ::res://assets/SkeletonPack/Models/assets/::1698679644
-::res://assets/SkeletonPack/Models/assets/dae/::1698679644
+::res://assets/SkeletonPack/Models/assets/dae/::1698679656
 arrow_green.dae::PackedScene::8118480256883733697::1631972757::1698679654::1::::<><>::
 arrow_green_broken.dae::PackedScene::3718543172256896234::1631972757::1698679654::1::::<><>::
 arrow_green_broken_half.dae::PackedScene::8471038098384212122::1631972757::1698679654::1::::<><>::
@@ -815,7 +815,7 @@ spellbook.dae::PackedScene::5246400461238017226::1631972757::1698679652::1::::<>
 sword_broken.dae::PackedScene::3081016921292440974::1631972757::1698679652::1::::<><>::
 sword_broken_half.dae::PackedScene::954327669558519591::1631972757::1698679653::1::::<><>::
 ::res://assets/SkeletonPack/Models/assets/fbx/::1698679644
-::res://assets/SkeletonPack/Models/assets/gltf/::1698679644
+::res://assets/SkeletonPack/Models/assets/gltf/::1698679661
 arrow_green.gltf.glb::PackedScene::2035378256377572976::1631972710::1698679653::1::::<><>::
 arrow_green_broken.gltf.glb::PackedScene::5772579348008897995::1631972710::1698679653::1::::<><>::
 arrow_green_broken_half.gltf.glb::PackedScene::1188219220671112769::1631972710::1698679654::1::::<><>::
@@ -845,7 +845,7 @@ skull_broken.glb::PackedScene::5865574616178290625::1631973749::1698679661::1:::
 spellbook.gltf.glb::PackedScene::4115648898177925645::1631972711::1698679661::1::::<><>::
 sword_broken.gltf.glb::PackedScene::1301829318052588402::1631972711::1698679656::1::::<><>::
 sword_broken_half.gltf.glb::PackedScene::6707827813575752598::1631972711::1698679656::1::::<><>::
-::res://assets/SkeletonPack/Models/assets/obj/::1698679644
+::res://assets/SkeletonPack/Models/assets/obj/::1698679652
 arrow_green.obj::Mesh::353146259647960212::1631972799::1698679651::1::::<><>::
 arrow_green_broken.obj::Mesh::7232974336694150490::1631972799::1698679651::1::::<><>::
 arrow_green_broken_half.obj::Mesh::8479204550339777693::1631972799::1698679651::1::::<><>::
@@ -880,7 +880,7 @@ spellbook.obj::Mesh::2408879342113642630::1631972799::1698679649::1::::<><>::
 sword_broken.obj::Mesh::3362021047463306356::1631972799::1698679650::1::::<><>::
 sword_broken_half.obj::Mesh::8788013094853971240::1631972799::1698679650::1::::<><>::
 ::res://assets/SkeletonPack/Models/characters/::1698679644
-::res://assets/SkeletonPack/Models/characters/dae/::1698679644
+::res://assets/SkeletonPack/Models/characters/dae/::1698679659
 character_skeleton_archer.dae::PackedScene::817959241141993148::1631975458::1698679659::1::::<><>::
 character_skeleton_archer_broken.dae::PackedScene::4843107203905499804::1631975473::1698679659::1::::<><>::
 character_skeleton_mage.dae::PackedScene::338998622130894259::1631975491::1698679659::1::::<><>::
@@ -890,7 +890,7 @@ character_skeleton_minion_broken.dae::PackedScene::8790942487286213091::16319753
 character_skeleton_warrior.dae::PackedScene::6177731970726359792::1631975422::1698679658::1::::<><>::
 character_skeleton_warrior_broken.dae::PackedScene::1569656381823362021::1631975437::1698679658::1::::<><>::
 ::res://assets/SkeletonPack/Models/characters/fbx/::1698679644
-::res://assets/SkeletonPack/Models/characters/gltf/::1698679644
+::res://assets/SkeletonPack/Models/characters/gltf/::1698679658
 character_skeleton_archer.gltf::PackedScene::6815840090426463233::1631975238::1698679658::1::::<><>::
 character_skeleton_archer_broken.gltf::PackedScene::4528484814695858499::1631975248::1698679658::1::::<><>::
 character_skeleton_mage.gltf::PackedScene::565161221048379944::1631975264::1698679657::1::::<><>::
@@ -899,7 +899,7 @@ character_skeleton_minion.gltf::PackedScene::3408900463912622285::1631975111::16
 character_skeleton_minion_broken.gltf::PackedScene::7879186205967620062::1631975173::1698679657::1::::<><>::
 character_skeleton_warrior.gltf::PackedScene::5858993152046018326::1631975191::1698679657::1::::<><>::
 character_skeleton_warrior_broken.gltf::PackedScene::6236828220987899699::1631975216::1698679657::1::::<><>::
-::res://assets/SkeletonPack/Models/characters/obj/::1698679644
+::res://assets/SkeletonPack/Models/characters/obj/::1698679651
 character_skeleton_archer_armLeft.obj::Mesh::1989435724177811574::1631975541::1698679650::1::::<><>::
 character_skeleton_archer_armLeft_broken.obj::Mesh::5245979000830125660::1631975541::1698679650::1::::<><>::
 character_skeleton_archer_armRight.obj::Mesh::2081467430856613622::1631975541::1698679650::1::::<><>::
@@ -975,6 +975,8 @@ floor_material - Copy (4).tres::StandardMaterial3D::6326398115674201070::1698507
 floor_material - Copy.tres::StandardMaterial3D::6506583956968400161::1698507010::0::1::::<><>::uid://c24xbijughc4w
 floor_material.tres::StandardMaterial3D::324023740436286422::1698509275::0::1::::<><>::uid://crj4j4bysdb1e
 wall_material.tres::StandardMaterial3D::2049049828431529787::1698509275::0::1::::<><>::uid://cwajncyw48ps0
+::res://mob/::1698683454
+knight.tscn::PackedScene::4927819592732677638::1698683454::0::1::::<><>::uid://c7x1l40dia4qi::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Knight_knight_texture.png
 ::res://player/::1698679391
 barbarian.tscn::PackedScene::7206016358280172472::1698679391::0::1::::<><>::uid://c7hiacvooqb8o::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Barbarian.glb
 camera_rig.tscn::PackedScene::6392152817220939938::1698679390::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
