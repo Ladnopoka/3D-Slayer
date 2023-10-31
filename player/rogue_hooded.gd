@@ -36,6 +36,8 @@ var attack_direction
 
 var arrow = load("res://shooting/arrow.tscn")
 var arrow_instance
+var arrow_cooldown_time = 0.2 # Cooldown time in seconds, e.g., 1 arrow per second.
+var arrow_last_shot_time = -0.2 # A variable to keep track of the last shot time.
 
 var current_blend_position = Vector2(0, 0)
 var target_blend_position = Vector2(0, 0)
@@ -102,10 +104,17 @@ func _physics_process(delta):
 func attack():
 	if walking:
 		return
+	
+	#var current_time = Time.get_ticks_msec() / 1000.0
+	
+	#if current_time - arrow_last_shot_time < arrow_cooldown_time:
+		#return
 		
 	if not attacking:
 		anim_state.travel(attacks[3])
 		attacking = true
+	
+	#arrow_last_shot_time = current_time # Update the last shot time.
 	
 	var space_state = get_world_3d().direct_space_state
 	mouse_position = get_viewport().get_mouse_position()
