@@ -17,3 +17,4 @@ res://mob/knight.tscn
 res://mob/knight.gd
 res://player/rogue_hooded.gd
 res://level/level2/level_2.gd
+res://addons/main-screen/main-screen.tscn
