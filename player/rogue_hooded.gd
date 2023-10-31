@@ -5,6 +5,7 @@ const JUMP_VELOCITY = 4.5
 const ROTATION_SPEED = 7
 const ACCELERATION = 8
 const HIT_STAGGER = 25.0
+const CROSSFADE_TIME = 0.2
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
@@ -36,6 +37,10 @@ var attack_direction
 var arrow = load("res://shooting/arrow.tscn")
 var arrow_instance
 
+var current_blend_position = Vector2(0, 0)
+var target_blend_position = Vector2(0, 0)
+var blend_lerp_speed = 1.0 / CROSSFADE_TIME
+
 func _ready():
 	GameManager.set_player(self)
 	anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
@@ -65,7 +70,10 @@ func _physics_process(delta):
 		
 		# Set the blend position in the IWR blend space
 		var vl = velocity * model.transform.basis
-		anim_tree.set("parameters/IWR/blend_position", Vector2(vl.x, -vl.z) / SPEED)
+		target_blend_position = Vector2(vl.x, -vl.z) / SPEED
+		
+		current_blend_position = current_blend_position.lerp(target_blend_position, blend_lerp_speed * delta)
+		anim_tree.set("parameters/IWR/blend_position", current_blend_position)
 		
 		if !walking:
 			walking = true
