@@ -41,6 +41,8 @@ var current_blend_position = Vector2(0, 0)
 var target_blend_position = Vector2(0, 0)
 var blend_lerp_speed = 1.0 / CROSSFADE_TIME
 
+var attacking = false
+
 func _ready():
 	GameManager.set_player(self)
 	anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
@@ -89,6 +91,10 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("primary_action"):
 		attack()
+	elif Input.is_action_just_released("primary_action"):
+		# Stop the attack and revert to "IWR"
+		anim_state.travel("IWR")
+		attacking = false
 	
 	print("Walking: ", walking)
 	print("Idle: ", idling)
@@ -98,6 +104,10 @@ func _physics_process(delta):
 func attack():
 	if walking:
 		return
+		
+	if not attacking:
+		anim_state.travel(attacks[3])
+		attacking = true
 	
 	var space_state = get_world_3d().direct_space_state
 	mouse_position = get_viewport().get_mouse_position()
@@ -111,8 +121,6 @@ func attack():
 	if intersection.size() > 0:
 		var pos = intersection.position
 		model.look_at(Vector3(pos.x, pos.y, pos.z), Vector3(0,1,0))
-		
-	anim_state.travel(attacks[3])
 
 	arrow_instance = arrow.instantiate()
 	arrow_instance.position = crossbow.global_position
