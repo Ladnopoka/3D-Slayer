@@ -1,15 +1,14 @@
-res://level/level_1.tscn
+res://mob/knight.gd
+res://shooting/arrow.tscn
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
+res://shooting/arrow.gd
+res://mob/mobcollision.gd
+res://level/level_1.tscn
 res://level/level2/level_2.tscn
 res://player/rogue_hooded.tscn
-res://shooting/arrow.tscn
 res://ui/ui.tscn
 res://mob/knight.tscn
 res://addons/main-screen/main-screen.tscn
 res://hideout/hideout.tscn
-res://player/rogue_hooded.gd
-res://shooting/arrow.gd
-res://mob/knight.gd
-res://mob/mobcollision.gd

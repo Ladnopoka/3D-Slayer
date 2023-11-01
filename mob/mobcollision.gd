@@ -1,4 +1,4 @@
-extends CollisionShape3D
+extends Area3D
 
 @export var damage := 1
 
@@ -15,5 +15,4 @@ func _process(delta):
 	pass
 	
 func hit():
-	print("arf")
 	emit_signal("body_hit", damage)

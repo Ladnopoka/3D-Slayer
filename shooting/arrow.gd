@@ -13,6 +13,9 @@ func _process(delta):
 	if ray_cast_3d.is_colliding():
 		arrow_2.visible = false
 		gpu_particles_3d.emitting = true
+		ray_cast_3d.enabled = false
+		if ray_cast_3d.get_collider().is_in_group("enemy"):
+			ray_cast_3d.get_collider().hit()
 		await get_tree().create_timer(1.0).timeout
 		queue_free()
 
