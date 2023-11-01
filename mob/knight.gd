@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 var player = null
 var state_machine
+var health = 3
 
 const SPEED = 7.0
 const ATTACK_RANGE = 2
@@ -40,3 +41,9 @@ func _hit_finished():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1:
 		var dir = global_position.direction_to(player.global_position)
 		player.hit(dir)
+
+func _on_collision_shape_3d_body_hit(dam):
+	print("BOOOM")
+	health -= dam
+	if health <= 0:
+		queue_free()

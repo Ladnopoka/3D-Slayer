@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2uymm4ikvcrl"]
+[gd_scene load_steps=6 format=3 uid="uid://d2uymm4ikvcrl"]
 
 [ext_resource type="PackedScene" uid="uid://dth7syj2rww6p" path="res://assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/arrow.gltf" id="1_17q3j"]
 [ext_resource type="Script" path="res://shooting/arrow.gd" id="2_2nvye"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_151gq"]
+albedo_color = Color(0.529412, 0.0117647, 0.0117647, 1)
+emission_enabled = true
+emission = Color(0.129412, 0, 0, 1)
+emission_energy_multiplier = 8.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m8534"]
+direction = Vector3(0, 0, 1)
+initial_velocity_min = 3.0
+initial_velocity_max = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_3ly0v"]
+size = Vector3(0.04, 0.04, 0.04)
 
 [node name="arrow" instance=ExtResource("1_17q3j")]
 script = ExtResource("2_2nvye")
@@ -11,3 +25,19 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 
 [node name="RayCast3D" type="RayCast3D" parent="." index="1"]
 target_position = Vector3(0, 0, -0.6)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.479228)
+material_override = SubResource("StandardMaterial3D_151gq")
+emitting = false
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_m8534")
+draw_pass_1 = SubResource("BoxMesh_3ly0v")
+
+[node name="Timer" type="Timer" parent="." index="3"]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

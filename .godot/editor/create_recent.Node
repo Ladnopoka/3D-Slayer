@@ -1,4 +1,6 @@
+Area3D
 Timer
+GPUParticles3D
 Node3D
 ColorRect
 Control
@@ -14,7 +16,6 @@ MeshInstance3D
 AnimatableBody2D
 PathFollow3D
 RayCast3D
-Area3D
 Camera3D
 SpringArm3D
 StaticBody3D
@@ -29,4 +30,3 @@ VisibleOnScreenEnabler3D
 Marker3D
 Node
 Label3D
-LineEdit

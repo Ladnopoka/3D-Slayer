@@ -10,3 +10,6 @@ res://mob/knight.tscn
 res://addons/main-screen/main-screen.tscn
 res://hideout/hideout.tscn
 res://player/rogue_hooded.gd
+res://shooting/arrow.gd
+res://mob/knight.gd
+res://mob/mobcollision.gd
