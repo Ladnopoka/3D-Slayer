@@ -36,8 +36,8 @@ var attack_direction
 
 var arrow = load("res://shooting/arrow.tscn")
 var arrow_instance
-var arrow_cooldown_time = 0.2 # Cooldown time in seconds, e.g., 1 arrow per second.
-var arrow_last_shot_time = -0.2 # A variable to keep track of the last shot time.
+var arrow_cooldown_time = 0.0005 # Cooldown time in seconds, e.g., 1 arrow per second.
+var arrow_last_shot_time = -0.0005 # A variable to keep track of the last shot time.
 
 var current_blend_position = Vector2(0, 0)
 var target_blend_position = Vector2(0, 0)
