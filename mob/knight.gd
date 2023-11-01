@@ -11,7 +11,11 @@ const ATTACK_RANGE = 2
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
 
+var random_number
+
 func _ready():
+	randomize()
+	random_number = randi() % 2 + 1
 	player = $"../../Rogue_Hooded"
 	state_machine = animation_tree.get("parameters/playback")
 	
@@ -44,8 +48,14 @@ func _hit_finished():
 
 func _on_area_3d_body_part_hit(dam):
 	print("BOOOM")
+	random_number = randi() % 2 + 1
 	health -= dam
 	if health <= 0:
 		animation_tree.set("parameters/conditions/die", true)
-		await get_tree().create_timer(4.0).timeout
+		if random_number == 1:
+			animation_tree.set("parameters/DeathStateMachine/conditions/die_a", true)
+			await get_tree().create_timer(4.0).timeout
+		else:
+			animation_tree.set("parameters/DeathStateMachine/conditions/die_b", true)
+			await get_tree().create_timer(7.0).timeout
 		queue_free()
