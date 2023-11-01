@@ -100,7 +100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5029, 0, 24.5392)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5029, 0, 24.5392)
 
 [node name="KnightSpawnTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 0.1
 autostart = true
 
 [node name="Control2" parent="." instance=ExtResource("5_k1boe")]
