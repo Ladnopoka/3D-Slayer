@@ -1,6 +1,6 @@
-BoneAttachment3D
 CollisionShape3D
 Area3D
+BoneAttachment3D
 Timer
 GPUParticles3D
 Node3D

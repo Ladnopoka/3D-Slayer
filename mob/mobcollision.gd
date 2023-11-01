@@ -2,7 +2,7 @@ extends Area3D
 
 @export var damage := 1
 
-signal body_hit(dam)
+signal body_part_hit(dam)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,4 +15,4 @@ func _process(delta):
 	pass
 	
 func hit():
-	emit_signal("body_hit", damage)
+	emit_signal("body_part_hit", damage)

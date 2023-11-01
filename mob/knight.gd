@@ -42,7 +42,7 @@ func _hit_finished():
 		var dir = global_position.direction_to(player.global_position)
 		player.hit(dir)
 
-func _on_area_3d_body_hit(dam):
+func _on_area_3d_body_part_hit(dam):
 	print("BOOOM")
 	health -= dam
 	if health <= 0:
