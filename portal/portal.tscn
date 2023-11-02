@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci7p6fwa6jxd"]
+[gd_scene load_steps=5 format=3 uid="uid://ci7p6fwa6jxd"]
 
 [ext_resource type="PackedScene" uid="uid://bk25ugh0l31sm" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_tile_large.gltf.glb" id="1_yco16"]
 [ext_resource type="Script" path="res://portal/portal.gd" id="2_80gtr"]
+[ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="3_yusyb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dvaoi"]
 
@@ -13,6 +14,8 @@ script = ExtResource("2_80gtr")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_dvaoi")
+
+[node name="Transition" parent="." index="2" instance=ExtResource("3_yusyb")]
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

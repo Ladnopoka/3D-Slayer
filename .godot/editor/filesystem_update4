@@ -1,12 +1,9 @@
-res://ui/ui.tscn
+res://mob/knight.tscn
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
-res://mob/knight.tscn
 res://player/rogue_hooded.tscn
-res://block/block.tscn
 res://hideout/hideout.tscn
-res://level/level_1.tscn
 res://level/level2/level_2.tscn
 res://player/barbarian.tscn
 res://player/camera_rig.tscn
@@ -15,5 +12,7 @@ res://playground/playground.tscn
 res://portal/portal.tscn
 res://shooting/arrow.tscn
 res://shooting/bullet.tscn
-res://ui/ui.gd
-res://player/rogue_hooded.gd
+res://ui/ui.tscn
+res://level/level_1.tscn
+res://transition/transition.tscn
+res://portal/portal.gd
