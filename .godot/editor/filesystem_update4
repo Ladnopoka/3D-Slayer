@@ -16,3 +16,5 @@ res://ui/ui.tscn
 res://level/level_1.tscn
 res://transition/transition.tscn
 res://portal/portal.gd
+res://level/level2/level_2.gd
+res://player/rogue_hooded.gd

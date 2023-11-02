@@ -13,6 +13,7 @@ const CROSSFADE_TIME = 0.1
 @onready var anim_state = $AnimationTree.get("parameters/playback")
 @onready var camera_rig = $camera_rig
 @onready var crossbow = $Rig/RayCast3D
+@onready var transition = $Transition
 
 #signal
 signal player_hit
@@ -168,6 +169,8 @@ func die():
 	print("inside die")
 	anim_tree.set("parameters/conditions/die", true)
 	await get_tree().create_timer(4.0).timeout
+	transition.get_node("AnimationPlayer").play("fade_out")
+	await get_tree().create_timer(1.0).timeout
 	get_tree().change_scene_to_file("res://level/level_1.tscn")
 	
 func HPRegen(delta):
