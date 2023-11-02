@@ -18,7 +18,9 @@ const CROSSFADE_TIME = 0.1
 signal player_hit
 
 var hp = 10
-var current_hp
+var hp_regen = 0.1
+var current_hp#
+var is_dead = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -54,7 +56,12 @@ func _ready():
 	current_hp = hp
 	
 func _physics_process(delta):
-	# Add the gravity.
+	if !is_dead:
+		HPRegen(delta)
+		movement_and_attacking(delta)
+	
+func movement_and_attacking(delta):
+		# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
@@ -103,8 +110,8 @@ func _physics_process(delta):
 		attacking = false
 	
 	anim_tree.set("parameters/conditions/run", walking)
-	
-	
+		
+
 func attack():
 	if walking:
 		return
@@ -157,5 +164,13 @@ func hit(dir):
 	print(current_hp)
 	
 func die():
+	is_dead = true
 	print("inside die")
 	anim_tree.set("parameters/conditions/die", true)
+	await get_tree().create_timer(4.0).timeout
+	get_tree().change_scene_to_file("res://level/level_1.tscn")
+	
+func HPRegen(delta):
+	current_hp += hp_regen * delta
+	if current_hp > hp:
+		current_hp = hp
