@@ -166,6 +166,8 @@ func hit(dir):
 	
 func die():
 	is_dead = true
+	Global.best_score = Global.score
+	Global.score = 0
 	print("inside die")
 	anim_tree.set("parameters/conditions/die", true)
 	await get_tree().create_timer(4.0).timeout

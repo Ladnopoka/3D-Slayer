@@ -10,6 +10,7 @@ const ATTACK_RANGE = 2
 @export var player_path := "/root/Level2/Rogue_Hooded"
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
+@onready var ui = $"../../UI"
 
 var random_number
 
@@ -50,6 +51,7 @@ func _on_area_3d_body_part_hit(dam):
 	random_number = randi() % 2 + 1
 	health -= dam
 	if health <= 0:
+		Global.score += 1
 		$CollisionShape3D.disabled = true
 		$Rig/Skeleton3D/Head/Area3D/CollisionShape3D.disabled = true
 		$Rig/Skeleton3D/Body/Area3D/CollisionShape3D.disabled = true

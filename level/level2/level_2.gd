@@ -4,6 +4,7 @@ extends Node3D
 @onready var spawns = $Spawns
 @onready var navigation_region = $NavigationRegion3D
 @onready var transition = $Transition
+@onready var score = $Score
 
 var knight = load("res://mob/knight.tscn")
 var knight_instance 
@@ -15,7 +16,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	score.text = "Knights Killed: " + str(Global.score) + "/100"
 
 
 func _on_rogue_hooded_player_hit():
