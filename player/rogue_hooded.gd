@@ -152,4 +152,10 @@ func hit(dir):
 	velocity += dir * HIT_STAGGER
 	
 	current_hp -= 1
+	if current_hp <= 0:
+		die()
 	print(current_hp)
+	
+func die():
+	print("inside die")
+	anim_tree.set("parameters/conditions/die", true)

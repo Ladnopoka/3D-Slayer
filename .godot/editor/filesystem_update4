@@ -16,3 +16,4 @@ res://portal/portal.tscn
 res://shooting/arrow.tscn
 res://shooting/bullet.tscn
 res://ui/ui.gd
+res://player/rogue_hooded.gd

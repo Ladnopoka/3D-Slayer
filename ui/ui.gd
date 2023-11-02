@@ -18,7 +18,4 @@ func _process(delta):
 	
 func UpdateGlobes():
 	var new_hp = player.current_hp
-	print("New HP: ", new_hp)
-	
 	health_globe.value = new_hp
-	
