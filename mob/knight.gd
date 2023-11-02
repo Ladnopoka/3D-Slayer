@@ -10,15 +10,7 @@ const ATTACK_RANGE = 2
 @export var player_path := "/root/Level2/Rogue_Hooded"
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
-#@onready var collision_shape_3d_head = $Rig/Skeleton3D/Head/Area3D/CollisionShape3D
-#@onready var collision_shape_3d_body = $Rig/Skeleton3D/Body/Area3D/CollisionShape3D
-#@onready var collision_shape_3d_sword = $Rig/Skeleton3D/Sword/Area3D/CollisionShape3D
-#@onready var area_3d_head = $Rig/Skeleton3D/Head/Area3D
-#@onready var area_3d_body = $Rig/Skeleton3D/Body/Area3D
-#@onready var area_3d_sword = $Rig/Skeleton3D/Sword/Area3D
-@onready var head = $Rig/Skeleton3D/Head
-@onready var body = $Rig/Skeleton3D/Body
-@onready var sword = $Rig/Skeleton3D/Sword
+@onready var ui = $"../../UI"
 
 var random_number
 
@@ -59,7 +51,11 @@ func _on_area_3d_body_part_hit(dam):
 	random_number = randi() % 2 + 1
 	health -= dam
 	if health <= 0:
+		Global.score += 1
 		$CollisionShape3D.disabled = true
+		$Rig/Skeleton3D/Head/Area3D/CollisionShape3D.disabled = true
+		$Rig/Skeleton3D/Body/Area3D/CollisionShape3D.disabled = true
+		$Rig/Skeleton3D/Sword/Area3D/CollisionShape3D.disabled = true
 		animation_tree.set("parameters/conditions/die", true)
 		if random_number == 1:
 			animation_tree.set("parameters/DeathStateMachine/conditions/die_a", true)

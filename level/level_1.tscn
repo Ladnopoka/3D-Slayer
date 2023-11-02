@@ -1,8 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=11 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
+[ext_resource type="PackedScene" uid="uid://muq1yk7w0c1h" path="res://ui/ui.tscn" id="4_xoe0u"]
+[ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
+[ext_resource type="FontFile" uid="uid://dxh1exxrby0bd" path="res://globals/Diablo Heavy.ttf" id="6_kd8a7"]
 [ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue_hooded.tscn" id="10_h0cyu"]
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
+
+[sub_resource type="GDScript" id="GDScript_1jutb"]
+script/source = "extends Node3D
+
+@onready var transition = $Transition
+@onready var score_max = $Score
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	transition.get_node(\"AnimationPlayer\").play(\"fade_in\")
+	score_max.text = \"Best Score: \" + str(Global.best_score)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n72or"]
 albedo_color = Color(0.0784314, 0.239216, 0.0627451, 1)
@@ -14,6 +33,7 @@ material = SubResource("StandardMaterial3D_n72or")
 size = Vector3(2, 2, 0)
 
 [node name="Level1" type="Node3D"]
+script = SubResource("GDScript_1jutb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
@@ -38,3 +58,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21744, 0, 16.0452)
 
 [node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="UI" parent="." instance=ExtResource("4_xoe0u")]
+
+[node name="Score" type="Label" parent="."]
+offset_right = 526.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("6_kd8a7")
+theme_override_font_sizes/font_size = 50
+text = "Max Score: 10/10"
+
+[node name="Transition" parent="." instance=ExtResource("5_1qjme")]

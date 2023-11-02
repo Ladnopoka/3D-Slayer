@@ -3,18 +3,20 @@ extends Node3D
 @onready var hit_rect = $Control/ColorRect
 @onready var spawns = $Spawns
 @onready var navigation_region = $NavigationRegion3D
+@onready var transition = $Transition
+@onready var score = $Score
 
 var knight = load("res://mob/knight.tscn")
 var knight_instance 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	transition.get_node("AnimationPlayer").play("fade_in")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	score.text = "Knights Killed: " + str(Global.score) + "/100"
 
 
 func _on_rogue_hooded_player_hit():
