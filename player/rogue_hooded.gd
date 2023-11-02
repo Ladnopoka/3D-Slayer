@@ -17,6 +17,9 @@ const CROSSFADE_TIME = 0.1
 #signal
 signal player_hit
 
+var hp = 10
+var current_hp
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
@@ -48,6 +51,7 @@ var attacking = false
 func _ready():
 	GameManager.set_player(self)
 	anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
+	current_hp = hp
 	
 func _physics_process(delta):
 	# Add the gravity.
@@ -146,3 +150,6 @@ func shoot_arrow():
 func hit(dir):
 	emit_signal("player_hit")
 	velocity += dir * HIT_STAGGER
+	
+	current_hp -= 1
+	print(current_hp)

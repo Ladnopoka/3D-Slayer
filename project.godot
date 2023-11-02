@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*res://scripts/globals/game_manager.gd"
-UI="*res://ui/ui.tscn"
 
 [display]
 

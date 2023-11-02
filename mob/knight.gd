@@ -10,15 +10,6 @@ const ATTACK_RANGE = 2
 @export var player_path := "/root/Level2/Rogue_Hooded"
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
-#@onready var collision_shape_3d_head = $Rig/Skeleton3D/Head/Area3D/CollisionShape3D
-#@onready var collision_shape_3d_body = $Rig/Skeleton3D/Body/Area3D/CollisionShape3D
-#@onready var collision_shape_3d_sword = $Rig/Skeleton3D/Sword/Area3D/CollisionShape3D
-#@onready var area_3d_head = $Rig/Skeleton3D/Head/Area3D
-#@onready var area_3d_body = $Rig/Skeleton3D/Body/Area3D
-#@onready var area_3d_sword = $Rig/Skeleton3D/Sword/Area3D
-@onready var head = $Rig/Skeleton3D/Head
-@onready var body = $Rig/Skeleton3D/Body
-@onready var sword = $Rig/Skeleton3D/Sword
 
 var random_number
 

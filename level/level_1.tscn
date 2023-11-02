@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=8 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
+[ext_resource type="PackedScene" uid="uid://muq1yk7w0c1h" path="res://ui/ui.tscn" id="4_xoe0u"]
 [ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue_hooded.tscn" id="10_h0cyu"]
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
 
@@ -38,3 +39,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21744, 0, 16.0452)
 
 [node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="UI" parent="." instance=ExtResource("4_xoe0u")]
