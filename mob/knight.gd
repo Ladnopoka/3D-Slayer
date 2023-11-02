@@ -51,6 +51,9 @@ func _on_area_3d_body_part_hit(dam):
 	health -= dam
 	if health <= 0:
 		$CollisionShape3D.disabled = true
+		$Rig/Skeleton3D/Head/Area3D/CollisionShape3D.disabled = true
+		$Rig/Skeleton3D/Body/Area3D/CollisionShape3D.disabled = true
+		$Rig/Skeleton3D/Sword/Area3D/CollisionShape3D.disabled = true
 		animation_tree.set("parameters/conditions/die", true)
 		if random_number == 1:
 			animation_tree.set("parameters/DeathStateMachine/conditions/die_a", true)
