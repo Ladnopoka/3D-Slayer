@@ -5,13 +5,14 @@ const JUMP_VELOCITY = 4.5
 const ROTATION_SPEED = 7
 const ACCELERATION = 8
 const HIT_STAGGER = 25.0
+const CROSSFADE_TIME = 0.1
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
 @onready var anim_tree = $AnimationTree
 @onready var anim_state = $AnimationTree.get("parameters/playback")
 @onready var camera_rig = $camera_rig
-@onready var crossbow = $"Rig/Skeleton3D/2H_Crossbow"
+@onready var crossbow = $Rig/RayCast3D
 
 #signal
 signal player_hit
@@ -20,6 +21,7 @@ signal player_hit
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 var walking = false
+var idling = false
 var target_angle
 var attacks = [
 	"2H_Ranged_Aiming",
@@ -34,6 +36,14 @@ var attack_direction
 
 var arrow = load("res://shooting/arrow.tscn")
 var arrow_instance
+var arrow_cooldown_time = 0.0005 # Cooldown time in seconds, e.g., 1 arrow per second.
+var arrow_last_shot_time = -0.0005 # A variable to keep track of the last shot time.
+
+var current_blend_position = Vector2(0, 0)
+var target_blend_position = Vector2(0, 0)
+var blend_lerp_speed = 1.0 / CROSSFADE_TIME
+
+var attacking = false
 
 func _ready():
 	GameManager.set_player(self)
@@ -64,39 +74,66 @@ func _physics_process(delta):
 		
 		# Set the blend position in the IWR blend space
 		var vl = velocity * model.transform.basis
-		anim_tree.set("parameters/IWR/blend_position", Vector2(vl.x, -vl.z) / SPEED)
+		target_blend_position = Vector2(vl.x, -vl.z) / SPEED
 		
-		if !walking:
-			walking = true
+		walking = true
+		idling = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 		if walking:
-			anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0)) # Reset to Idle position
+			target_blend_position = Vector2(0, 0) # Reset to Idle position
 			walking = false
-			
+			idling = true
+	
+	current_blend_position = current_blend_position.lerp(target_blend_position, blend_lerp_speed * delta)
+	anim_tree.set("parameters/IWR/blend_position", current_blend_position)
 	move_and_slide()
-	if Input.is_action_just_pressed("primary_action"):
+	
+	if Input.is_action_pressed("primary_action"):
 		attack()
+	elif Input.is_action_just_released("primary_action"):
+		# Stop the attack and revert to "IWR"
+		anim_state.travel("IWR")
+		attacking = false
+	
+	anim_tree.set("parameters/conditions/run", walking)
+	
 	
 func attack():
 	if walking:
 		return
-	
+	# Always update orientation, regardless of cooldown
+	update_orientation()
+
+	var current_time = Time.get_ticks_msec() / 1000.0
+	if current_time - arrow_last_shot_time >= arrow_cooldown_time:
+		shoot_arrow()
+		arrow_last_shot_time = current_time
+
+func update_orientation():
+	# All the logic related to updating the character's orientation goes here
 	var space_state = get_world_3d().direct_space_state
 	mouse_position = get_viewport().get_mouse_position()
-	
-	rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position) # set the ray end point
-	rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000 # set the ray end point
-	
+
+	rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position)
+	rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000
+
 	var query = PhysicsRayQueryParameters3D.create(rayOrigin, rayEnd); 
 	var intersection = space_state.intersect_ray(query)
-	
+
 	if intersection.size() > 0:
 		var pos = intersection.position
-		model.look_at(Vector3(pos.x, pos.y, pos.z), Vector3(0,1,0))
-		
+		var direction_to_pos = pos - model.global_position
+
+		if direction_to_pos.length() > 0.5:
+			direction_to_pos.y = 0
+			var look_at_pos = model.global_position + direction_to_pos
+			model.look_at(look_at_pos, Vector3(0, 1, 0))
+
+func shoot_arrow():
+	# The logic related to shooting an arrow goes here
 	anim_state.travel(attacks[3])
 
 	arrow_instance = arrow.instantiate()
