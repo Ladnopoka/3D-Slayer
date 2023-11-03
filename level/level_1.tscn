@@ -12,11 +12,13 @@ script/source = "extends Node3D
 
 @onready var transition = $Transition
 @onready var score_max = $Score
+@onready var deaths = $Deaths
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	transition.get_node(\"AnimationPlayer\").play(\"fade_in\")
 	score_max.text = \"Best Score: \" + str(Global.best_score)
+	deaths.text = \"Deaths: \" + str(Global.deaths)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -67,5 +69,13 @@ offset_bottom = 61.0
 theme_override_fonts/font = ExtResource("6_kd8a7")
 theme_override_font_sizes/font_size = 50
 text = "Max Score: 10/10"
+
+[node name="Deaths" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 237.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("6_kd8a7")
+theme_override_font_sizes/font_size = 50
+text = "Deaths:"
 
 [node name="Transition" parent="." instance=ExtResource("5_1qjme")]

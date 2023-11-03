@@ -175,6 +175,7 @@ func die():
 	if Global.score > Global.best_score:
 		Global.best_score = Global.score
 		Global.score = 0
+		Global.deaths += 1
 	
 func HPRegen(delta):
 	current_hp += hp_regen * delta
