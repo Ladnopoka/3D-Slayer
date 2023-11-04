@@ -15,3 +15,6 @@ res://shooting/arrow.tscn
 res://shooting/bullet.tscn
 res://ui/ui.tscn
 res://transition/transition.tscn
+res://item/item_data.gd
+res://inventory/slot_data.gd
+res://inventory/inventory_data.gd
