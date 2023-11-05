@@ -1,7 +1,9 @@
-res://level/level_1.tscn
+res://ui/ui.tscn
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
+res://ui/ui.gd
+res://level/level_1.tscn
 res://level/level2/level_2.tscn
 res://mob/knight.tscn
 res://player/rogue_hooded.tscn
@@ -13,8 +15,4 @@ res://playground/playground.tscn
 res://portal/portal.tscn
 res://shooting/arrow.tscn
 res://shooting/bullet.tscn
-res://ui/ui.tscn
 res://transition/transition.tscn
-res://item/item_data.gd
-res://inventory/slot_data.gd
-res://inventory/inventory_data.gd

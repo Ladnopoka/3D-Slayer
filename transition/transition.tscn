@@ -44,7 +44,6 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
-self_modulate = Color(1, 1, 1, 0)
 offset_left = -202.0
 offset_top = -129.0
 offset_right = 2142.0
