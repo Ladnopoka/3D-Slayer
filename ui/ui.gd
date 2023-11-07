@@ -21,4 +21,4 @@ func _process(delta):
 func UpdateGlobes():
 	var new_hp = player.current_hp
 	health_globe.value = new_hp
-	label.text = str(new_hp) + "/" + str(player.hp)
+	label.text = (str(int(new_hp))) + "/" + str(player.hp)

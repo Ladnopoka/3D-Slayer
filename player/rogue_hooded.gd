@@ -162,6 +162,7 @@ func hit(dir):
 	current_hp -= 1
 	if current_hp <= 0:
 		die()
+		current_hp = 0 # so life can't be -1
 	print(current_hp)
 	
 func die():

@@ -16,3 +16,4 @@ res://shooting/bullet.tscn
 res://ui/ui.tscn
 res://transition/transition.tscn
 res://ui/ui.gd
+res://player/rogue_hooded.gd
