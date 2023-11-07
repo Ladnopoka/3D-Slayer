@@ -166,14 +166,16 @@ func hit(dir):
 	
 func die():
 	is_dead = true
-	Global.best_score = Global.score
-	Global.score = 0
 	print("inside die")
 	anim_tree.set("parameters/conditions/die", true)
 	await get_tree().create_timer(4.0).timeout
 	transition.get_node("AnimationPlayer").play("fade_out")
 	await get_tree().create_timer(1.0).timeout
 	get_tree().change_scene_to_file("res://level/level_1.tscn")
+	if Global.score > Global.best_score:
+		Global.best_score = Global.score
+		Global.score = 0
+		Global.deaths += 1
 	
 func HPRegen(delta):
 	current_hp += hp_regen * delta

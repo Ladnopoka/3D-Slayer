@@ -2,6 +2,7 @@ extends Node
 
 var score = 0
 var best_score = 0
+var deaths = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
