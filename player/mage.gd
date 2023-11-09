@@ -9,8 +9,8 @@ const CROSSFADE_TIME = 0.1
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
-#@onready var anim_tree = $AnimationTree
-#@onready var anim_state = $AnimationTree.get("parameters/playback")
+@onready var anim_tree = $AnimationTree
+@onready var anim_state = $AnimationTree.get("parameters/playback")
 @onready var camera_rig = $camera_rig
 #@onready var crossbow = $Rig/RayCast3D
 @onready var transition = $Transition
@@ -53,7 +53,7 @@ var attacking = false
 
 func _ready():
 	GameManager.set_player(self)
-	#anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
+	anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
 	current_hp = hp
 	
 func _physics_process(delta):
