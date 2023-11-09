@@ -1,3 +1,4 @@
+CharacterBody3D
 Label
 RichTextLabel
 TextureRect
@@ -13,7 +14,6 @@ Control
 AnimationTree
 NavigationRegion3D
 NavigationAgent3D
-CharacterBody3D
 TextureProgressBar
 CanvasLayer
 MeshInstance3D
