@@ -2,6 +2,7 @@ res://player/mage.tscn
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
+res://player/mage.gd
 res://level/level_1.tscn
 res://level/level2/level_2.tscn
 res://mob/knight.tscn
@@ -15,4 +16,3 @@ res://shooting/bullet.tscn
 res://ui/ui.tscn
 res://transition/transition.tscn
 res://player/rogue_hooded.tscn
-res://player/mage.gd

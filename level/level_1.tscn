@@ -59,14 +59,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21744, 0, 16.0452)
 [node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="UI" parent="." instance=ExtResource("4_xoe0u")]
+[node name="Rogue_Hooded" parent="." instance=ExtResource("10_h0cyu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.09193)
 
-[node name="Score" type="Label" parent="."]
-offset_right = 526.0
-offset_bottom = 61.0
-theme_override_fonts/font = ExtResource("6_kd8a7")
-theme_override_font_sizes/font_size = 50
-text = "Max Score: 10/10"
+[node name="Mage" parent="." instance=ExtResource("7_kerki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
 
 [node name="Deaths" type="Label" parent="."]
 offset_top = 40.0
@@ -76,10 +73,13 @@ theme_override_fonts/font = ExtResource("6_kd8a7")
 theme_override_font_sizes/font_size = 50
 text = "Deaths:"
 
+[node name="Score" type="Label" parent="."]
+offset_right = 526.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("6_kd8a7")
+theme_override_font_sizes/font_size = 50
+text = "Max Score: 10/10"
+
+[node name="UI" parent="." instance=ExtResource("4_xoe0u")]
+
 [node name="Transition" parent="." instance=ExtResource("5_1qjme")]
-
-[node name="Rogue_Hooded" parent="." instance=ExtResource("10_h0cyu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.09193)
-
-[node name="Mage" parent="." instance=ExtResource("7_kerki")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)

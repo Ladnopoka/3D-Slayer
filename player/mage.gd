@@ -7,6 +7,11 @@ const ACCELERATION = 8
 const HIT_STAGGER = 25.0
 const CROSSFADE_TIME = 0.1
 
+var direction = Vector3.BACK
+var velocity_var = Vector3.ZERO
+var strafe_dir = Vector3.ZERO
+var strafe = Vector3.ZERO
+
 @onready var camera_point = $camera_point
 @onready var model = $Rig
 @onready var anim_tree = $AnimationTree
@@ -74,6 +79,8 @@ func movement_and_attacking(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	strafe_dir = direction
+	
 
 	var model_rotation = model.rotation.y
 	if direction.length() > 0.01:
@@ -98,14 +105,18 @@ func movement_and_attacking(delta):
 			target_blend_position = Vector2(0, 0) # Reset to Idle position
 			walking = false
 			idling = true
+		
+		strafe_dir = Vector3.ZERO
 	
 	current_blend_position = current_blend_position.lerp(target_blend_position, blend_lerp_speed * delta)
 	#anim_tree.set("parameters/IWR/blend_position", current_blend_position)
 	move_and_slide()
 	
 	if Input.is_action_pressed("primary_action"):
+		anim_tree.set("parameters/aim_transition/current_index", 0)
 		attack()
 	elif Input.is_action_just_released("primary_action"):
+		anim_tree.set("parameters/aim_transition/current_index", 1)
 		# Stop the attack and revert to "IWR"
 		#anim_state.travel("IWR")
 		attacking = false
