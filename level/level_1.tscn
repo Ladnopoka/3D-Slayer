@@ -83,3 +83,4 @@ text = "Max Score: 10/10"
 [node name="UI" parent="." instance=ExtResource("4_xoe0u")]
 
 [node name="Transition" parent="." instance=ExtResource("5_1qjme")]
+position = Vector2(1, 0)
