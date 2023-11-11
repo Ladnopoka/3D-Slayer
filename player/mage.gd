@@ -110,10 +110,10 @@ func movement_and_attacking(delta):
 	move_and_slide()
 	
 	if Input.is_action_pressed("primary_action"):
-		anim_tree.set("parameters/aim_transition/current_index", 0)
+		anim_tree.set("parameters/UnoShoto/internal_active", true)
 		attack()
 	elif Input.is_action_just_released("primary_action"):
-		anim_tree.set("parameters/aim_transition/current_index", 1)
+		anim_tree.set("parameters/UnoShoto/active", true)	
 		# Stop the attack and revert to "IWR"
 		#anim_state.travel("IWR")
 		attacking = false
@@ -126,7 +126,7 @@ func attack():
 #	if walking:
 #		return
 #	# Always update orientation, regardless of cooldown
-#	update_orientation()
+	update_orientation()
 #
 #	var current_time = Time.get_ticks_msec() / 1000.0
 #	if current_time - arrow_last_shot_time >= arrow_cooldown_time:
@@ -150,7 +150,7 @@ func update_orientation():
 
 		if direction_to_pos.length() > 0.5:
 			direction_to_pos.y = 0
-			var look_at_pos = model.global_position + direction_to_pos
+			var look_at_pos = model.global_position + -direction_to_pos
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
 
 #func shoot_arrow():
