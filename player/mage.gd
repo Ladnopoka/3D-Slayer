@@ -15,7 +15,7 @@ var velocity_var = Vector3.ZERO
 @onready var camera_point = $camera_point
 @onready var model = $Rig
 @onready var anim_tree = $AnimationTree
-@onready var anim_state = $AnimationTree.get("parameters/playback")
+@onready var anim_state = null
 @onready var camera_rig = $camera_rig
 #@onready var crossbow = $Rig/RayCast3D
 @onready var transition = $Transition
@@ -58,7 +58,7 @@ var attacking = false
 
 func _ready():
 	GameManager.set_player(self)
-	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
+	#anim_tree.set(locomotionBlendPath, Vector2(0, 0))
 	current_hp = hp
 	
 func _physics_process(delta):
@@ -70,6 +70,7 @@ func movement_and_attacking(delta):
 		# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		anim_tree.set("parameters/attacking/transition_request", "false")
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -86,9 +87,9 @@ func movement_and_attacking(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 
-		#target_angle = atan2(direction.x, direction.z)
-		#model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
-		#model.rotation.y = model_rotation
+		target_angle = atan2(direction.x, direction.z)
+		model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
+		model.rotation.y = model_rotation
 		
 		# Set the blend position in the IWR blend space
 		var vl = velocity * model.transform.basis
@@ -96,6 +97,7 @@ func movement_and_attacking(delta):
 		
 		walking = true
 		idling = false
+		anim_tree.set("parameters/movement/transition_request", "run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -104,34 +106,42 @@ func movement_and_attacking(delta):
 			target_blend_position = Vector2(0, 0) # Reset to Idle position
 			walking = false
 			idling = true
-	
+			
+		anim_tree.set("parameters/movement/transition_request", "idle")
+		
 	current_blend_position = current_blend_position.lerp(-target_blend_position, blend_lerp_speed * delta)
-	anim_tree.set(locomotionBlendPath, current_blend_position)
+	#anim_tree.set(locomotionBlendPath, current_blend_position)
 	move_and_slide()
 	
-	if Input.is_action_pressed("primary_action"):
-		anim_tree.set("parameters/UnoShoto/internal_active", true)
+	if Input.is_action_just_pressed("primary_action"):
 		attack()
-	elif Input.is_action_just_released("primary_action"):
-		anim_tree.set("parameters/UnoShoto/active", true)	
+	#elif Input.is_action_just_released("primary_action"):
+		#anim_tree.set("parameters/UnoShoto/active", true)	
 		# Stop the attack and revert to "IWR"
 		#anim_state.travel("IWR")
-		attacking = false
+		#attacking = false
 	
 	#anim_tree.set("parameters/conditions/run", walking)
+	
+#	if is_on_floor():
+#		anim_tree.set("parameters/attacking/transition_request", "false")
+#
+#		if Input.is_action_pressed("primary_action"):
+#			anim_tree.set("parameters/movement/transition_request", "attack")
+#			attack()
+#
+#		if (input_dir.x != 0 or input_dir.y != 0):
+#			anim_tree.set("parameters/movement/transition_request", "attack")
+#		else:
+#			anim_tree.set("parameters/movement/transition_request", "idle")
 		
 
 func attack():
 	print("Mage is attacking")
-#	if walking:
-#		return
-#	# Always update orientation, regardless of cooldown
+	anim_tree.set("parameters/attacking/transition_request", "true")
 	update_orientation()
-#
-#	var current_time = Time.get_ticks_msec() / 1000.0
-#	if current_time - arrow_last_shot_time >= arrow_cooldown_time:
-#		shoot_arrow()
-#		arrow_last_shot_time = current_time
+
+	print("Current animation state: ", anim_tree)
 
 func update_orientation():
 	# All the logic related to updating the character's orientation goes here
