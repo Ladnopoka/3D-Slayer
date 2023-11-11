@@ -86,9 +86,9 @@ func movement_and_attacking(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 
-		target_angle = atan2(direction.x, direction.z)
-		model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
-		model.rotation.y = model_rotation
+		#target_angle = atan2(direction.x, direction.z)
+		#model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
+		#model.rotation.y = model_rotation
 		
 		# Set the blend position in the IWR blend space
 		var vl = velocity * model.transform.basis
@@ -105,7 +105,7 @@ func movement_and_attacking(delta):
 			walking = false
 			idling = true
 	
-	current_blend_position = current_blend_position.lerp(target_blend_position, blend_lerp_speed * delta)
+	current_blend_position = current_blend_position.lerp(-target_blend_position, blend_lerp_speed * delta)
 	anim_tree.set(locomotionBlendPath, current_blend_position)
 	move_and_slide()
 	
