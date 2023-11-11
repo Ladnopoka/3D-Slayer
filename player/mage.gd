@@ -9,8 +9,8 @@ const CROSSFADE_TIME = 0.1
 
 var direction = Vector3.BACK
 var velocity_var = Vector3.ZERO
-var strafe_dir = Vector3.ZERO
-var strafe = Vector3.ZERO
+
+@export var locomotionBlendPath: String;
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
@@ -58,7 +58,7 @@ var attacking = false
 
 func _ready():
 	GameManager.set_player(self)
-	anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
+	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
 	current_hp = hp
 	
 func _physics_process(delta):
@@ -79,7 +79,6 @@ func movement_and_attacking(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	strafe_dir = direction
 	
 
 	var model_rotation = model.rotation.y
@@ -105,11 +104,9 @@ func movement_and_attacking(delta):
 			target_blend_position = Vector2(0, 0) # Reset to Idle position
 			walking = false
 			idling = true
-		
-		strafe_dir = Vector3.ZERO
 	
 	current_blend_position = current_blend_position.lerp(target_blend_position, blend_lerp_speed * delta)
-	#anim_tree.set("parameters/IWR/blend_position", current_blend_position)
+	anim_tree.set(locomotionBlendPath, current_blend_position)
 	move_and_slide()
 	
 	if Input.is_action_pressed("primary_action"):
