@@ -15,3 +15,4 @@ res://ui/ui.tscn
 res://transition/transition.tscn
 res://player/rogue_hooded.tscn
 res://player/mage.tscn
+res://player/mage.gd

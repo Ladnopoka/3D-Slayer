@@ -1,11 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=10 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
-[ext_resource type="PackedScene" uid="uid://muq1yk7w0c1h" path="res://ui/ui.tscn" id="4_xoe0u"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
 [ext_resource type="FontFile" uid="uid://dxh1exxrby0bd" path="res://globals/Diablo Heavy.ttf" id="6_kd8a7"]
 [ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage.tscn" id="7_kerki"]
-[ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue_hooded.tscn" id="10_h0cyu"]
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
 
 [sub_resource type="GDScript" id="GDScript_1jutb"]
@@ -59,12 +57,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21744, 0, 16.0452)
 [node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="Rogue_Hooded" parent="." instance=ExtResource("10_h0cyu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.09193)
-
-[node name="Mage" parent="." instance=ExtResource("7_kerki")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
-
 [node name="Deaths" type="Label" parent="."]
 offset_top = 40.0
 offset_right = 237.0
@@ -80,7 +72,7 @@ theme_override_fonts/font = ExtResource("6_kd8a7")
 theme_override_font_sizes/font_size = 50
 text = "Max Score: 10/10"
 
-[node name="UI" parent="." instance=ExtResource("4_xoe0u")]
-
 [node name="Transition" parent="." instance=ExtResource("5_1qjme")]
 position = Vector2(1, 0)
+
+[node name="Mage" parent="." instance=ExtResource("7_kerki")]

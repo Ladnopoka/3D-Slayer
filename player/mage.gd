@@ -87,7 +87,7 @@ func movement_and_attacking(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 
-		target_angle = atan2(-direction.x, -direction.z)
+		target_angle = atan2(direction.x, direction.z)
 		model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
 		model.rotation.y = model_rotation
 		
