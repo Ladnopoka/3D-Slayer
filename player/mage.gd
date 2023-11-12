@@ -121,9 +121,6 @@ func movement_and_attacking(delta):
 func attack():
 	print("Mage is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
-	#anim_tree_sm.get
-#	if walking:
-#		return
 #	# Always update orientation, regardless of cooldown
 	update_orientation()
 #

@@ -1,6 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=12 format=3 uid="uid://ckf3ipmwutb47"]
 
+[ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue_hooded.tscn" id="2_aurua"]
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
+[ext_resource type="PackedScene" uid="uid://dawwbik4sgvk7" path="res://player/barbarian.tscn" id="3_wd3uh"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
 [ext_resource type="FontFile" uid="uid://dxh1exxrby0bd" path="res://globals/Diablo Heavy.ttf" id="6_kd8a7"]
 [ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage.tscn" id="7_kerki"]
@@ -35,6 +37,18 @@ size = Vector3(2, 2, 0)
 
 [node name="Level1" type="Node3D"]
 script = SubResource("GDScript_1jutb")
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Mage" parent="Characters" instance=ExtResource("7_kerki")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 11)
+
+[node name="Rogue_Hooded" parent="Characters" instance=ExtResource("2_aurua")]
+transform = Transform3D(-0.688582, 0, -0.725158, 0, 1, 0, 0.725158, 0, -0.688582, -6.52419, 0, 4.73239)
+script = null
+
+[node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
+transform = Transform3D(0.957637, 0, -0.287979, 0, 1, 0, 0.287979, 0, 0.957637, 0.549507, 0, -0.252919)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
@@ -74,5 +88,3 @@ text = "Max Score: 10/10"
 
 [node name="Transition" parent="." instance=ExtResource("5_1qjme")]
 position = Vector2(1, 0)
-
-[node name="Mage" parent="." instance=ExtResource("7_kerki")]
