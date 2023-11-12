@@ -1,3 +1,5 @@
+AnimationTree
+CharacterBody3D
 Label
 RichTextLabel
 TextureRect
@@ -10,10 +12,8 @@ Timer
 GPUParticles3D
 Node3D
 Control
-AnimationTree
 NavigationRegion3D
 NavigationAgent3D
-CharacterBody3D
 TextureProgressBar
 CanvasLayer
 MeshInstance3D
