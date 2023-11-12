@@ -15,6 +15,7 @@ var velocity_var = Vector3.ZERO
 @onready var camera_point = $camera_point
 @onready var model = $Rig
 @onready var anim_tree = $AnimationTree
+#@onready var one_shot_node = anim_tree.get("")
 @onready var anim_state = null
 @onready var camera_rig = $camera_rig
 #@onready var crossbow = $Rig/RayCast3D
@@ -58,7 +59,7 @@ var attacking = false
 
 func _ready():
 	GameManager.set_player(self)
-	#anim_tree.set(locomotionBlendPath, Vector2(0, 0))
+	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
 	current_hp = hp
 	
 func _physics_process(delta):
@@ -70,7 +71,7 @@ func movement_and_attacking(delta):
 		# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-		anim_tree.set("parameters/attacking/transition_request", "false")
+		#anim_tree.set("parameters/attacking/transition_request", "false")
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -97,7 +98,7 @@ func movement_and_attacking(delta):
 		
 		walking = true
 		idling = false
-		anim_tree.set("parameters/movement/transition_request", "run")
+		#anim_tree.set("parameters/movement/transition_request", "run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -107,10 +108,10 @@ func movement_and_attacking(delta):
 			walking = false
 			idling = true
 			
-		anim_tree.set("parameters/movement/transition_request", "idle")
+		#anim_tree.set("parameters/movement/transition_request", "idle")
 		
 	current_blend_position = current_blend_position.lerp(-target_blend_position, blend_lerp_speed * delta)
-	#anim_tree.set(locomotionBlendPath, current_blend_position)
+	anim_tree.set(locomotionBlendPath, current_blend_position)
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("primary_action"):
@@ -138,8 +139,8 @@ func movement_and_attacking(delta):
 
 func attack():
 	print("Mage is attacking")
-	anim_tree.set("parameters/attacking/transition_request", "true")
-	update_orientation()
+	anim_tree.set("parameters/attack_one_shot/request", true)
+	#update_orientation()
 
 	print("Current animation state: ", anim_tree)
 
