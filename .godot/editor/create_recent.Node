@@ -1,3 +1,4 @@
+MeshInstance3D
 CollisionShape3D
 Area3D
 Node
@@ -17,7 +18,6 @@ NavigationRegion3D
 NavigationAgent3D
 TextureProgressBar
 CanvasLayer
-MeshInstance3D
 AnimatableBody2D
 PathFollow3D
 RayCast3D
