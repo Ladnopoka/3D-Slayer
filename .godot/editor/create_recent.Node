@@ -1,10 +1,10 @@
+Label
 MeshInstance3D
 CollisionShape3D
 Area3D
 Node
 AnimationTree
 CharacterBody3D
-Label
 RichTextLabel
 TextureRect
 ColorRect
