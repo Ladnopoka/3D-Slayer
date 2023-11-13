@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc7n5pbs5tnh2"]
+
+[ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_convex_block.gd" id="1_nl4wd"]
+
+[node name="Cyclops" type="Node3D"]
+
+[node name="CyclopsConvexBlock" type="Node" parent="."]
+script = ExtResource("1_nl4wd")

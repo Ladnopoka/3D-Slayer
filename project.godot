@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scripts/globals/game_manager.gd"
 Global="*res://globals/Global.gd"
+CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
 
 [display]
 
@@ -27,7 +28,7 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/editor-plugin/plugin.cfg", "res://addons/main-screen/plugin.cfg")
+enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg", "res://addons/editor-plugin/plugin.cfg", "res://addons/main-screen/plugin.cfg")
 
 [filesystem]
 
