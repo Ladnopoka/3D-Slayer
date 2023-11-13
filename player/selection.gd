@@ -9,17 +9,21 @@ signal character_selected
 func _ready() -> void:
 	connect("character_selected", character_selection_scene.character_selected)
 	animation_player.connect("animation_finished", _on_animation_player_animation_finished)
+	
+	
+func _input_event(camera, event, position, normal, shape_idx):
+	print("hover over character")
+	#printt("Event: ", event, event.is_action_type(), event.is_pressed(), event.is_released())
 
-func _on_input_event(camera, event, position, normal, shape_idx):
 	
-	#print("hover over character")
-	#print(event)
+	#print(character)
 	
-	if event.is_action_pressed("right_mouse_clicked"):
-		print("hover over character")
+	if Input.is_action_pressed("right_mouse_clicked"):
+		print("action pressed on character")
 		animation_player.play("Cheer")
 		emit_signal("character_selected", character.name)
 		$Selection.show()
+		
 		
 func hide_selection():
 	$Selection.hide()

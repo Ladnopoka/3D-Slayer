@@ -20,5 +20,3 @@ shape = SubResource("CapsuleShape3D_g0lii")
 visible = false
 mesh = SubResource("TorusMesh_fixms")
 skeleton = NodePath("../..")
-
-[connection signal="input_event" from="." to="." method="_on_input_event"]
