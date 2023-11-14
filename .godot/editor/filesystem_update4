@@ -5,7 +5,6 @@ res://addons/cyclops_level_builder/docks/material_palette/thumbnail_normal_theme
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
-res://player/selection.gd
 res://ui/ui.tscn
 res://player/rogue_hooded.tscn
 res://player/mage.tscn
@@ -13,4 +12,4 @@ res://level/level2/level_2.tscn
 res://hideout/hideout.tscn
 res://player/selection_area.tscn
 res://player/barbarian.tscn
-res://cyclops_playground/cyclops.tscn
+res://player/selection.gd
