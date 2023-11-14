@@ -12,7 +12,4 @@ res://level/level2/level_2.tscn
 res://hideout/hideout.tscn
 res://player/selection_area.tscn
 res://player/barbarian.tscn
-res://player/selection.gd
-res://player/rogue_hooded.gd
-res://scripts/globals/game_manager.gd
-res://level/level2/level_2.gd
+res://transition/transition.tscn
