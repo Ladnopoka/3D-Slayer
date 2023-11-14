@@ -13,3 +13,4 @@ res://hideout/hideout.tscn
 res://player/selection_area.tscn
 res://player/barbarian.tscn
 res://player/selection.gd
+res://player/rogue_hooded.gd
