@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699970231
+::res://::1700090516
 icon.svg::CompressedTexture2D::3540083071793652844::1696266044::1696266048::1::::<><>::
 Ideas.txt::TextFile::-1::1698346894::0::1::::<><>::
 ::res://addons/::1699913218
@@ -84,7 +84,7 @@ resource_inspector.gd::GDScript::-1::1699913218::0::1::::ResourceInspector<>Cont
 resource_inspector.tscn::PackedScene::6729863528294998586::1699913218::0::1::::<><>::res://addons/cyclops_level_builder/controls/resource_inspector/resource_inspector.gd
 ::res://addons/cyclops_level_builder/doc/::1699913218
 ::res://addons/cyclops_level_builder/docks/::1699913218
-::res://addons/cyclops_level_builder/docks/material_palette/::1699914022
+::res://addons/cyclops_level_builder/docks/material_palette/::1699975978
 material_palette_viewport.gd::GDScript::-1::1699913218::0::1::::MaterialPaletteViewport<>Control<>::
 material_palette_viewport.tscn::PackedScene::1036570676893576714::1699913218::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_palette_viewport.gd<>res://addons/cyclops_level_builder/docks/material_palette/thumbnail_group.gd
 material_snapshot.gd::GDScript::-1::1699913218::0::1::::MaterialShapshot<>SubViewport<>::
@@ -92,8 +92,8 @@ material_snapshot.tscn::PackedScene::-1::1699913218::0::1::::<><>::res://addons/
 material_thumbnail.gd::GDScript::-1::1699913218::0::1::::MaterialThumbnail<>Control<>::
 material_thumbnail.tscn::PackedScene::-1::1699913218::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_thumbnail.gd<>uid://c0gpl22e2g6ay
 thumbnail_group.gd::GDScript::-1::1699913218::0::1::::ThumbnailGroup<>Resource<>::
-thumbnail_normal_theme.tres::Theme::4058405243379725578::1699914022::0::1::::<><>::
-thumbnail_selected_theme.tres::Theme::6540880583544088756::1699914022::0::1::::<><>::
+thumbnail_normal_theme.tres::Theme::4058405243379725578::1699975978::0::1::::<><>::
+thumbnail_selected_theme.tres::Theme::6540880583544088756::1699975978::0::1::::<><>::
 ::res://addons/cyclops_level_builder/docks/material_palette/commands/::1699913218
 cmd_mat_dock_add_materials.gd::GDScript::-1::1699913218::0::1::::CommandMaterialDockAddMaterials<>CyclopsCommand<>::
 cmd_mat_dock_remove_materials.gd::GDScript::-1::1699913218::0::1::::CommandMaterialDockRemoveMaterials<>CyclopsCommand<>::
@@ -146,8 +146,8 @@ intersect_results.gd::GDScript::-1::1699913218::0::1::::IntersectResults<>RefCou
 ::res://addons/cyclops_level_builder/resources/::1699913218
 block_data.gd::GDScript::-1::1699913218::0::1::::BlockData<>Resource<>::
 convex_block_data.gd::GDScript::-1::1699913218::0::1::::ConvexBlockData<>Resource<>::
-::res://addons/cyclops_level_builder/shaders/::1699914022
-outline_shader.tres::VisualShader::4976330123338311102::1699914022::0::1::::<><>::
+::res://addons/cyclops_level_builder/shaders/::1699975978
+outline_shader.tres::VisualShader::4976330123338311102::1699975978::0::1::::<><>::
 tool_outline_shader.tres::VisualShader::6796597932207006307::1699913218::0::1::::<><>::
 ::res://addons/cyclops_level_builder/tools/::1699913218
 cyclops_tool.gd::GDScript::-1::1699913218::0::1::::CyclopsTool<>Resource<>::
@@ -167,15 +167,15 @@ tool_stairs_settings.gd::GDScript::-1::1699913218::0::1::::ToolStairsSettings<>R
 display_mode.gd::GDScript::-1::1699913218::0::1::::DisplayMode<>RefCounted<>::
 general_util.gd::GDScript::-1::1699913218::0::1::::GeneralUtil<>RefCounted<>::
 selection.gd::GDScript::-1::1699913218::0::1::::Selection<>RefCounted<>::
-::res://addons/editor-plugin/::1699914022
+::res://addons/editor-plugin/::1699975978
 panel.tscn::PackedScene::5401244366276246444::1698782808::0::1::::<><>::
 plugin.cfg::TextFile::-1::1698782808::0::1::::<><>::
-plugin.gd::GDScript::-1::1699914022::0::1::::<>EditorPlugin<>::
+plugin.gd::GDScript::-1::1699975978::0::1::::<>EditorPlugin<>::
 ::res://addons/editor-plugin/room_template/::1698782808
 room_template.tscn::PackedScene::1473403741818640738::1698782808::0::1::::<><>::
-::res://addons/main-screen/::1699914022
+::res://addons/main-screen/::1699975978
 control.gd::GDScript::-1::1698782808::0::1::::<>VBoxContainer<>::
-main-screen.gd::GDScript::-1::1699914022::0::1::::<>EditorPlugin<>::
+main-screen.gd::GDScript::-1::1699975978::0::1::::<>EditorPlugin<>::
 main-screen.tscn::PackedScene::5610324604663873796::1698854995::0::1::::<><>::res://addons/main-screen/control.gd
 name-generator.gd::GDScript::-1::1696542482::0::1::::NameGenerator<>Node<>::
 plugin.cfg::TextFile::-1::1696542482::0::1::::<><>::
@@ -1161,23 +1161,23 @@ cyclops.tscn::PackedScene::4980122827769036981::1699914809::0::1::::<><>::res://
 Bildad.ttf::FontFile::8943576189857571327::1698960675::1698960675::1::::<><>::
 Diablo Heavy.ttf::FontFile::8789643128362279737::1698961042::1698961042::1::::<><>::
 Global.gd::GDScript::-1::1699299545::0::1::::<>Node<>::
-::res://hideout/::1699916407
-hideout.tscn::PackedScene::7716916017365361345::1699916407::0::1::::<><>::uid://bhqof1t0bm717::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bed_floor.gltf.glb<>uid://dwbaq4uhjquy5::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_green.gltf.glb<>uid://j24ungbtfvlc::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_labeled_brown.gltf.glb<>uid://bdp6tutkxnjpy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_C_brown.gltf.glb<>uid://casqreq25pifw::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_large.gltf.glb<>uid://0qo5pqlgjtx1::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small.gltf.glb<>uid://bpadbu3mlppok::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small_decorated.gltf.glb<>uid://b0s1pm13gntfy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_stacked.gltf.glb<>uid://cbuhnr0vvr062::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chair.gltf.glb<>uid://brjuqiht77plh::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chest.glb<>uid://d2buip5jlkbok::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/coin.gltf.glb<>uid://835kbutn2rfy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_large.gltf.glb<>uid://dmfsqhc4dmoja::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_large_rocky.gltf.glb<>uid://b2ggx6v8a0fah::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/keg_decorated.gltf.glb<>uid://chnbfpgsef1t4::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_A.gltf.glb<>uid://v0g3wjjembau::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_B.gltf.glb<>uid://dguci4kg4lvkn::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_large.gltf.glb<>uid://bx1h7nu55x7g2::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_half.gltf.glb<>uid://bpkc4doatcokf::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_C.gltf.glb<>uid://cbvkgdxcy2odg::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stool.gltf.glb<>uid://ckwf8jm55ofeq::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_D.gltf.glb<>uid://c8l0ndly1fhbw::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_weeds.gltf.glb<>uid://cnoqyh6t6jkvf::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_long_decorated_A.gltf.glb<>uid://b1dnt7amvfebe::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_medium_tablecloth_decorated_B.gltf.glb<>uid://cti6h2pnckd5n::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_small_decorated_A.gltf.glb<>uid://b0a83hrm81gfq::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_B.gltf.glb<>uid://dp584c61xh6q4::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_A.gltf.glb
+::res://hideout/::1699976470
+hideout.tscn::PackedScene::7716916017365361345::1699976470::0::1::::<><>::uid://bhqof1t0bm717::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bed_floor.gltf.glb<>uid://dwbaq4uhjquy5::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_green.gltf.glb<>uid://j24ungbtfvlc::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_labeled_brown.gltf.glb<>uid://bdp6tutkxnjpy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_C_brown.gltf.glb<>uid://casqreq25pifw::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_large.gltf.glb<>uid://0qo5pqlgjtx1::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small.gltf.glb<>uid://bpadbu3mlppok::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small_decorated.gltf.glb<>uid://b0s1pm13gntfy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_stacked.gltf.glb<>uid://cbuhnr0vvr062::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chair.gltf.glb<>uid://brjuqiht77plh::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chest.glb<>uid://d2buip5jlkbok::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/coin.gltf.glb<>uid://835kbutn2rfy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_large.gltf.glb<>uid://dmfsqhc4dmoja::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_large_rocky.gltf.glb<>uid://b2ggx6v8a0fah::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/keg_decorated.gltf.glb<>uid://chnbfpgsef1t4::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_A.gltf.glb<>uid://v0g3wjjembau::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_B.gltf.glb<>uid://dguci4kg4lvkn::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_large.gltf.glb<>uid://bx1h7nu55x7g2::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_half.gltf.glb<>uid://bpkc4doatcokf::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_C.gltf.glb<>uid://cbvkgdxcy2odg::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stool.gltf.glb<>uid://ckwf8jm55ofeq::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_D.gltf.glb<>uid://c8l0ndly1fhbw::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_weeds.gltf.glb<>uid://cnoqyh6t6jkvf::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_long_decorated_A.gltf.glb<>uid://b1dnt7amvfebe::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_medium_tablecloth_decorated_B.gltf.glb<>uid://cti6h2pnckd5n::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_small_decorated_A.gltf.glb<>uid://b0a83hrm81gfq::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_B.gltf.glb<>uid://dp584c61xh6q4::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_A.gltf.glb
 ::res://inventory/::1699299545
 inventory_data.gd::GDScript::-1::1699299545::0::1::::InventoryData<>Resource<>::
 slot_data.gd::GDScript::-1::1699299545::0::1::::SlotData<>Resource<>::
 ::res://item/::1699299545
 item_data.gd::GDScript::-1::1699299545::0::1::::ItemData<>Resource<>::
-::res://level/::1699916460
+::res://level/::1699976469
 level_1.gd::GDScript::-1::1698955672::0::1::::<>Node3D<>::
-level_1.tscn::PackedScene::5486766862100485142::1699916460::0::1::::<><>::uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://dh7eqkenjyvhp::::res://hideout/hideout.tscn<>uid://dawwbik4sgvk7::::res://player/barbarian.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dxh1exxrby0bd::::res://globals/Diablo Heavy.ttf<>uid://dcbt3cxtuaj55::::res://player/mage.tscn<>uid://ci7p6fwa6jxd::::res://portal/portal.tscn
-::res://level/level2/::1699916407
+level_1.tscn::PackedScene::5486766862100485142::1699976469::0::1::::<><>::uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://dh7eqkenjyvhp::::res://hideout/hideout.tscn<>uid://dawwbik4sgvk7::::res://player/barbarian.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dxh1exxrby0bd::::res://globals/Diablo Heavy.ttf<>uid://dcbt3cxtuaj55::::res://player/mage.tscn<>uid://ci7p6fwa6jxd::::res://portal/portal.tscn
+::res://level/level2/::1699976470
 hideout.tscn::PackedScene::6805561760561017034::1698782810::0::1::::<><>::uid://bg21syiad1wtc
-level_2.gd::GDScript::-1::1698961416::0::1::::<>Node3D<>::
-level_2.tscn::PackedScene::2347473302513341459::1699916407::0::1::::<><>::res://level/level2/level_2.gd<>uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://cchcp636iid71::::res://mob/knight.tscn<>uid://muq1yk7w0c1h::::res://ui/ui.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dxh1exxrby0bd::::res://globals/Diablo Heavy.ttf
-::res://materials/::1699914022
+level_2.gd::GDScript::-1::1699976017::0::1::::<>Node3D<>::
+level_2.tscn::PackedScene::2347473302513341459::1699976470::0::1::::<><>::res://level/level2/level_2.gd<>uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://cchcp636iid71::::res://mob/knight.tscn<>uid://muq1yk7w0c1h::::res://ui/ui.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dxh1exxrby0bd::::res://globals/Diablo Heavy.ttf
+::res://materials/::1699975978
 floor_material - Copy (2).tres::StandardMaterial3D::4941683408885706279::1698507010::0::1::::<><>::uid://bpn2xpuu8u7ps
-floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1699914022::0::1::::<><>::
+floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1699975978::0::1::::<><>::
 floor_material - Copy (4).tres::StandardMaterial3D::6326398115674201070::1698507010::0::1::::<><>::uid://bhcqo5inf8ft5
 floor_material - Copy.tres::StandardMaterial3D::6506583956968400161::1698507010::0::1::::<><>::uid://c24xbijughc4w
 floor_material.tres::StandardMaterial3D::324023740436286422::1698509275::0::1::::<><>::uid://crj4j4bysdb1e
@@ -1186,23 +1186,23 @@ wall_material.tres::StandardMaterial3D::2049049828431529787::1698509275::0::1:::
 knight.gd::GDScript::-1::1699721154::0::1::::<>CharacterBody3D<>::
 knight.tscn::PackedScene::4927819592732677638::1699713598::0::1::::<><>::uid://c7x1l40dia4qi
 mobcollision.gd::GDScript::-1::1698838429::0::1::::<>Area3D<>::
-::res://player/::1699916407
-barbarian.tscn::PackedScene::7206016358280172472::1699916407::0::1::::<><>::uid://c7hiacvooqb8o::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Barbarian.glb
+::res://player/::1699976470
+barbarian.tscn::PackedScene::7206016358280172472::1699976470::0::1::::<><>::uid://c7hiacvooqb8o::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Barbarian.glb
 camera_rig.tscn::PackedScene::6392152817220939938::1699713598::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
 mage.gd::GDScript::-1::1699796380::0::1::::<>CharacterBody3D<>::
-mage.tscn::PackedScene::7302907882668540702::1699916407::0::1::::<><>::res://player/mage.gd<>uid://0y6quu11guul::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Mage_mage_texture.png<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn
-rogue_hooded.gd::GDScript::-1::1699800719::0::1::::<>CharacterBody3D<>::
-rogue_hooded.tscn::PackedScene::6069684257656594730::1699916406::0::1::::<><>::uid://db0337ymkwxhu::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Rogue_Hooded.glb<>res://player/rogue_hooded.gd<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn
-selection.gd::GDScript::-1::1699916405::0::1::::<>Area3D<>::
-selection_area.tscn::PackedScene::1660714247796833638::1699916407::0::1::::<><>::res://player/selection.gd
+mage.tscn::PackedScene::7302907882668540702::1699976470::0::1::::<><>::res://player/mage.gd<>uid://0y6quu11guul::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Mage_mage_texture.png<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn
+rogue_hooded.gd::GDScript::-1::1699971988::0::1::::<>CharacterBody3D<>::
+rogue_hooded.tscn::PackedScene::6069684257656594730::1699976469::0::1::::<><>::uid://db0337ymkwxhu::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Rogue_Hooded.glb<>res://player/rogue_hooded.gd<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn
+selection.gd::GDScript::-1::1699971537::0::1::::<>Area3D<>::
+selection_area.tscn::PackedScene::1660714247796833638::1699976470::0::1::::<><>::res://player/selection.gd
 ::res://playground/::1699713598
 playground.tscn::PackedScene::714749942661595729::1699713598::0::1::::<><>::
 ::res://portal/::1699713598
 portal.gd::GDScript::-1::1698955672::0::1::::<>Area3D<>::
 portal.tscn::PackedScene::158864076934328749::1699713598::0::1::::<><>::uid://bk25ugh0l31sm
 ::res://scripts/::1696520166
-::res://scripts/globals/::1698943256
-game_manager.gd::GDScript::-1::1698943256::0::1::::<>Node<>::
+::res://scripts/globals/::1699973034
+game_manager.gd::GDScript::-1::1699973034::0::1::::<>Node<>::
 ::res://scripts/player/::1698782807
 camera_rig.gd::GDScript::-1::1696542482::0::1::::<>Node3D<>::
 ::res://shooting/::1699713598
@@ -1210,8 +1210,8 @@ arrow.gd::GDScript::-1::1698836213::0::1::::<>Node3D<>::
 arrow.tscn::PackedScene::9097127697197831773::1699713598::0::1::::<><>::uid://dth7syj2rww6p
 bullet.gd::GDScript::-1::1696542482::0::1::::<>Node3D<>::
 bullet.tscn::PackedScene::1053457791512271113::1699713598::0::1::::<><>::res://shooting/bullet.gd
-::res://transition/::1699713598
-transition.tscn::PackedScene::8486262327048564225::1699713598::0::1::::<><>::
-::res://ui/::1699916406
+::res://transition/::1699976470
+transition.tscn::PackedScene::8486262327048564225::1699976470::0::1::::<><>::
+::res://ui/::1699976469
 ui.gd::GDScript::-1::1699391945::0::1::::<>CanvasLayer<>::
-ui.tscn::PackedScene::884572858756141227::1699916406::0::1::::<><>::res://ui/ui.gd<>uid://befbx2j60m08y::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Bonus_Level_Base.png<>uid://ddk1b7fdnqiry::::res://assets/HealthGlobe/Globe_Red.png<>uid://v43dje64fmy4::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Main_Button_Overlay.png<>uid://lphqff08vli7::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Corner.png<>uid://b4l1kwkjr5ar3::::res://assets/HealthGlobe/Globe_Blue.png<>uid://d0olnmrky3ugd::::res://globals/Bildad.ttf
+ui.tscn::PackedScene::884572858756141227::1699976469::0::1::::<><>::res://ui/ui.gd<>uid://befbx2j60m08y::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Bonus_Level_Base.png<>uid://ddk1b7fdnqiry::::res://assets/HealthGlobe/Globe_Red.png<>uid://v43dje64fmy4::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Main_Button_Overlay.png<>uid://lphqff08vli7::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Corner.png<>uid://b4l1kwkjr5ar3::::res://assets/HealthGlobe/Globe_Blue.png<>uid://d0olnmrky3ugd::::res://globals/Bildad.ttf
