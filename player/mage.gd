@@ -15,6 +15,7 @@ var velocity_var = Vector3.ZERO
 @onready var camera_point = $camera_point
 @onready var model = $Rig
 @onready var anim_tree = $AnimationTree
+@onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
 #@onready var anim_state = $AnimationTree.get("parameters/playback")
 @onready var camera_rig = $camera_rig
 #@onready var crossbow = $Rig/RayCast3D
@@ -25,7 +26,7 @@ signal player_hit
 
 var hp = 10
 var hp_regen = 0.1
-var current_hp#
+var current_hp
 var is_dead = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -110,22 +111,16 @@ func movement_and_attacking(delta):
 	move_and_slide()
 	
 	if Input.is_action_pressed("primary_action"):
-		anim_tree.set("parameters/aim_transition/current_index", 0)
 		attack()
 	elif Input.is_action_just_released("primary_action"):
-		anim_tree.set("parameters/aim_transition/current_index", 1)
-		# Stop the attack and revert to "IWR"
-		#anim_state.travel("IWR")
-		attacking = false
+		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)
 	
 	#anim_tree.set("parameters/conditions/run", walking)
 		
 
 func attack():
 	print("Mage is attacking")
-	anim_tree.set("parameters/attack-oneshot/request", true)
-#	if walking:
-#		return
+	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
 #	# Always update orientation, regardless of cooldown
 	update_orientation()
 #

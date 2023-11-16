@@ -9,8 +9,9 @@ const CROSSFADE_TIME = 0.1
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
-@onready var anim_tree = $AnimationTree
-@onready var anim_state = $AnimationTree.get("parameters/playback")
+@onready var animation_tree = $AnimationTree
+#@onready var anim_tree = $AnimationTreeOld
+#@onready var anim_state = $AnimationTreeOld.get("parameters/playback")
 @onready var camera_rig = $camera_rig
 @onready var crossbow = $Rig/RayCast3D
 @onready var transition = $Transition
@@ -53,7 +54,7 @@ var attacking = false
 
 func _ready():
 	GameManager.set_player(self)
-	anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
+	#anim_tree.set("parameters/IWR/blend_position", Vector2(0, 0))
 	current_hp = hp
 	
 func _physics_process(delta):
@@ -100,17 +101,17 @@ func movement_and_attacking(delta):
 			idling = true
 	
 	current_blend_position = current_blend_position.lerp(target_blend_position, blend_lerp_speed * delta)
-	anim_tree.set("parameters/IWR/blend_position", current_blend_position)
+	#anim_tree.set("parameters/IWR/blend_position", current_blend_position)
 	move_and_slide()
 	
 	if Input.is_action_pressed("primary_action"):
 		attack()
 	elif Input.is_action_just_released("primary_action"):
 		# Stop the attack and revert to "IWR"
-		anim_state.travel("IWR")
+		#anim_state.travel("IWR")
 		attacking = false
 	
-	anim_tree.set("parameters/conditions/run", walking)
+	#anim_tree.set("parameters/conditions/run", walking)
 		
 
 func attack():
@@ -146,7 +147,7 @@ func update_orientation():
 
 func shoot_arrow():
 	# The logic related to shooting an arrow goes here
-	anim_state.travel(attacks[3])
+	#anim_state.travel(attacks[3])
 
 	arrow_instance = arrow.instantiate()
 	arrow_instance.position = crossbow.global_position
@@ -168,7 +169,7 @@ func hit(dir):
 func die():
 	is_dead = true
 	print("inside die")
-	anim_tree.set("parameters/conditions/die", true)
+	#anim_tree.set("parameters/conditions/die", true)
 	await get_tree().create_timer(4.0).timeout
 	transition.get_node("AnimationPlayer").play("fade_out")
 	await get_tree().create_timer(1.0).timeout

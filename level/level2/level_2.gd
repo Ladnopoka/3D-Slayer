@@ -7,12 +7,17 @@ extends Node3D
 @onready var score = $Score
 
 var knight = load("res://mob/knight.tscn")
-var knight_instance 
+var knight_instance
+
+var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_player_character()
+	var player_ins = player.instantiate()
+	add_child(player_ins)
+	player_ins.position = $Marker3D.position
 	transition.get_node("AnimationPlayer").play("fade_in")
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -33,3 +38,14 @@ func _on_knight_spawn_timer_timeout():
 	knight_instance = knight.instantiate()
 	knight_instance.position = spawn_point
 	navigation_region.add_child(knight_instance)
+	
+func get_player_character():
+	match GameManager.player_name:
+		"Rogue_Hooded":
+			player = load("res://player/rogue_hooded.tscn")
+		"Barbarian":
+			player = load("res://player/barbarian.tscn")
+		"Mage":
+			player = load("res://player/mage.tscn")
+		_:
+			player = load("res://player/rogue_hooded.tscn")

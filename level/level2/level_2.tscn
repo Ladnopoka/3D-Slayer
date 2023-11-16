@@ -126,5 +126,8 @@ text = "Knights Killed: 100/100"
 
 [node name="Transition" parent="." instance=ExtResource("6_qheyw")]
 
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.7465)
+
 [connection signal="player_hit" from="Rogue_Hooded" to="." method="_on_rogue_hooded_player_hit"]
 [connection signal="timeout" from="KnightSpawnTimer" to="." method="_on_knight_spawn_timer_timeout"]

@@ -1,6 +1,5 @@
-[gd_scene load_steps=29 format=3 uid="uid://dh7eqkenjyvhp"]
+[gd_scene load_steps=28 format=3 uid="uid://dh7eqkenjyvhp"]
 
-[ext_resource type="PackedScene" uid="uid://dawwbik4sgvk7" path="res://player/barbarian.tscn" id="1_1hty5"]
 [ext_resource type="PackedScene" uid="uid://bhqof1t0bm717" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bed_floor.gltf.glb" id="4_qix14"]
 [ext_resource type="PackedScene" uid="uid://dwbaq4uhjquy5" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_green.gltf.glb" id="5_1p201"]
 [ext_resource type="PackedScene" uid="uid://j24ungbtfvlc" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_labeled_brown.gltf.glb" id="6_bw0ek"]
@@ -30,11 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://dp584c61xh6q4" path="res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_A.gltf.glb" id="47_yc8c1"]
 
 [node name="Hideout" type="Node3D"]
-
-[node name="Characters" type="Node3D" parent="."]
-
-[node name="Barbarian" parent="Characters" instance=ExtResource("1_1hty5")]
-transform = Transform3D(-0.756059, 0, 0.654503, 0, 1, 0, -0.654503, 0, -0.756059, -1.21663, 0, -0.41308)
 
 [node name="Boxes" type="Node3D" parent="."]
 
