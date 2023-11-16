@@ -30,4 +30,3 @@ RayCast3D
 SpringArm3D
 StaticBody3D
 CSGBox3D
-CSGCombiner3D

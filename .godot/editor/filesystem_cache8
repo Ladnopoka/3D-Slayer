@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700158121
+::res://::1700160524
 icon.svg::CompressedTexture2D::3540083071793652844::1696266044::1696266048::1::::<><>::
 Ideas.txt::TextFile::-1::1700158023::0::1::::<><>::
 ::res://addons/::1700158144
@@ -31,7 +31,7 @@ action_scale_selection.gd::GDScript::-1::1683755122::0::1::::ActionScaleSelectio
 action_snap_to_grid.gd::GDScript::-1::1683755122::0::1::::ActionSnapToGrid<>CyclopsAction<>::
 action_tool_duplicate.gd::GDScript::-1::1683755122::0::1::::ActionToolDuplicate<>CyclopsAction<>::
 cyclops_action.gd::GDScript::-1::1683755122::0::1::::CyclopsAction<>RefCounted<>::
-::res://addons/cyclops_level_builder/art/::1683755122
+::res://addons/cyclops_level_builder/art/::1700158147
 cyclops1.png::CompressedTexture2D::832933109050672076::1683755122::1683755122::1::::<><>::
 cyclops2.png::CompressedTexture2D::1031168319167062316::1683755122::1683755122::1::::<><>::
 cyclops.svg::CompressedTexture2D::3232119659508548051::1683755122::1700158147::1::::<><>::
@@ -42,7 +42,7 @@ cyclops_17.png::CompressedTexture2D::1712293627499082897::1683755122::1683755122
 cyclops_closed.png::CompressedTexture2D::7439365741997215728::1683755122::1683755122::1::::<><>::
 cyclops_open.png::CompressedTexture2D::8701327370751441397::1683755122::1683755122::1::::<><>::
 materialTest.glb::PackedScene::8805855001641236736::1683755122::1683755122::1::::<><>::
-::res://addons/cyclops_level_builder/art/textures/::1683755122
+::res://addons/cyclops_level_builder/art/textures/::1700158147
 checkerboard.png::CompressedTexture2D::4701329132569388675::1683755122::1700158147::1::::<><>::
 grid_cell2.png::CompressedTexture2D::3322571021301483258::1683755122::1683755122::1::::<><>::
 grid_cell.png::CompressedTexture2D::8241025639786597521::1683755122::1700158147::1::::<><>::
@@ -84,16 +84,16 @@ resource_inspector.gd::GDScript::-1::1683755122::0::1::::ResourceInspector<>Cont
 resource_inspector.tscn::PackedScene::6729863528294998586::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/controls/resource_inspector/resource_inspector.gd
 ::res://addons/cyclops_level_builder/doc/::1683755122
 ::res://addons/cyclops_level_builder/docks/::1683755122
-::res://addons/cyclops_level_builder/docks/material_palette/::1683755122
+::res://addons/cyclops_level_builder/docks/material_palette/::1700160482
 material_palette_viewport.gd::GDScript::-1::1683755122::0::1::::MaterialPaletteViewport<>Control<>::
 material_palette_viewport.tscn::PackedScene::1036570676893576714::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_palette_viewport.gd<>res://addons/cyclops_level_builder/docks/material_palette/thumbnail_group.gd
 material_snapshot.gd::GDScript::-1::1683755122::0::1::::MaterialShapshot<>SubViewport<>::
-material_snapshot.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_snapshot.gd<>uid://rdhrhgrb78ls::::res://addons/cyclops_level_builder/materials/grid.tres
+material_snapshot.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_snapshot.gd<>uid://rdhrhgrb78ls
 material_thumbnail.gd::GDScript::-1::1683755122::0::1::::MaterialThumbnail<>Control<>::
-material_thumbnail.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_thumbnail.gd<>uid://c0gpl22e2g6ay::::res://addons/cyclops_level_builder/docks/material_palette/thumbnail_selected_theme.tres<>uid://bx26luxdhj3jq::::res://addons/cyclops_level_builder/docks/material_palette/thumbnail_normal_theme.tres
+material_thumbnail.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_thumbnail.gd<>uid://c0gpl22e2g6ay
 thumbnail_group.gd::GDScript::-1::1683755122::0::1::::ThumbnailGroup<>Resource<>::
-thumbnail_normal_theme.tres::Theme::4058405243379725578::1683755122::0::1::::<><>::
-thumbnail_selected_theme.tres::Theme::6540880583544088756::1683755122::0::1::::<><>::
+thumbnail_normal_theme.tres::Theme::4058405243379725578::1700160482::0::1::::<><>::
+thumbnail_selected_theme.tres::Theme::6540880583544088756::1700160482::0::1::::<><>::
 ::res://addons/cyclops_level_builder/docks/material_palette/commands/::1683755122
 cmd_mat_dock_add_materials.gd::GDScript::-1::1683755122::0::1::::CommandMaterialDockAddMaterials<>CyclopsCommand<>::
 cmd_mat_dock_remove_materials.gd::GDScript::-1::1683755122::0::1::::CommandMaterialDockRemoveMaterials<>CyclopsCommand<>::
@@ -102,18 +102,18 @@ tool_properties_dock.gd::GDScript::-1::1683755122::0::1::::ToolPropertiesDock<>C
 tool_properties_dock.tscn::PackedScene::4803251575721593226::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/tool_properties/tool_properties_dock.gd
 ::res://addons/cyclops_level_builder/docks/uv_editor/::1683755122
 uv_editor_preview.gd::GDScript::-1::1683755122::0::1::::UvEditorPreview<>SubViewport<>::
-uv_editor_preview.tscn::PackedScene::2467323579116487398::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/uv_editor/uv_editor_preview.gd<>uid://rdhrhgrb78ls::::res://addons/cyclops_level_builder/materials/grid.tres<>res://addons/cyclops_level_builder/docks/uv_editor/uv_editor_preview_studio.tscn
+uv_editor_preview.tscn::PackedScene::2467323579116487398::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/uv_editor/uv_editor_preview.gd<>uid://rdhrhgrb78ls
 uv_editor_preview_studio.gd::GDScript::-1::1683755122::0::1::::UvEditorPreviewStudio<>Node3D<>::
 uv_editor_preview_studio.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/uv_editor/uv_editor_preview_studio.gd
 uv_editor_viewport.gd::GDScript::-1::1683755122::0::1::::UvEdtiorViewport<>Control<>::
-uv_editor_viewport.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/uv_editor/uv_editor_viewport.gd<>uid://diibmlqy1mpqb::::res://addons/cyclops_level_builder/controls/numeric_line_edit.tscn<>res://addons/cyclops_level_builder/docks/uv_editor/uv_editor_preview.tscn
+uv_editor_viewport.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/uv_editor/uv_editor_viewport.gd<>uid://diibmlqy1mpqb
 ::res://addons/cyclops_level_builder/handles/::1683755122
 handle_edge.gd::GDScript::-1::1683755122::0::1::::HandleEdge<>RefCounted<>::
 handle_face.gd::GDScript::-1::1683755122::0::1::::HandleFace<>RefCounted<>::
 handle_vertex.gd::GDScript::-1::1683755122::0::1::::HandleVertex<>RefCounted<>::
 ::res://addons/cyclops_level_builder/materials/::1683755122
-grid.tres::StandardMaterial3D::1199859230261790652::1683755122::0::1::::<><>::uid://bnlqi20ay4vs1::::res://addons/cyclops_level_builder/art/textures/grid_cell2.png<>uid://b78mg60xhic6n::::res://addons/cyclops_level_builder/art/textures/checkerboard.png
-outline_material.tres::ShaderMaterial::749169765283895681::1683755122::0::1::::<><>::uid://cc5tovf48xmg1::::res://addons/cyclops_level_builder/shaders/outline_shader.tres
+grid.tres::StandardMaterial3D::1199859230261790652::1683755122::0::1::::<><>::uid://bnlqi20ay4vs1
+outline_material.tres::ShaderMaterial::749169765283895681::1683755122::0::1::::<><>::uid://cc5tovf48xmg1
 tool_edit_active_fill_material.tres::StandardMaterial3D::8695562753081693419::1683755122::0::1::::<><>::
 tool_edit_active_material.tres::StandardMaterial3D::8081221598229669384::1683755122::0::1::::<><>::
 tool_edit_selected_fill_material.tres::StandardMaterial3D::4334240765305570039::1683755122::0::1::::<><>::
@@ -135,8 +135,8 @@ action_popup_menu.gd::GDScript::-1::1683755122::0::1::::ActionPopupMenu<>PopupMe
 editor_toolbar.gd::GDScript::-1::1683755122::0::1::::EditorToolbar<>PanelContainer<>::
 editor_toolbar.tscn::PackedScene::6742984485542207434::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/menu/editor_toolbar.gd<>res://addons/cyclops_level_builder/menu/action_popup_menu.gd
 sticky_toolbar.gd::GDScript::-1::1683755122::0::1::::StickyToolbar<>Control<>::
-sticky_toolbar.tscn::PackedScene::6846210784298201372::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/menu/sticky_toolbar.gd<>uid://d0krdms4l6ns4::::res://addons/cyclops_level_builder/art/cyclops_3.png<>uid://cg3yjatinkymb::::res://addons/cyclops_level_builder/art/cyclops_4.png
-::res://addons/cyclops_level_builder/nodes/::1683755122
+sticky_toolbar.tscn::PackedScene::6846210784298201372::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/menu/sticky_toolbar.gd<>uid://d0krdms4l6ns4
+::res://addons/cyclops_level_builder/nodes/::1700158147
 cyclops_blocks.gd::GDScript::-1::1683755122::0::1::::CyclopsBlocks<>Node3D<>::
 cyclops_blocks_icon.png::CompressedTexture2D::2621788596869049476::1683755122::1683755122::1::::<><>::
 cyclops_blocks_icon.svg::CompressedTexture2D::5306815017916434016::1683755122::1700158147::1::::<><>::
@@ -146,8 +146,8 @@ intersect_results.gd::GDScript::-1::1683755122::0::1::::IntersectResults<>RefCou
 ::res://addons/cyclops_level_builder/resources/::1683755122
 block_data.gd::GDScript::-1::1683755122::0::1::::BlockData<>Resource<>::
 convex_block_data.gd::GDScript::-1::1683755122::0::1::::ConvexBlockData<>Resource<>::
-::res://addons/cyclops_level_builder/shaders/::1683755122
-outline_shader.tres::VisualShader::4976330123338311102::1683755122::0::1::::<><>::
+::res://addons/cyclops_level_builder/shaders/::1700160482
+outline_shader.tres::VisualShader::4976330123338311102::1700160482::0::1::::<><>::
 tool_outline_shader.tres::VisualShader::6796597932207006307::1683755122::0::1::::<><>::
 ::res://addons/cyclops_level_builder/tools/::1683755122
 cyclops_tool.gd::GDScript::-1::1683755122::0::1::::CyclopsTool<>Resource<>::
@@ -167,19 +167,118 @@ tool_stairs_settings.gd::GDScript::-1::1683755122::0::1::::ToolStairsSettings<>R
 display_mode.gd::GDScript::-1::1683755122::0::1::::DisplayMode<>RefCounted<>::
 general_util.gd::GDScript::-1::1683755122::0::1::::GeneralUtil<>RefCounted<>::
 selection.gd::GDScript::-1::1683755122::0::1::::Selection<>RefCounted<>::
-::res://addons/editor-plugin/::1700157043
+::res://addons/editor-plugin/::1700160482
 panel.tscn::PackedScene::5401244366276246444::1700157014::0::1::::<><>::
 plugin.cfg::TextFile::-1::1700157014::0::1::::<><>::
-plugin.gd::GDScript::-1::1700157043::0::1::::<>EditorPlugin<>::
+plugin.gd::GDScript::-1::1700160482::0::1::::<>EditorPlugin<>::
 ::res://addons/editor-plugin/room_template/::1700157014
 room_template.tscn::PackedScene::1473403741818640738::1700157014::0::1::::<><>::
-::res://addons/main-screen/::1700157043
+::res://addons/main-screen/::1700160482
 control.gd::GDScript::-1::1700157014::0::1::::<>VBoxContainer<>::
-main-screen.gd::GDScript::-1::1700157043::0::1::::<>EditorPlugin<>::
+main-screen.gd::GDScript::-1::1700160482::0::1::::<>EditorPlugin<>::
 main-screen.tscn::PackedScene::5610324604663873796::1698854995::0::1::::<><>::res://addons/main-screen/control.gd
 name-generator.gd::GDScript::-1::1696542482::0::1::::NameGenerator<>Node<>::
 plugin.cfg::TextFile::-1::1696542482::0::1::::<><>::
-::res://assets/::1700157016
+::res://assets/::1700161757
+::res://assets/bricks_and_ground/::1700161814
+::res://assets/bricks_and_ground/4k JPEG/::1700161827
+blouberg_sunrise_2_4k.hdr::CompressedTexture2D::2509768605615655326::1523036353::1700161827::1::::<><>::
+blouberg_sunrise_2_4k.jpg::CompressedTexture2D::2780915569668126746::1593055929::1700161827::1::::<><>::
+::res://assets/bricks_and_ground/4k JPEG/Bark 02/::1700161832
+Bark 02_Ambient Occlusion.jpg::CompressedTexture2D::2337714719930317776::1593055919::1700161830::1::::<><>::
+Bark 02_Base Color.jpg::CompressedTexture2D::7288341959434084447::1593055920::1700161832::1::::<><>::
+Bark 02_Height.jpg::CompressedTexture2D::8433847714238653130::1593055921::1700161830::1::::<><>::
+Bark 02_Metallic.jpg::CompressedTexture2D::3274934363755820602::1593055922::1700161828::1::::<><>::
+Bark 02_Normal.jpg::CompressedTexture2D::3236554933650872820::1593055925::1700161832::1::::<><>::
+Bark 02_Opacity.jpg::CompressedTexture2D::2157832201261507966::1593055925::1700161828::1::::<><>::
+Bark 02_Roughness.jpg::CompressedTexture2D::8772265870259087060::1593055926::1700161830::1::::<><>::
+Bark 02_Specular Level.jpg::CompressedTexture2D::8322521708710622723::1593055927::1700161830::1::::<><>::
+::res://assets/bricks_and_ground/4k JPEG/Grass 02/::1700161831
+Grass02_Ambient Occlusion.jpg::CompressedTexture2D::6250708247369537525::1593055930::1700161829::1::::<><>::
+Grass02_Height.jpg::CompressedTexture2D::9009693684560099542::1593055932::1700161829::1::::<><>::
+Grass02_Metallic.jpg::CompressedTexture2D::2966878129685612481::1593055933::1700161827::1::::<><>::
+Grass02_Normal.jpg::CompressedTexture2D::3686154347398210572::1593055935::1700161831::1::::<><>::
+Grass02_Opacity.jpg::CompressedTexture2D::2912363388727050650::1593055936::1700161827::1::::<><>::
+Grass02_Roughness.jpg::CompressedTexture2D::8009545032541984879::1593055936::1700161828::1::::<><>::
+Grass02_Specular Level.jpg::CompressedTexture2D::5049215995727039547::1593055937::1700161827::1::::<><>::
+Grass03_Base Color.jpg::CompressedTexture2D::1753626871912930338::1593055939::1700161831::1::::<><>::
+::res://assets/bricks_and_ground/4k JPEG/Grass 03/::1700161833
+Grass03_Ambient Occlusion.jpg::CompressedTexture2D::3144943725380944401::1593055940::1700161829::1::::<><>::
+Grass03_BaseColor.jpg::CompressedTexture2D::8940364965518212813::1593055941::1700161831::1::::<><>::
+Grass03_Height.jpg::CompressedTexture2D::7100660495116343556::1593055942::1700161828::1::::<><>::
+Grass03_Metallic.jpg::CompressedTexture2D::8096861453282261198::1593055943::1700161826::1::::<><>::
+Grass03_Normal.jpg::CompressedTexture2D::1024878152470942593::1593055946::1700161831::1::::<><>::
+Grass03_Opacity.jpg::CompressedTexture2D::2979154982841288176::1593055947::1700161826::1::::<><>::
+Grass03_Roughness.jpg::CompressedTexture2D::8568964969819972996::1593055948::1700161833::1::::<><>::
+Grass03_Specular Level.jpg::CompressedTexture2D::8321555158623729349::1593055948::1700161831::1::::<><>::
+::res://assets/bricks_and_ground/4k JPEG/Ground Peables 01/::1700161834
+GroundPeables01_Ambient Occlusion.jpg::CompressedTexture2D::116383671482638665::1593055949::1700161833::1::::<><>::
+GroundPeables01_Base Color.jpg::CompressedTexture2D::2921180139155076111::1593055951::1700161834::1::::<><>::
+GroundPeables01_Height.jpg::CompressedTexture2D::1781660682310377535::1593055952::1700161832::1::::<><>::
+GroundPeables01_Metallic.jpg::CompressedTexture2D::879784898704858136::1593055952::1700161831::1::::<><>::
+GroundPeables01_Normal.jpg::CompressedTexture2D::1949389802148695670::1593055954::1700161834::1::::<><>::
+GroundPeables01_Opacity.jpg::CompressedTexture2D::5724907716473831955::1593055955::1700161830::1::::<><>::
+GroundPeables01_Roughness.jpg::CompressedTexture2D::7573551768766756718::1593055956::1700161832::1::::<><>::
+GroundPeables01_Specular Level.jpg::CompressedTexture2D::107406517631792290::1593055957::1700161830::1::::<><>::
+::res://assets/bricks_and_ground/4k JPEG/Ground Peables 02/::1700161833
+GroundPeables02_Ambient Occlusion.jpg::CompressedTexture2D::2858396778878336784::1593055958::1700161832::1::::<><>::
+GroundPeables02_Base Color.jpg::CompressedTexture2D::4974155141765358125::1593055960::1700161833::1::::<><>::
+GroundPeables02_Height.jpg::CompressedTexture2D::5617110286092989184::1593055961::1700161831::1::::<><>::
+GroundPeables02_Metallic.jpg::CompressedTexture2D::6094101618736655313::1593055962::1700161829::1::::<><>::
+GroundPeables02_Normal.jpg::CompressedTexture2D::7238270188253026060::1593055965::1700161833::1::::<><>::
+GroundPeables02_Opacity.jpg::CompressedTexture2D::4378270160657254119::1593055965::1700161829::1::::<><>::
+GroundPeables02_Roughness.jpg::CompressedTexture2D::5645062464430887082::1593055966::1700161831::1::::<><>::
+GroundPeables02_Specular Level.jpg::CompressedTexture2D::4774128684475568115::1593055967::1700161831::1::::<><>::
+::res://assets/bricks_and_ground/4k JPEG/Ground Sidewalk 01/::1700161832
+GroundSidewalk01_Ambient Occlusion.jpg::CompressedTexture2D::2313611168221544524::1593055968::1700161831::1::::<><>::
+GroundSidewalk01_Base Color.jpg::CompressedTexture2D::89638518779552512::1593055970::1700161832::1::::<><>::
+GroundSidewalk01_Height.jpg::CompressedTexture2D::3606497976850087795::1593055971::1700161831::1::::<><>::
+GroundSidewalk01_Metallic.jpg::CompressedTexture2D::3072051439248182110::1593055972::1700161828::1::::<><>::
+GroundSidewalk01_Normal.jpg::CompressedTexture2D::1188226404803071651::1593055974::1700161829::1::::<><>::
+GroundSidewalk01_Opacity.jpg::CompressedTexture2D::8333113866261887842::1593055975::1700161824::1::::<><>::
+GroundSidewalk01_Roughness.jpg::CompressedTexture2D::1224598670489864167::1593055975::1700161826::1::::<><>::
+GroundSidewalk01_Specular Level.jpg::CompressedTexture2D::2875903066637830726::1593055976::1700161826::1::::<><>::
+::res://assets/bricks_and_ground/4k JPEG/Ground Sidewalk 02/::1700161828
+GroundSidewalk02_Ambient Occlusion.jpg::CompressedTexture2D::405386588319250857::1593055977::1700161826::1::::<><>::
+GroundSidewalk02_Base Color.jpg::CompressedTexture2D::822473826831362947::1593055980::1700161828::1::::<><>::
+GroundSidewalk02_Height.jpg::CompressedTexture2D::3442926241061779160::1593055981::1700161826::1::::<><>::
+GroundSidewalk02_Metallic.jpg::CompressedTexture2D::8625494208410842932::1593055982::1700161824::1::::<><>::
+GroundSidewalk02_Normal.jpg::CompressedTexture2D::2689918794252179105::1593055984::1700161828::1::::<><>::
+GroundSidewalk02_Opacity.jpg::CompressedTexture2D::361182521404979976::1593055985::1700161824::1::::<><>::
+GroundSidewalk02_Roughness.jpg::CompressedTexture2D::3541098336778184029::1593055986::1700161826::1::::<><>::
+GroundSidewalk02_Specular Level.jpg::CompressedTexture2D::5822433355261196602::1593055987::1700161824::1::::<><>::
+::res://assets/bricks_and_ground/4k JPEG/Ground Stones/::1700161829
+GroundStones_Ambient Occlusion.jpg::CompressedTexture2D::6371091846043074311::1593055989::1700161826::1::::<><>::
+GroundStones_BaseColor.jpg::CompressedTexture2D::7917605858736172650::1593055990::1700161828::1::::<><>::
+GroundStones_Height.jpg::CompressedTexture2D::1785559110189176189::1593055991::1700161826::1::::<><>::
+GroundStones_Metallic.jpg::CompressedTexture2D::4398203898578217573::1593055992::1700161824::1::::<><>::
+GroundStones_Normal.jpg::CompressedTexture2D::3790643640025134445::1593055995::1700161829::1::::<><>::
+GroundStones_Opacity.jpg::CompressedTexture2D::2618448800531885875::1593055996::1700161824::1::::<><>::
+GroundStones_Roughness.jpg::CompressedTexture2D::8036777356276962787::1593055997::1700161826::1::::<><>::
+GroundStones_Specular Level.jpg::CompressedTexture2D::5414549860908607067::1593055998::1700161825::1::::<><>::
+::res://assets/bricks_and_ground/4k JPEG/Stone 03/::1700161830
+Stone03_Ambient Occlusion.jpg::CompressedTexture2D::8707689447636201536::1593055999::1700161826::1::::<><>::
+Stone03_Base Color.jpg::CompressedTexture2D::7165962302577055673::1593056000::1700161830::1::::<><>::
+Stone03_Height.jpg::CompressedTexture2D::570859392368654590::1593056001::1700161827::1::::<><>::
+Stone03_Metallic.jpg::CompressedTexture2D::1892815309509357167::1593056002::1700161825::1::::<><>::
+Stone03_Normal.jpg::CompressedTexture2D::470120634000549411::1593056004::1700161830::1::::<><>::
+Stone03_Opacity.jpg::CompressedTexture2D::6030956211327047341::1593056005::1700161825::1::::<><>::
+Stone03_Roughness.jpg::CompressedTexture2D::639070683727352156::1593056006::1700161827::1::::<><>::
+Stone03_Specular Level.jpg::CompressedTexture2D::7054749883896579012::1593056007::1700161825::1::::<><>::
+::res://assets/bricks_and_ground/Bricks/::1700161825
+Bluerock_Texture.jpg::CompressedTexture2D::2960369483092980832::1649750490::1700161825::1::::<><>::
+Brick2_Texture.jpg::CompressedTexture2D::6663263312477017636::1649750486::1700161825::1::::<><>::
+Brickwall2_Texture.png::CompressedTexture2D::1862976293927759644::1649750472::1700161825::1::::<><>::
+Brickwall3_Texture.png::CompressedTexture2D::4494248613313995935::1649750470::1700161825::1::::<><>::
+Brickwall4_Texture.png::CompressedTexture2D::1913844525975339261::1649750498::1700161824::1::::<><>::
+Brickwall5_Texture.png::CompressedTexture2D::4444516574250536412::1649750496::1700161824::1::::<><>::
+Brickwall6_Texture.png::CompressedTexture2D::9073804181532045310::1649750494::1700161824::1::::<><>::
+Brickwall_Texture.png::CompressedTexture2D::4321941890860320175::1649750476::1700161824::1::::<><>::
+Brick_Texture.png::CompressedTexture2D::6672010072365793885::1649750478::1700161824::1::::<><>::
+Darkmetal_Texture.png::CompressedTexture2D::2349265492494190380::1649750488::1700161824::1::::<><>::
+Stones_Texture.png::CompressedTexture2D::6702744456264777988::1649750466::1700161824::1::::<><>::
+Stonewall_Spriteclip.png::CompressedTexture2D::1183480410609658893::1649750482::1700161824::1::::<><>::
+Stonewall_Texture.png::CompressedTexture2D::6078921041169895554::1649750480::1700161824::1::::<><>::
 ::res://assets/HealthGlobe/::1700157014
 Background.png::CompressedTexture2D::2413726135197671398::1700157014::1700157014::1::::<><>::
 Border.png::CompressedTexture2D::3480918899064479091::1700157014::1700157014::1::::<><>::
@@ -954,8 +1053,8 @@ wall_window_closed.obj::Mesh::336856755618094547::1700157016::1700157016::1::::<
 wall_window_closed_scaffold.obj::Mesh::8179842697946107252::1700157016::1700157016::1::::<><>::
 wall_window_open.obj::Mesh::2142717638781372784::1700157016::1700157016::1::::<><>::
 wall_window_open_scaffold.obj::Mesh::3335238026905829837::1700157016::1700157016::1::::<><>::
-::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/texture/::1700157016
-dungeon_texture.png::CompressedTexture2D::8628975430861656525::1700157016::1700157016::1::::<><>::
+::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/texture/::1700161089
+dungeon_texture.png::CompressedTexture2D::8628975430861656525::1700157016::1700161089::1::::<><>::
 ::res://assets/KayKit_DungeonRemastered_1.0_FREE/Samples/::1700157016
 dungeon_remastered_sample1.png::CompressedTexture2D::8951401738998022117::1700157016::1700157016::1::::<><>::
 dungeon_remastered_sample2.png::CompressedTexture2D::4836910953505948648::1700157016::1700157016::1::::<><>::
@@ -1162,7 +1261,7 @@ Bildad.ttf::FontFile::8943576189857571327::1700157016::1700157016::1::::<><>::
 Diablo Heavy.ttf::FontFile::8789643128362279737::1700157016::1700157016::1::::<><>::
 Global.gd::GDScript::-1::1700157016::0::1::::<>Node<>::
 ::res://hideout/::1700157084
-hideout.tscn::PackedScene::7716916017365361345::1700157084::0::1::::<><>::uid://bhqof1t0bm717::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bed_floor.gltf.glb<>uid://dwbaq4uhjquy5::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_green.gltf.glb<>uid://j24ungbtfvlc::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_labeled_brown.gltf.glb<>uid://bdp6tutkxnjpy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_C_brown.gltf.glb<>uid://casqreq25pifw::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_large.gltf.glb<>uid://0qo5pqlgjtx1::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small.gltf.glb<>uid://bpadbu3mlppok::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small_decorated.gltf.glb<>uid://b0s1pm13gntfy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_stacked.gltf.glb<>uid://cbuhnr0vvr062::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chair.gltf.glb<>uid://brjuqiht77plh::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chest.glb<>uid://d2buip5jlkbok::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/coin.gltf.glb<>uid://835kbutn2rfy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_large.gltf.glb<>uid://dmfsqhc4dmoja::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_large_rocky.gltf.glb<>uid://b2ggx6v8a0fah::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/keg_decorated.gltf.glb<>uid://chnbfpgsef1t4::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_A.gltf.glb<>uid://v0g3wjjembau::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_B.gltf.glb<>uid://dguci4kg4lvkn::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_large.gltf.glb<>uid://bx1h7nu55x7g2::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_half.gltf.glb<>uid://bpkc4doatcokf::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_C.gltf.glb<>uid://cbvkgdxcy2odg::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stool.gltf.glb<>uid://ckwf8jm55ofeq::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_D.gltf.glb<>uid://c8l0ndly1fhbw::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/floor_dirt_small_weeds.gltf.glb<>uid://cnoqyh6t6jkvf::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_long_decorated_A.gltf.glb<>uid://b1dnt7amvfebe::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_medium_tablecloth_decorated_B.gltf.glb<>uid://cti6h2pnckd5n::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_small_decorated_A.gltf.glb<>uid://b0a83hrm81gfq::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_B.gltf.glb<>uid://dp584c61xh6q4::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_A.gltf.glb
+hideout.tscn::PackedScene::7716916017365361345::1700157084::0::1::::<><>::uid://bhqof1t0bm717
 ::res://inventory/::1700157016
 inventory_data.gd::GDScript::-1::1700157016::0::1::::InventoryData<>Resource<>::
 slot_data.gd::GDScript::-1::1700157016::0::1::::SlotData<>Resource<>::
@@ -1170,14 +1269,14 @@ slot_data.gd::GDScript::-1::1700157016::0::1::::SlotData<>Resource<>::
 item_data.gd::GDScript::-1::1700157016::0::1::::ItemData<>Resource<>::
 ::res://level/::1700157083
 level_1.gd::GDScript::-1::1700157016::0::1::::<>Node3D<>::
-level_1.tscn::PackedScene::5486766862100485142::1700157083::0::1::::<><>::uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://dh7eqkenjyvhp::::res://hideout/hideout.tscn<>uid://dawwbik4sgvk7::::res://player/barbarian.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dxh1exxrby0bd::::res://globals/Diablo Heavy.ttf<>uid://dcbt3cxtuaj55::::res://player/mage.tscn<>uid://ci7p6fwa6jxd::::res://portal/portal.tscn
+level_1.tscn::PackedScene::5486766862100485142::1700157083::0::1::::<><>::uid://csqg2v0p2s8yw
 ::res://level/level2/::1700157084
 hideout.tscn::PackedScene::6805561760561017034::1700157016::0::1::::<><>::uid://bg21syiad1wtc
 level_2.gd::GDScript::-1::1700157016::0::1::::<>Node3D<>::
-level_2.tscn::PackedScene::2347473302513341459::1700157084::0::1::::<><>::res://level/level2/level_2.gd<>uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://cchcp636iid71::::res://mob/knight.tscn<>uid://muq1yk7w0c1h::::res://ui/ui.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dxh1exxrby0bd::::res://globals/Diablo Heavy.ttf
-::res://materials/::1700157043
+level_2.tscn::PackedScene::2347473302513341459::1700157084::0::1::::<><>::res://level/level2/level_2.gd<>uid://csqg2v0p2s8yw
+::res://materials/::1700160482
 floor_material - Copy (2).tres::StandardMaterial3D::4941683408885706279::1698507010::0::1::::<><>::uid://bpn2xpuu8u7ps
-floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1700157043::0::1::::<><>::
+floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1700160482::0::1::::<><>::
 floor_material - Copy (4).tres::StandardMaterial3D::6326398115674201070::1698507010::0::1::::<><>::uid://bhcqo5inf8ft5
 floor_material - Copy.tres::StandardMaterial3D::6506583956968400161::1698507010::0::1::::<><>::uid://c24xbijughc4w
 floor_material.tres::StandardMaterial3D::324023740436286422::1698509275::0::1::::<><>::uid://crj4j4bysdb1e
@@ -1187,16 +1286,16 @@ knight.gd::GDScript::-1::1700157016::0::1::::<>CharacterBody3D<>::
 knight.tscn::PackedScene::4927819592732677638::1700157016::0::1::::<><>::uid://c7x1l40dia4qi
 mobcollision.gd::GDScript::-1::1700157016::0::1::::<>Area3D<>::
 ::res://player/::1700157084
-barbarian.tscn::PackedScene::7206016358280172472::1700157084::0::1::::<><>::uid://c7hiacvooqb8o::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Barbarian.glb
+barbarian.tscn::PackedScene::7206016358280172472::1700157084::0::1::::<><>::uid://c7hiacvooqb8o
 camera_rig.tscn::PackedScene::6392152817220939938::1699713598::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
 mage.gd::GDScript::-1::1700157016::0::1::::<>CharacterBody3D<>::
-mage.tscn::PackedScene::7302907882668540702::1700157084::0::1::::<><>::res://player/mage.gd<>uid://0y6quu11guul::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Mage_mage_texture.png<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn
+mage.tscn::PackedScene::7302907882668540702::1700157084::0::1::::<><>::res://player/mage.gd<>uid://0y6quu11guul
 rogue_hooded.gd::GDScript::-1::1700157082::0::1::::<>CharacterBody3D<>::
-rogue_hooded.tscn::PackedScene::6069684257656594730::1700157083::0::1::::<><>::uid://db0337ymkwxhu::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Rogue_Hooded.glb<>res://player/rogue_hooded.gd<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn
+rogue_hooded.tscn::PackedScene::6069684257656594730::1700157083::0::1::::<><>::uid://db0337ymkwxhu
 selection.gd::GDScript::-1::1700157016::0::1::::<>Area3D<>::
 selection_area.tscn::PackedScene::1660714247796833638::1700157084::0::1::::<><>::res://player/selection.gd
-::res://playground/::1700157016
-playground.tscn::PackedScene::714749942661595729::1700157016::0::1::::<><>::
+::res://playground/::1700160434
+playground.tscn::PackedScene::714749942661595729::1700160434::0::1::::<><>::res://addons/cyclops_level_builder/nodes/cyclops_blocks.gd
 ::res://portal/::1700157016
 portal.gd::GDScript::-1::1700157016::0::1::::<>Area3D<>::
 portal.tscn::PackedScene::158864076934328749::1700157016::0::1::::<><>::uid://bk25ugh0l31sm
@@ -1214,4 +1313,4 @@ bullet.tscn::PackedScene::1053457791512271113::1700157016::0::1::::<><>::res://s
 transition.tscn::PackedScene::8486262327048564225::1700157084::0::1::::<><>::
 ::res://ui/::1700157083
 ui.gd::GDScript::-1::1700157016::0::1::::<>CanvasLayer<>::
-ui.tscn::PackedScene::884572858756141227::1700157083::0::1::::<><>::res://ui/ui.gd<>uid://befbx2j60m08y::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Bonus_Level_Base.png<>uid://ddk1b7fdnqiry::::res://assets/HealthGlobe/Globe_Red.png<>uid://v43dje64fmy4::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Main_Button_Overlay.png<>uid://lphqff08vli7::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Corner.png<>uid://b4l1kwkjr5ar3::::res://assets/HealthGlobe/Globe_Blue.png<>uid://d0olnmrky3ugd::::res://globals/Bildad.ttf
+ui.tscn::PackedScene::884572858756141227::1700157083::0::1::::<><>::res://ui/ui.gd<>uid://befbx2j60m08y
