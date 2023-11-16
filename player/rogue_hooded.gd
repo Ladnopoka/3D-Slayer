@@ -115,8 +115,8 @@ func movement_and_attacking(delta):
 		
 
 func attack():
-	if walking:
-		return
+#	if walking:
+#		return
 	# Always update orientation, regardless of cooldown
 	update_orientation()
 

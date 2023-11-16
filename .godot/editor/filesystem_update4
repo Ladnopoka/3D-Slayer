@@ -1,15 +1,7 @@
-res://level/level_1.tscn
-res://addons/cyclops_level_builder/shaders/outline_shader.tres
-res://addons/cyclops_level_builder/docks/material_palette/thumbnail_selected_theme.tres
-res://addons/cyclops_level_builder/docks/material_palette/thumbnail_normal_theme.tres
+res://playground/playground.tscn
 res://addons/editor-plugin/plugin.gd
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
-res://ui/ui.tscn
-res://player/rogue_hooded.tscn
-res://player/mage.tscn
-res://level/level2/level_2.tscn
-res://hideout/hideout.tscn
-res://player/selection_area.tscn
-res://player/barbarian.tscn
-res://transition/transition.tscn
+res://addons/cyclops_level_builder/shaders/outline_shader.tres
+res://addons/cyclops_level_builder/docks/material_palette/thumbnail_selected_theme.tres
+res://addons/cyclops_level_builder/docks/material_palette/thumbnail_normal_theme.tres

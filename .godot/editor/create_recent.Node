@@ -1,8 +1,11 @@
+CyclopsBlocks
+MeshInstance3D
+Camera3D
+WorldEnvironment
 Marker3D
 Button
 CyclopsConvexBlock
 Label
-MeshInstance3D
 CollisionShape3D
 Area3D
 Node
@@ -24,10 +27,7 @@ CanvasLayer
 AnimatableBody2D
 PathFollow3D
 RayCast3D
-Camera3D
 SpringArm3D
 StaticBody3D
 CSGBox3D
 CSGCombiner3D
-Panel
-VBoxContainer
