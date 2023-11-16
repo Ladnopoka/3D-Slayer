@@ -84,7 +84,7 @@ resource_inspector.gd::GDScript::-1::1683755122::0::1::::ResourceInspector<>Cont
 resource_inspector.tscn::PackedScene::6729863528294998586::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/controls/resource_inspector/resource_inspector.gd
 ::res://addons/cyclops_level_builder/doc/::1683755122
 ::res://addons/cyclops_level_builder/docks/::1683755122
-::res://addons/cyclops_level_builder/docks/material_palette/::1700160482
+::res://addons/cyclops_level_builder/docks/material_palette/::1700162270
 material_palette_viewport.gd::GDScript::-1::1683755122::0::1::::MaterialPaletteViewport<>Control<>::
 material_palette_viewport.tscn::PackedScene::1036570676893576714::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_palette_viewport.gd<>res://addons/cyclops_level_builder/docks/material_palette/thumbnail_group.gd
 material_snapshot.gd::GDScript::-1::1683755122::0::1::::MaterialShapshot<>SubViewport<>::
@@ -92,8 +92,8 @@ material_snapshot.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/
 material_thumbnail.gd::GDScript::-1::1683755122::0::1::::MaterialThumbnail<>Control<>::
 material_thumbnail.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_thumbnail.gd<>uid://c0gpl22e2g6ay
 thumbnail_group.gd::GDScript::-1::1683755122::0::1::::ThumbnailGroup<>Resource<>::
-thumbnail_normal_theme.tres::Theme::4058405243379725578::1700160482::0::1::::<><>::
-thumbnail_selected_theme.tres::Theme::6540880583544088756::1700160482::0::1::::<><>::
+thumbnail_normal_theme.tres::Theme::4058405243379725578::1700162270::0::1::::<><>::
+thumbnail_selected_theme.tres::Theme::6540880583544088756::1700162270::0::1::::<><>::
 ::res://addons/cyclops_level_builder/docks/material_palette/commands/::1683755122
 cmd_mat_dock_add_materials.gd::GDScript::-1::1683755122::0::1::::CommandMaterialDockAddMaterials<>CyclopsCommand<>::
 cmd_mat_dock_remove_materials.gd::GDScript::-1::1683755122::0::1::::CommandMaterialDockRemoveMaterials<>CyclopsCommand<>::
@@ -146,8 +146,8 @@ intersect_results.gd::GDScript::-1::1683755122::0::1::::IntersectResults<>RefCou
 ::res://addons/cyclops_level_builder/resources/::1683755122
 block_data.gd::GDScript::-1::1683755122::0::1::::BlockData<>Resource<>::
 convex_block_data.gd::GDScript::-1::1683755122::0::1::::ConvexBlockData<>Resource<>::
-::res://addons/cyclops_level_builder/shaders/::1700160482
-outline_shader.tres::VisualShader::4976330123338311102::1700160482::0::1::::<><>::
+::res://addons/cyclops_level_builder/shaders/::1700162270
+outline_shader.tres::VisualShader::4976330123338311102::1700162270::0::1::::<><>::
 tool_outline_shader.tres::VisualShader::6796597932207006307::1683755122::0::1::::<><>::
 ::res://addons/cyclops_level_builder/tools/::1683755122
 cyclops_tool.gd::GDScript::-1::1683755122::0::1::::CyclopsTool<>Resource<>::
@@ -167,19 +167,19 @@ tool_stairs_settings.gd::GDScript::-1::1683755122::0::1::::ToolStairsSettings<>R
 display_mode.gd::GDScript::-1::1683755122::0::1::::DisplayMode<>RefCounted<>::
 general_util.gd::GDScript::-1::1683755122::0::1::::GeneralUtil<>RefCounted<>::
 selection.gd::GDScript::-1::1683755122::0::1::::Selection<>RefCounted<>::
-::res://addons/editor-plugin/::1700160482
+::res://addons/editor-plugin/::1700162270
 panel.tscn::PackedScene::5401244366276246444::1700157014::0::1::::<><>::
 plugin.cfg::TextFile::-1::1700157014::0::1::::<><>::
-plugin.gd::GDScript::-1::1700160482::0::1::::<>EditorPlugin<>::
+plugin.gd::GDScript::-1::1700162270::0::1::::<>EditorPlugin<>::
 ::res://addons/editor-plugin/room_template/::1700157014
 room_template.tscn::PackedScene::1473403741818640738::1700157014::0::1::::<><>::
-::res://addons/main-screen/::1700160482
+::res://addons/main-screen/::1700162270
 control.gd::GDScript::-1::1700157014::0::1::::<>VBoxContainer<>::
-main-screen.gd::GDScript::-1::1700160482::0::1::::<>EditorPlugin<>::
+main-screen.gd::GDScript::-1::1700162270::0::1::::<>EditorPlugin<>::
 main-screen.tscn::PackedScene::5610324604663873796::1698854995::0::1::::<><>::res://addons/main-screen/control.gd
 name-generator.gd::GDScript::-1::1696542482::0::1::::NameGenerator<>Node<>::
 plugin.cfg::TextFile::-1::1696542482::0::1::::<><>::
-::res://assets/::1700161757
+::res://assets/::1700162055
 ::res://assets/bricks_and_ground/::1700161814
 ::res://assets/bricks_and_ground/4k JPEG/::1700161827
 blouberg_sunrise_2_4k.hdr::CompressedTexture2D::2509768605615655326::1523036353::1700161827::1::::<><>::
@@ -193,7 +193,7 @@ Bark 02_Normal.jpg::CompressedTexture2D::3236554933650872820::1593055925::170016
 Bark 02_Opacity.jpg::CompressedTexture2D::2157832201261507966::1593055925::1700161828::1::::<><>::
 Bark 02_Roughness.jpg::CompressedTexture2D::8772265870259087060::1593055926::1700161830::1::::<><>::
 Bark 02_Specular Level.jpg::CompressedTexture2D::8322521708710622723::1593055927::1700161830::1::::<><>::
-::res://assets/bricks_and_ground/4k JPEG/Grass 02/::1700161831
+::res://assets/bricks_and_ground/4k JPEG/Grass 02/::1700162398
 Grass02_Ambient Occlusion.jpg::CompressedTexture2D::6250708247369537525::1593055930::1700161829::1::::<><>::
 Grass02_Height.jpg::CompressedTexture2D::9009693684560099542::1593055932::1700161829::1::::<><>::
 Grass02_Metallic.jpg::CompressedTexture2D::2966878129685612481::1593055933::1700161827::1::::<><>::
@@ -201,7 +201,7 @@ Grass02_Normal.jpg::CompressedTexture2D::3686154347398210572::1593055935::170016
 Grass02_Opacity.jpg::CompressedTexture2D::2912363388727050650::1593055936::1700161827::1::::<><>::
 Grass02_Roughness.jpg::CompressedTexture2D::8009545032541984879::1593055936::1700161828::1::::<><>::
 Grass02_Specular Level.jpg::CompressedTexture2D::5049215995727039547::1593055937::1700161827::1::::<><>::
-Grass03_Base Color.jpg::CompressedTexture2D::1753626871912930338::1593055939::1700161831::1::::<><>::
+Grass03_Base Color.jpg::CompressedTexture2D::1753626871912930338::1593055939::1700162398::1::::<><>::
 ::res://assets/bricks_and_ground/4k JPEG/Grass 03/::1700161833
 Grass03_Ambient Occlusion.jpg::CompressedTexture2D::3144943725380944401::1593055940::1700161829::1::::<><>::
 Grass03_BaseColor.jpg::CompressedTexture2D::8940364965518212813::1593055941::1700161831::1::::<><>::
@@ -211,9 +211,9 @@ Grass03_Normal.jpg::CompressedTexture2D::1024878152470942593::1593055946::170016
 Grass03_Opacity.jpg::CompressedTexture2D::2979154982841288176::1593055947::1700161826::1::::<><>::
 Grass03_Roughness.jpg::CompressedTexture2D::8568964969819972996::1593055948::1700161833::1::::<><>::
 Grass03_Specular Level.jpg::CompressedTexture2D::8321555158623729349::1593055948::1700161831::1::::<><>::
-::res://assets/bricks_and_ground/4k JPEG/Ground Peables 01/::1700161834
+::res://assets/bricks_and_ground/4k JPEG/Ground Peables 01/::1700162256
 GroundPeables01_Ambient Occlusion.jpg::CompressedTexture2D::116383671482638665::1593055949::1700161833::1::::<><>::
-GroundPeables01_Base Color.jpg::CompressedTexture2D::2921180139155076111::1593055951::1700161834::1::::<><>::
+GroundPeables01_Base Color.jpg::CompressedTexture2D::2921180139155076111::1593055951::1700162256::1::::<><>::
 GroundPeables01_Height.jpg::CompressedTexture2D::1781660682310377535::1593055952::1700161832::1::::<><>::
 GroundPeables01_Metallic.jpg::CompressedTexture2D::879784898704858136::1593055952::1700161831::1::::<><>::
 GroundPeables01_Normal.jpg::CompressedTexture2D::1949389802148695670::1593055954::1700161834::1::::<><>::
@@ -238,10 +238,10 @@ GroundSidewalk01_Normal.jpg::CompressedTexture2D::1188226404803071651::159305597
 GroundSidewalk01_Opacity.jpg::CompressedTexture2D::8333113866261887842::1593055975::1700161824::1::::<><>::
 GroundSidewalk01_Roughness.jpg::CompressedTexture2D::1224598670489864167::1593055975::1700161826::1::::<><>::
 GroundSidewalk01_Specular Level.jpg::CompressedTexture2D::2875903066637830726::1593055976::1700161826::1::::<><>::
-::res://assets/bricks_and_ground/4k JPEG/Ground Sidewalk 02/::1700161828
+::res://assets/bricks_and_ground/4k JPEG/Ground Sidewalk 02/::1700162436
 GroundSidewalk02_Ambient Occlusion.jpg::CompressedTexture2D::405386588319250857::1593055977::1700161826::1::::<><>::
 GroundSidewalk02_Base Color.jpg::CompressedTexture2D::822473826831362947::1593055980::1700161828::1::::<><>::
-GroundSidewalk02_Height.jpg::CompressedTexture2D::3442926241061779160::1593055981::1700161826::1::::<><>::
+GroundSidewalk02_Height.jpg::CompressedTexture2D::3442926241061779160::1593055981::1700162436::1::::<><>::
 GroundSidewalk02_Metallic.jpg::CompressedTexture2D::8625494208410842932::1593055982::1700161824::1::::<><>::
 GroundSidewalk02_Normal.jpg::CompressedTexture2D::2689918794252179105::1593055984::1700161828::1::::<><>::
 GroundSidewalk02_Opacity.jpg::CompressedTexture2D::361182521404979976::1593055985::1700161824::1::::<><>::
@@ -250,7 +250,7 @@ GroundSidewalk02_Specular Level.jpg::CompressedTexture2D::5822433355261196602::1
 ::res://assets/bricks_and_ground/4k JPEG/Ground Stones/::1700161829
 GroundStones_Ambient Occlusion.jpg::CompressedTexture2D::6371091846043074311::1593055989::1700161826::1::::<><>::
 GroundStones_BaseColor.jpg::CompressedTexture2D::7917605858736172650::1593055990::1700161828::1::::<><>::
-GroundStones_Height.jpg::CompressedTexture2D::1785559110189176189::1593055991::1700161826::1::::<><>::
+GroundStones_Height.jpg::CompressedTexture2D::1785559110189176189::1593055991::1700162544::1::::<><>::
 GroundStones_Metallic.jpg::CompressedTexture2D::4398203898578217573::1593055992::1700161824::1::::<><>::
 GroundStones_Normal.jpg::CompressedTexture2D::3790643640025134445::1593055995::1700161829::1::::<><>::
 GroundStones_Opacity.jpg::CompressedTexture2D::2618448800531885875::1593055996::1700161824::1::::<><>::
@@ -271,7 +271,7 @@ Brick2_Texture.jpg::CompressedTexture2D::6663263312477017636::1649750486::170016
 Brickwall2_Texture.png::CompressedTexture2D::1862976293927759644::1649750472::1700161825::1::::<><>::
 Brickwall3_Texture.png::CompressedTexture2D::4494248613313995935::1649750470::1700161825::1::::<><>::
 Brickwall4_Texture.png::CompressedTexture2D::1913844525975339261::1649750498::1700161824::1::::<><>::
-Brickwall5_Texture.png::CompressedTexture2D::4444516574250536412::1649750496::1700161824::1::::<><>::
+Brickwall5_Texture.png::CompressedTexture2D::4444516574250536412::1649750496::1700162522::1::::<><>::
 Brickwall6_Texture.png::CompressedTexture2D::9073804181532045310::1649750494::1700161824::1::::<><>::
 Brickwall_Texture.png::CompressedTexture2D::4321941890860320175::1649750476::1700161824::1::::<><>::
 Brick_Texture.png::CompressedTexture2D::6672010072365793885::1649750478::1700161824::1::::<><>::
@@ -1071,6 +1071,12 @@ dungeon_remastered_sample_big.png::CompressedTexture2D::4721920599229202434::170
 extra_content1.png::CompressedTexture2D::5318678534942038129::1700157016::1700157016::1::::<><>::
 extra_content2.png::CompressedTexture2D::1137698395791902319::1700157016::1700157016::1::::<><>::
 source_content.png::CompressedTexture2D::2946489902886033902::1700157016::1700157016::1::::<><>::
+::res://assets/resources/::1700162442
+grass_material.tres::StandardMaterial3D::6193948413629750958::1700162419::0::1::::<><>::uid://y8p8i87e5o1g::::res://assets/bricks_and_ground/4k JPEG/Grass 02/Grass03_Base Color.jpg
+ground_material2.tres::StandardMaterial3D::8812093235694294164::1700162442::0::1::::<><>::uid://bpb1qy7l11vye::::res://assets/bricks_and_ground/4k JPEG/Ground Sidewalk 02/GroundSidewalk02_Height.jpg
+ground_material3.tres::StandardMaterial3D::6986723407047568525::1700162332::0::1::::<><>::uid://bhvbn7cwh5608::::res://assets/bricks_and_ground/4k JPEG/Ground Peables 01/GroundPeables01_Base Color.jpg
+ground_material.tres::StandardMaterial3D::6992325596091240811::1700162270::0::1::::<><>::uid://bhvbn7cwh5608::::res://assets/bricks_and_ground/4k JPEG/Ground Peables 01/GroundPeables01_Base Color.jpg
+wall_material.tres::StandardMaterial3D::7371996258273746314::1700162527::0::1::::<><>::uid://b4k7skwfgrsw7::::res://assets/bricks_and_ground/Bricks/Brickwall5_Texture.png
 ::res://assets/shaders/::1698507010
 forground_shader.gdshader::Shader::-1::1698507010::0::1::::<><>::
 forground_shader_2.gdshader::Shader::-1::1698507010::0::1::::<><>::
@@ -1274,9 +1280,9 @@ level_1.tscn::PackedScene::5486766862100485142::1700157083::0::1::::<><>::uid://
 hideout.tscn::PackedScene::6805561760561017034::1700157016::0::1::::<><>::uid://bg21syiad1wtc
 level_2.gd::GDScript::-1::1700157016::0::1::::<>Node3D<>::
 level_2.tscn::PackedScene::2347473302513341459::1700157084::0::1::::<><>::res://level/level2/level_2.gd<>uid://csqg2v0p2s8yw
-::res://materials/::1700160482
+::res://materials/::1700162270
 floor_material - Copy (2).tres::StandardMaterial3D::4941683408885706279::1698507010::0::1::::<><>::uid://bpn2xpuu8u7ps
-floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1700160482::0::1::::<><>::
+floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1700162270::0::1::::<><>::
 floor_material - Copy (4).tres::StandardMaterial3D::6326398115674201070::1698507010::0::1::::<><>::uid://bhcqo5inf8ft5
 floor_material - Copy.tres::StandardMaterial3D::6506583956968400161::1698507010::0::1::::<><>::uid://c24xbijughc4w
 floor_material.tres::StandardMaterial3D::324023740436286422::1698509275::0::1::::<><>::uid://crj4j4bysdb1e
@@ -1294,8 +1300,8 @@ rogue_hooded.gd::GDScript::-1::1700157082::0::1::::<>CharacterBody3D<>::
 rogue_hooded.tscn::PackedScene::6069684257656594730::1700157083::0::1::::<><>::uid://db0337ymkwxhu
 selection.gd::GDScript::-1::1700157016::0::1::::<>Area3D<>::
 selection_area.tscn::PackedScene::1660714247796833638::1700157084::0::1::::<><>::res://player/selection.gd
-::res://playground/::1700160434
-playground.tscn::PackedScene::714749942661595729::1700160434::0::1::::<><>::res://addons/cyclops_level_builder/nodes/cyclops_blocks.gd
+::res://playground/::1700162441
+playground.tscn::PackedScene::714749942661595729::1700162527::0::1::::<><>::res://addons/cyclops_level_builder/nodes/cyclops_blocks.gd<>res://addons/cyclops_level_builder/nodes/cyclops_convex_block.gd<>res://addons/cyclops_level_builder/resources/convex_block_data.gd
 ::res://portal/::1700157016
 portal.gd::GDScript::-1::1700157016::0::1::::<>Area3D<>::
 portal.tscn::PackedScene::158864076934328749::1700157016::0::1::::<><>::uid://bk25ugh0l31sm
