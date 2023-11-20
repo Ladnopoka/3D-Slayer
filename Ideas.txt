@@ -5,3 +5,6 @@ I explained to ChatGPT that what I did and how I got the error, ChatGPT wrote 5 
 I tried 4 of them before trying to simply google search the problem, and instantly found out on the first forum post that
 the problem was that instance() is for Godot3, while I was using Godot4.1. ChatGPT has no way of knowing this as its module came out 
 before the release of Godot4.1. I could have save some time at this moment and used google instead of ChatGPT.
+
+Do poe mapping system, each map you have to walk up. There will be phases where mobs start spawning around you, drop items and consumables. At the end of map BOSS fight.
+In the hideout, have a waypoint where you can store maps, tiers from 1-5, in ascendinding difficulty order.

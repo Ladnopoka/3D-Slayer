@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c6sokwxjn0yyf"]
+
+[ext_resource type="Texture2D" uid="uid://0o65ryctcu6p" path="res://assets/bricks_and_ground/4k JPEG/Ground Stones/GroundStones_Height.jpg" id="1_2nfba"]
+
+[resource]
+albedo_texture = ExtResource("1_2nfba")
