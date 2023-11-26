@@ -137,28 +137,15 @@ shadow_enabled = true
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14, 6.32136, 3.32582)
 
 [node name="Floor" parent="Room_13" index="0"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("PlaneMesh_5jfiv")
 
 [node name="BackWall" parent="Room_13" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 5)
 mesh = SubResource("BoxMesh_hibp0")
 
 [node name="LeftWall" parent="Room_13" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 0)
 mesh = SubResource("BoxMesh_sncqx")
 
 [node name="RightWall" parent="Room_13" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0)
 mesh = SubResource("BoxMesh_bqnli")
-
-[node name="CSGBox3D" parent="Room_13/FrontWallWithHole" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -5)
-size = Vector3(10, 4, 0.1)
-
-[node name="CSGBox3D2" parent="Room_13/FrontWallWithHole" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5)
-operation = 2
-size = Vector3(2, 3, 0.2)
 
 [editable path="Room_13"]
