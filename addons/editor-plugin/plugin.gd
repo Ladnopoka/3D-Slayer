@@ -5,8 +5,9 @@ const panel = preload("res://addons/editor-plugin/panel.tscn")
 const RoomTemplate = preload("res://addons/editor-plugin/room_template/room_template.tscn")
 
 var dockedScene
-var toggle_button: Button
-var is_content_visible: bool = true  # Tracks whether the content is currently visible
+#var toggle_button: Button
+var tab_container: TabContainer
+var is_content_visible: bool = false  # Tracks whether the content is currently visible
 
 var button1
 var button2
@@ -17,8 +18,11 @@ var undo_redo = get_undo_redo()
 
 func _enter_tree():
 	dockedScene = panel.instantiate()
-	toggle_button = dockedScene.get_node("toggle_button")
-	print("RoomGenerator scene instantiated!")
+	print("RoomGenerator panel scene instantiated!")
+	
+	#toggle_button = dockedScene.get_node("ToggleButton")
+	tab_container = dockedScene.get_node("TabContainer")
+	tab_container.visible = true
 	
 	setup_button_connections()
 	# Initial setup when the plugin is enabled
@@ -26,23 +30,25 @@ func _enter_tree():
 
 func setup_button_connections():
 	# Connect the toggle button signal
-	toggle_button.connect("pressed", _on_toggle_button_pressed)
-	print("inside setup")
+	#toggle_button.connect("pressed", _on_toggle_button_pressed)
 
-	button1 = dockedScene.get_child(0).get_child(0).get_child(0).get_child(0)
-	button2 = dockedScene.get_child(0).get_child(0).get_child(0).get_child(1)
-	button3 = dockedScene.get_child(0).get_child(1).get_child(0).get_child(0)
+	button1 = dockedScene.get_child(0).get_child(0).get_child(0)
+	button2 = dockedScene.get_child(0).get_child(0).get_child(1)
+	button3 = dockedScene.get_child(0).get_child(1).get_child(0)
 	button1.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)
 	button3.connect("pressed", create_room)
-	button1.visible = false
-	button2.visible = false
-	button3.visible = false
+	button1.visible = true
+	button2.visible = true
+	button3.visible = true
 
 
 func _on_toggle_button_pressed():
 	# Toggle the visibility state
-	is_content_visible = !is_content_visible
+	if !tab_container.visible:
+		tab_container.visible = true
+	elif tab_container.visible:
+		tab_container.visible = false
 	print("Toggle Button Pressed")
 
 	# Toggle the visibility of other UI elements
@@ -53,9 +59,10 @@ func toggle_ui_elements(visible: bool):
 	# Example: dockedScene.get_node("path/to/button1").visible = visible
 	# Apply this for each element you want to show/hide
 	# ...
-	button1.visible = visible
-	button2.visible = visible
-	button3.visible = visible
+	button1.visible = true
+	button2.visible = true
+	button3.visible = true
+	
 
 
 

@@ -4,36 +4,24 @@
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="toggle_button" type="Button" parent="."]
-layout_mode = 2
-text = "Toggle Button"
-
-[node name="ModelsTab" type="TabContainer" parent="toggle_button"]
-layout_mode = 2
-offset_top = -167.0
-offset_right = 88.0
-offset_bottom = -70.0
-
-[node name="Models" type="VBoxContainer" parent="toggle_button/ModelsTab"]
+[node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 2
 
-[node name="Button1" type="Button" parent="toggle_button/ModelsTab/Models"]
+[node name="Models" type="VBoxContainer" parent="TabContainer"]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="TabContainer/Models"]
 layout_mode = 2
 text = "Add Wall"
 
-[node name="Button2" type="Button" parent="toggle_button/ModelsTab/Models"]
+[node name="Button2" type="Button" parent="TabContainer/Models"]
 layout_mode = 2
 text = "Add Cube"
 
-[node name="LayoutsTab" type="TabContainer" parent="toggle_button"]
-layout_mode = 2
-offset_top = -66.0
-offset_right = 88.0
-offset_bottom = -4.0
-
-[node name="Layouts" type="VBoxContainer" parent="toggle_button/LayoutsTab"]
+[node name="Layouts" type="VBoxContainer" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="toggle_button/LayoutsTab/Layouts"]
+[node name="Button3" type="Button" parent="TabContainer/Layouts"]
 layout_mode = 2
 text = "Add Room"
