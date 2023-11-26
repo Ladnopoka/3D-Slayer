@@ -5,23 +5,60 @@ const panel = preload("res://addons/editor-plugin/panel.tscn")
 const RoomTemplate = preload("res://addons/editor-plugin/room_template/room_template.tscn")
 
 var dockedScene
+var toggle_button: Button
+var is_content_visible: bool = true  # Tracks whether the content is currently visible
+
+var button1
+var button2
+var button3
 
 # Get the undo/redo object
 var undo_redo = get_undo_redo()
 
 func _enter_tree():
 	dockedScene = panel.instantiate()
-	print("Panel scene instantiated!")
+	toggle_button = dockedScene.get_node("toggle_button")
+	print("RoomGenerator scene instantiated!")
 	
-	var button1 = dockedScene.get_child(0).get_child(0).get_child(0)
-	var button2 = dockedScene.get_child(0).get_child(0).get_child(1)
-	var button3 = dockedScene.get_child(1).get_child(0).get_child(0)
+	setup_button_connections()
+	# Initial setup when the plugin is enabled
+	add_control_to_dock(DOCK_SLOT_RIGHT_BL, dockedScene)
+
+func setup_button_connections():
+	# Connect the toggle button signal
+	toggle_button.connect("pressed", _on_toggle_button_pressed)
+	print("inside setup")
+
+	button1 = dockedScene.get_child(0).get_child(0).get_child(0).get_child(0)
+	button2 = dockedScene.get_child(0).get_child(0).get_child(0).get_child(1)
+	button3 = dockedScene.get_child(0).get_child(1).get_child(0).get_child(0)
 	button1.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)
 	button3.connect("pressed", create_room)
-	
-	# Initial setup when the plugin is enabled
-	add_control_to_dock(DOCK_SLOT_RIGHT_BL, dockedScene)
+	button1.visible = false
+	button2.visible = false
+	button3.visible = false
+
+
+func _on_toggle_button_pressed():
+	# Toggle the visibility state
+	is_content_visible = !is_content_visible
+	print("Toggle Button Pressed")
+
+	# Toggle the visibility of other UI elements
+	toggle_ui_elements(is_content_visible)
+
+func toggle_ui_elements(visible: bool):
+	# Assuming you have paths or references to your buttons or containers
+	# Example: dockedScene.get_node("path/to/button1").visible = visible
+	# Apply this for each element you want to show/hide
+	# ...
+	button1.visible = visible
+	button2.visible = visible
+	button3.visible = visible
+
+
+
 
 
 func _exit_tree():

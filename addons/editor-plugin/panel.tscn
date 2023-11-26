@@ -1,29 +1,39 @@
 [gd_scene format=3 uid="uid://ci7nx8wfe8vdk"]
 
-[node name="Panel" type="VBoxContainer"]
+[node name="RoomGenerator" type="VBoxContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ModelsTab" type="TabContainer" parent="."]
+[node name="toggle_button" type="Button" parent="."]
+layout_mode = 2
+text = "Toggle Button"
+
+[node name="ModelsTab" type="TabContainer" parent="toggle_button"]
+layout_mode = 2
+offset_top = -167.0
+offset_right = 88.0
+offset_bottom = -70.0
+
+[node name="Models" type="VBoxContainer" parent="toggle_button/ModelsTab"]
 layout_mode = 2
 
-[node name="Models" type="VBoxContainer" parent="ModelsTab"]
-layout_mode = 2
-
-[node name="Button1" type="Button" parent="ModelsTab/Models"]
+[node name="Button1" type="Button" parent="toggle_button/ModelsTab/Models"]
 layout_mode = 2
 text = "Add Wall"
 
-[node name="Button2" type="Button" parent="ModelsTab/Models"]
+[node name="Button2" type="Button" parent="toggle_button/ModelsTab/Models"]
 layout_mode = 2
 text = "Add Cube"
 
-[node name="LayoutsTab" type="TabContainer" parent="."]
+[node name="LayoutsTab" type="TabContainer" parent="toggle_button"]
+layout_mode = 2
+offset_top = -66.0
+offset_right = 88.0
+offset_bottom = -4.0
+
+[node name="Layouts" type="VBoxContainer" parent="toggle_button/LayoutsTab"]
 layout_mode = 2
 
-[node name="Layouts" type="VBoxContainer" parent="LayoutsTab"]
-layout_mode = 2
-
-[node name="Button3" type="Button" parent="LayoutsTab/Layouts"]
+[node name="Button3" type="Button" parent="toggle_button/LayoutsTab/Layouts"]
 layout_mode = 2
 text = "Add Room"
