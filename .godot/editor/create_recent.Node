@@ -1,3 +1,5 @@
+VBoxContainer
+TabContainer
 MeshInstance3D
 CyclopsBlocks
 Camera3D
@@ -28,5 +30,3 @@ AnimatableBody2D
 PathFollow3D
 RayCast3D
 SpringArm3D
-StaticBody3D
-CSGBox3D

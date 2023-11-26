@@ -2,9 +2,14 @@
 
 Non-functional Requirements:
 •       NF1: The tool works as an editor extension for Godot 4.x and works as such (within the editor at design-time and not at game-runtime).
+DONE
 •       NF2: The extension has a user interface that becomes available when the extension is installed.
+DONE
 •       NF3: The extension can be added to individual projects.
+DONE
 •       NF4: The output of the extension does not generate a dependency to the extension. In other words, removing the extension after having done the work should not break the project, meaning the extension does not need to be included to maintain the project and does not need to be compiled into a finished game/experience.
+DONE
+
 
 Functional Requirements (Godot Editor UI):
 •       F1: The extension adds a new Tab to the bottom Panel ‘3D RoomGen’.

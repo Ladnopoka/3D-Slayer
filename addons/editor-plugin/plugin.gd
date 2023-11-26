@@ -13,15 +13,15 @@ func _enter_tree():
 	dockedScene = panel.instantiate()
 	print("Panel scene instantiated!")
 	
-	var button1 = dockedScene.get_child(0)
-	var button2 = dockedScene.get_child(1)
-	var button3 = dockedScene.get_child(2)
+	var button1 = dockedScene.get_child(0).get_child(0).get_child(0)
+	var button2 = dockedScene.get_child(0).get_child(0).get_child(1)
+	var button3 = dockedScene.get_child(1).get_child(0).get_child(0)
 	button1.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)
 	button3.connect("pressed", create_room)
 	
 	# Initial setup when the plugin is enabled
-	add_control_to_dock(DOCK_SLOT_RIGHT_UL, dockedScene)
+	add_control_to_dock(DOCK_SLOT_RIGHT_BL, dockedScene)
 
 
 func _exit_tree():
@@ -31,7 +31,7 @@ func _exit_tree():
 	dockedScene.free()
 
 func get_plugin_name():
-	return "IsometricRoomEditor"
+	return "RoomGenerator"
 
 func get_plugin_description():
 	return "An editor for creating 3D isometric rooms and blocks."

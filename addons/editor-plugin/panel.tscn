@@ -4,14 +4,26 @@
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button1" type="Button" parent="."]
+[node name="ModelsTab" type="TabContainer" parent="."]
+layout_mode = 2
+
+[node name="Models" type="VBoxContainer" parent="ModelsTab"]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="ModelsTab/Models"]
 layout_mode = 2
 text = "Add Wall"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="ModelsTab/Models"]
 layout_mode = 2
 text = "Add Cube"
 
-[node name="Button3" type="Button" parent="."]
+[node name="LayoutsTab" type="TabContainer" parent="."]
+layout_mode = 2
+
+[node name="Layouts" type="VBoxContainer" parent="LayoutsTab"]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="LayoutsTab/Layouts"]
 layout_mode = 2
 text = "Add Room"
