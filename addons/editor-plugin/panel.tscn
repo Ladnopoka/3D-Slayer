@@ -18,6 +18,10 @@ text = "Add Wall"
 layout_mode = 2
 text = "Add Cube"
 
+[node name="Hideout" type="Button" parent="TabContainer/Models"]
+layout_mode = 2
+text = "Add Hideout"
+
 [node name="Layouts" type="VBoxContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2

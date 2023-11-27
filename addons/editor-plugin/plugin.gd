@@ -3,6 +3,7 @@ extends EditorPlugin
 
 const panel = preload("res://addons/editor-plugin/panel.tscn")
 const RoomTemplate = preload("res://addons/editor-plugin/room_template/room_template.tscn")
+const HideoutTemplate = preload("res://addons/editor-plugin/room_template/hideout.tscn")
 
 var dockedScene
 #var toggle_button: Button
@@ -12,6 +13,7 @@ var is_content_visible: bool = false  # Tracks whether the content is currently 
 var button1
 var button2
 var button3
+var hideout_button
 
 # Get the undo/redo object
 var undo_redo = get_undo_redo()
@@ -35,12 +37,15 @@ func setup_button_connections():
 	button1 = dockedScene.get_child(0).get_child(0).get_child(0)
 	button2 = dockedScene.get_child(0).get_child(0).get_child(1)
 	button3 = dockedScene.get_child(0).get_child(1).get_child(0)
+	hideout_button = dockedScene.get_child(0).get_child(0).get_child(2) 
 	button1.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)
 	button3.connect("pressed", create_room)
+	hideout_button.connect("pressed", create_hideout)
 	button1.visible = true
 	button2.visible = true
 	button3.visible = true
+	hideout_button.visible = true
 
 
 func _on_toggle_button_pressed():
@@ -50,23 +55,6 @@ func _on_toggle_button_pressed():
 	elif tab_container.visible:
 		tab_container.visible = false
 	print("Toggle Button Pressed")
-
-	# Toggle the visibility of other UI elements
-	toggle_ui_elements(is_content_visible)
-
-func toggle_ui_elements(visible: bool):
-	# Assuming you have paths or references to your buttons or containers
-	# Example: dockedScene.get_node("path/to/button1").visible = visible
-	# Apply this for each element you want to show/hide
-	# ...
-	button1.visible = true
-	button2.visible = true
-	button3.visible = true
-	
-
-
-
-
 
 func _exit_tree():
 	remove_custom_type("Button1")
@@ -148,6 +136,7 @@ func create_box():
 	else:
 		print("No active scene!")
 	
+	
 func create_room():
 	var room = RoomTemplate.instantiate()
 	var current_scene = get_editor_interface().get_edited_scene_root()
@@ -164,43 +153,21 @@ func create_room():
 		room.owner = current_scene
 	else:
 		print("No active scene!")
-	
-	#Test function to add all childs to scene and not just the capsule	
-#func create_room():
-#	# Instantiate the room template
-#	var room_instance = RoomTemplate.instantiate()
-#
-#	# Get a reference to the current scene
-#	var current_scene = get_editor_interface().get_edited_scene_root()
-#
-#	if current_scene:
-#		# Create a new node to house the room's components
-#		var room_container = Node3D.new()
-#		room_container.name = "Room_" + str(current_scene.get_child_count() + 1)
-#
-#		var children_to_transfer = []
-#
-#		for child in room_instance.get_children():
-#			children_to_transfer.append(child)
-#
-#		for child in children_to_transfer:
-#			room_instance.remove_child(child)
-#			room_container.add_child(child)
-#
-#		# Begin undo-redo action
-#		undo_redo.create_action("Create Room")
-#
-#		# "Do" and "Undo" methods
-#		undo_redo.add_do_method(current_scene, "add_child", room_container)	
-#		undo_redo.add_undo_method(current_scene, "remove_child", room_container)
-#
-#		# Commit the action
-#		undo_redo.commit_action()
-#
-#		# Set ownership for the room_container and its children
-#		room_container.owner = current_scene
-#
-#		for child in room_container.get_children():
-#				child.owner = current_scene
-#	else:
-#		print("No active scene!")
+		
+		
+func create_hideout():
+	var hideout = HideoutTemplate.instantiate()
+	var current_scene = get_editor_interface().get_edited_scene_root()
+
+	if current_scene:
+		hideout.name = "Hideout_1" + str(current_scene.get_child_count())
+
+		# For undo/redo functionality:
+		undo_redo.create_action("Create Hideout")
+		undo_redo.add_do_method(current_scene, "add_child", hideout)
+		undo_redo.add_do_reference(hideout)
+		undo_redo.add_undo_method(current_scene, "remove_child", hideout)
+		undo_redo.commit_action(true)
+		hideout.owner = current_scene
+	else:
+		print("No active scene!")
