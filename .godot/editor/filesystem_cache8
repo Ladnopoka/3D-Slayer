@@ -181,7 +181,7 @@ main-screen.gd::GDScript::-1::1701099019::0::1::::<>EditorPlugin<>::
 main-screen.tscn::PackedScene::5610324604663873796::1698854995::0::1::::<><>::res://addons/main-screen/control.gd
 name-generator.gd::GDScript::-1::1696542482::0::1::::NameGenerator<>Node<>::
 plugin.cfg::TextFile::-1::1696542482::0::1::::<><>::
-::res://assets/::1701100580
+::res://assets/::1701102226
 ::res://assets/bricks_and_ground/::1700161814
 ::res://assets/bricks_and_ground/4k JPEG/::1700161827
 blouberg_sunrise_2_4k.hdr::CompressedTexture2D::2509768605615655326::1523036353::1700161827::1::::<><>::
@@ -1074,7 +1074,7 @@ extra_content1.png::CompressedTexture2D::5318678534942038129::1700157016::170015
 extra_content2.png::CompressedTexture2D::1137698395791902319::1700157016::1700157016::1::::<><>::
 source_content.png::CompressedTexture2D::2946489902886033902::1700157016::1700157016::1::::<><>::
 ::res://assets/KayKit_Dungeon_Old/::1701100550
-::res://assets/KayKit_Dungeon_Old/KayKit Brand Resouces/::1605285269
+::res://assets/KayKit_Dungeon_Old/KayKit Brand Resouces/::1701100606
 KayKit_logo.png::CompressedTexture2D::8357591980657516647::1599588306::1701100606::1::::<><>::
 KayKit_logoVariation_black.png::CompressedTexture2D::7456988770517763163::1599588306::1701100606::1::::<><>::
 KayKit_logoVariation_red.png::CompressedTexture2D::1962856361020893589::1599588306::1701100606::1::::<><>::
@@ -1084,12 +1084,12 @@ KayKit_logo_red.png::CompressedTexture2D::3839882797420713797::1599588307::17011
 KayKit_logo_white.png::CompressedTexture2D::7408624351031207041::1599588307::1701100606::1::::<><>::
 ::res://assets/KayKit_Dungeon_Old/Models/::1605285365
 ::res://assets/KayKit_Dungeon_Old/Models/Characters/::1605285274
-::res://assets/KayKit_Dungeon_Old/Models/Characters/dae/::1605285272
+::res://assets/KayKit_Dungeon_Old/Models/Characters/dae/::1701100686
 character_barbarian.dae::PackedScene::4407973696449758598::1605184758::1701100686::1::::<><>::
 character_knight.dae::PackedScene::1881361679542632026::1605184684::1701100686::1::::<><>::
 character_mage.dae::PackedScene::8684686197885752590::1605184742::1701100686::1::::<><>::
 character_rogue.dae::PackedScene::2359941451673711064::1605184778::1701100686::1::::<><>::
-::res://assets/KayKit_Dungeon_Old/Models/Characters/dae/extra heads/::1605285269
+::res://assets/KayKit_Dungeon_Old/Models/Characters/dae/extra heads/::1701100723
 barbarianHeadA.dae::PackedScene::5738162581902690091::1605188766::1701100702::1::::<><>::
 barbarianHeadB.dae::PackedScene::7601923557606257483::1605188766::1701100702::1::::<><>::
 barbarianHeadC.dae::PackedScene::2840183763444645207::1605188766::1701100702::1::::<><>::
@@ -1105,12 +1105,12 @@ rogueHeadC.dae::PackedScene::1609693228850409620::1605189286::1701100685::1::::<
 skull.dae::PackedScene::6889799608550489266::1605188766::1701100686::1::::<><>::
 ::res://assets/KayKit_Dungeon_Old/Models/Characters/fbx/::1605285272
 ::res://assets/KayKit_Dungeon_Old/Models/Characters/fbx/extra heads/::1605631530
-::res://assets/KayKit_Dungeon_Old/Models/Characters/gltf/::1605285275
+::res://assets/KayKit_Dungeon_Old/Models/Characters/gltf/::1701100689
 character_barbarian.gltf::PackedScene::6973751998889832936::1605184948::1701100689::1::::<><>::
 character_knight.gltf::PackedScene::3298151412232028713::1605184922::1701100689::1::::<><>::
 character_mage.gltf::PackedScene::6493268532077871558::1605184933::1701100688::1::::<><>::
 character_rogue.gltf::PackedScene::3545320533328458041::1605184964::1701100688::1::::<><>::
-::res://assets/KayKit_Dungeon_Old/Models/Characters/gltf/extra heads/::1605285274
+::res://assets/KayKit_Dungeon_Old/Models/Characters/gltf/extra heads/::1701100689
 barbarianHeadA.gltf.glb::PackedScene::4932921800817795937::1605188791::1701100686::1::::<><>::
 barbarianHeadB.gltf.glb::PackedScene::3319512866093107733::1605188791::1701100687::1::::<><>::
 barbarianHeadC.gltf.glb::PackedScene::8309316468968005195::1605188791::1701100687::1::::<><>::
@@ -1124,7 +1124,7 @@ rogueHeadA.gltf::PackedScene::9095272763947368760::1605188994::1701100689::1::::
 rogueHeadB.gltf::PackedScene::250126243310818796::1605189006::1701100689::1::::<><>::
 rogueHeadC.gltf::PackedScene::3082000036285029216::1605189018::1701100689::1::::<><>::
 skull.gltf.glb::PackedScene::4645839741559269099::1605188792::1701100689::1::::<><>::
-::res://assets/KayKit_Dungeon_Old/Models/Characters/obj/::1605285286
+::res://assets/KayKit_Dungeon_Old/Models/Characters/obj/::1701100624
 character_barbarianArmLeft.obj::Mesh::5695299818417974642::1605184580::1701100624::1::::<><>::
 character_barbarianArmRight.obj::Mesh::1647630661205343983::1605184580::1701100624::1::::<><>::
 character_barbarianBody.obj::Mesh::5517652609558497848::1605184580::1701100624::1::::<><>::
@@ -1147,7 +1147,7 @@ character_rogueArmRight.obj::Mesh::3609353563213527626::1605184580::1701100623::
 character_rogueBody.obj::Mesh::3865311498272854984::1605184580::1701100623::1::::<><>::
 character_rogueHair.obj::Mesh::2167961701380602839::1605184580::1701100623::1::::<><>::
 character_rogueHead.obj::Mesh::6318172318918158963::1605184580::1701100621::1::::<><>::
-::res://assets/KayKit_Dungeon_Old/Models/Characters/obj/extra heads/::1605285281
+::res://assets/KayKit_Dungeon_Old/Models/Characters/obj/extra heads/::1701100625
 barbarianHeadA.obj::Mesh::8424973143610031577::1605188097::1701100622::1::::<><>::
 barbarianHeadB.obj::Mesh::1277027678798917375::1605188097::1701100622::1::::<><>::
 barbarianHeadC.obj::Mesh::412169263510117314::1605188098::1701100622::1::::<><>::
@@ -1167,7 +1167,7 @@ rogueHeadA.obj::Mesh::3636171859551706660::1605188098::1701100624::1::::<><>::
 rogueHeadB.obj::Mesh::3916810716087120248::1605188098::1701100624::1::::<><>::
 rogueHeadC.obj::Mesh::559304250944952203::1605188098::1701100624::1::::<><>::
 skull.obj::Mesh::5249333345038177884::1605188098::1701100624::1::::<><>::
-::res://assets/KayKit_Dungeon_Old/Models/dae/::1605285315
+::res://assets/KayKit_Dungeon_Old/Models/dae/::1701100697
 arrow.dae::PackedScene::5451595172089926975::1605182012::1701100688::1::::<><>::
 artifact.dae::PackedScene::8237099558741210899::1605182012::1701100688::1::::<><>::
 axeDouble_common.dae::PackedScene::4858844636428519046::1605182012::1701100688::1::::<><>::
@@ -1354,7 +1354,7 @@ wall_window.dae::PackedScene::1991277274466800633::1605182022::1701100678::1::::
 wall_windowGate.dae::PackedScene::121960303345383761::1605182022::1701100678::1::::<><>::
 weaponRack.dae::PackedScene::579347426767573212::1605182022::1701100679::1::::<><>::
 ::res://assets/KayKit_Dungeon_Old/Models/fbx/::1605285341
-::res://assets/KayKit_Dungeon_Old/Models/gltf/::1605285365
+::res://assets/KayKit_Dungeon_Old/Models/gltf/::1701100729
 arrow.gltf.glb::PackedScene::8339706723715750932::1605182061::1701100679::1::::<><>::
 artifact.gltf.glb::PackedScene::1617177097487197883::1605182061::1701100679::1::::<><>::
 axeDouble_common.gltf.glb::PackedScene::3185650367477982066::1605182061::1701100679::1::::<><>::
@@ -1540,7 +1540,7 @@ wall_gateDoor.gltf.glb::PackedScene::6583985069101924999::1605182080::1701100724
 wall_window.gltf.glb::PackedScene::4979381472918834542::1605182080::1701100724::1::::<><>::
 wall_windowGate.gltf.glb::PackedScene::1562188119904290107::1605182081::1701100723::1::::<><>::
 weaponRack.gltf.glb::PackedScene::8654658969665976736::1605182081::1701100723::1::::<><>::
-::res://assets/KayKit_Dungeon_Old/Models/obj/::1605285418
+::res://assets/KayKit_Dungeon_Old/Models/obj/::1701100619
 arrow.obj::Mesh::813525787713249022::1605182298::1701100608::1::::<><>::
 artifact.obj::Mesh::503788620307964195::1605182297::1701100609::1::::<><>::
 axeDouble_common.obj::Mesh::8764961021588367098::1605182298::1701100609::1::::<><>::
@@ -1726,12 +1726,12 @@ wall_gateDoor.obj::Mesh::3452437436752079705::1605182295::1701100607::1::::<><>:
 wall_window.obj::Mesh::7876264237935805768::1605182293::1701100607::1::::<><>::
 wall_windowGate.obj::Mesh::3128341355330447942::1605182293::1701100607::1::::<><>::
 weaponRack.obj::Mesh::972928413436551981::1605182296::1701100607::1::::<><>::
-::res://assets/KayKit_Dungeon_Old/Samples/::1605778918
+::res://assets/KayKit_Dungeon_Old/Samples/::1701100607
 Sample1.png::CompressedTexture2D::8323926343949703783::1605715098::1701100607::1::::<><>::
 Sample2.png::CompressedTexture2D::5564512591549591570::1605715099::1701100607::1::::<><>::
 Sample3.png::CompressedTexture2D::1879556075311705400::1605715103::1701100607::1::::<><>::
 ::res://assets/KayKit_Medieval_Builder/::1701100592
-::res://assets/KayKit_Medieval_Builder/KayKit Brand Resouces/::1627633438
+::res://assets/KayKit_Medieval_Builder/KayKit Brand Resouces/::1701100606
 KayKit_logo.png::CompressedTexture2D::5788110953431533066::1599588306::1701100606::1::::<><>::
 KayKit_logoVariation_black.png::CompressedTexture2D::1330156461641662347::1599588306::1701100606::1::::<><>::
 KayKit_logoVariation_red.png::CompressedTexture2D::7740575212323232104::1599588306::1701100606::1::::<><>::
@@ -1741,7 +1741,7 @@ KayKit_logo_red.png::CompressedTexture2D::7931058958098463970::1599588307::17011
 KayKit_logo_white.png::CompressedTexture2D::7528083306904274971::1599588307::1701100606::1::::<><>::
 ::res://assets/KayKit_Medieval_Builder/Models/::1627634645
 ::res://assets/KayKit_Medieval_Builder/Models/objects/::1627634574
-::res://assets/KayKit_Medieval_Builder/Models/objects/dae/::1627648492
+::res://assets/KayKit_Medieval_Builder/Models/objects/dae/::1701100706
 archeryrange.dae::PackedScene::5037844095736221379::1627474558::1701100702::1::::<><>::
 barracks.dae::PackedScene::775245986320175363::1627474558::1701100703::1::::<><>::
 bridge.dae::PackedScene::509838134921083965::1627474558::1701100703::1::::<><>::
@@ -1773,7 +1773,7 @@ watchtower.dae::PackedScene::3078424886119715966::1627474559::1701100698::1::::<
 watermill.dae::PackedScene::1330977418507748753::1627474559::1701100698::1::::<><>::
 well.dae::PackedScene::7369499049130384103::1627474559::1701100698::1::::<><>::
 ::res://assets/KayKit_Medieval_Builder/Models/objects/fbx/::1627648495
-::res://assets/KayKit_Medieval_Builder/Models/objects/gltf/::1627648497
+::res://assets/KayKit_Medieval_Builder/Models/objects/gltf/::1701100710
 archeryrange.gltf.glb::PackedScene::8951742790623499276::1627474567::1701100698::1::::<><>::
 barracks.gltf.glb::PackedScene::8051223934649093357::1627474567::1701100698::1::::<><>::
 bridge.gltf.glb::PackedScene::6118691150874089472::1627474567::1701100698::1::::<><>::
@@ -1804,7 +1804,7 @@ wall_straight.gltf.glb::PackedScene::2504432749065369114::1627474568::1701100700
 watchtower.gltf.glb::PackedScene::2954384768299711821::1627474569::1701100700::1::::<><>::
 watermill.gltf.glb::PackedScene::5649410803734895408::1627474678::1701100700::1::::<><>::
 well.gltf.glb::PackedScene::6360440375650922180::1627474569::1701100710::1::::<><>::
-::res://assets/KayKit_Medieval_Builder/Models/objects/obj/::1627648500
+::res://assets/KayKit_Medieval_Builder/Models/objects/obj/::1701100626
 archeryrange.obj::Mesh::6228912049321576601::1627474931::1701100625::1::::<><>::
 barracks.obj::Mesh::1378603530192896070::1627474931::1701100625::1::::<><>::
 bridge.obj::Mesh::9022513718077126377::1627474932::1701100625::1::::<><>::
@@ -1840,7 +1840,7 @@ watermill_wheel.obj::Mesh::5004792594332879956::1627474932::1701100621::1::::<><
 well.obj::Mesh::4257602304040089769::1627474932::1701100621::1::::<><>::
 ::res://assets/KayKit_Medieval_Builder/Models/tiles/::1627634581
 ::res://assets/KayKit_Medieval_Builder/Models/tiles/hex/::1627634579
-::res://assets/KayKit_Medieval_Builder/Models/tiles/hex/dae/::1627648522
+::res://assets/KayKit_Medieval_Builder/Models/tiles/hex/dae/::1701100713
 hex_forest.dae::PackedScene::3615601056608177597::1627474352::1701100710::1::::<><>::
 hex_forest_detail.dae::PackedScene::227780684337642118::1627474352::1701100710::1::::<><>::
 hex_forest_roadA.dae::PackedScene::4168942828317372769::1627474352::1701100710::1::::<><>::
@@ -1970,7 +1970,7 @@ hex_sand_waterD_empty.dae::PackedScene::2173854943382991254::1627474358::1701100
 hex_water.dae::PackedScene::1443518550204053366::1627474360::1701100636::1::::<><>::
 hex_water_detail.dae::PackedScene::1681996744311621725::1627474360::1701100636::1::::<><>::
 ::res://assets/KayKit_Medieval_Builder/Models/tiles/hex/fbx/::1627648540
-::res://assets/KayKit_Medieval_Builder/Models/tiles/hex/gltf/::1627648552
+::res://assets/KayKit_Medieval_Builder/Models/tiles/hex/gltf/::1701100663
 hex_forest.gltf.glb::PackedScene::3884180590016546884::1627474328::1701100636::1::::<><>::
 hex_forest_detail.gltf.glb::PackedScene::3696082310495343820::1627474328::1701100628::1::::<><>::
 hex_forest_roadA.gltf.glb::PackedScene::2789425197546631928::1627474328::1701100628::1::::<><>::
@@ -2099,7 +2099,7 @@ hex_sand_waterD_detail.gltf.glb::PackedScene::2129023833582688328::1627474338::1
 hex_sand_waterD_empty.gltf.glb::PackedScene::6037864763947701542::1627474338::1701100662::1::::<><>::
 hex_water.gltf.glb::PackedScene::3457080540260999137::1627474342::1701100663::1::::<><>::
 hex_water_detail.gltf.glb::PackedScene::4219776555548608324::1627474342::1701100663::1::::<><>::
-::res://assets/KayKit_Medieval_Builder/Models/tiles/hex/obj/::1627648564
+::res://assets/KayKit_Medieval_Builder/Models/tiles/hex/obj/::1701100627
 hex_forest.obj::Mesh::7414306334416369187::1627474424::1701100607::1::::<><>::
 hex_forest_detail.obj::Mesh::4571782482502156192::1627474424::1701100607::1::::<><>::
 hex_forest_roadA.obj::Mesh::6977337226601506252::1627474424::1701100607::1::::<><>::
@@ -2229,7 +2229,7 @@ hex_sand_waterD_empty.obj::Mesh::2410960689957092257::1627474426::1701100625::1:
 hex_water.obj::Mesh::8580284871724720440::1627474424::1701100625::1::::<><>::
 hex_water_detail.obj::Mesh::1498456224582882418::1627474424::1701100625::1::::<><>::
 ::res://assets/KayKit_Medieval_Builder/Models/tiles/square/::1627634583
-::res://assets/KayKit_Medieval_Builder/Models/tiles/square/dae/::1627648575
+::res://assets/KayKit_Medieval_Builder/Models/tiles/square/dae/::1701100664
 square_forest.dae::PackedScene::2650098196682073322::1627474210::1701100663::1::::<><>::
 square_forest_detail.dae::PackedScene::3206872929613236748::1627474210::1701100663::1::::<><>::
 square_forest_roadA.dae::PackedScene::4380152413395354842::1627474210::1701100663::1::::<><>::
@@ -2299,7 +2299,7 @@ square_water_detail_empty.dae::PackedScene::2934427444244192692::1627474213::170
 square_water_detail_noSides.dae::PackedScene::4857325757575597422::1627474213::1701100643::1::::<><>::
 square_water_empty.dae::PackedScene::7324416100564768068::1627474213::1701100643::1::::<><>::
 ::res://assets/KayKit_Medieval_Builder/Models/tiles/square/fbx/::1627648589
-::res://assets/KayKit_Medieval_Builder/Models/tiles/square/gltf/::1627648598
+::res://assets/KayKit_Medieval_Builder/Models/tiles/square/gltf/::1701100653
 square_forest.gltf.glb::PackedScene::724454214522015589::1627474248::1701100643::1::::<><>::
 square_forest_detail.gltf.glb::PackedScene::1550781043060404526::1627474248::1701100643::1::::<><>::
 square_forest_roadA.gltf.glb::PackedScene::3615313827812279618::1627474248::1701100643::1::::<><>::
@@ -2368,7 +2368,7 @@ square_water_detail.gltf.glb::PackedScene::6378330883850533513::1627474252::1701
 square_water_detail_empty.gltf.glb::PackedScene::3735651243464755856::1627474252::1701100650::1::::<><>::
 square_water_detail_noSides.gltf.glb::PackedScene::497969768749143447::1627474252::1701100650::1::::<><>::
 square_water_empty.gltf.glb::PackedScene::2168052958463957374::1627474252::1701100650::1::::<><>::
-::res://assets/KayKit_Medieval_Builder/Models/tiles/square/obj/::1627648608
+::res://assets/KayKit_Medieval_Builder/Models/tiles/square/obj/::1701100623
 square_forest.obj::Mesh::1857887235263026513::1627474287::1701100621::1::::<><>::
 square_forest_detail.obj::Mesh::300517403556766588::1627474287::1701100621::1::::<><>::
 square_forest_roadA.obj::Mesh::5201113116039058333::1627474287::1701100621::1::::<><>::
@@ -2437,12 +2437,14 @@ square_water_detail.obj::Mesh::7637185374539579803::1627474287::1701100623::1:::
 square_water_detail_empty.obj::Mesh::6140703126572322687::1627474288::1701100623::1::::<><>::
 square_water_detail_noSides.obj::Mesh::8418056314736966143::1627474287::1701100623::1::::<><>::
 square_water_empty.obj::Mesh::5048423050101852842::1627474288::1701100623::1::::<><>::
-::res://assets/KayKit_Medieval_Builder/Samples/::1628682899
+::res://assets/KayKit_Medieval_Builder/Samples/::1701100607
 sampleA.png::CompressedTexture2D::1510709867500731660::1628679438::1701100606::1::::<><>::
 sampleB.png::CompressedTexture2D::4828869052074545339::1628679440::1701100606::1::::<><>::
 sampleC.png::CompressedTexture2D::4441791897100925662::1628679442::1701100606::1::::<><>::
 sampleD.png::CompressedTexture2D::3077589932888247641::1628679426::1701100607::1::::<><>::
 sampleE.png::CompressedTexture2D::4010270310062977134::1628679430::1701100607::1::::<><>::
+::res://assets/panorama/::1701102338
+panorama_image.png::CompressedTexture2D::6778868258060571829::1701102238::1701102390::1::::<><>::
 ::res://assets/resources/::1701099019
 grass_material.tres::StandardMaterial3D::6193948413629750958::1701099019::0::1::::<><>::uid://y8p8i87e5o1g::::res://assets/bricks_and_ground/4k JPEG/Grass 02/Grass03_Base Color.jpg
 ground_material2.tres::StandardMaterial3D::8812093235694294164::1701099019::0::1::::<><>::uid://bpb1qy7l11vye::::res://assets/bricks_and_ground/4k JPEG/Ground Sidewalk 02/GroundSidewalk02_Height.jpg
@@ -2630,7 +2632,7 @@ character_skeleton_warrior_jaw.obj::Mesh::7835077408405457319::1700157016::17001
 character_skeleton_warrior_jaw_broken.obj::Mesh::7307700439295537518::1700157016::1700157016::1::::<><>::
 character_template.553.obj::Mesh::442108949565176257::1700157016::1700157016::1::::<><>::
 ::res://assets/Trolling/::1701020308
-stillian_material.tres::StandardMaterial3D::3784778306829292868::1701020308::0::1::::<><>::uid://c727nd8pc45c2::::res://assets/Trolling/stillimon.png
+stillian_material.tres::StandardMaterial3D::3784778306829292868::1701020308::0::1::::<><>::uid://c727nd8pc45c2
 stillimon.png::CompressedTexture2D::7076588931486117631::1700344032::1700344042::1::::<><>::
 ::res://block/::1698950699
 block-generator.gd::GDScript::-1::1696542481::0::1::::BlockGenerator<>Node<>::
