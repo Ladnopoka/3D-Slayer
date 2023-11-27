@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dxalgd75i3ud4"
+path="res://.godot/imported/square_forest_waterInnerCorner_noSides.obj-48ff652c4e93cba0285f6f9aac985c64.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_forest_waterInnerCorner_noSides.obj-48ff652c4e93cba0285f6f9aac985c64.mesh"]
+
+source_file="res://assets/KayKit_Medieval_Builder/Models/tiles/square/obj/square_forest_waterInnerCorner_noSides.obj"
+dest_files=["res://.godot/imported/square_forest_waterInnerCorner_noSides.obj-48ff652c4e93cba0285f6f9aac985c64.mesh", "res://.godot/imported/square_forest_waterInnerCorner_noSides.obj-48ff652c4e93cba0285f6f9aac985c64.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

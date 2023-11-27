@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mktw1yx7ci3c"
+path="res://.godot/imported/hex_forest_waterB_detail.obj-fb08f8c7cb4f47a07e2f77c77df25cab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hex_forest_waterB_detail.obj-fb08f8c7cb4f47a07e2f77c77df25cab.mesh"]
+
+source_file="res://assets/KayKit_Medieval_Builder/Models/tiles/hex/obj/hex_forest_waterB_detail.obj"
+dest_files=["res://.godot/imported/hex_forest_waterB_detail.obj-fb08f8c7cb4f47a07e2f77c77df25cab.mesh", "res://.godot/imported/hex_forest_waterB_detail.obj-fb08f8c7cb4f47a07e2f77c77df25cab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

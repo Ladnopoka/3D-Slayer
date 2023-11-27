@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kvvx6730s1b1"
+path="res://.godot/imported/crossbow_common.obj-17a7b21a8da2ece69f978f0631021acc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/crossbow_common.obj-17a7b21a8da2ece69f978f0631021acc.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/crossbow_common.obj"
+dest_files=["res://.godot/imported/crossbow_common.obj-17a7b21a8da2ece69f978f0631021acc.mesh", "res://.godot/imported/crossbow_common.obj-17a7b21a8da2ece69f978f0631021acc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

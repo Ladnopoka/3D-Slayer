@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dcmx457la0fqf"
+path="res://.godot/imported/trapdoor.obj-31adf48427f848828ccee18636672697.mesh"
+
+[deps]
+
+files=["res://.godot/imported/trapdoor.obj-31adf48427f848828ccee18636672697.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/trapdoor.obj"
+dest_files=["res://.godot/imported/trapdoor.obj-31adf48427f848828ccee18636672697.mesh", "res://.godot/imported/trapdoor.obj-31adf48427f848828ccee18636672697.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

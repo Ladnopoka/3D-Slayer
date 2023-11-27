@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://w3i4oo1qxj28"
+path="res://.godot/imported/character_barbarianHead.obj-5d5ebb84ad4234418f2308dab1f8d6db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_barbarianHead.obj-5d5ebb84ad4234418f2308dab1f8d6db.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/Characters/obj/character_barbarianHead.obj"
+dest_files=["res://.godot/imported/character_barbarianHead.obj-5d5ebb84ad4234418f2308dab1f8d6db.mesh", "res://.godot/imported/character_barbarianHead.obj-5d5ebb84ad4234418f2308dab1f8d6db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

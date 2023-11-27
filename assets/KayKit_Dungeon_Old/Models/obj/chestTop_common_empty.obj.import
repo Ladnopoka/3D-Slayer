@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ojjhey5aiyty"
+path="res://.godot/imported/chestTop_common_empty.obj-2021f5a68308ccab52579dc13dd52f96.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chestTop_common_empty.obj-2021f5a68308ccab52579dc13dd52f96.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/chestTop_common_empty.obj"
+dest_files=["res://.godot/imported/chestTop_common_empty.obj-2021f5a68308ccab52579dc13dd52f96.mesh", "res://.godot/imported/chestTop_common_empty.obj-2021f5a68308ccab52579dc13dd52f96.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

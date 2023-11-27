@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://df6j7wcsooj4"
+path="res://.godot/imported/cratePlatform_small.obj-5c24dcd5bd99accda2ba7b0d7b83472e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cratePlatform_small.obj-5c24dcd5bd99accda2ba7b0d7b83472e.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/cratePlatform_small.obj"
+dest_files=["res://.godot/imported/cratePlatform_small.obj-5c24dcd5bd99accda2ba7b0d7b83472e.mesh", "res://.godot/imported/cratePlatform_small.obj-5c24dcd5bd99accda2ba7b0d7b83472e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

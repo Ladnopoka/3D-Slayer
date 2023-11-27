@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvcnd6xn5ekfw"
+path="res://.godot/imported/character_rogueBody.obj-26397c5baf20606a84ee57a8b9d96135.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_rogueBody.obj-26397c5baf20606a84ee57a8b9d96135.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/Characters/obj/character_rogueBody.obj"
+dest_files=["res://.godot/imported/character_rogueBody.obj-26397c5baf20606a84ee57a8b9d96135.mesh", "res://.godot/imported/character_rogueBody.obj-26397c5baf20606a84ee57a8b9d96135.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dm6sjyk5vmwy7"
+path="res://.godot/imported/square_rock_waterOuterCorner_empty.obj-ea0ce945bd7c7954b35c7c82c7f68a7c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_rock_waterOuterCorner_empty.obj-ea0ce945bd7c7954b35c7c82c7f68a7c.mesh"]
+
+source_file="res://assets/KayKit_Medieval_Builder/Models/tiles/square/obj/square_rock_waterOuterCorner_empty.obj"
+dest_files=["res://.godot/imported/square_rock_waterOuterCorner_empty.obj-ea0ce945bd7c7954b35c7c82c7f68a7c.mesh", "res://.godot/imported/square_rock_waterOuterCorner_empty.obj-ea0ce945bd7c7954b35c7c82c7f68a7c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

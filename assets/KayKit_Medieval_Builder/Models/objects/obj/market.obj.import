@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cke16v4l0id18"
+path="res://.godot/imported/market.obj-ff6cc60739cdd9857045a18d4789e952.mesh"
+
+[deps]
+
+files=["res://.godot/imported/market.obj-ff6cc60739cdd9857045a18d4789e952.mesh"]
+
+source_file="res://assets/KayKit_Medieval_Builder/Models/objects/obj/market.obj"
+dest_files=["res://.godot/imported/market.obj-ff6cc60739cdd9857045a18d4789e952.mesh", "res://.godot/imported/market.obj-ff6cc60739cdd9857045a18d4789e952.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

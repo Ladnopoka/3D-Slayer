@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5i6gglgtbosr"
+path="res://.godot/imported/quiver_full.obj-2d5a15b2d9138509ec3086bb8522da6f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/quiver_full.obj-2d5a15b2d9138509ec3086bb8522da6f.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/quiver_full.obj"
+dest_files=["res://.godot/imported/quiver_full.obj-2d5a15b2d9138509ec3086bb8522da6f.mesh", "res://.godot/imported/quiver_full.obj-2d5a15b2d9138509ec3086bb8522da6f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

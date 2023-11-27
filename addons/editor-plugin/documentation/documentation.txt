@@ -13,10 +13,20 @@ DONE
 
 Functional Requirements (Godot Editor UI):
 •       F1: The extension adds a new Tab to the bottom Panel ‘3D RoomGen’.
+DONE - bottom right panel.
+
 •       The bottom Panel has two tabs: “Models” and “Layouts” within.
+DONE
+
+
 •       F2: Model works with individual scenes that a designer wants to work with in a project:
-(Note: These scenes are typically rooms, or sections of a scenery, like a part of a surface
+(Note: These scenes are typically rooms, or sections of a scenery, like a part of a surface)
+DONE
+
 •       F2.1: The user can attach a scene (e.g., of a room) as such a ‘model’ and instantiate it with a button.
+DONE
+
+
 •       F2.2: Models would (ideally) be previewed on the right side of the panel
 •       F2.3: Models can be added and deleted.
 •       F2.4: Since Models are scenes that exist in the project (in the FileSystem), the view must check if the scene still exist (i.e., is part of the project). If the scene is gone, the list must be updated.
