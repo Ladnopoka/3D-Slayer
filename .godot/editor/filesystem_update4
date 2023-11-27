@@ -32,3 +32,5 @@ res://assets/TileMaps/tiles_medieval_square.tres
 res://assets/TileMaps/dungeon_tiles.tres
 res://tilemaps/dungeon_tiles.tscn
 res://dungeon/dungeon.tscn
+res://player/third_person_player.tscn
+res://third_person_player.gd

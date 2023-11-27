@@ -1,3 +1,4 @@
+res://player
 res://dungeon
 res://assets/TileMaps
 res://tilemaps
@@ -6,7 +7,6 @@ res://level/level3
 res://assets/Trolling
 res://assets/resources
 res://cyclops_playground
-res://player
 res://globals
 res://transition
 res://mob

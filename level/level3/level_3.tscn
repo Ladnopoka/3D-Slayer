@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="1_da008"]
 [ext_resource type="PackedScene" uid="uid://bgon3qk57fki8" path="res://dungeon/dungeon.tscn" id="2_m4gm7"]
-[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage.tscn" id="3_2nk5r"]
+[ext_resource type="PackedScene" uid="uid://mfjjwuf3wno2" path="res://player/third_person_player.tscn" id="3_nebqo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_miouu"]
 panorama = ExtResource("1_da008")
@@ -21,9 +21,10 @@ environment = SubResource("Environment_cq6n2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
+visible = false
 shadow_enabled = true
 
 [node name="GridMap" parent="." instance=ExtResource("2_m4gm7")]
 
-[node name="Mage" parent="." instance=ExtResource("3_2nk5r")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, -9)
+[node name="ThirdPersonPlayer" parent="." instance=ExtResource("3_nebqo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65464, -10.6349)
