@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://kgh3efq0krk0"]
+[gd_scene load_steps=17 format=3 uid="uid://kgh3efq0krk0"]
 
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_blocks.gd" id="1_d66kh"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_convex_block.gd" id="2_75d0c"]
@@ -7,6 +7,7 @@
 [ext_resource type="Material" uid="uid://ddbbx3yl8sa1w" path="res://assets/resources/wall_material.tres" id="5_m2qk4"]
 [ext_resource type="Material" uid="uid://c6vet0uxh8k4r" path="res://assets/resources/ground_material.tres" id="6_q578a"]
 [ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage.tscn" id="7_eyx81"]
+[ext_resource type="PackedScene" uid="uid://u8y0kqmdkdgk" path="res://addons/editor-plugin/room_template/room_template.tscn" id="8_ainvc"]
 
 [sub_resource type="Resource" id="Resource_bkw11"]
 script = ExtResource("3_7yao2")
@@ -88,6 +89,18 @@ face_selected = PackedByteArray(0, 0, 0, 0, 0, 0)
 active_face = -1
 face_ids = PackedInt32Array(0, 1, 2, 3, 4, 5)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_5jfiv"]
+size = Vector2(1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hibp0"]
+size = Vector3(10, 4, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sncqx"]
+size = Vector3(0.1, 4, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bqnli"]
+size = Vector3(0.1, 4, 10)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="CyclopsBlocks" type="Node3D" parent="."]
@@ -119,3 +132,20 @@ transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 0.1445
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.0506395, -0.704759, 0.707637, -0.0170119, 0.707835, 0.706173, -0.998572, -0.0477985, 0.0238551, 0.144511, 8.21207, -0.144511)
 shadow_enabled = true
+
+[node name="Room_13" parent="." instance=ExtResource("8_ainvc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14, 6.32136, 3.32582)
+
+[node name="Floor" parent="Room_13" index="0"]
+mesh = SubResource("PlaneMesh_5jfiv")
+
+[node name="BackWall" parent="Room_13" index="1"]
+mesh = SubResource("BoxMesh_hibp0")
+
+[node name="LeftWall" parent="Room_13" index="2"]
+mesh = SubResource("BoxMesh_sncqx")
+
+[node name="RightWall" parent="Room_13" index="3"]
+mesh = SubResource("BoxMesh_bqnli")
+
+[editable path="Room_13"]

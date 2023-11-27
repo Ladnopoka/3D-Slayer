@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qmrw7eho0l31"
+path="res://.godot/imported/mageHairB.obj-2ba98eae7a03df7fad4fef675236ff9c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mageHairB.obj-2ba98eae7a03df7fad4fef675236ff9c.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/Characters/obj/extra heads/mageHairB.obj"
+dest_files=["res://.godot/imported/mageHairB.obj-2ba98eae7a03df7fad4fef675236ff9c.mesh", "res://.godot/imported/mageHairB.obj-2ba98eae7a03df7fad4fef675236ff9c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

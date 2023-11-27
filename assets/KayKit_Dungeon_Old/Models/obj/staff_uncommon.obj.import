@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dx584gh4efk85"
+path="res://.godot/imported/staff_uncommon.obj-7e0ebf72a3f46a2eeecf6fec7b31360d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/staff_uncommon.obj-7e0ebf72a3f46a2eeecf6fec7b31360d.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/staff_uncommon.obj"
+dest_files=["res://.godot/imported/staff_uncommon.obj-7e0ebf72a3f46a2eeecf6fec7b31360d.mesh", "res://.godot/imported/staff_uncommon.obj-7e0ebf72a3f46a2eeecf6fec7b31360d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

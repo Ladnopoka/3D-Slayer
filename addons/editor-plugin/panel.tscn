@@ -1,17 +1,27 @@
 [gd_scene format=3 uid="uid://ci7nx8wfe8vdk"]
 
-[node name="Panel" type="VBoxContainer"]
+[node name="RoomGenerator" type="VBoxContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button1" type="Button" parent="."]
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 2
+
+[node name="Models" type="VBoxContainer" parent="TabContainer"]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="TabContainer/Models"]
 layout_mode = 2
 text = "Add Wall"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="TabContainer/Models"]
 layout_mode = 2
 text = "Add Cube"
 
-[node name="Button3" type="Button" parent="."]
+[node name="Layouts" type="VBoxContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="TabContainer/Layouts"]
 layout_mode = 2
 text = "Add Room"

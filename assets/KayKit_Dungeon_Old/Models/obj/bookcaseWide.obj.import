@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d3a2gv0mh0gwf"
+path="res://.godot/imported/bookcaseWide.obj-5d6b20f895ddc893d635aee250cb1e8e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bookcaseWide.obj-5d6b20f895ddc893d635aee250cb1e8e.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/bookcaseWide.obj"
+dest_files=["res://.godot/imported/bookcaseWide.obj-5d6b20f895ddc893d635aee250cb1e8e.mesh", "res://.godot/imported/bookcaseWide.obj-5d6b20f895ddc893d635aee250cb1e8e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

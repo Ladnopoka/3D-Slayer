@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://sni4juyqahdl"
+path="res://.godot/imported/character_knightHelmetVisor.obj-3a492b848ce86988b8b9f831cd44cf45.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_knightHelmetVisor.obj-3a492b848ce86988b8b9f831cd44cf45.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/Characters/obj/character_knightHelmetVisor.obj"
+dest_files=["res://.godot/imported/character_knightHelmetVisor.obj-3a492b848ce86988b8b9f831cd44cf45.mesh", "res://.godot/imported/character_knightHelmetVisor.obj-3a492b848ce86988b8b9f831cd44cf45.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

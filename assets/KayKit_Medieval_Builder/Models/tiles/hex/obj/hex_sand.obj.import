@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://pc84nre45n6s"
+path="res://.godot/imported/hex_sand.obj-aed7a5de5100e638f05d238b15b98953.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hex_sand.obj-aed7a5de5100e638f05d238b15b98953.mesh"]
+
+source_file="res://assets/KayKit_Medieval_Builder/Models/tiles/hex/obj/hex_sand.obj"
+dest_files=["res://.godot/imported/hex_sand.obj-aed7a5de5100e638f05d238b15b98953.mesh", "res://.godot/imported/hex_sand.obj-aed7a5de5100e638f05d238b15b98953.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

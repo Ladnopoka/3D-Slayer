@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bm2juy3otvc6w"
+path="res://.godot/imported/watermill.obj-287f7ce8d1f6b9d72a425bbb7f5a4d9e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/watermill.obj-287f7ce8d1f6b9d72a425bbb7f5a4d9e.mesh"]
+
+source_file="res://assets/KayKit_Medieval_Builder/Models/objects/obj/watermill.obj"
+dest_files=["res://.godot/imported/watermill.obj-287f7ce8d1f6b9d72a425bbb7f5a4d9e.mesh", "res://.godot/imported/watermill.obj-287f7ce8d1f6b9d72a425bbb7f5a4d9e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

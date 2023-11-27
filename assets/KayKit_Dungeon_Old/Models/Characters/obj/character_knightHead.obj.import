@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c4ewpaq4kowrv"
+path="res://.godot/imported/character_knightHead.obj-3a1ca57554eedf3519420bf6ec1b2647.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character_knightHead.obj-3a1ca57554eedf3519420bf6ec1b2647.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/Characters/obj/character_knightHead.obj"
+dest_files=["res://.godot/imported/character_knightHead.obj-3a1ca57554eedf3519420bf6ec1b2647.mesh", "res://.godot/imported/character_knightHead.obj-3a1ca57554eedf3519420bf6ec1b2647.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

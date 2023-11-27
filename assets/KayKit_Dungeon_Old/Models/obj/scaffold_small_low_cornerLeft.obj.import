@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dxni6f0ewp5o4"
+path="res://.godot/imported/scaffold_small_low_cornerLeft.obj-2806a877fe1ceac61d5e7567a556cffe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/scaffold_small_low_cornerLeft.obj-2806a877fe1ceac61d5e7567a556cffe.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/scaffold_small_low_cornerLeft.obj"
+dest_files=["res://.godot/imported/scaffold_small_low_cornerLeft.obj-2806a877fe1ceac61d5e7567a556cffe.mesh", "res://.godot/imported/scaffold_small_low_cornerLeft.obj-2806a877fe1ceac61d5e7567a556cffe.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bafgrdwr4r8fb"
+path="res://.godot/imported/mill.obj-b9c6e146a09312108a6c1df4efe90302.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mill.obj-b9c6e146a09312108a6c1df4efe90302.mesh"]
+
+source_file="res://assets/KayKit_Medieval_Builder/Models/objects/obj/mill.obj"
+dest_files=["res://.godot/imported/mill.obj-b9c6e146a09312108a6c1df4efe90302.mesh", "res://.godot/imported/mill.obj-b9c6e146a09312108a6c1df4efe90302.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

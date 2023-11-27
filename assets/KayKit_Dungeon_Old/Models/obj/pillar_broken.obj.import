@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://xsqvwvrmi1tk"
+path="res://.godot/imported/pillar_broken.obj-9669028b9a7e01aa115cecf68ead5819.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pillar_broken.obj-9669028b9a7e01aa115cecf68ead5819.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/pillar_broken.obj"
+dest_files=["res://.godot/imported/pillar_broken.obj-9669028b9a7e01aa115cecf68ead5819.mesh", "res://.godot/imported/pillar_broken.obj-9669028b9a7e01aa115cecf68ead5819.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

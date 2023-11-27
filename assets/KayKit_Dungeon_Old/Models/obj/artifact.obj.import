@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://hgblbwx3es56"
+path="res://.godot/imported/artifact.obj-7fa47d7840b580f69de549f8f7d70389.mesh"
+
+[deps]
+
+files=["res://.godot/imported/artifact.obj-7fa47d7840b580f69de549f8f7d70389.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/artifact.obj"
+dest_files=["res://.godot/imported/artifact.obj-7fa47d7840b580f69de549f8f7d70389.mesh", "res://.godot/imported/artifact.obj-7fa47d7840b580f69de549f8f7d70389.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

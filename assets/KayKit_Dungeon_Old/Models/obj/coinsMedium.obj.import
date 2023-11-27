@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bio5pj6rgokav"
+path="res://.godot/imported/coinsMedium.obj-900bed85626d1fb9ee3a71315335daad.mesh"
+
+[deps]
+
+files=["res://.godot/imported/coinsMedium.obj-900bed85626d1fb9ee3a71315335daad.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/coinsMedium.obj"
+dest_files=["res://.godot/imported/coinsMedium.obj-900bed85626d1fb9ee3a71315335daad.mesh", "res://.godot/imported/coinsMedium.obj-900bed85626d1fb9ee3a71315335daad.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

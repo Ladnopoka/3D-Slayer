@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c2uratrpiryxg"
+path="res://.godot/imported/wallSingle_split.obj-c14c1efea8b052aed5bb6c1c254f2dd2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallSingle_split.obj-c14c1efea8b052aed5bb6c1c254f2dd2.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/wallSingle_split.obj"
+dest_files=["res://.godot/imported/wallSingle_split.obj-c14c1efea8b052aed5bb6c1c254f2dd2.mesh", "res://.godot/imported/wallSingle_split.obj-c14c1efea8b052aed5bb6c1c254f2dd2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

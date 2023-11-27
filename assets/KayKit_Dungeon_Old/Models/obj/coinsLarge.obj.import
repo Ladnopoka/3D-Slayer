@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bfpnt8wlmrhl2"
+path="res://.godot/imported/coinsLarge.obj-7198e4df4abaa43e25593c81d46b9ff7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/coinsLarge.obj-7198e4df4abaa43e25593c81d46b9ff7.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/coinsLarge.obj"
+dest_files=["res://.godot/imported/coinsLarge.obj-7198e4df4abaa43e25593c81d46b9ff7.mesh", "res://.godot/imported/coinsLarge.obj-7198e4df4abaa43e25593c81d46b9ff7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

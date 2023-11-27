@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://2vwkew1k8ucp"
+path="res://.godot/imported/scaffold_small_high_railing_long.obj-ad9d44d6a0211a4b5cfacb19e4fd72cb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/scaffold_small_high_railing_long.obj-ad9d44d6a0211a4b5cfacb19e4fd72cb.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Old/Models/obj/scaffold_small_high_railing_long.obj"
+dest_files=["res://.godot/imported/scaffold_small_high_railing_long.obj-ad9d44d6a0211a4b5cfacb19e4fd72cb.mesh", "res://.godot/imported/scaffold_small_high_railing_long.obj-ad9d44d6a0211a4b5cfacb19e4fd72cb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
