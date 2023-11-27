@@ -30,4 +30,3 @@ CanvasLayer
 AnimatableBody2D
 PathFollow3D
 RayCast3D
-SpringArm3D

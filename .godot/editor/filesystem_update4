@@ -23,3 +23,7 @@ res://transition/transition.tscn
 res://portal/portal.tscn
 res://addons/editor-plugin/documentation/documentation.txt
 res://Ideas.txt
+res://assets/TileMaps/tiles.tres
+res://assets/TileMaps/tiles_dungeon_remastered.tres
+res://tilemaps/tiles.tscn
+res://level/level3/level_3.tscn

@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://dpxhd262bj67g"]
+[gd_scene load_steps=6 format=3 uid="uid://dpxhd262bj67g"]
+
+[ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="1_da008"]
+[ext_resource type="MeshLibrary" uid="uid://b5n23ue5nwjwg" path="res://assets/TileMaps/tiles_dungeon_remastered.tres" id="2_uakb2"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_miouu"]
+panorama = ExtResource("1_da008")
+
+[sub_resource type="Sky" id="Sky_7ifxp"]
+sky_material = SubResource("PanoramaSkyMaterial_miouu")
+
+[sub_resource type="Environment" id="Environment_cq6n2"]
+background_mode = 2
+sky = SubResource("Sky_7ifxp")
 
 [node name="Level3" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cq6n2")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("2_uakb2")
+metadata/_editor_floor_ = Vector3(0, 0, 0)
