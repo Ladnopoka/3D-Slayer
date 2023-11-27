@@ -1,5 +1,6 @@
-Button
+CollisionShape3D
 GridMap
+Button
 WorldEnvironment
 TabContainer
 VBoxContainer
@@ -9,7 +10,6 @@ Camera3D
 Marker3D
 CyclopsConvexBlock
 Label
-CollisionShape3D
 Area3D
 Node
 AnimationTree
