@@ -59,43 +59,36 @@ func setup_button_connections():
 func setup_menu_button():
 	var popup_menu = menu_button.get_popup()
 	
-	popup_menu.add_item("Model 1")
-	popup_menu.add_item("Model 2")
-	popup_menu.add_item("Model 3")
-	popup_menu.add_item("Model 4")
+	popup_menu.add_item("Wall")
+	popup_menu.add_item("Corner IN")
+	popup_menu.add_item("Floor")
+	popup_menu.add_item("Corner OUT")
+	popup_menu.connect("id_pressed", _on_model_selected)
+	
+func _on_model_selected(id):
+	print("Dungeon Model ID: ", id)
+	match id:
+		0:
+			instantiate_model("Wall")
+		1:
+			instantiate_model("Corner IN")
+		2:
+			instantiate_model("Floor")
+		3:
+			instantiate_model("Corner OUT")
+		_:
+			print("Unknown model selected")
+			
 
 func menu_button_pressed():
 	print("Menu button pressed")
-
 	# Connect the signal for when an item is selected
 	#popup_menu.connect("id_pressed", self, "_on_model_selected")
-
-func dungeon_button_pressed():
-	print("inside dungeon dropdown")
-
-	dungeon_dropdown.set("placeholder", "Dungeon Generator")  # Or use this to set a placeholder
-	
-	dungeon_dropdown.add_item("Model 1", 0)  # The second parameter is an ID for the item
-	dungeon_dropdown.add_item("Model 2", 1)
-	dungeon_dropdown.add_item("Model 3", 2)
-	dungeon_dropdown.add_item("Model 4", 3)
-	# Connect the signal for when an item is selected
-	#dungeon_dropdown.connect("item_selected", _on_model_selected)
-
-	
-func _on_model_selected(id):
-	print("Model selected: ", dungeon_dropdown.get_item_text(id))
-	# Here you would add the logic to instantiate the selected model
-	# For example:
-	#instantiate(dungeon_dropdown.get_item_text(id))
 	
 func instantiate_model(model_name):
 	# Logic to instantiate the model based on the selection
 	# This will depend on how you've set up your models and scenes
-	print("inside instantiate_model")
-
-
-
+	print("Instantiating model: ", model_name)
 
 func _on_toggle_button_pressed():
 	# Toggle the visibility state

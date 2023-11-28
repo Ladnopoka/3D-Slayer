@@ -18,3 +18,4 @@ res://level/level_1.tscn
 res://dungeon/dungeon.tscn
 res://player/third_person_player.tscn
 res://button_themes/new_theme.tres
+res://tilemaps/dungeon_tiles.tscn
