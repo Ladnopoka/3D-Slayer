@@ -127,7 +127,6 @@ func _on_toggle_button_pressed():
 	print("Toggle Button Pressed")
 
 func _exit_tree():
-	#remove_custom_type("Button1")
 	# Clean up when the plugin is disabled
 	remove_control_from_docks(dockedScene)
 	dockedScene.free()
@@ -137,10 +136,6 @@ func get_plugin_name():
 
 func get_plugin_description():
 	return "An editor for creating 3D isometric rooms and blocks."
-
-func _build_docks():
-	# Create your GUI controls here
-	pass
 	
 func create_wall():
 	print("Inside create wall")
@@ -173,8 +168,7 @@ func create_wall():
 		wall.owner = current_scene
 	else:
 		print("No active scene!")
-		
-		
+				
 func create_box():
 	print("Inside create box")
 
@@ -204,8 +198,7 @@ func create_box():
 		undo_redo.commit_action(true)
 		box.owner = current_scene
 	else:
-		print("No active scene!")
-	
+		print("No active scene!")	
 	
 func create_room():
 	var room = RoomTemplate.instantiate()
@@ -223,24 +216,7 @@ func create_room():
 		room.owner = current_scene
 	else:
 		print("No active scene!")
-		
-func instantiate_dungeon_wall():
-	var _dungeon_wall = dungeon_wall.instantiate()
-	var current_scene = get_editor_interface().get_edited_scene_root()
-
-	if current_scene:
-		_dungeon_wall.name = "dungeon_wall_" + str(current_scene.get_child_count())
-
-		# For undo/redo functionality:
-		undo_redo.create_action("Create Dungeon Wall")
-		undo_redo.add_do_method(current_scene, "add_child", _dungeon_wall)
-		undo_redo.add_do_reference(_dungeon_wall)
-		undo_redo.add_undo_method(current_scene, "remove_child", _dungeon_wall)
-		undo_redo.commit_action(true)
-		_dungeon_wall.owner = current_scene
-	else:
-		print("No active scene!")	
-		
+			
 func create_hideout():
 	var hideout = HideoutTemplate.instantiate()
 	var current_scene = get_editor_interface().get_edited_scene_root()
@@ -257,3 +233,20 @@ func create_hideout():
 		hideout.owner = current_scene
 	else:
 		print("No active scene!")
+
+func instantiate_dungeon_wall():
+	var _dungeon_wall = dungeon_wall.instantiate()
+	var current_scene = get_editor_interface().get_edited_scene_root()
+
+	if current_scene:
+		_dungeon_wall.name = "dungeon_wall_" + str(current_scene.get_child_count())
+
+		# For undo/redo functionality:
+		undo_redo.create_action("Create Dungeon Wall")
+		undo_redo.add_do_method(current_scene, "add_child", _dungeon_wall)
+		undo_redo.add_do_reference(_dungeon_wall)
+		undo_redo.add_undo_method(current_scene, "remove_child", _dungeon_wall)
+		undo_redo.commit_action(true)
+		_dungeon_wall.owner = current_scene
+	else:
+		print("No active scene!")	
