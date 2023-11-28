@@ -1,3 +1,4 @@
+MenuButton
 OptionButton
 SpotLight3D
 Node3D
@@ -30,4 +31,3 @@ NavigationAgent3D
 TextureProgressBar
 CanvasLayer
 AnimatableBody2D
-PathFollow3D

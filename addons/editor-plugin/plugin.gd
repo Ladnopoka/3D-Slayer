@@ -15,6 +15,7 @@ var button2: Button
 var button3: Button
 var hideout_button: Button
 var dungeon_dropdown: OptionButton
+var menu_button: MenuButton
 
 # Get the undo/redo object
 var undo_redo = get_undo_redo()
@@ -28,6 +29,7 @@ func _enter_tree():
 	tab_container.visible = true
 	
 	setup_button_connections()
+	setup_menu_button()
 	# Initial setup when the plugin is enabled
 	add_control_to_dock(DOCK_SLOT_RIGHT_BL, dockedScene)
 
@@ -39,27 +41,47 @@ func setup_button_connections():
 	button2 = dockedScene.get_node("TabContainer/Models/Cube")
 	button3 = dockedScene.get_node("TabContainer/Layouts/Room")
 	hideout_button = dockedScene.get_node("TabContainer/Layouts/Hideout")
-	dungeon_dropdown = dockedScene.get_node("TabContainer/Models/OptionButton")
+	menu_button = dockedScene.get_node("TabContainer/Models/DungeonGeneratorMenu")
+	#dungeon_dropdown = dockedScene.get_node("TabContainer/Models/DungeonGeneratorMenu/OptionButton")
 	wall_button.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)
 	button3.connect("pressed", create_room)
 	hideout_button.connect("pressed", create_hideout)
-	dungeon_dropdown.connect("pressed", Dungeon_Dropdown)
+	menu_button.connect("pressed", menu_button_pressed)
+	#dungeon_dropdown.connect("pressed", Dungeon_Dropdown)
 	wall_button.visible = true
 	button2.visible = true
 	button3.visible = true
 	hideout_button.visible = true
-	dungeon_dropdown.visible = true
+	menu_button.visible = true
+	#dungeon_dropdown.visible = true
+	
+func setup_menu_button():
+	var popup_menu = menu_button.get_popup()
+	
+	popup_menu.add_item("Model 1")
+	popup_menu.add_item("Model 2")
+	popup_menu.add_item("Model 3")
+	popup_menu.add_item("Model 4")
 
-func Dungeon_Dropdown():
+func menu_button_pressed():
+	print("Menu button pressed")
+
+	# Connect the signal for when an item is selected
+	#popup_menu.connect("id_pressed", self, "_on_model_selected")
+
+func dungeon_button_pressed():
 	print("inside dungeon dropdown")
+
+	dungeon_dropdown.set("placeholder", "Dungeon Generator")  # Or use this to set a placeholder
 	
 	dungeon_dropdown.add_item("Model 1", 0)  # The second parameter is an ID for the item
 	dungeon_dropdown.add_item("Model 2", 1)
 	dungeon_dropdown.add_item("Model 3", 2)
 	dungeon_dropdown.add_item("Model 4", 3)
 	# Connect the signal for when an item is selected
-	dungeon_dropdown.connect("item_selected", _on_model_selected)
+	#dungeon_dropdown.connect("item_selected", _on_model_selected)
+
 	
 func _on_model_selected(id):
 	print("Model selected: ", dungeon_dropdown.get_item_text(id))
@@ -71,6 +93,9 @@ func instantiate_model(model_name):
 	# Logic to instantiate the model based on the selection
 	# This will depend on how you've set up your models and scenes
 	print("inside instantiate_model")
+
+
+
 
 func _on_toggle_button_pressed():
 	# Toggle the visibility state

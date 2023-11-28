@@ -17,3 +17,4 @@ res://addons/editor-plugin/panel.tscn
 res://level/level_1.tscn
 res://dungeon/dungeon.tscn
 res://player/third_person_player.tscn
+res://button_themes/new_theme.tres
