@@ -10,7 +10,7 @@ var dockedScene
 var tab_container: TabContainer
 var is_content_visible: bool = false  # Tracks whether the content is currently visible
 
-var button1: Button
+var wall_button: Button
 var button2: Button
 var button3: Button
 var hideout_button: Button
@@ -35,17 +35,17 @@ func setup_button_connections():
 	# Connect the toggle button signal
 	#toggle_button.connect("pressed", _on_toggle_button_pressed)
 
-	button1 = dockedScene.get_node("TabContainer/Models/Walll")
+	wall_button = dockedScene.get_node("TabContainer/Models/Wall")
 	button2 = dockedScene.get_node("TabContainer/Models/Cube")
-	button3 = dockedScene.get_node("TabContainer/Models/OptionButton")
-	hideout_button = dockedScene.get_node("TabContainer/Layouts/Room")
+	button3 = dockedScene.get_node("TabContainer/Layouts/Room")
+	hideout_button = dockedScene.get_node("TabContainer/Layouts/Hideout")
 	dungeon_dropdown = dockedScene.get_node("TabContainer/Models/OptionButton")
-	button1.connect("pressed", create_wall)
+	wall_button.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)
 	button3.connect("pressed", create_room)
 	hideout_button.connect("pressed", create_hideout)
 	dungeon_dropdown.connect("pressed", Dungeon_Dropdown)
-	button1.visible = true
+	wall_button.visible = true
 	button2.visible = true
 	button3.visible = true
 	hideout_button.visible = true
@@ -59,7 +59,7 @@ func Dungeon_Dropdown():
 	dungeon_dropdown.add_item("Model 3", 2)
 	dungeon_dropdown.add_item("Model 4", 3)
 	# Connect the signal for when an item is selected
-	#dungeon_dropdown.connect("item_selected", _on_model_selected)
+	dungeon_dropdown.connect("item_selected", _on_model_selected)
 	
 func _on_model_selected(id):
 	print("Model selected: ", dungeon_dropdown.get_item_text(id))
@@ -81,7 +81,7 @@ func _on_toggle_button_pressed():
 	print("Toggle Button Pressed")
 
 func _exit_tree():
-	remove_custom_type("Button1")
+	#remove_custom_type("Button1")
 	# Clean up when the plugin is disabled
 	remove_control_from_docks(dockedScene)
 	dockedScene.free()
@@ -166,7 +166,7 @@ func create_room():
 	var current_scene = get_editor_interface().get_edited_scene_root()
 
 	if current_scene:
-		room.name = "Room_1" + str(current_scene.get_child_count())
+		room.name = "Room_" + str(current_scene.get_child_count())
 
 		# For undo/redo functionality:
 		undo_redo.create_action("Create Room")
@@ -184,7 +184,7 @@ func create_hideout():
 	var current_scene = get_editor_interface().get_edited_scene_root()
 
 	if current_scene:
-		hideout.name = "Hideout_1" + str(current_scene.get_child_count())
+		hideout.name = "Hideout_" + str(current_scene.get_child_count())
 
 		# For undo/redo functionality:
 		undo_redo.create_action("Create Hideout")

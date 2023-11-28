@@ -10,7 +10,7 @@ layout_mode = 2
 [node name="Models" type="VBoxContainer" parent="TabContainer"]
 layout_mode = 2
 
-[node name="Walll" type="Button" parent="TabContainer/Models"]
+[node name="Wall" type="Button" parent="TabContainer/Models"]
 layout_mode = 2
 text = "Add Wall"
 
