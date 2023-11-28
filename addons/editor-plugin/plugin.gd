@@ -85,13 +85,13 @@ func _on_model_selected(id):
 	print("Dungeon Model ID: ", id)
 	match id:
 		0:
-			instantiate_model("Wall")
+			instantiate_dungeon_wall()
 		1:
-			instantiate_model("Corner IN")
+			instantiate_dungeon_corner_in()
 		2:
-			instantiate_model("Floor")
+			instantiate_dungeon_floor()
 		3:
-			instantiate_model("Corner OUT")
+			instantiate_dungeon_corner_out()
 		_:
 			print("Unknown model selected")
 			
@@ -100,31 +100,6 @@ func menu_button_pressed():
 	print("Menu button pressed")
 	# Connect the signal for when an item is selected
 	#popup_menu.connect("id_pressed", self, "_on_model_selected")
-	
-func instantiate_model(model_name):
-	# Logic to instantiate the model based on the selection
-	# This will depend on how you've set up your models and scenes
-	print("Instantiating model: ", model_name)
-	
-	match model_name:
-		"Wall":
-			instantiate_dungeon_wall()
-		"Corner IN":
-			print("need to instantiate Corner IN")
-		"Floor":
-			print("need to instantiate Floor")
-		"Corner OUT":
-			print("need to instantiate Corner OUT")
-		_:
-			print("Unknown model name")
-
-func _on_toggle_button_pressed():
-	# Toggle the visibility state
-	if !tab_container.visible:
-		tab_container.visible = true
-	elif tab_container.visible:
-		tab_container.visible = false
-	print("Toggle Button Pressed")
 
 func _exit_tree():
 	# Clean up when the plugin is disabled
@@ -248,5 +223,56 @@ func instantiate_dungeon_wall():
 		undo_redo.add_undo_method(current_scene, "remove_child", _dungeon_wall)
 		undo_redo.commit_action(true)
 		_dungeon_wall.owner = current_scene
+	else:
+		print("No active scene!")
+		
+func instantiate_dungeon_corner_in():
+	var _dungeon_corner_in = dungeon_corner_in.instantiate()
+	var current_scene = get_editor_interface().get_edited_scene_root()
+
+	if current_scene:
+		_dungeon_corner_in.name = "dungeon_corner_" + str(current_scene.get_child_count())
+
+		# For undo/redo functionality:
+		undo_redo.create_action("Create Dungeon Wall")
+		undo_redo.add_do_method(current_scene, "add_child", _dungeon_corner_in)
+		undo_redo.add_do_reference(_dungeon_corner_in)
+		undo_redo.add_undo_method(current_scene, "remove_child", _dungeon_corner_in)
+		undo_redo.commit_action(true)
+		_dungeon_corner_in.owner = current_scene
+	else:
+		print("No active scene!")
+
+func instantiate_dungeon_floor():
+	var _dungeon_floor = dungeon_floor.instantiate()
+	var current_scene = get_editor_interface().get_edited_scene_root()
+
+	if current_scene:
+		_dungeon_floor.name = "dungeon_wall_" + str(current_scene.get_child_count())
+
+		# For undo/redo functionality:
+		undo_redo.create_action("Create Dungeon Wall")
+		undo_redo.add_do_method(current_scene, "add_child", _dungeon_floor)
+		undo_redo.add_do_reference(_dungeon_floor)
+		undo_redo.add_undo_method(current_scene, "remove_child", _dungeon_floor)
+		undo_redo.commit_action(true)
+		_dungeon_floor.owner = current_scene
+	else:
+		print("No active scene!")	
+		
+func instantiate_dungeon_corner_out():
+	var _dungeon_corner_out = dungeon_corner_out.instantiate()
+	var current_scene = get_editor_interface().get_edited_scene_root()
+
+	if current_scene:
+		_dungeon_corner_out.name = "dungeon_wall_" + str(current_scene.get_child_count())
+
+		# For undo/redo functionality:
+		undo_redo.create_action("Create Dungeon Wall")
+		undo_redo.add_do_method(current_scene, "add_child", _dungeon_corner_out)
+		undo_redo.add_do_reference(_dungeon_corner_out)
+		undo_redo.add_undo_method(current_scene, "remove_child", _dungeon_corner_out)
+		undo_redo.commit_action(true)
+		_dungeon_corner_out.owner = current_scene
 	else:
 		print("No active scene!")	
