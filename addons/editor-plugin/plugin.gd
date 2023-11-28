@@ -21,6 +21,7 @@ var button3: Button
 var hideout_button: Button
 var menu_button: MenuButton
 var dungeon_layout_button: Button
+var popup_menu
 
 # Get the undo/redo object
 var undo_redo = get_undo_redo()
@@ -60,10 +61,9 @@ func setup_button_connections():
 	hideout_button.visible = true
 	menu_button.visible = true
 	dungeon_layout_button
-
 	
 func setup_menu_button():
-	var popup_menu = menu_button.get_popup()
+	popup_menu = menu_button.get_popup()
 	var popup_theme = Theme.new()  # Create a new theme
 	var style_box = StyleBoxFlat.new()
 	style_box.bg_color = Color(0.5, 0.2, 0.2)  # Example brown color
@@ -82,9 +82,10 @@ func setup_menu_button():
 	popup_menu.add_item("Floor")
 	popup_menu.add_item("Corner OUT")
 	popup_menu.connect("id_pressed", _on_model_selected)
-	
+		
 func _on_model_selected(id):
 	print("Dungeon Model ID: ", id)
+	menu_button.get_popup().popup()  # Show the popup again
 	match id:
 		0:
 			instantiate_dungeon_wall()
@@ -114,7 +115,6 @@ func dungeon_layout_button_pressed():
 	else:
 		print("No active scene!")
 	
-
 func menu_button_pressed():
 	print("Menu button pressed")
 	# Connect the signal for when an item is selected

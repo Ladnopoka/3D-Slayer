@@ -1,3 +1,6 @@
+SubViewport
+VBoxContainer
+SubViewportContainer
 Button
 MenuButton
 OptionButton
@@ -10,7 +13,6 @@ CollisionShape3D
 GridMap
 WorldEnvironment
 TabContainer
-VBoxContainer
 CyclopsBlocks
 Marker3D
 CyclopsConvexBlock
@@ -29,4 +31,3 @@ Control
 NavigationRegion3D
 NavigationAgent3D
 TextureProgressBar
-CanvasLayer

@@ -49,3 +49,7 @@ text = "Add Hideout"
 [node name="Dungeon" type="Button" parent="TabContainer/Layouts"]
 layout_mode = 2
 text = "Add Dungeon"
+
+[node name="Preview" type="VBoxContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
