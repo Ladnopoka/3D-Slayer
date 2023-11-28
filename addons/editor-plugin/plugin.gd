@@ -61,13 +61,12 @@ func setup_menu_button():
 	var popup_theme = Theme.new()  # Create a new theme
 	var style_box = StyleBoxFlat.new()
 	style_box.bg_color = Color(0.5, 0.2, 0.2)  # Example brown color
-	
+
 	var popup_font = FontFile.new()
 	popup_font.font_data = load("res://addons/editor-plugin/fonts/Diablo Heavy.ttf")  # Replace with the path to your font file
-	#popup_font.font_stretch = 5  # Set the desired font size for the popup
 	popup_theme.set_font("font", "PopupMenu", popup_font)
-	popup_theme.set_font_size("font", "PopupMenu", 50)
 	popup_theme.set_color("font_color", "PopupMenu", Color(0, 150, 0))  # Set to black
+	popup_theme.set_font_size("font_size", "PopupMenu", 25)
 	popup_menu.theme = popup_theme
 	
 	popup_menu.add_theme_stylebox_override("panel", style_box)
