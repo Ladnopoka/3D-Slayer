@@ -22,6 +22,9 @@ text = "Add Cube"
 layout_mode = 2
 text = "Add Hideout"
 
+[node name="OptionButton" type="OptionButton" parent="TabContainer/Models"]
+layout_mode = 2
+
 [node name="Layouts" type="VBoxContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2

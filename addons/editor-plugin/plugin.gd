@@ -10,10 +10,11 @@ var dockedScene
 var tab_container: TabContainer
 var is_content_visible: bool = false  # Tracks whether the content is currently visible
 
-var button1
-var button2
-var button3
-var hideout_button
+var button1: Button
+var button2: Button
+var button3: Button
+var hideout_button: Button
+var dungeon_dropdown: OptionButton
 
 # Get the undo/redo object
 var undo_redo = get_undo_redo()
@@ -38,15 +39,38 @@ func setup_button_connections():
 	button2 = dockedScene.get_child(0).get_child(0).get_child(1)
 	button3 = dockedScene.get_child(0).get_child(1).get_child(0)
 	hideout_button = dockedScene.get_child(0).get_child(0).get_child(2) 
+	dungeon_dropdown = dockedScene.get_node("TabContainer/Models/OptionButton")
 	button1.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)
 	button3.connect("pressed", create_room)
 	hideout_button.connect("pressed", create_hideout)
+	dungeon_dropdown.connect("pressed", Dungeon_Dropdown)
 	button1.visible = true
 	button2.visible = true
 	button3.visible = true
 	hideout_button.visible = true
+	dungeon_dropdown.visible = true
 
+func Dungeon_Dropdown():
+	print("inside dungeon dropdown")
+	
+	dungeon_dropdown.add_item("Model 1", 0)  # The second parameter is an ID for the item
+	dungeon_dropdown.add_item("Model 2", 1)
+	dungeon_dropdown.add_item("Model 3", 2)
+	dungeon_dropdown.add_item("Model 4", 3)
+	# Connect the signal for when an item is selected
+	dungeon_dropdown.connect("item_selected", _on_model_selected)
+	
+func _on_model_selected(id):
+	print("Model selected: ", dungeon_dropdown.get_item_text(id))
+	# Here you would add the logic to instantiate the selected model
+	# For example:
+	#instantiate(dungeon_dropdown.get_item_text(id))
+	
+func instantiate_model(model_name):
+	# Logic to instantiate the model based on the selection
+	# This will depend on how you've set up your models and scenes
+	print("inside instantiate_model")
 
 func _on_toggle_button_pressed():
 	# Toggle the visibility state
