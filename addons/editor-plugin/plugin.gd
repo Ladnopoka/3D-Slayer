@@ -59,7 +59,7 @@ func Dungeon_Dropdown():
 	dungeon_dropdown.add_item("Model 3", 2)
 	dungeon_dropdown.add_item("Model 4", 3)
 	# Connect the signal for when an item is selected
-	dungeon_dropdown.connect("item_selected", _on_model_selected)
+	#dungeon_dropdown.connect("item_selected", _on_model_selected)
 	
 func _on_model_selected(id):
 	print("Model selected: ", dungeon_dropdown.get_item_text(id))
