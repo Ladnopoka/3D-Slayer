@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci7nx8wfe8vdk"]
+[gd_scene load_steps=3 format=3 uid="uid://ci7nx8wfe8vdk"]
 
-[ext_resource type="Theme" uid="uid://cujpelxk8viy6" path="res://button_themes/new_theme.tres" id="1_ilnd5"]
+[ext_resource type="FontFile" uid="uid://d0olnmrky3ugd" path="res://globals/Bildad.ttf" id="1_ew2gw"]
+
+[sub_resource type="Theme" id="Theme_qhqxy"]
+default_font = ExtResource("1_ew2gw")
 
 [node name="RoomGenerator" type="VBoxContainer"]
 offset_right = 40.0
@@ -22,15 +25,15 @@ text = "Add Cube"
 
 [node name="DungeonGeneratorMenu" type="MenuButton" parent="TabContainer/Models"]
 layout_mode = 2
-theme = ExtResource("1_ilnd5")
+theme = SubResource("Theme_qhqxy")
 text = "Dungeon Generator"
 
 [node name="OptionButton" type="OptionButton" parent="TabContainer/Models/DungeonGeneratorMenu"]
 visible = false
 layout_mode = 2
-offset_top = -24.0
-offset_right = 83.0
-offset_bottom = -4.0
+offset_top = 31.0
+offset_right = 162.0
+offset_bottom = 62.0
 item_count = 4
 popup/item_0/text = "Wall"
 popup/item_0/id = 0
