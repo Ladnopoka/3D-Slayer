@@ -4,6 +4,10 @@ extends EditorPlugin
 const panel = preload("res://addons/editor-plugin/panel.tscn")
 const RoomTemplate = preload("res://addons/editor-plugin/room_template/room_template.tscn")
 const HideoutTemplate = preload("res://addons/editor-plugin/room_template/hideout.tscn")
+const dungeon_corner_in = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_corner_in.tscn")
+const dungeon_corner_out = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_corner_out.tscn")
+const dungeon_floor = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_floor.tscn")
+const dungeon_wall = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_wall.tscn")
 
 var dockedScene
 #var toggle_button: Button
@@ -101,6 +105,18 @@ func instantiate_model(model_name):
 	# Logic to instantiate the model based on the selection
 	# This will depend on how you've set up your models and scenes
 	print("Instantiating model: ", model_name)
+	
+	match model_name:
+		"Wall":
+			instantiate_dungeon_wall()
+		"Corner IN":
+			print("need to instantiate Corner IN")
+		"Floor":
+			print("need to instantiate Floor")
+		"Corner OUT":
+			print("need to instantiate Corner OUT")
+		_:
+			print("Unknown model name")
 
 func _on_toggle_button_pressed():
 	# Toggle the visibility state
@@ -208,6 +224,22 @@ func create_room():
 	else:
 		print("No active scene!")
 		
+func instantiate_dungeon_wall():
+	var _dungeon_wall = dungeon_wall.instantiate()
+	var current_scene = get_editor_interface().get_edited_scene_root()
+
+	if current_scene:
+		_dungeon_wall.name = "dungeon_wall_" + str(current_scene.get_child_count())
+
+		# For undo/redo functionality:
+		undo_redo.create_action("Create Dungeon Wall")
+		undo_redo.add_do_method(current_scene, "add_child", _dungeon_wall)
+		undo_redo.add_do_reference(_dungeon_wall)
+		undo_redo.add_undo_method(current_scene, "remove_child", _dungeon_wall)
+		undo_redo.commit_action(true)
+		_dungeon_wall.owner = current_scene
+	else:
+		print("No active scene!")	
 		
 func create_hideout():
 	var hideout = HideoutTemplate.instantiate()

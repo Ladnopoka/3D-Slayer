@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701192927
+::res://::1701197566
 icon.svg::CompressedTexture2D::3540083071793652844::1696266044::1700778612::1::::<><>::
 Ideas.txt::TextFile::-1::1701103059::0::1::::<><>::
 third_person_player.gd::GDScript::-1::1701127583::0::1::::<>CharacterBody3D<>::
@@ -168,13 +168,19 @@ tool_stairs_settings.gd::GDScript::-1::1683755122::0::1::::ToolStairsSettings<>R
 display_mode.gd::GDScript::-1::1683755122::0::1::::DisplayMode<>RefCounted<>::
 general_util.gd::GDScript::-1::1683755122::0::1::::GeneralUtil<>RefCounted<>::
 selection.gd::GDScript::-1::1683755122::0::1::::Selection<>RefCounted<>::
-::res://addons/editor-plugin/::1701192927
-panel.tscn::PackedScene::5401244366276246444::1701192611::0::1::::<><>::uid://d0olnmrky3ugd::::res://globals/Bildad.ttf
+::res://addons/editor-plugin/::1701197719
+panel.tscn::PackedScene::5401244366276246444::1701197323::0::1::::<><>::uid://cg5e10waxsb3x::::res://addons/editor-plugin/fonts/Bildad.ttf
 plugin.cfg::TextFile::-1::1701103058::0::1::::<><>::
-plugin.gd::GDScript::-1::1701192927::0::1::::<>EditorPlugin<>::
+plugin.gd::GDScript::-1::1701197719::0::1::::<>EditorPlugin<>::
 ::res://addons/editor-plugin/documentation/::1701182729
 documentation.txt::TextFile::-1::1701103059::0::1::::<><>::
 report_txt.txt::TextFile::-1::1701107436::0::1::::<><>::
+::res://addons/editor-plugin/dungeon_tiles/::0
+dungeon_corner_in.tscn::PackedScene::5240666334934246191::1701197907::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
+dungeon_corner_out.tscn::PackedScene::8840036095904652678::1701197907::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
+dungeon_floor.tscn::PackedScene::4084485688624545597::1701197907::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
+dungeon_tiles.tscn::PackedScene::3074746894418519701::1701197907::0::1::::<><>::uid://cs1c54q62868r::::res://assets/TileMaps/dungeon_tiles.glb
+dungeon_wall.tscn::PackedScene::4394341652343579082::1701197907::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
 ::res://addons/editor-plugin/fonts/::1701192929
 Bildad.ttf::FontFile::5256196407549678931::1701189079::1701189112::1::::<><>::
 Diablo Heavy.ttf::FontFile::8789643128362279737::1700157016::1701192929::1::::<><>::
@@ -2658,7 +2664,7 @@ new_theme.tres::Theme::6196116151787146279::1701185739::0::1::::<><>::
 cyclops.tscn::PackedScene::4980122827769036981::1700157016::0::1::::<><>::res://addons/cyclops_level_builder/nodes/cyclops_convex_block.gd
 ::res://dungeon/::1701184447
 dungeon.tscn::PackedScene::2837295214441113665::1701184447::0::1::::<><>::uid://d3i786s8l33qb
-::res://globals/::1701192942
+::res://globals/::1701192943
 Bildad.ttf::FontFile::8943576189857571327::1700157016::1700157016::1::::<><>::
 Diablo Heavy.ttf::FontFile::2129054404135454350::1701192942::1701192943::1::::<><>::
 Global.gd::GDScript::-1::1700157016::0::1::::<>Node<>::
@@ -2714,11 +2720,16 @@ arrow.gd::GDScript::-1::1700157016::0::1::::<>Node3D<>::
 arrow.tscn::PackedScene::9097127697197831773::1700157016::0::1::::<><>::uid://dth7syj2rww6p
 bullet.gd::GDScript::-1::1700157016::0::1::::<>Node3D<>::
 bullet.tscn::PackedScene::1053457791512271113::1700157016::0::1::::<><>::res://shooting/bullet.gd
-::res://tilemaps/::1701187156
-dungeon_tiles.tscn::PackedScene::1197996864231951588::1701187156::0::1::::<><>::uid://cs1c54q62868r
+::res://tilemaps/::1701197566
 medieval_tiles_hex.tscn::PackedScene::8706826791775847641::1701111153::0::1::::<><>::uid://bvlr5fgbdxfbg
 medieval_tiles_square.tscn::PackedScene::5296028733060930359::1701116736::0::1::::<><>::uid://kk6wji3n7o74
 tiles.tscn::PackedScene::844375683218272852::1701125487::0::1::::<><>::uid://c58uklwlr80pk
+::res://tilemaps/dungeon_tiles/::1701197830
+dungeon_tiles.tscn::PackedScene::1197996864231951588::1701187156::0::1::::<><>::uid://cs1c54q62868r::::res://assets/TileMaps/dungeon_tiles.glb
+dungeon_wall.tscn::PackedScene::736270479419838036::1701197719::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
+dungeon_corner_in.tscn::PackedScene::8169398219981667894::1701197761::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
+dungeon_floor.tscn::PackedScene::4514194136024099242::1701197797::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
+dungeon_corner_out.tscn::PackedScene::8312412805797889301::1701197830::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
 ::res://transition/::1701125486
 transition.tscn::PackedScene::8486262327048564225::1701125486::0::1::::<><>::
 ::res://ui/::1701125486
