@@ -1,8 +1,14 @@
+res://tilemaps/dungeon_tiles
+res://button_themes
+res://player
+res://dungeon
+res://assets/TileMaps
+res://tilemaps
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin/documentation
+res://level/level3
 res://assets/Trolling
 res://assets/resources
 res://cyclops_playground
-res://player
 res://globals
 res://transition
 res://mob
@@ -14,8 +20,3 @@ res://addons/editor-plugin
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin
 res://addons/button
 C:/Users/ladno/Documents/3D Slayer/addons
-res://scripts/globals
-res://scripts/player
-res://materials
-res://block
-res://level
