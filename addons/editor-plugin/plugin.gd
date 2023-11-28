@@ -35,10 +35,10 @@ func setup_button_connections():
 	# Connect the toggle button signal
 	#toggle_button.connect("pressed", _on_toggle_button_pressed)
 
-	button1 = dockedScene.get_child(0).get_child(0).get_child(0)
-	button2 = dockedScene.get_child(0).get_child(0).get_child(1)
-	button3 = dockedScene.get_child(0).get_child(1).get_child(0)
-	hideout_button = dockedScene.get_child(0).get_child(0).get_child(2) 
+	button1 = dockedScene.get_node("TabContainer/Models/Walll")
+	button2 = dockedScene.get_node("TabContainer/Models/Cube")
+	button3 = dockedScene.get_node("TabContainer/Models/OptionButton")
+	hideout_button = dockedScene.get_node("TabContainer/Layouts/Room")
 	dungeon_dropdown = dockedScene.get_node("TabContainer/Models/OptionButton")
 	button1.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)

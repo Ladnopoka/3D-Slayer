@@ -10,17 +10,13 @@ layout_mode = 2
 [node name="Models" type="VBoxContainer" parent="TabContainer"]
 layout_mode = 2
 
-[node name="Button1" type="Button" parent="TabContainer/Models"]
+[node name="Walll" type="Button" parent="TabContainer/Models"]
 layout_mode = 2
 text = "Add Wall"
 
-[node name="Button2" type="Button" parent="TabContainer/Models"]
+[node name="Cube" type="Button" parent="TabContainer/Models"]
 layout_mode = 2
 text = "Add Cube"
-
-[node name="Hideout" type="Button" parent="TabContainer/Models"]
-layout_mode = 2
-text = "Add Hideout"
 
 [node name="OptionButton" type="OptionButton" parent="TabContainer/Models"]
 layout_mode = 2
@@ -29,6 +25,10 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="TabContainer/Layouts"]
+[node name="Room" type="Button" parent="TabContainer/Layouts"]
 layout_mode = 2
 text = "Add Room"
+
+[node name="Hideout" type="Button" parent="TabContainer/Layouts"]
+layout_mode = 2
+text = "Add Hideout"
