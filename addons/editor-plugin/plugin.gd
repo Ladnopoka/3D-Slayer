@@ -4,6 +4,7 @@ extends EditorPlugin
 const panel = preload("res://addons/editor-plugin/panel.tscn")
 const RoomTemplate = preload("res://addons/editor-plugin/room_template/room_template.tscn")
 const HideoutTemplate = preload("res://addons/editor-plugin/room_template/hideout.tscn")
+const DungeonTemplate = preload("res://addons/editor-plugin/room_template/dungeon.tscn")
 const dungeon_corner_in = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_corner_in.tscn")
 const dungeon_corner_out = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_corner_out.tscn")
 const dungeon_floor = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_floor.tscn")
@@ -18,8 +19,8 @@ var wall_button: Button
 var button2: Button
 var button3: Button
 var hideout_button: Button
-var dungeon_dropdown: OptionButton
 var menu_button: MenuButton
+var dungeon_layout_button: Button
 
 # Get the undo/redo object
 var undo_redo = get_undo_redo()
@@ -39,26 +40,27 @@ func _enter_tree():
 
 func setup_button_connections():
 	# Connect the toggle button signal
-	#toggle_button.connect("pressed", _on_toggle_button_pressed)
-
 	wall_button = dockedScene.get_node("TabContainer/Models/Wall")
 	button2 = dockedScene.get_node("TabContainer/Models/Cube")
 	button3 = dockedScene.get_node("TabContainer/Layouts/Room")
 	hideout_button = dockedScene.get_node("TabContainer/Layouts/Hideout")
 	menu_button = dockedScene.get_node("TabContainer/Models/DungeonGeneratorMenu")
-	#dungeon_dropdown = dockedScene.get_node("TabContainer/Models/DungeonGeneratorMenu/OptionButton")
+	dungeon_layout_button = dockedScene.get_node("TabContainer/Layouts/Dungeon")
+
 	wall_button.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)
 	button3.connect("pressed", create_room)
 	hideout_button.connect("pressed", create_hideout)
 	menu_button.connect("pressed", menu_button_pressed)
-	#dungeon_dropdown.connect("pressed", Dungeon_Dropdown)
+	dungeon_layout_button.connect("pressed", dungeon_layout_button_pressed)
+
 	wall_button.visible = true
 	button2.visible = true
 	button3.visible = true
 	hideout_button.visible = true
 	menu_button.visible = true
-	#dungeon_dropdown.visible = true
+	dungeon_layout_button
+
 	
 func setup_menu_button():
 	var popup_menu = menu_button.get_popup()
@@ -95,6 +97,23 @@ func _on_model_selected(id):
 		_:
 			print("Unknown model selected")
 			
+func dungeon_layout_button_pressed():
+	var dungeon_layout = DungeonTemplate.instantiate()
+	var current_scene = get_editor_interface().get_edited_scene_root()
+
+	if current_scene:
+		dungeon_layout.name = "Dungeon_" + str(current_scene.get_child_count())
+
+		# For undo/redo functionality:
+		undo_redo.create_action("Create Hideout")
+		undo_redo.add_do_method(current_scene, "add_child", dungeon_layout)
+		undo_redo.add_do_reference(dungeon_layout)
+		undo_redo.add_undo_method(current_scene, "remove_child", dungeon_layout)
+		undo_redo.commit_action(true)
+		dungeon_layout.owner = current_scene
+	else:
+		print("No active scene!")
+	
 
 func menu_button_pressed():
 	print("Menu button pressed")

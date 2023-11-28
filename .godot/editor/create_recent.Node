@@ -1,3 +1,4 @@
+Button
 MenuButton
 OptionButton
 SpotLight3D
@@ -7,7 +8,6 @@ MeshInstance3D
 CharacterBody3D
 CollisionShape3D
 GridMap
-Button
 WorldEnvironment
 TabContainer
 VBoxContainer
@@ -30,4 +30,3 @@ NavigationRegion3D
 NavigationAgent3D
 TextureProgressBar
 CanvasLayer
-AnimatableBody2D

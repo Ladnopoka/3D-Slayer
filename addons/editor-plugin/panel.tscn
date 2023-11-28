@@ -34,22 +34,6 @@ theme = SubResource("Theme_qhqxy")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pm5nh")
 text = "Dungeon Menu"
 
-[node name="OptionButton" type="OptionButton" parent="TabContainer/Models/DungeonGeneratorMenu"]
-visible = false
-layout_mode = 2
-offset_top = 31.0
-offset_right = 162.0
-offset_bottom = 62.0
-item_count = 4
-popup/item_0/text = "Wall"
-popup/item_0/id = 0
-popup/item_1/text = "Corner IN"
-popup/item_1/id = 1
-popup/item_2/text = "Floor"
-popup/item_2/id = 2
-popup/item_3/text = "Corner Out"
-popup/item_3/id = 3
-
 [node name="Layouts" type="VBoxContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
@@ -61,3 +45,7 @@ text = "Add Room"
 [node name="Hideout" type="Button" parent="TabContainer/Layouts"]
 layout_mode = 2
 text = "Add Hideout"
+
+[node name="Dungeon" type="Button" parent="TabContainer/Layouts"]
+layout_mode = 2
+text = "Add Dungeon"
