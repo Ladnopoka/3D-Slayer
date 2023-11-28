@@ -24,12 +24,12 @@ func _enter_tree():
 	dockedScene = panel.instantiate()
 	print("RoomGenerator panel scene instantiated!")
 	
-	#toggle_button = dockedScene.get_node("ToggleButton")
 	tab_container = dockedScene.get_node("TabContainer")
 	tab_container.visible = true
 	
 	setup_button_connections()
 	setup_menu_button()
+	
 	# Initial setup when the plugin is enabled
 	add_control_to_dock(DOCK_SLOT_RIGHT_BL, dockedScene)
 
@@ -58,6 +58,19 @@ func setup_button_connections():
 	
 func setup_menu_button():
 	var popup_menu = menu_button.get_popup()
+	var popup_theme = Theme.new()  # Create a new theme
+	var style_box = StyleBoxFlat.new()
+	style_box.bg_color = Color(0.5, 0.2, 0.2)  # Example brown color
+	
+	var popup_font = FontFile.new()
+	popup_font.font_data = load("res://addons/editor-plugin/fonts/Diablo Heavy.ttf")  # Replace with the path to your font file
+	#popup_font.font_stretch = 5  # Set the desired font size for the popup
+	popup_theme.set_font("font", "PopupMenu", popup_font)
+	popup_theme.set_font_size("font", "PopupMenu", 50)
+	popup_theme.set_color("font_color", "PopupMenu", Color(0, 150, 0))  # Set to black
+	popup_menu.theme = popup_theme
+	
+	popup_menu.add_theme_stylebox_override("panel", style_box)
 	
 	popup_menu.add_item("Wall")
 	popup_menu.add_item("Corner IN")
