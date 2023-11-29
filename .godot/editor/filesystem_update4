@@ -18,3 +18,5 @@ res://assets/resources/ground_material3.tres
 res://assets/resources/ground_material.tres
 res://assets/resources/wall_material.tres
 res://player/mage.tscn
+res://player/mage/mage_skill.tscn
+res://player/mage/mage.tscn

@@ -1,4 +1,5 @@
 RayCast3D
+MeshInstance3D
 SubViewport
 VBoxContainer
 SubViewportContainer
@@ -8,7 +9,6 @@ OptionButton
 SpotLight3D
 Node3D
 Camera3D
-MeshInstance3D
 CharacterBody3D
 CollisionShape3D
 GridMap
