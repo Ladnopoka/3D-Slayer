@@ -20,6 +20,7 @@ var velocity_var = Vector3.ZERO
 @onready var camera_rig = $camera_rig
 #@onready var crossbow = $Rig/RayCast3D
 @onready var transition = $Transition
+@onready var ray_cast_3d = $Rig/RayCast3D
 
 #signal
 signal player_hit
@@ -28,6 +29,10 @@ var hp = 10
 var hp_regen = 0.1
 var current_hp
 var is_dead = false
+
+#projectile skills
+var mage_skill = load("res://player/mage/mage_skill.tscn")
+var mage_skill_instance
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -121,6 +126,10 @@ func movement_and_attacking(delta):
 func attack():
 	print("Mage is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
+	mage_skill_instance = mage_skill.instantiate()
+	mage_skill_instance.position = ray_cast_3d.global_position
+	mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
+	get_parent().add_child(mage_skill_instance)
 #	# Always update orientation, regardless of cooldown
 	update_orientation()
 #

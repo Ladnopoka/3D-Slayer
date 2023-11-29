@@ -42,10 +42,10 @@ func _on_knight_spawn_timer_timeout():
 func get_player_character():
 	match GameManager.player_name:
 		"Rogue_Hooded":
-			player = load("res://player/rogue_hooded.tscn")
+			player = load("res://player/rogue/rogue_hooded.tscn")
 		"Barbarian":
-			player = load("res://player/barbarian.tscn")
+			player = load("res://player/barbarian/barbarian.tscn")
 		"Mage":
-			player = load("res://player/mage.tscn")
+			player = load("res://player/mage/mage.tscn")
 		_:
-			player = load("res://player/rogue_hooded.tscn")
+			player = load("res://player/barbarian/barbarian.tscn")

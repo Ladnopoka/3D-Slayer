@@ -1,3 +1,4 @@
+GPUParticles3D
 RayCast3D
 MeshInstance3D
 SubViewport
@@ -27,6 +28,5 @@ ColorRect
 AnimationPlayer
 BoneAttachment3D
 Timer
-GPUParticles3D
 Control
 NavigationRegion3D

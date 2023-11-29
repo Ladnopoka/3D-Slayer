@@ -27,7 +27,6 @@ func _input_event(camera, event, position, normal, shape_idx):
 	elif Input.is_action_just_released("right_mouse_clicked"):
 		animation_tree.set("parameters/AttackStateMachine/conditions/cheer", false)
 		
-		
 func hide_selection():
 	$Selection.hide()
 	

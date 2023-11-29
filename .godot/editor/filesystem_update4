@@ -20,3 +20,11 @@ res://assets/resources/wall_material.tres
 res://player/mage.tscn
 res://player/mage/mage_skill.tscn
 res://player/mage/mage.tscn
+res://player/mage/mage_skill.gd
+res://player/mage/mage.gd
+res://player/rogue_hooded.tscn
+res://level/level2/level_2.tscn
+res://level/level2/level_2.gd
+res://player/rogue/rogue_hooded.tscn
+res://player/selection.gd
+res://player/selection_area.tscn

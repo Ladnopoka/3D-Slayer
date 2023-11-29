@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701292901
+::res://::1701295806
 icon.svg::CompressedTexture2D::3540083071793652844::1696266044::1700778612::1::::<><>::
 Ideas.txt::TextFile::-1::1701103059::0::1::::<><>::
 third_person_player.gd::GDScript::-1::1701127583::0::1::::<>CharacterBody3D<>::
@@ -168,8 +168,8 @@ tool_stairs_settings.gd::GDScript::-1::1683755122::0::1::::ToolStairsSettings<>R
 display_mode.gd::GDScript::-1::1683755122::0::1::::DisplayMode<>RefCounted<>::
 general_util.gd::GDScript::-1::1683755122::0::1::::GeneralUtil<>RefCounted<>::
 selection.gd::GDScript::-1::1683755122::0::1::::Selection<>RefCounted<>::
-::res://addons/editor-plugin/::1701292929
-panel.tscn::PackedScene::5401244366276246444::1701292929::0::1::::<><>::uid://cg5e10waxsb3x::::res://addons/editor-plugin/fonts/Bildad.ttf
+::res://addons/editor-plugin/::1701295634
+panel.tscn::PackedScene::5401244366276246444::1701295634::0::1::::<><>::uid://cg5e10waxsb3x::::res://addons/editor-plugin/fonts/Bildad.ttf
 plugin.cfg::TextFile::-1::1701103058::0::1::::<><>::
 plugin.gd::GDScript::-1::1701291671::0::1::::<>EditorPlugin<>::
 ::res://addons/editor-plugin/documentation/::1701212991
@@ -2458,11 +2458,11 @@ sampleD.png::CompressedTexture2D::3077589932888247641::1701103060::1701103060::1
 sampleE.png::CompressedTexture2D::4010270310062977134::1701103060::1701103060::1::::<><>::
 ::res://assets/panorama/::1701103374
 panorama_image.png::CompressedTexture2D::6778868258060571829::1701103374::1701103374::1::::<><>::
-::res://assets/resources/::1701292929
+::res://assets/resources/::1701295634
 grass_material.tres::StandardMaterial3D::6193948413629750958::1701292929::0::1::::<><>::uid://y8p8i87e5o1g::::res://assets/bricks_and_ground/4k JPEG/Grass 02/Grass03_Base Color.jpg
 ground_material2.tres::StandardMaterial3D::8812093235694294164::1701291958::0::1::::<><>::uid://bpb1qy7l11vye::::res://assets/bricks_and_ground/4k JPEG/Ground Sidewalk 02/GroundSidewalk02_Height.jpg
 ground_material3.tres::StandardMaterial3D::6986723407047568525::1701291958::0::1::::<><>::uid://0o65ryctcu6p::::res://assets/bricks_and_ground/4k JPEG/Ground Stones/GroundStones_Height.jpg
-ground_material.tres::StandardMaterial3D::6992325596091240811::1701291958::0::1::::<><>::uid://bhvbn7cwh5608::::res://assets/bricks_and_ground/4k JPEG/Ground Peables 01/GroundPeables01_Base Color.jpg
+ground_material.tres::StandardMaterial3D::6992325596091240811::1701295634::0::1::::<><>::uid://bhvbn7cwh5608::::res://assets/bricks_and_ground/4k JPEG/Ground Peables 01/GroundPeables01_Base Color.jpg
 wall_material.tres::StandardMaterial3D::7371996258273746314::1701291958::0::1::::<><>::uid://b4k7skwfgrsw7::::res://assets/bricks_and_ground/Bricks/Brickwall5_Texture.png
 ::res://assets/shaders/::1698507010
 forground_shader.gdshader::Shader::-1::1698507010::0::1::::<><>::
@@ -2663,8 +2663,8 @@ block.tscn::PackedScene::2944682419896583785::1698950699::0::1::::<><>::uid://cs
 new_theme.tres::Theme::6196116151787146279::1701185739::0::1::::<><>::
 ::res://cyclops_playground/::1700157016
 cyclops.tscn::PackedScene::4980122827769036981::1700157016::0::1::::<><>::res://addons/cyclops_level_builder/nodes/cyclops_convex_block.gd
-::res://dungeon/::1701292929
-dungeon.tscn::PackedScene::2837295214441113665::1701292929::0::1::::<><>::uid://d3i786s8l33qb::::res://assets/TileMaps/dungeon_tiles.tres<>uid://b5n23ue5nwjwg::::res://assets/TileMaps/tiles_dungeon_remastered.tres
+::res://dungeon/::1701295634
+dungeon.tscn::PackedScene::2837295214441113665::1701295634::0::1::::<><>::uid://d3i786s8l33qb::::res://assets/TileMaps/dungeon_tiles.tres<>uid://b5n23ue5nwjwg::::res://assets/TileMaps/tiles_dungeon_remastered.tres
 ::res://globals/::1701192943
 Bildad.ttf::FontFile::8943576189857571327::1700157016::1700157016::1::::<><>::
 Diablo Heavy.ttf::FontFile::2129054404135454350::1701192942::1701192943::1::::<><>::
@@ -2676,15 +2676,15 @@ inventory_data.gd::GDScript::-1::1700157016::0::1::::InventoryData<>Resource<>::
 slot_data.gd::GDScript::-1::1700157016::0::1::::SlotData<>Resource<>::
 ::res://item/::1700157016
 item_data.gd::GDScript::-1::1700157016::0::1::::ItemData<>Resource<>::
-::res://level/::1701292930
+::res://level/::1701295793
 level_1.gd::GDScript::-1::1700157016::0::1::::<>Node3D<>::
-level_1.tscn::PackedScene::5486766862100485142::1701292930::0::1::::<><>::uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://dh7eqkenjyvhp::::res://hideout/hideout.tscn<>uid://dawwbik4sgvk7::::res://player/barbarian.tscn<>uid://cuinop16et3w1::::res://assets/resources/grass_material.tres<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dcbt3cxtuaj55::::res://player/mage/mage.tscn<>uid://dxh1exxrby0bd::::res://addons/editor-plugin/fonts/Diablo Heavy.ttf<>uid://c3ty78dhu6mmv::::res://assets/panorama/panorama_image.png<>uid://ci7p6fwa6jxd::::res://portal/portal.tscn
-::res://level/level2/::1701125486
+level_1.tscn::PackedScene::5486766862100485142::1701295793::0::1::::<><>::uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://dh7eqkenjyvhp::::res://hideout/hideout.tscn<>uid://dawwbik4sgvk7::::res://player/barbarian/barbarian.tscn<>uid://cuinop16et3w1::::res://assets/resources/grass_material.tres<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dcbt3cxtuaj55::::res://player/mage/mage.tscn<>uid://dxh1exxrby0bd::::res://addons/editor-plugin/fonts/Diablo Heavy.ttf<>uid://c3ty78dhu6mmv::::res://assets/panorama/panorama_image.png<>uid://ci7p6fwa6jxd::::res://portal/portal.tscn
+::res://level/level2/::1701295793
 hideout.tscn::PackedScene::6805561760561017034::1700157016::0::1::::<><>::uid://bg21syiad1wtc
-level_2.gd::GDScript::-1::1700157016::0::1::::<>Node3D<>::
-level_2.tscn::PackedScene::2347473302513341459::1701125486::0::1::::<><>::res://level/level2/level_2.gd<>uid://csqg2v0p2s8yw
-::res://level/level3/::1701292929
-level_3.tscn::PackedScene::8260007237572117946::1701292929::0::1::::<><>::uid://bgon3qk57fki8::::res://dungeon/dungeon.tscn<>uid://mfjjwuf3wno2::::res://player/third_person_player.tscn
+level_2.gd::GDScript::-1::1701295793::0::1::::<>Node3D<>::
+level_2.tscn::PackedScene::2347473302513341459::1701295808::0::1::::<><>::res://level/level2/level_2.gd<>uid://csqg2v0p2s8yw::::res://player/rogue_hooded.tscn<>uid://c6vet0uxh8k4r::::res://assets/resources/ground_material.tres<>uid://cchcp636iid71::::res://mob/knight.tscn<>uid://muq1yk7w0c1h::::res://ui/ui.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dxh1exxrby0bd::::res://addons/editor-plugin/fonts/Diablo Heavy.ttf
+::res://level/level3/::1701295634
+level_3.tscn::PackedScene::8260007237572117946::1701295634::0::1::::<><>::uid://bgon3qk57fki8::::res://dungeon/dungeon.tscn<>uid://mfjjwuf3wno2::::res://player/third_person_player.tscn
 ::res://materials/::1701291674
 floor_material - Copy (2).tres::StandardMaterial3D::4941683408885706279::1698507010::0::1::::<><>::uid://bpn2xpuu8u7ps
 floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1701291674::0::1::::<><>::
@@ -2696,18 +2696,21 @@ wall_material.tres::StandardMaterial3D::2049049828431529787::1698509275::0::1:::
 knight.gd::GDScript::-1::1700157016::0::1::::<>CharacterBody3D<>::
 knight.tscn::PackedScene::4927819592732677638::1700157016::0::1::::<><>::uid://c7x1l40dia4qi
 mobcollision.gd::GDScript::-1::1700157016::0::1::::<>Area3D<>::
-::res://player/::1701292929
-barbarian.tscn::PackedScene::7206016358280172472::1701125486::0::1::::<><>::uid://c7hiacvooqb8o
+::res://player/::1701295806
 camera_rig.tscn::PackedScene::6392152817220939938::1699713598::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
-mage.gd::GDScript::-1::1700157016::0::1::::<>CharacterBody3D<>::
-rogue_hooded.gd::GDScript::-1::1700157082::0::1::::<>CharacterBody3D<>::
-rogue_hooded.tscn::PackedScene::6069684257656594730::1701125486::0::1::::<><>::uid://db0337ymkwxhu
+rogue_hooded.tscn::PackedScene::6069684257656594730::1701295806::0::1::::<><>::uid://db0337ymkwxhu::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Rogue_Hooded.glb<>res://player/rogue/rogue_hooded.gd<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn
 selection.gd::GDScript::-1::1700157016::0::1::::<>Area3D<>::
 selection_area.tscn::PackedScene::1660714247796833638::1701125486::0::1::::<><>::res://player/selection.gd
-third_person_player.tscn::PackedScene::853151724181995963::1701292929::0::1::::<><>::res://third_person_player.gd
-::res://player/mage/::1701292930
-mage.tscn::PackedScene::7302907882668540702::1701292949::0::1::::<><>::res://player/mage.gd<>uid://0y6quu11guul::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Mage_mage_texture.png<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn
-mage_skill.tscn::PackedScene::2838744425835682014::1701292929::0::1::::<><>::
+third_person_player.tscn::PackedScene::853151724181995963::1701295634::0::1::::<><>::res://third_person_player.gd
+::res://player/barbarian/::1701295793
+barbarian.tscn::PackedScene::7206016358280172472::1701125486::0::1::::<><>::uid://c7hiacvooqb8o::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Barbarian.glb
+::res://player/mage/::1701295635
+mage.gd::GDScript::-1::1701294123::0::1::::<>CharacterBody3D<>::
+mage.tscn::PackedScene::7302907882668540702::1701295635::0::1::::<><>::res://player/mage/mage.gd<>uid://0y6quu11guul::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Mage_mage_texture.png<>uid://cxcn28m8cf2ck::::res://player/camera_rig.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn
+mage_skill.gd::GDScript::-1::1701294207::0::1::::<>Node3D<>::
+mage_skill.tscn::PackedScene::2838744425835682014::1701295634::0::1::::<><>::res://player/mage/mage_skill.gd
+::res://player/rogue/::1701295806
+rogue_hooded.gd::GDScript::-1::1700157082::0::1::::<>CharacterBody3D<>::
 ::res://playground/::1701125486
 playground.tscn::PackedScene::714749942661595729::1701125486::0::1::::<><>::res://addons/cyclops_level_builder/nodes/cyclops_blocks.gd<>res://addons/cyclops_level_builder/nodes/cyclops_convex_block.gd<>res://addons/cyclops_level_builder/resources/convex_block_data.gd<>uid://c6sokwxjn0yyf
 ::res://portal/::1701125487
