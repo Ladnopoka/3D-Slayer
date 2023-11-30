@@ -54,13 +54,6 @@ func setup_button_connections():
 	hideout_button.connect("pressed", create_hideout)
 	menu_button.connect("pressed", menu_button_pressed)
 	dungeon_layout_button.connect("pressed", dungeon_layout_button_pressed)
-
-	wall_button.visible = true
-	button2.visible = true
-	button3.visible = true
-	hideout_button.visible = true
-	menu_button.visible = true
-	dungeon_layout_button
 	
 func setup_menu_button():
 	popup_menu = menu_button.get_popup()
