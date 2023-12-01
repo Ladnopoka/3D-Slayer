@@ -1,4 +1,4 @@
-res://dungeon/dungeon.tscn
+res://level/level_1.tscn
 res://addons/cyclops_level_builder/shaders/outline_shader.tres
 res://addons/cyclops_level_builder/docks/material_palette/thumbnail_selected_theme.tres
 res://addons/cyclops_level_builder/docks/material_palette/thumbnail_normal_theme.tres
@@ -9,15 +9,13 @@ res://assets/TileMaps/dungeon_tiles.tres
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
 res://assets/resources/grass_material.tres
-res://assets/resources/ground_material2.tres
-res://assets/resources/ground_material3.tres
-res://assets/resources/ground_material.tres
-res://assets/resources/wall_material.tres
 res://addons/editor-plugin/panel.tscn
 res://player/mage/mage_skill.tscn
+res://dungeon/dungeon.tscn
 res://player/third_person_player.tscn
 res://level/level3/level_3.tscn
 res://player/rogue/rogue_hooded.tscn
 res://player/mage/mage.tscn
-res://level/level_1.tscn
 res://player/selection_area.tscn
+res://level/level2/level_2.tscn
+res://assets/resources/ground_material.tres

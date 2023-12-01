@@ -61,7 +61,6 @@ shape = SubResource("BoxShape3D_imstk")
 
 [node name="Rogue_Hooded" parent="." instance=ExtResource("2_tshh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.9577)
-visible = false
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
