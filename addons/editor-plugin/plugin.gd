@@ -64,7 +64,7 @@ func setup_menu_button():
 	var popup_font = FontFile.new()
 	popup_font.font_data = load("res://addons/editor-plugin/fonts/Diablo Heavy.ttf")  # Replace with the path to your font file
 	popup_theme.set_font("font", "PopupMenu", popup_font)
-	popup_theme.set_color("font_color", "PopupMenu", Color(0, 150, 0))  # Set to black
+	popup_theme.set_color("font_color", "PopupMenu", Color(0, 250, 0))  # Set to black
 	popup_theme.set_font_size("font_size", "PopupMenu", 25)
 	popup_menu.theme = popup_theme
 	
