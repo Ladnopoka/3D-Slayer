@@ -54,13 +54,6 @@ func setup_button_connections():
 	hideout_button.connect("pressed", create_hideout)
 	menu_button.connect("pressed", menu_button_pressed)
 	dungeon_layout_button.connect("pressed", dungeon_layout_button_pressed)
-
-	wall_button.visible = true
-	button2.visible = true
-	button3.visible = true
-	hideout_button.visible = true
-	menu_button.visible = true
-	dungeon_layout_button
 	
 func setup_menu_button():
 	popup_menu = menu_button.get_popup()
@@ -71,7 +64,7 @@ func setup_menu_button():
 	var popup_font = FontFile.new()
 	popup_font.font_data = load("res://addons/editor-plugin/fonts/Diablo Heavy.ttf")  # Replace with the path to your font file
 	popup_theme.set_font("font", "PopupMenu", popup_font)
-	popup_theme.set_color("font_color", "PopupMenu", Color(0, 150, 0))  # Set to black
+	popup_theme.set_color("font_color", "PopupMenu", Color(0, 250, 0))  # Set to black
 	popup_theme.set_font_size("font_size", "PopupMenu", 25)
 	popup_menu.theme = popup_theme
 	

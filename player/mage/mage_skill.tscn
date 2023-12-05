@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgpdyactn6am5"]
+
+[ext_resource type="Script" path="res://player/mage/mage_skill.gd" id="1_kvv1w"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h1fe7"]
+size = Vector3(0.05, 0.05, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c5dve"]
+albedo_color = Color(0.776471, 0.427451, 0.27451, 1)
+emission_enabled = true
+emission_energy_multiplier = 5.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vck10"]
+albedo_color = Color(0.831373, 0, 0.160784, 1)
+emission_enabled = true
+emission = Color(0.752941, 0.423529, 0.152941, 1)
+emission_energy_multiplier = 8.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_f6eru"]
+direction = Vector3(1, 0, 1)
+spread = 40.0
+initial_velocity_max = 10.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_xc7oy"]
+size = Vector3(0.04, 0.04, 0.04)
+
+[node name="MageSkill" type="Node3D"]
+script = ExtResource("1_kvv1w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_h1fe7")
+surface_material_override/0 = SubResource("StandardMaterial3D_c5dve")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.313388)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.564746)
+material_override = SubResource("StandardMaterial3D_vck10")
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_f6eru")
+draw_pass_1 = SubResource("BoxMesh_xc7oy")
