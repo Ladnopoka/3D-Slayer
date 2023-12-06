@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var speed = 70
+@export var speed = 50
 
 const KILL_TIME = 2
 var timer = 0

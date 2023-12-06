@@ -10,12 +10,4 @@ res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
 res://assets/resources/grass_material.tres
 res://assets/resources/ground_material.tres
-res://addons/editor-plugin/panel.tscn
-res://player/mage/mage_skill.tscn
-res://dungeon/dungeon.tscn
-res://player/third_person_player.tscn
-res://level/level3/level_3.tscn
-res://player/rogue/rogue_hooded.tscn
-res://player/mage/mage.tscn
-res://player/selection_area.tscn
-res://level/level2/level_2.tscn
+res://player/mage/mage_skill.gd
