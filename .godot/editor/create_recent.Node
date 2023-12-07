@@ -1,3 +1,4 @@
+GridMap
 Node3D
 GPUParticles3D
 RayCast3D
@@ -12,7 +13,6 @@ SpotLight3D
 Camera3D
 CharacterBody3D
 CollisionShape3D
-GridMap
 WorldEnvironment
 TabContainer
 CyclopsBlocks

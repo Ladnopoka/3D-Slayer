@@ -10,6 +10,6 @@ func _physics_process(delta):
 	global_translate(forward_direction * speed * delta)
 	
 	timer += delta
-	
+#
 	if timer >= KILL_TIME:
 		queue_free()

@@ -9,6 +9,7 @@ const dungeon_corner_in = preload("res://addons/editor-plugin/dungeon_tiles/dung
 const dungeon_corner_out = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_corner_out.tscn")
 const dungeon_floor = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_floor.tscn")
 const dungeon_wall = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_wall.tscn")
+const dungeon_menu = preload("res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd")
 
 var dockedScene
 #var toggle_button: Button
