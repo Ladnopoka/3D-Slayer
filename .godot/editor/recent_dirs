@@ -1,5 +1,6 @@
-res://dungeon
+res://addons/editor-plugin/dungeon
 res://addons/editor-plugin/dungeon_tiles
+res://dungeon
 res://playground
 res://player/mage
 res://tilemaps/dungeon_tiles
@@ -19,6 +20,5 @@ res://hideout
 res://shooting
 res://portal
 res://level/level2
-res://addons/editor-plugin
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin
 C:/Users/ladno/Documents/3D Slayer/addons

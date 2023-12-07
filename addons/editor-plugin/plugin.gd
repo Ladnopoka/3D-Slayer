@@ -9,7 +9,7 @@ const dungeon_corner_in = preload("res://addons/editor-plugin/dungeon_tiles/dung
 const dungeon_corner_out = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_corner_out.tscn")
 const dungeon_floor = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_floor.tscn")
 const dungeon_wall = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_wall.tscn")
-const dungeon_menu = preload("res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd")
+const dungeon_menu = preload("res://addons/editor-plugin/dungeon/dungeon_menu.tscn")
 
 var dockedScene
 #var toggle_button: Button
@@ -60,12 +60,12 @@ func setup_menu_button():
 	popup_menu = menu_button.get_popup()
 	var popup_theme = Theme.new()  # Create a new theme
 	var style_box = StyleBoxFlat.new()
-	style_box.bg_color = Color(0.5, 0.2, 0.2)  # Example brown color
+	style_box.bg_color = Color(0, 0, 0)  # Example brown color
 
 	var popup_font = FontFile.new()
 	popup_font.font_data = load("res://addons/editor-plugin/fonts/Diablo Heavy.ttf")  # Replace with the path to your font file
 	popup_theme.set_font("font", "PopupMenu", popup_font)
-	popup_theme.set_color("font_color", "PopupMenu", Color(0, 250, 0))  # Set to black
+	popup_theme.set_color("font_color", "PopupMenu", Color(0.5, 0.2, 0.2))  # Set to black
 	popup_theme.set_font_size("font_size", "PopupMenu", 25)
 	popup_menu.theme = popup_theme
 	
@@ -75,6 +75,7 @@ func setup_menu_button():
 	popup_menu.add_item("Corner IN")
 	popup_menu.add_item("Floor")
 	popup_menu.add_item("Corner OUT")
+	popup_menu.add_item("Create GridMap")
 	popup_menu.connect("id_pressed", _on_model_selected)
 		
 func _on_model_selected(id):
@@ -89,6 +90,8 @@ func _on_model_selected(id):
 			instantiate_dungeon_floor()
 		3:
 			instantiate_dungeon_corner_out()
+		4:
+			instantiate_dungeon_gridmap()
 		_:
 			print("Unknown model selected")
 			
@@ -287,5 +290,22 @@ func instantiate_dungeon_corner_out():
 		undo_redo.add_undo_method(current_scene, "remove_child", _dungeon_corner_out)
 		undo_redo.commit_action(true)
 		_dungeon_corner_out.owner = current_scene
+	else:
+		print("No active scene!")	
+		
+func instantiate_dungeon_gridmap():
+	var dungeon_menu_inst = dungeon_menu.instantiate()
+	var current_scene = get_editor_interface().get_edited_scene_root()
+
+	if current_scene:
+		dungeon_menu_inst.name = "dungeon_grid_" + str(current_scene.get_child_count())
+
+		# For undo/redo functionality:
+		undo_redo.create_action("Create Dungeon Gridmap")
+		undo_redo.add_do_method(current_scene, "add_child", dungeon_menu_inst)
+		undo_redo.add_do_reference(dungeon_menu_inst)
+		undo_redo.add_undo_method(current_scene, "remove_child", dungeon_menu_inst)
+		undo_redo.commit_action(true)
+		dungeon_menu_inst.owner = current_scene
 	else:
 		print("No active scene!")	
