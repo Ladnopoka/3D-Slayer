@@ -243,7 +243,7 @@ func instantiate_dungeon_corner_in():
 	var current_scene = get_editor_interface().get_edited_scene_root()
 
 	if current_scene:
-		_dungeon_corner_in.name = "dungeon_corner_" + str(current_scene.get_child_count())
+		_dungeon_corner_in.name = "dungeon_corner_in_" + str(current_scene.get_child_count())
 
 		# For undo/redo functionality:
 		undo_redo.create_action("Create Dungeon Wall")
@@ -260,7 +260,7 @@ func instantiate_dungeon_floor():
 	var current_scene = get_editor_interface().get_edited_scene_root()
 
 	if current_scene:
-		_dungeon_floor.name = "dungeon_wall_" + str(current_scene.get_child_count())
+		_dungeon_floor.name = "dungeon_floor_" + str(current_scene.get_child_count())
 
 		# For undo/redo functionality:
 		undo_redo.create_action("Create Dungeon Wall")
@@ -277,7 +277,7 @@ func instantiate_dungeon_corner_out():
 	var current_scene = get_editor_interface().get_edited_scene_root()
 
 	if current_scene:
-		_dungeon_corner_out.name = "dungeon_wall_" + str(current_scene.get_child_count())
+		_dungeon_corner_out.name = "dungeon_corner_out_" + str(current_scene.get_child_count())
 
 		# For undo/redo functionality:
 		undo_redo.create_action("Create Dungeon Wall")
