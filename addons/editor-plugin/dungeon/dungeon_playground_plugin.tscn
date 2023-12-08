@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://3jaggpfclhi3"]
+
+[ext_resource type="PackedScene" uid="uid://ci66d6nlmqckg" path="res://addons/editor-plugin/dungeon/dungeon_menu.tscn" id="1_0obeq"]
+[ext_resource type="Script" path="res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd" id="2_mscfa"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="dungeon_grid_0" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_1" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_2" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_3" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_4" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_5" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_6" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_7" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_8" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_9" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_10" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")
+
+[node name="dungeon_grid_11" type="Node3D" parent="." instance=ExtResource("1_0obeq")]
+script = ExtResource("2_mscfa")

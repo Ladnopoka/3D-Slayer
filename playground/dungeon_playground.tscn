@@ -169,22 +169,19 @@ shadow_mesh = SubResource("ArrayMesh_y3ayw")
 
 [node name="Node3D" type="Node3D"]
 
-[node name="dungeon_corner_1" type="MeshInstance3D" parent="." instance=ExtResource("1_vwqt6")]
+[node name="dungeon_corner_1" parent="." instance=ExtResource("1_vwqt6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4273, 0, 0)
 mesh = SubResource("ArrayMesh_3a7cd")
-skeleton = NodePath("")
 
-[node name="dungeon_wall_2" type="MeshInstance3D" parent="." instance=ExtResource("4_1guea")]
+[node name="dungeon_wall_2" parent="." instance=ExtResource("4_1guea")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.79822, 0, 0)
 mesh = SubResource("ArrayMesh_ausxt")
-skeleton = NodePath("")
 
 [node name="Tunnel" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
 
-[node name="dungeon_wall_0" type="MeshInstance3D" parent="Tunnel" instance=ExtResource("6_2ei46")]
+[node name="dungeon_wall_0" parent="Tunnel" instance=ExtResource("6_2ei46")]
 mesh = SubResource("ArrayMesh_lfp18")
-skeleton = NodePath("")
 
 [node name="dungeon_wall_1" parent="Tunnel" instance=ExtResource("6_2ei46")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 2)
@@ -212,10 +209,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
 
 [node name="SquareArc" type="Node3D" parent="."]
 
-[node name="dungeon_wall_3" type="MeshInstance3D" parent="SquareArc" instance=ExtResource("5_llsvi")]
+[node name="dungeon_wall_3" parent="SquareArc" instance=ExtResource("5_llsvi")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0)
 mesh = SubResource("ArrayMesh_yksun")
-skeleton = NodePath("")
 
 [node name="dungeon_wall_18" parent="SquareArc" instance=ExtResource("5_llsvi")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, -2)
@@ -238,10 +234,9 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -3
 [node name="dungeon_wall_16" parent="SquareArc" instance=ExtResource("5_llsvi")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 8, 0, -3)
 
-[node name="dungeon_wall_4" type="MeshInstance3D" parent="SquareArc" instance=ExtResource("6_2ei46")]
+[node name="dungeon_wall_4" parent="SquareArc" instance=ExtResource("6_2ei46")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 mesh = SubResource("ArrayMesh_lfp18")
-skeleton = NodePath("")
 
 [node name="dungeon_wall_9" parent="SquareArc" instance=ExtResource("6_2ei46")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
@@ -267,10 +262,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 
 [node name="dungeon_wall_8" parent="SquareArc" instance=ExtResource("6_2ei46")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, -1)
 
-[node name="dungeon_corner_out_4" type="MeshInstance3D" parent="." instance=ExtResource("5_llsvi")]
+[node name="dungeon_corner_out_4" parent="." instance=ExtResource("5_llsvi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -8)
 mesh = SubResource("ArrayMesh_yksun")
-skeleton = NodePath("")
 
 [node name="dungeon_corner_out_5" parent="." instance=ExtResource("5_llsvi")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 0, -7)
@@ -281,30 +275,26 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4, 0,
 [node name="dungeon_corner_out_7" parent="." instance=ExtResource("5_llsvi")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -4, 0, -8)
 
-[node name="dungeon_floor_5" type="MeshInstance3D" parent="." instance=ExtResource("4_1guea")]
+[node name="dungeon_floor_5" parent="." instance=ExtResource("4_1guea")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -7)
 mesh = SubResource("ArrayMesh_ausxt")
-skeleton = NodePath("")
 
 [node name="dungeon_corner_in_8" parent="." instance=ExtResource("1_vwqt6")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4, 0, -7)
 
-[node name="dungeon_wall_7" type="MeshInstance3D" parent="." instance=ExtResource("6_2ei46")]
+[node name="dungeon_wall_7" parent="." instance=ExtResource("6_2ei46")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -8)
 mesh = SubResource("ArrayMesh_lfp18")
-skeleton = NodePath("")
 
 [node name="2x2" type="Node3D" parent="."]
 
-[node name="dungeon_corner_in_6" type="MeshInstance3D" parent="2x2" instance=ExtResource("1_vwqt6")]
+[node name="dungeon_corner_in_6" parent="2x2" instance=ExtResource("1_vwqt6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -8)
 mesh = SubResource("ArrayMesh_3a7cd")
-skeleton = NodePath("")
 
 [node name="dungeon_corner_in_7" parent="2x2" instance=ExtResource("1_vwqt6")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -7)
 
-[node name="dungeon_corner_in_13" type="MeshInstance3D" parent="2x2" instance=ExtResource("1_vwqt6")]
+[node name="dungeon_corner_in_13" parent="2x2" instance=ExtResource("1_vwqt6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, -8)
 mesh = SubResource("ArrayMesh_3a7cd")
-skeleton = NodePath("")

@@ -299,7 +299,6 @@ func instantiate_dungeon_gridmap():
 
 	if current_scene:
 		dungeon_menu_inst.name = "dungeon_grid_" + str(current_scene.get_child_count())
-
 		# For undo/redo functionality:
 		undo_redo.create_action("Create Dungeon Gridmap")
 		undo_redo.add_do_method(current_scene, "add_child", dungeon_menu_inst)
