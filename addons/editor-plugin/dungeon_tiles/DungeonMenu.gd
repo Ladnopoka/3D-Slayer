@@ -20,10 +20,10 @@ func visualize_border():
 	if grid_map:
 		grid_map.clear() # need to clear every time because the textures stay
 		for pos1 in range(-1, border_size+1):
-			grid_map.set_cell_item(Vector3i(pos1, 0, -1), 3)
-			grid_map.set_cell_item(Vector3i(pos1, 0, border_size), 3)
-			grid_map.set_cell_item(Vector3i(border_size, 0, pos1), 3)
-			grid_map.set_cell_item(Vector3i(-1, 0, pos1), 3)
+			grid_map.set_cell_item(Vector3i(pos1, 0, -1), 0)
+			grid_map.set_cell_item(Vector3i(pos1, 0, border_size), 0)
+			grid_map.set_cell_item(Vector3i(border_size, 0, pos1), 0)
+			grid_map.set_cell_item(Vector3i(-1, 0, pos1), 0)
 	
 	
 func generate():
@@ -44,5 +44,5 @@ func generate_room():
 	for r in height: #for every row in height
 		for c in width:	#for every row in width
 			var pos : Vector3i = start_pos + Vector3i(c, 0 , r)
-			grid_map.set_cell_item(pos, 0)
+			grid_map.set_cell_item(pos, 2)
 	
