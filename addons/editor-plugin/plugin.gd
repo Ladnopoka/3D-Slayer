@@ -3,8 +3,8 @@ extends EditorPlugin
 
 const panel = preload("res://addons/editor-plugin/panel.tscn")
 const RoomTemplate = preload("res://addons/editor-plugin/room_template/room_template.tscn")
-const HideoutTemplate = preload("res://addons/editor-plugin/room_template/hideout.tscn")
-const DungeonTemplate = preload("res://addons/editor-plugin/room_template/dungeon.tscn")
+#const HideoutTemplate = preload("res://addons/editor-plugin/room_template/hideout.tscn")
+#const DungeonTemplate = preload("res://addons/editor-plugin/room_template/dungeon.tscn")
 const dungeon_corner_in = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_corner_in.tscn")
 const dungeon_corner_out = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_corner_out.tscn")
 const dungeon_floor = preload("res://addons/editor-plugin/dungeon_tiles/dungeon_floor.tscn")
@@ -62,9 +62,9 @@ func setup_button_connections():
 	wall_button.connect("pressed", create_wall)
 	button2.connect("pressed", create_box)
 	button3.connect("pressed", create_room)
-	hideout_button.connect("pressed", create_hideout)
+	#hideout_button.connect("pressed", create_hideout)
 	menu_button.connect("pressed", menu_button_pressed)
-	dungeon_layout_button.connect("pressed", dungeon_layout_button_pressed)
+	#dungeon_layout_button.connect("pressed", dungeon_layout_button_pressed)
 	
 func setup_menu_button():
 	popup_menu = menu_button.get_popup()
@@ -104,23 +104,24 @@ func _on_model_selected(id):
 			instantiate_dungeon_gridmap()
 		_:
 			print("Unknown model selected")
-			
-func dungeon_layout_button_pressed():
-	var dungeon_layout = DungeonTemplate.instantiate()
-	var current_scene = get_editor_interface().get_edited_scene_root()
 
-	if current_scene:
-		dungeon_layout.name = "Dungeon_" + str(current_scene.get_child_count())
-
-		# For undo/redo functionality:
-		undo_redo.create_action("Create Hideout")
-		undo_redo.add_do_method(current_scene, "add_child", dungeon_layout)
-		undo_redo.add_do_reference(dungeon_layout)
-		undo_redo.add_undo_method(current_scene, "remove_child", dungeon_layout)
-		undo_redo.commit_action(true)
-		dungeon_layout.owner = current_scene
-	else:
-		print("No active scene!")
+#DISABLED FOR NOW, WORKING ON NEW FUNCTIONALITY	
+#func dungeon_layout_button_pressed():
+#	var dungeon_layout = DungeonTemplate.instantiate()
+#	var current_scene = get_editor_interface().get_edited_scene_root()
+#
+#	if current_scene:
+#		dungeon_layout.name = "Dungeon_" + str(current_scene.get_child_count())
+#
+#		# For undo/redo functionality:
+#		undo_redo.create_action("Create Hideout")
+#		undo_redo.add_do_method(current_scene, "add_child", dungeon_layout)
+#		undo_redo.add_do_reference(dungeon_layout)
+#		undo_redo.add_undo_method(current_scene, "remove_child", dungeon_layout)
+#		undo_redo.commit_action(true)
+#		dungeon_layout.owner = current_scene
+#	else:
+#		print("No active scene!")
 	
 func menu_button_pressed():
 	print("Menu button pressed")
@@ -217,23 +218,24 @@ func create_room():
 		room.owner = current_scene
 	else:
 		print("No active scene!")
-			
-func create_hideout():
-	var hideout = HideoutTemplate.instantiate()
-	var current_scene = get_editor_interface().get_edited_scene_root()
-
-	if current_scene:
-		hideout.name = "Hideout_" + str(current_scene.get_child_count())
-
-		# For undo/redo functionality:
-		undo_redo.create_action("Create Hideout")
-		undo_redo.add_do_method(current_scene, "add_child", hideout)
-		undo_redo.add_do_reference(hideout)
-		undo_redo.add_undo_method(current_scene, "remove_child", hideout)
-		undo_redo.commit_action(true)
-		hideout.owner = current_scene
-	else:
-		print("No active scene!")
+	
+#TURNED OFF FOR NOW TO NOT LOAD ASSETS		
+#func create_hideout():
+#	var hideout = HideoutTemplate.instantiate()
+#	var current_scene = get_editor_interface().get_edited_scene_root()
+#
+#	if current_scene:
+#		hideout.name = "Hideout_" + str(current_scene.get_child_count())
+#
+#		# For undo/redo functionality:
+#		undo_redo.create_action("Create Hideout")
+#		undo_redo.add_do_method(current_scene, "add_child", hideout)
+#		undo_redo.add_do_reference(hideout)
+#		undo_redo.add_undo_method(current_scene, "remove_child", hideout)
+#		undo_redo.commit_action(true)
+#		hideout.owner = current_scene
+#	else:
+#		print("No active scene!")
 
 func instantiate_dungeon_wall():
 	var _dungeon_wall = dungeon_wall.instantiate()
