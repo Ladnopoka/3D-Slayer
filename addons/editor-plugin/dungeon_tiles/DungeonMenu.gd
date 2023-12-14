@@ -3,6 +3,9 @@ extends Node3D
 
 @onready var grid_map = $GridMap
 
+@export var room_size_minimum : int = 2
+@export var room_size_maximum : int = 4
+
 @export var start : bool = false : set = set_start
 func set_start(val:bool):
 	generate() #eventually generate a whole dungeon
@@ -15,6 +18,7 @@ func set_border_size(val : int):
 		visualize_border()
 	
 func visualize_border():
+	grid_map.clear() # need to clear every time because the textures stay
 	for pos1 in range(-1, border_size+1):
 		grid_map.set_cell_item(Vector3i(pos1, 0, -1), 3)
 		grid_map.set_cell_item(Vector3i(pos1, 0, border_size), 3)
@@ -23,4 +27,21 @@ func visualize_border():
 	
 	
 func generate():
-	print("generating")
+	visualize_border()
+	generate_room()
+	
+func generate_room():
+	# get random width and heights
+	var width : int = (randi() % (room_size_maximum - room_size_minimum)) + room_size_minimum
+	var height : int = (randi() % (room_size_maximum - room_size_minimum)) + room_size_minimum
+	
+	#pick starting position
+	var start_pos : Vector3i
+	start_pos.x = randi() % (border_size - width + 1) # need to have +1 there at the end because of how the mod operator works in godot
+	start_pos.z = randi() % (border_size - height + 1)
+	
+	for r in height:
+		for c in width:
+			var pos : Vector3i = start_pos + Vector3i(c, 0 , r)
+			grid_map.set_cell_item(pos, 0)
+	
