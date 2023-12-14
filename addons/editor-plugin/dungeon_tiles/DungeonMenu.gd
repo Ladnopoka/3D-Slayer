@@ -7,6 +7,7 @@ extends Node3D
 @export var border_size : int = 20 : set = set_border_size
 @export var room_size_minimum : int = 2
 @export var room_size_maximum : int = 4
+@export var room_number : int = 3
 
 func set_start(val:bool):
 	generate() #eventually generate a whole dungeon
@@ -28,7 +29,8 @@ func visualize_border():
 	
 func generate():
 	visualize_border()
-	generate_room()
+	for i in room_number:
+		generate_room()
 	
 func generate_room():
 	# get random width and heights
