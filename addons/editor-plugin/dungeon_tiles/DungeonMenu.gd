@@ -11,6 +11,9 @@ extends Node3D
 @export var room_margin : int = 1 #minimum distance the rooms must keep from each other
 @export var room_recursion : int = 15
 
+var room_tiles : Array[PackedVector3Array] = []
+var room_positions : PackedVector3Array
+
 func set_start(val:bool):
 	generate() #eventually generate a whole dungeon
 
@@ -30,9 +33,13 @@ func visualize_border():
 	
 	
 func generate():
+	room_tiles.clear()
+	room_positions.clear()
 	visualize_border()
 	for i in room_number:
 		generate_room(room_recursion)
+	print(room_positions)
+	
 	
 func generate_room(rec: int):
 	if !rec>0:
@@ -46,7 +53,6 @@ func generate_room(rec: int):
 	start_pos.x = randi() % (border_size - width + 1) # need to have +1 there at the end because of how the mod operator works in godot
 	start_pos.z = randi() % (border_size - height + 1)
 	
-	#we fill in the columns from left to right
 	for r in range(-room_margin, height+room_margin): 
 		for c in range(-room_margin, width+room_margin):	
 			var pos : Vector3i = start_pos + Vector3i(c, 0 , r)
@@ -55,8 +61,17 @@ func generate_room(rec: int):
 				return
 	
 	#we fill in the columns from left to right
+	var room : PackedVector3Array = []
 	for r in height: #for every row in height
 		for c in width:	#for every row in width
 			var pos : Vector3i = start_pos + Vector3i(c, 0 , r)
 			grid_map.set_cell_item(pos, 2)
+			room.append(pos)
+	room_tiles.append(room)
+	
+	#calculating x an z positions separately
+	var avg_x : float = start_pos.x + (float(width)/2)
+	var avg_z : float = start_pos.z + (float(height)/2)
+	var pos : Vector3 = Vector3(avg_x, 0, avg_z)
+	room_positions.append(pos)
 	
