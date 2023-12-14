@@ -53,3 +53,22 @@ text = "Add Dungeon"
 [node name="Preview" type="VBoxContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
+
+[node name="Generator" type="VBoxContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="TabContainer/Generator"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="TabContainer/Generator"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="TabContainer/Generator"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Generator"]
+layout_mode = 2
+
+[node name="LineEdit2" type="LineEdit" parent="TabContainer/Generator"]
+layout_mode = 2
