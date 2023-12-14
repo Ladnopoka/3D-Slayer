@@ -15,3 +15,7 @@ res://assets/resources/ground_material2.tres
 res://assets/resources/ground_material3.tres
 res://assets/resources/ground_material.tres
 res://assets/resources/wall_material.tres
+res://playground/dungeon_playground.tscn
+res://addons/editor-plugin/panel.tscn
+res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tscn
+res://addons/editor-plugin/dungeon/dungeon_playground_plugin.tscn
