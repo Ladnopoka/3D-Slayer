@@ -8,6 +8,8 @@ extends Node3D
 @export var room_size_minimum : int = 2
 @export var room_size_maximum : int = 4
 @export var room_number : int = 3
+@export var room_margin : int = 1 #minimum distance the rooms must keep from each other
+@export var room_recursion : int = 15
 
 func set_start(val:bool):
 	generate() #eventually generate a whole dungeon
@@ -30,9 +32,11 @@ func visualize_border():
 func generate():
 	visualize_border()
 	for i in room_number:
-		generate_room()
+		generate_room(room_recursion)
 	
-func generate_room():
+func generate_room(rec: int):
+	if !rec>0:
+		return
 	# get random width and heights
 	var width : int = (randi() % (room_size_maximum - room_size_minimum)) + room_size_minimum
 	var height : int = (randi() % (room_size_maximum - room_size_minimum)) + room_size_minimum
@@ -41,6 +45,14 @@ func generate_room():
 	var start_pos : Vector3i
 	start_pos.x = randi() % (border_size - width + 1) # need to have +1 there at the end because of how the mod operator works in godot
 	start_pos.z = randi() % (border_size - height + 1)
+	
+	#we fill in the columns from left to right
+	for r in range(-room_margin, height+room_margin): 
+		for c in range(-room_margin, width+room_margin):	
+			var pos : Vector3i = start_pos + Vector3i(c, 0 , r)
+			if grid_map.get_cell_item(pos) == 0:
+				generate_room(rec-1)
+				return
 	
 	#we fill in the columns from left to right
 	for r in height: #for every row in height
