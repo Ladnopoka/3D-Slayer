@@ -60,7 +60,7 @@ func generate_room(rec: int):
 				generate_room(rec-1)
 				return
 	
-	#we fill in the columns from left to right
+	#we fill in the columns from left to right 
 	var room : PackedVector3Array = []
 	for r in height: #for every row in height
 		for c in width:	#for every row in width

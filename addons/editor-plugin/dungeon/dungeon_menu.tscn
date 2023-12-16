@@ -9,7 +9,6 @@ border_size = 100
 room_size_maximum = 24
 room_number = 6
 room_margin = 3
-room_recursion = null
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("2_w6lgk")
