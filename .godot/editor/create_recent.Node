@@ -1,3 +1,5 @@
+GridMap
+Node3D
 GPUParticles3D
 RayCast3D
 MeshInstance3D
@@ -8,11 +10,9 @@ Button
 MenuButton
 OptionButton
 SpotLight3D
-Node3D
 Camera3D
 CharacterBody3D
 CollisionShape3D
-GridMap
 WorldEnvironment
 TabContainer
 CyclopsBlocks

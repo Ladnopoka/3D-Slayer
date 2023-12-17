@@ -1,0 +1,300 @@
+[gd_scene load_steps=19 format=3 uid="uid://iubvr25w7cxo"]
+
+[ext_resource type="PackedScene" uid="uid://cgwvakipgyih8" path="res://addons/editor-plugin/dungeon_tiles/dungeon_corner_in.tscn" id="1_vwqt6"]
+[ext_resource type="Texture2D" uid="uid://ch3woy2gqbe7y" path="res://assets/TileMaps/dungeon_tiles_atlas.png" id="2_y83tu"]
+[ext_resource type="Texture2D" uid="uid://cyjamtf15en82" path="res://assets/TileMaps/dungeon_tiles_atlas_n.png" id="3_yukxi"]
+[ext_resource type="PackedScene" uid="uid://bygs5ahnckhgf" path="res://addons/editor-plugin/dungeon_tiles/dungeon_floor.tscn" id="4_1guea"]
+[ext_resource type="PackedScene" uid="uid://dx7gdrarj0mgs" path="res://addons/editor-plugin/dungeon_tiles/dungeon_corner_out.tscn" id="5_llsvi"]
+[ext_resource type="PackedScene" uid="uid://b3uwfuy40qnsc" path="res://addons/editor-plugin/dungeon_tiles/dungeon_wall.tscn" id="6_2ei46"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u0tc2"]
+resource_name = "Material.001"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_y83tu")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("3_yukxi")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qc7q5"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1.00001),
+"format": 4097,
+"index_count": 48,
+"index_data": PackedByteArray(0, 0, 8, 0, 1, 0, 0, 0, 2, 0, 8, 0, 2, 0, 9, 0, 8, 0, 2, 0, 3, 0, 9, 0, 3, 0, 11, 0, 9, 0, 3, 0, 4, 0, 11, 0, 4, 0, 6, 0, 11, 0, 4, 0, 5, 0, 6, 0, 5, 0, 7, 0, 6, 0, 8, 0, 10, 0, 1, 0, 8, 0, 9, 0, 10, 0, 9, 0, 12, 0, 10, 0, 9, 0, 11, 0, 12, 0, 11, 0, 13, 0, 12, 0, 11, 0, 6, 0, 13, 0, 6, 0, 7, 0, 13, 0),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 14,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 0, 64, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 128, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 52, 255, 255, 255, 190, 0, 0, 0, 63, 0, 0, 128, 63, 255, 255, 255, 190, 255, 255, 255, 62, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 64, 255, 255, 255, 190, 255, 255, 255, 62, 0, 0, 0, 64, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 63)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3a7cd"]
+resource_name = "dungeon_tiles_Plane_003"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1.00001),
+"attribute_data": PackedByteArray(254, 255, 255, 62, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 63, 255, 255, 127, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 254, 255, 255, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 15, 110, 112, 62, 218, 114, 223, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220, 114, 213, 62, 244, 200, 135, 62, 0, 0, 0, 63, 0, 0, 0, 0, 140, 52, 130, 61, 2, 55, 130, 62, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 63, 255, 255, 127, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 245, 145, 123, 62, 112, 52, 170, 61),
+"format": 4119,
+"index_count": 48,
+"index_data": PackedByteArray(0, 0, 17, 0, 2, 0, 0, 0, 4, 0, 17, 0, 3, 0, 20, 0, 16, 0, 3, 0, 5, 0, 20, 0, 6, 0, 27, 0, 21, 0, 6, 0, 8, 0, 27, 0, 7, 0, 13, 0, 26, 0, 7, 0, 10, 0, 13, 0, 9, 0, 14, 0, 12, 0, 15, 0, 22, 0, 1, 0, 15, 0, 18, 0, 22, 0, 19, 0, 28, 0, 23, 0, 19, 0, 24, 0, 28, 0, 25, 0, 30, 0, 29, 0, 25, 0, 11, 0, 30, 0, 12, 0, 14, 0, 31, 0),
+"material": SubResource("StandardMaterial3D_u0tc2"),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 32,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 63, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 128, 255, 127, 0, 0, 255, 255, 2, 223, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 128, 255, 127, 255, 63, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 128, 255, 63, 255, 63, 255, 127, 255, 191, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 128, 255, 127, 0, 0, 255, 255, 2, 223, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 128, 255, 127, 255, 63, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 63, 255, 127, 0, 0, 255, 255, 2, 223, 0, 0, 0, 63, 0, 0, 0, 52, 255, 255, 255, 190, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 0, 63, 0, 0, 0, 52, 255, 255, 255, 190, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 52, 255, 255, 255, 190, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 128, 63, 255, 255, 255, 190, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 0, 63, 0, 0, 128, 63, 255, 255, 255, 190, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 0, 63, 0, 0, 128, 63, 255, 255, 255, 190, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 128, 63, 255, 255, 255, 190, 255, 127, 255, 127, 255, 255, 255, 191, 255, 255, 255, 62, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 255, 127, 255, 127, 255, 191, 255, 255, 255, 62, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 0, 63, 0, 0, 0, 64, 255, 255, 255, 190, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 0, 63, 0, 0, 0, 64, 255, 255, 255, 190, 255, 63, 255, 63, 255, 127, 255, 191, 0, 0, 0, 63, 0, 0, 0, 64, 255, 255, 255, 190, 255, 127, 255, 63, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 64, 255, 255, 255, 190, 255, 127, 255, 127, 255, 255, 255, 191, 255, 255, 255, 62, 0, 0, 0, 64, 0, 0, 0, 63, 0, 0, 255, 127, 255, 127, 255, 191, 255, 255, 255, 62, 0, 0, 0, 64, 0, 0, 0, 63, 255, 63, 255, 63, 255, 127, 255, 191, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 63, 255, 63, 255, 63, 255, 127, 255, 191, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 63, 255, 127, 0, 0, 255, 255, 2, 223)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qc7q5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_swtv3"]
+resource_name = "Material.001"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_y83tu")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("3_yukxi")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_derom"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1.00001),
+"format": 4097,
+"index_count": 12,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 4, 0, 7, 0, 5, 0, 4, 0, 6, 0, 7, 0),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 63)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ausxt"]
+resource_name = "dungeon_tiles_Plane_004"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1.00001),
+"attribute_data": PackedByteArray(254, 255, 255, 62, 0, 0, 0, 63, 255, 255, 127, 63, 0, 0, 0, 63, 254, 255, 255, 62, 0, 0, 0, 0, 255, 255, 127, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0),
+"format": 4119,
+"index_count": 12,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 4, 0, 7, 0, 5, 0, 4, 0, 6, 0, 7, 0),
+"material": SubResource("StandardMaterial3D_swtv3"),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 63, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 63, 255, 127, 0, 0, 255, 255, 255, 191)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_derom")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ehhp"]
+resource_name = "Material.001"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_y83tu")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("3_yukxi")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qai1q"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1.00001),
+"format": 4097,
+"index_count": 30,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 5, 0, 3, 0, 2, 0, 4, 0, 5, 0, 4, 0, 7, 0, 5, 0, 4, 0, 6, 0, 7, 0, 6, 0, 9, 0, 7, 0, 6, 0, 8, 0, 9, 0, 8, 0, 11, 0, 9, 0, 8, 0, 10, 0, 11, 0),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 12,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 0, 64, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 64, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 128, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 128, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 63)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lfp18"]
+resource_name = "dungeon_tiles_Plane"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1.00001),
+"attribute_data": PackedByteArray(254, 255, 255, 62, 0, 0, 0, 63, 255, 255, 127, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 254, 255, 255, 62, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 255, 255, 127, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 128, 62, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0),
+"format": 4119,
+"index_count": 30,
+"index_data": PackedByteArray(0, 0, 5, 0, 1, 0, 0, 0, 3, 0, 5, 0, 2, 0, 8, 0, 4, 0, 2, 0, 6, 0, 8, 0, 7, 0, 13, 0, 9, 0, 7, 0, 11, 0, 13, 0, 10, 0, 17, 0, 12, 0, 10, 0, 15, 0, 17, 0, 14, 0, 19, 0, 16, 0, 14, 0, 18, 0, 19, 0),
+"material": SubResource("StandardMaterial3D_1ehhp"),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 20,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 63, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 63, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 128, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 128, 255, 127, 255, 63, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 128, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 128, 255, 127, 255, 63, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 63, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 63, 255, 127, 0, 0, 255, 255, 255, 191)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qai1q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgiih"]
+resource_name = "Material.001"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_y83tu")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("3_yukxi")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y3ayw"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1.00001),
+"format": 4097,
+"index_count": 18,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 6, 0, 8, 0, 4, 0, 8, 0, 7, 0, 9, 0, 8, 0, 6, 0, 7, 0, 9, 0, 5, 0, 8, 0),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 10,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 64, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 128)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yksun"]
+resource_name = "dungeon_tiles_Plane_007"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 2.5, 1.00001),
+"attribute_data": PackedByteArray(254, 255, 255, 62, 0, 0, 0, 63, 255, 255, 127, 63, 0, 0, 0, 63, 254, 255, 255, 62, 0, 0, 0, 0, 255, 255, 127, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 128, 62, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 62, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 128, 62),
+"format": 4119,
+"index_count": 18,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 6, 0, 9, 0, 4, 0, 9, 0, 7, 0, 11, 0, 9, 0, 6, 0, 7, 0, 10, 0, 5, 0, 8, 0),
+"material": SubResource("StandardMaterial3D_kgiih"),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 12,
+"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 64, 0, 0, 0, 191, 84, 85, 84, 85, 255, 191, 255, 191, 0, 0, 0, 191, 0, 0, 32, 64, 0, 0, 0, 63, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 63, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 191, 84, 85, 84, 85, 255, 191, 255, 191, 0, 0, 0, 0, 0, 0, 32, 64, 0, 0, 0, 191, 255, 127, 0, 0, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 128, 84, 85, 84, 85, 255, 191, 255, 191, 0, 0, 0, 63, 0, 0, 32, 64, 0, 0, 0, 128, 255, 127, 0, 0, 255, 255, 255, 191)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_y3ayw")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="dungeon_corner_1" parent="." instance=ExtResource("1_vwqt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4273, 0, 0)
+mesh = SubResource("ArrayMesh_3a7cd")
+
+[node name="dungeon_wall_2" parent="." instance=ExtResource("4_1guea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.79822, 0, 0)
+mesh = SubResource("ArrayMesh_ausxt")
+
+[node name="Tunnel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="dungeon_wall_0" parent="Tunnel" instance=ExtResource("6_2ei46")]
+mesh = SubResource("ArrayMesh_lfp18")
+
+[node name="dungeon_wall_1" parent="Tunnel" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 2)
+
+[node name="dungeon_wall_4" parent="Tunnel" instance=ExtResource("4_1guea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="dungeon_wall_5" parent="Tunnel" instance=ExtResource("6_2ei46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="dungeon_wall_6" parent="Tunnel" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 2)
+
+[node name="dungeon_wall_7" parent="Tunnel" instance=ExtResource("4_1guea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="dungeon_wall_8" parent="Tunnel" instance=ExtResource("6_2ei46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="dungeon_wall_9" parent="Tunnel" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 2)
+
+[node name="dungeon_wall_10" parent="Tunnel" instance=ExtResource("4_1guea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="SquareArc" type="Node3D" parent="."]
+
+[node name="dungeon_wall_3" parent="SquareArc" instance=ExtResource("5_llsvi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0)
+mesh = SubResource("ArrayMesh_yksun")
+
+[node name="dungeon_wall_18" parent="SquareArc" instance=ExtResource("5_llsvi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, -2)
+
+[node name="dungeon_wall_10" parent="SquareArc" instance=ExtResource("5_llsvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="dungeon_wall_19" parent="SquareArc" instance=ExtResource("5_llsvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="dungeon_wall_6" parent="SquareArc" instance=ExtResource("5_llsvi")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 0, -3)
+
+[node name="dungeon_wall_17" parent="SquareArc" instance=ExtResource("5_llsvi")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9, 0, -3)
+
+[node name="dungeon_wall_13" parent="SquareArc" instance=ExtResource("5_llsvi")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, -3)
+
+[node name="dungeon_wall_16" parent="SquareArc" instance=ExtResource("5_llsvi")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 8, 0, -3)
+
+[node name="dungeon_wall_4" parent="SquareArc" instance=ExtResource("6_2ei46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+mesh = SubResource("ArrayMesh_lfp18")
+
+[node name="dungeon_wall_9" parent="SquareArc" instance=ExtResource("6_2ei46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="dungeon_wall_11" parent="SquareArc" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -1)
+
+[node name="dungeon_wall_12" parent="SquareArc" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -2)
+
+[node name="dungeon_wall_5" parent="SquareArc" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3, 0, -3)
+
+[node name="dungeon_wall_14" parent="SquareArc" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, -3)
+
+[node name="dungeon_wall_15" parent="SquareArc" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, -3)
+
+[node name="dungeon_wall_7" parent="SquareArc" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, -2)
+
+[node name="dungeon_wall_8" parent="SquareArc" instance=ExtResource("6_2ei46")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, -1)
+
+[node name="dungeon_corner_out_4" parent="." instance=ExtResource("5_llsvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -8)
+mesh = SubResource("ArrayMesh_yksun")
+
+[node name="dungeon_corner_out_5" parent="." instance=ExtResource("5_llsvi")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 0, -7)
+
+[node name="dungeon_corner_out_6" parent="." instance=ExtResource("5_llsvi")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4, 0, -7)
+
+[node name="dungeon_corner_out_7" parent="." instance=ExtResource("5_llsvi")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -4, 0, -8)
+
+[node name="dungeon_floor_5" parent="." instance=ExtResource("4_1guea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -7)
+mesh = SubResource("ArrayMesh_ausxt")
+
+[node name="dungeon_corner_in_8" parent="." instance=ExtResource("1_vwqt6")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4, 0, -7)
+
+[node name="dungeon_wall_7" parent="." instance=ExtResource("6_2ei46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -8)
+mesh = SubResource("ArrayMesh_lfp18")
+
+[node name="2x2" type="Node3D" parent="."]
+
+[node name="dungeon_corner_in_6" parent="2x2" instance=ExtResource("1_vwqt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -8)
+mesh = SubResource("ArrayMesh_3a7cd")
+
+[node name="dungeon_corner_in_7" parent="2x2" instance=ExtResource("1_vwqt6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -7)
+
+[node name="dungeon_corner_in_13" parent="2x2" instance=ExtResource("1_vwqt6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, -8)
+mesh = SubResource("ArrayMesh_3a7cd")
