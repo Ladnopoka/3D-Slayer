@@ -19,6 +19,7 @@ var velocity_var = Vector3.ZERO
 @onready var camera_rig = $camera_rig
 @onready var transition = $Transition
 @onready var ray_cast_3d = $Rig/RayCast3D
+@onready var attack_timer = $AttackTimer
 
 #signal
 signal player_hit
@@ -31,8 +32,9 @@ var is_dead = false
 #projectile skills
 var mage_skill = load("res://player/mage/mage_skill.tscn")
 var mage_skill_instance
-var mage_skill_cooldown_time = 1.0005 # Cooldown time in seconds, e.g., 1 arrow per second.
-var mage_skill_last_shot_time = -1.0005 # A variable to keep track of the last shot time.
+var mage_skill_cooldown_time = 0.5 # Cooldown time in seconds, e.g., 1 arrow per second.
+var mage_skill_last_shot_time = -0.5 # A variable to keep track of the last shot time.
+var can_shoot = true
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -119,6 +121,11 @@ func movement_and_attacking(delta):
 		
 
 func attack():
+	# Always update orientation, regardless of cooldown
+	update_orientation()
+	if not can_shoot:
+		return
+		
 	print("Mage is attacking")
 	
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
@@ -126,9 +133,9 @@ func attack():
 	mage_skill_instance.position = ray_cast_3d.global_position
 	mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
 	get_parent().add_child(mage_skill_instance)
-		
-#	# Always update orientation, regardless of cooldown
-	update_orientation()
+	
+	can_shoot = false
+	attack_timer.start()
 
 
 func update_orientation():
@@ -189,3 +196,7 @@ func HPRegen(delta):
 	current_hp += hp_regen * delta
 	if current_hp > hp:
 		current_hp = hp
+
+
+func _on_attack_timer_timeout():
+	can_shoot = true
