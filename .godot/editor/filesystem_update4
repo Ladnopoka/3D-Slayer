@@ -15,3 +15,10 @@ res://assets/resources/wall_material.tres
 res://playground/dungeon_playground.tscn
 res://addons/editor-plugin/panel.tscn
 res://addons/editor-plugin/dungeon/dungeon_playground_plugin.tscn
+res://player/mage/mage_skill.tscn
+res://assets/TileMaps/tiles_dungeon_remastered.tres
+res://assets/TileMaps/tiles_medieval.tres
+res://player/mage/mage_skill.gd
+res://level/level_1.tscn
+res://player/mage/mage.tscn
+res://player/mage/mage.gd
