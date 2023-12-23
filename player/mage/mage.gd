@@ -16,9 +16,7 @@ var velocity_var = Vector3.ZERO
 @onready var model = $Rig
 @onready var anim_tree = $AnimationTree
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
-#@onready var anim_state = $AnimationTree.get("parameters/playback")
 @onready var camera_rig = $camera_rig
-#@onready var crossbow = $Rig/RayCast3D
 @onready var transition = $Transition
 @onready var ray_cast_3d = $Rig/RayCast3D
 
@@ -52,11 +50,6 @@ var rayOrigin
 var rayEnd
 var mouse_position
 var attack_direction
-
-#var arrow = load("res://shooting/arrow.tscn")
-#var arrow_instance
-#var arrow_cooldown_time = 0.0005 # Cooldown time in seconds, e.g., 1 arrow per second.
-#var arrow_last_shot_time = -0.0005 # A variable to keep track of the last shot time.
 
 var current_blend_position = Vector2(0, 0)
 var target_blend_position = Vector2(0, 0)
@@ -128,13 +121,11 @@ func movement_and_attacking(delta):
 func attack():
 	print("Mage is attacking")
 	
-	var current_time = Time.get_ticks_msec() / 1000.0
-	if current_time - mage_skill_last_shot_time >= mage_skill_cooldown_time:
-		anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
-		mage_skill_instance = mage_skill.instantiate()
-		mage_skill_instance.position = ray_cast_3d.global_position
-		mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
-		get_parent().add_child(mage_skill_instance)
+	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
+	mage_skill_instance = mage_skill.instantiate()
+	mage_skill_instance.position = ray_cast_3d.global_position
+	mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
+	get_parent().add_child(mage_skill_instance)
 		
 #	# Always update orientation, regardless of cooldown
 	update_orientation()
