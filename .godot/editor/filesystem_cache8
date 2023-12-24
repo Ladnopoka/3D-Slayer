@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702851838
+::res://::1703371062
 icon.svg::CompressedTexture2D::3540083071793652844::1696266044::1700778612::1::::<><>::
 Ideas.txt::TextFile::-1::1701103059::0::1::::<><>::
 third_person_player.gd::GDScript::-1::1701127583::0::1::::<>CharacterBody3D<>::
@@ -85,7 +85,7 @@ resource_inspector.gd::GDScript::-1::1683755122::0::1::::ResourceInspector<>Cont
 resource_inspector.tscn::PackedScene::6729863528294998586::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/controls/resource_inspector/resource_inspector.gd
 ::res://addons/cyclops_level_builder/doc/::1683755122
 ::res://addons/cyclops_level_builder/docks/::1683755122
-::res://addons/cyclops_level_builder/docks/material_palette/::1702769969
+::res://addons/cyclops_level_builder/docks/material_palette/::1702851986
 material_palette_viewport.gd::GDScript::-1::1683755122::0::1::::MaterialPaletteViewport<>Control<>::
 material_palette_viewport.tscn::PackedScene::1036570676893576714::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_palette_viewport.gd<>res://addons/cyclops_level_builder/docks/material_palette/thumbnail_group.gd
 material_snapshot.gd::GDScript::-1::1683755122::0::1::::MaterialShapshot<>SubViewport<>::
@@ -93,8 +93,8 @@ material_snapshot.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/
 material_thumbnail.gd::GDScript::-1::1683755122::0::1::::MaterialThumbnail<>Control<>::
 material_thumbnail.tscn::PackedScene::-1::1683755122::0::1::::<><>::res://addons/cyclops_level_builder/docks/material_palette/material_thumbnail.gd<>uid://c0gpl22e2g6ay
 thumbnail_group.gd::GDScript::-1::1683755122::0::1::::ThumbnailGroup<>Resource<>::
-thumbnail_normal_theme.tres::Theme::4058405243379725578::1702769969::0::1::::<><>::
-thumbnail_selected_theme.tres::Theme::6540880583544088756::1702769969::0::1::::<><>::
+thumbnail_normal_theme.tres::Theme::4058405243379725578::1702851986::0::1::::<><>::
+thumbnail_selected_theme.tres::Theme::6540880583544088756::1702851986::0::1::::<><>::
 ::res://addons/cyclops_level_builder/docks/material_palette/commands/::1683755122
 cmd_mat_dock_add_materials.gd::GDScript::-1::1683755122::0::1::::CommandMaterialDockAddMaterials<>CyclopsCommand<>::
 cmd_mat_dock_remove_materials.gd::GDScript::-1::1683755122::0::1::::CommandMaterialDockRemoveMaterials<>CyclopsCommand<>::
@@ -147,8 +147,8 @@ intersect_results.gd::GDScript::-1::1683755122::0::1::::IntersectResults<>RefCou
 ::res://addons/cyclops_level_builder/resources/::1683755122
 block_data.gd::GDScript::-1::1683755122::0::1::::BlockData<>Resource<>::
 convex_block_data.gd::GDScript::-1::1683755122::0::1::::ConvexBlockData<>Resource<>::
-::res://addons/cyclops_level_builder/shaders/::1702769969
-outline_shader.tres::VisualShader::4976330123338311102::1702769969::0::1::::<><>::
+::res://addons/cyclops_level_builder/shaders/::1702851986
+outline_shader.tres::VisualShader::4976330123338311102::1702851986::0::1::::<><>::
 tool_outline_shader.tres::VisualShader::6796597932207006307::1683755122::0::1::::<><>::
 ::res://addons/cyclops_level_builder/tools/::1683755122
 cyclops_tool.gd::GDScript::-1::1683755122::0::1::::CyclopsTool<>Resource<>::
@@ -168,21 +168,21 @@ tool_stairs_settings.gd::GDScript::-1::1683755122::0::1::::ToolStairsSettings<>R
 display_mode.gd::GDScript::-1::1683755122::0::1::::DisplayMode<>RefCounted<>::
 general_util.gd::GDScript::-1::1683755122::0::1::::GeneralUtil<>RefCounted<>::
 selection.gd::GDScript::-1::1683755122::0::1::::Selection<>RefCounted<>::
-::res://addons/editor-plugin/::1702769969
-panel.tscn::PackedScene::5401244366276246444::1702582356::0::1::::<><>::uid://cg5e10waxsb3x
+::res://addons/editor-plugin/::1702851986
+panel.tscn::PackedScene::5401244366276246444::1702851986::0::1::::<><>::uid://cg5e10waxsb3x::::res://addons/editor-plugin/fonts/Bildad.ttf
 plugin.cfg::TextFile::-1::1701103058::0::1::::<><>::
-plugin.gd::GDScript::-1::1702769969::0::1::::<>EditorPlugin<>::
+plugin.gd::GDScript::-1::1702851986::0::1::::<>EditorPlugin<>::
 ::res://addons/editor-plugin/documentation/::1701980560
 func_requirements.txt::TextFile::-1::1701391270::0::1::::<><>::
-::res://addons/editor-plugin/dungeon/::1702769969
-dungeon_menu.tscn::PackedScene::5400237059846558402::1702769969::0::1::::<><>::res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd<>uid://dvlo50v35hurs::::res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
-dungeon_playground_plugin.tscn::PackedScene::1983878074957331744::1702584557::0::1::::<><>::uid://ci66d6nlmqckg
-::res://addons/editor-plugin/dungeon_tiles/::1702769969
-DungeonMenu.gd::GDScript::-1::1702769969::0::1::::<>Node3D<>::
+::res://addons/editor-plugin/dungeon/::1702852023
+dungeon_menu.tscn::PackedScene::5400237059846558402::1702852023::0::1::::<><>::res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd<>uid://dvlo50v35hurs::::res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
+dungeon_playground_plugin.tscn::PackedScene::1983878074957331744::1702851986::0::1::::<><>::uid://ci66d6nlmqckg::::res://addons/editor-plugin/dungeon/dungeon_menu.tscn
+::res://addons/editor-plugin/dungeon_tiles/::1702851986
+DungeonMenu.gd::GDScript::-1::1702851986::0::1::::<>Node3D<>::
 dungeon_corner_in.tscn::PackedScene::5240666334934246191::1701197907::0::1::::<><>::uid://ch3woy2gqbe7y
 dungeon_corner_out.tscn::PackedScene::8840036095904652678::1701197907::0::1::::<><>::uid://ch3woy2gqbe7y
 dungeon_floor.tscn::PackedScene::4084485688624545597::1701197907::0::1::::<><>::uid://ch3woy2gqbe7y
-dungeon_tiles.tres::MeshLibrary::8656840881325745276::1702769969::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
+dungeon_tiles.tres::MeshLibrary::8656840881325745276::1702851986::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
 dungeon_tiles.tscn::PackedScene::3074746894418519701::1702574496::0::1::::<><>::uid://cs1c54q62868r
 dungeon_wall.tscn::PackedScene::4394341652343579082::1702582610::0::1::::<><>::uid://ch3woy2gqbe7y
 ::res://addons/editor-plugin/fonts/::1701192929
@@ -190,9 +190,9 @@ Bildad.ttf::FontFile::5256196407549678931::1701189079::1701189112::1::::<><>::
 Diablo Heavy.ttf::FontFile::8789643128362279737::1700157016::1701192929::1::::<><>::
 ::res://addons/editor-plugin/room_template/::1702582455
 room_template.tscn::PackedScene::1473403741818640738::1700157014::0::1::::<><>::
-::res://addons/main-screen/::1702769969
+::res://addons/main-screen/::1702851986
 control.gd::GDScript::-1::1700157014::0::1::::<>VBoxContainer<>::
-main-screen.gd::GDScript::-1::1702769969::0::1::::<>EditorPlugin<>::
+main-screen.gd::GDScript::-1::1702851986::0::1::::<>EditorPlugin<>::
 main-screen.tscn::PackedScene::5610324604663873796::1698854995::0::1::::<><>::res://addons/main-screen/control.gd
 name-generator.gd::GDScript::-1::1696542482::0::1::::NameGenerator<>Node<>::
 plugin.cfg::TextFile::-1::1696542482::0::1::::<><>::
@@ -2460,12 +2460,12 @@ sampleD.png::CompressedTexture2D::3077589932888247641::1701103060::1701103060::1
 sampleE.png::CompressedTexture2D::4010270310062977134::1701103060::1701103060::1::::<><>::
 ::res://assets/panorama/::1701103374
 panorama_image.png::CompressedTexture2D::6778868258060571829::1701103374::1701103374::1::::<><>::
-::res://assets/resources/::1702769969
-grass_material.tres::StandardMaterial3D::6193948413629750958::1702769969::0::1::::<><>::uid://y8p8i87e5o1g::::res://assets/bricks_and_ground/4k JPEG/Grass 02/Grass03_Base Color.jpg
-ground_material2.tres::StandardMaterial3D::8812093235694294164::1702769969::0::1::::<><>::uid://bpb1qy7l11vye::::res://assets/bricks_and_ground/4k JPEG/Ground Sidewalk 02/GroundSidewalk02_Height.jpg
-ground_material3.tres::StandardMaterial3D::6986723407047568525::1702769969::0::1::::<><>::uid://0o65ryctcu6p::::res://assets/bricks_and_ground/4k JPEG/Ground Stones/GroundStones_Height.jpg
-ground_material.tres::StandardMaterial3D::6992325596091240811::1702769969::0::1::::<><>::uid://bhvbn7cwh5608::::res://assets/bricks_and_ground/4k JPEG/Ground Peables 01/GroundPeables01_Base Color.jpg
-wall_material.tres::StandardMaterial3D::7371996258273746314::1702769969::0::1::::<><>::uid://b4k7skwfgrsw7::::res://assets/bricks_and_ground/Bricks/Brickwall5_Texture.png
+::res://assets/resources/::1702851986
+grass_material.tres::StandardMaterial3D::6193948413629750958::1702851986::0::1::::<><>::uid://y8p8i87e5o1g::::res://assets/bricks_and_ground/4k JPEG/Grass 02/Grass03_Base Color.jpg
+ground_material2.tres::StandardMaterial3D::8812093235694294164::1702851986::0::1::::<><>::uid://bpb1qy7l11vye::::res://assets/bricks_and_ground/4k JPEG/Ground Sidewalk 02/GroundSidewalk02_Height.jpg
+ground_material3.tres::StandardMaterial3D::6986723407047568525::1702851986::0::1::::<><>::uid://0o65ryctcu6p::::res://assets/bricks_and_ground/4k JPEG/Ground Stones/GroundStones_Height.jpg
+ground_material.tres::StandardMaterial3D::6992325596091240811::1702851986::0::1::::<><>::uid://bhvbn7cwh5608::::res://assets/bricks_and_ground/4k JPEG/Ground Peables 01/GroundPeables01_Base Color.jpg
+wall_material.tres::StandardMaterial3D::7371996258273746314::1702851986::0::1::::<><>::uid://b4k7skwfgrsw7::::res://assets/bricks_and_ground/Bricks/Brickwall5_Texture.png
 ::res://assets/shaders/::1698507010
 forground_shader.gdshader::Shader::-1::1698507010::0::1::::<><>::
 forground_shader_2.gdshader::Shader::-1::1698507010::0::1::::<><>::
@@ -2689,9 +2689,9 @@ level_2.gd::GDScript::-1::1701295883::0::1::::<>Node3D<>::
 level_2.tscn::PackedScene::2347473302513341459::1701646306::0::1::::<><>::res://level/level2/level_2.gd<>uid://csqg2v0p2s8yw
 ::res://level/level3/::1701646304
 level_3.tscn::PackedScene::8260007237572117946::1701646304::0::1::::<><>::uid://bgon3qk57fki8
-::res://materials/::1702769969
+::res://materials/::1702851986
 floor_material - Copy (2).tres::StandardMaterial3D::4941683408885706279::1698507010::0::1::::<><>::uid://bpn2xpuu8u7ps
-floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1702769969::0::1::::<><>::
+floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1702851986::0::1::::<><>::
 floor_material - Copy (4).tres::StandardMaterial3D::6326398115674201070::1698507010::0::1::::<><>::uid://bhcqo5inf8ft5
 floor_material - Copy.tres::StandardMaterial3D::6506583956968400161::1698507010::0::1::::<><>::uid://c24xbijughc4w
 floor_material.tres::StandardMaterial3D::324023740436286422::1698509275::0::1::::<><>::uid://crj4j4bysdb1e
@@ -2715,8 +2715,8 @@ mage_skill.tscn::PackedScene::2838744425835682014::1701646304::0::1::::<><>::res
 ::res://player/rogue/::1701646304
 rogue_hooded.gd::GDScript::-1::1700157082::0::1::::<>CharacterBody3D<>::
 rogue_hooded.tscn::PackedScene::6069684257656594730::1701646304::0::1::::<><>::uid://db0337ymkwxhu
-::res://playground/::1702580770
-dungeon_playground.tscn::PackedScene::602897458850618500::1702580770::0::1::::<><>::uid://cgwvakipgyih8
+::res://playground/::1702851986
+dungeon_playground.tscn::PackedScene::602897458850618500::1702851986::0::1::::<><>::uid://cgwvakipgyih8::::res://addons/editor-plugin/dungeon_tiles/dungeon_corner_in.tscn<>uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png<>uid://bygs5ahnckhgf::::res://addons/editor-plugin/dungeon_tiles/dungeon_floor.tscn<>uid://dx7gdrarj0mgs::::res://addons/editor-plugin/dungeon_tiles/dungeon_corner_out.tscn<>uid://b3uwfuy40qnsc::::res://addons/editor-plugin/dungeon_tiles/dungeon_wall.tscn
 playground.tscn::PackedScene::714749942661595729::1701125486::0::1::::<><>::res://addons/cyclops_level_builder/nodes/cyclops_blocks.gd<>res://addons/cyclops_level_builder/nodes/cyclops_convex_block.gd<>res://addons/cyclops_level_builder/resources/convex_block_data.gd<>uid://c6sokwxjn0yyf
 ::res://portal/::1701125487
 portal.gd::GDScript::-1::1700157016::0::1::::<>Area3D<>::
