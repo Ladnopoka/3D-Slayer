@@ -125,7 +125,6 @@ func attack():
 	update_orientation()
 	print("Mage is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
-	print(anim_tree_sm)
 	
 func set_attack_animation_speed(speed: float):
 	var state_machine_path = "parameters/AttackStateMachine"
