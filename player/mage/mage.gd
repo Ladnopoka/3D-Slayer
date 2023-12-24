@@ -125,18 +125,12 @@ func attack():
 	update_orientation()
 	print("Mage is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
-	
-func set_attack_animation_speed(speed: float):
-	var state_machine_path = "parameters/AttackStateMachine"
-	var attack_state_name = "1H_Melee_Attack_Slice_Diagonal"
-	anim_tree.set(state_machine_path + "/states/" + attack_state_name + "/playback_speed", speed)
 
 func shoot_projectile():
 	mage_skill_instance = mage_skill.instantiate()
 	mage_skill_instance.position = ray_cast_3d.global_position
 	mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
 	get_parent().add_child(mage_skill_instance)
-
 
 func update_orientation():
 	# All the logic related to updating the character's orientation goes here
