@@ -14,11 +14,13 @@ var velocity_var = Vector3.ZERO
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
+@onready var anim_player = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
 @onready var camera_rig = $camera_rig
 @onready var transition = $Transition
 @onready var ray_cast_3d = $Rig/RayCast3D
+
 
 #signal
 signal player_hit
@@ -121,10 +123,14 @@ func movement_and_attacking(delta):
 func attack():
 	# Always update orientation, regardless of cooldown
 	update_orientation()
-	
-	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
-	
 	print("Mage is attacking")
+	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
+	print(anim_tree_sm)
+	
+func set_attack_animation_speed(speed: float):
+	var state_machine_path = "parameters/AttackStateMachine"
+	var attack_state_name = "1H_Melee_Attack_Slice_Diagonal"
+	anim_tree.set(state_machine_path + "/states/" + attack_state_name + "/playback_speed", speed)
 
 func shoot_projectile():
 	mage_skill_instance = mage_skill.instantiate()
