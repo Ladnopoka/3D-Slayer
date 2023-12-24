@@ -123,12 +123,15 @@ func movement_and_attacking(delta):
 func attack():
 	# Always update orientation, regardless of cooldown
 	update_orientation()
-	if not can_shoot:
-		return
-		
-	print("Mage is attacking")
 	
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
+	
+	print("Mage is attacking")
+
+func shoot_projectile():
+	if not can_shoot:
+		return
+
 	mage_skill_instance = mage_skill.instantiate()
 	mage_skill_instance.position = ray_cast_3d.global_position
 	mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
@@ -136,7 +139,6 @@ func attack():
 	
 	can_shoot = false
 	attack_timer.start()
-
 
 func update_orientation():
 	# All the logic related to updating the character's orientation goes here
