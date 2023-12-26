@@ -1,3 +1,5 @@
+WorldEnvironment
+CSGBox3D
 Node3D
 Timer
 GridMap
@@ -11,4 +13,3 @@ Button
 MenuButton
 OptionButton
 SpotLight3D
-Camera3D

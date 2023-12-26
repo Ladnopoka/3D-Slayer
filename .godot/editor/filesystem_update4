@@ -1,19 +1,7 @@
-res://playground/dungeon_playground.tscn
+res://level/cemetery/cemetery.tscn
 res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd
 res://addons/editor-plugin/plugin.gd
 res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
-res://assets/TileMaps/tiles_dungeon_remastered.tres
-res://assets/TileMaps/tiles_medieval.tres
-res://assets/resources/grass_material.tres
-res://addons/editor-plugin/panel.tscn
-res://addons/editor-plugin/dungeon/dungeon_playground_plugin.tscn
-res://addons/editor-plugin/dungeon/dungeon_menu.tscn
-res://level/level_1.tscn
-res://player/mage/mage.tscn
-res://player/mage/mage_skill.tscn
-res://addons/cyclops_level_builder/shaders/outline_shader.tres
-res://addons/cyclops_level_builder/docks/material_palette/thumbnail_selected_theme.tres
-res://addons/cyclops_level_builder/docks/material_palette/thumbnail_normal_theme.tres
-res://level/cemetery/cemetery.tscn
+res://level/cemetery/World.tscn
