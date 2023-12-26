@@ -19,7 +19,7 @@ var velocity_var = Vector3.ZERO
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
 @onready var camera_rig = $camera_rig
 @onready var transition = $Transition
-@onready var ray_cast_3d = $Rig/RayCast3D
+#@onready var ray_cast_3d = $Rig/RayCast3D
 
 #signal
 signal player_hit
