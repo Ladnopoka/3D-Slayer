@@ -18,3 +18,4 @@ res://player/camera_rig.tscn
 res://player/selection.gd
 res://level/cemetery/cemetery.gd
 res://scripts/player/camera_rig.gd
+res://player/mage/mage.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://eqmc5sl0b1n0"]
+[gd_scene load_steps=30 format=3 uid="uid://eqmc5sl0b1n0"]
 
 [ext_resource type="Texture2D" uid="uid://difglsmbfmw81" path="res://Textures/terrain.jpg" id="1_ftcgo"]
 [ext_resource type="Script" path="res://level/cemetery/cemetery.gd" id="1_wubuy"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://dsc6yq6mfbvet" path="res://level/cemetery/Trees/pine_not_crooked.tscn" id="24_lgagw"]
 [ext_resource type="PackedScene" uid="uid://dl6len7ofdorj" path="res://level/cemetery/Trees/trunk.tscn" id="25_pof27"]
 [ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="26_8x7qm"]
+[ext_resource type="PackedScene" uid="uid://dawwbik4sgvk7" path="res://player/barbarian/barbarian.tscn" id="28_u8kml"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crgnn"]
 albedo_color = Color(0.603922, 0.658824, 0.298039, 1)
@@ -3738,3 +3739,6 @@ shadow_enabled = true
 
 [node name="Mage" parent="Characters" instance=ExtResource("26_8x7qm")]
 transform = Transform3D(1, 0, 3.49692e-07, 0, 1, 0, -3.49692e-07, 0, 1, 0, 0, 10.1846)
+
+[node name="Barbarian" parent="Characters" instance=ExtResource("28_u8kml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.533789, 6.71315)

@@ -123,7 +123,7 @@ func movement_and_attacking(delta):
 func attack():
 	# Always update orientation, regardless of cooldown
 	update_orientation()
-	print("Mage is attacking")
+	#print("Mage is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
 
 func shoot_projectile():
