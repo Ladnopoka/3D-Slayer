@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1703560571
+::res://::1703564574
 icon.svg::CompressedTexture2D::3540083071793652844::1697544935::1703560510::1::::<><>::
 Ideas.txt::TextFile::-1::1703560031::0::1::::<><>::
 third_person_player.gd::GDScript::-1::1703560034::0::1::::<>CharacterBody3D<>::
@@ -296,15 +296,15 @@ Darkmetal_Texture.png::CompressedTexture2D::2349265492494190380::1703560034::170
 Stones_Texture.png::CompressedTexture2D::6702744456264777988::1703560034::1703560034::1::::<><>::
 Stonewall_Spriteclip.png::CompressedTexture2D::1183480410609658893::1703560034::1703560034::1::::<><>::
 Stonewall_Texture.png::CompressedTexture2D::6078921041169895554::1703560034::1703560034::1::::<><>::
-::res://assets/cemetery/::1703561485
+::res://assets/cemetery/::1703561521
 License.txt::TextFile::-1::1703561485::0::1::::<><>::
 Preview.png::CompressedTexture2D::7319825486650281329::1703561485::1703561521::1::::<><>::
 Sample.png::CompressedTexture2D::1872148678864817340::1703561485::1703561521::1::::<><>::
 ::res://assets/cemetery/Models/::1703561483
 ::res://assets/cemetery/Models/FBX format/::1703561475
-::res://assets/cemetery/Models/FBX format/Textures/::1703561475
+::res://assets/cemetery/Models/FBX format/Textures/::1703561521
 colormap.png::CompressedTexture2D::6862034521217415958::1703561475::1703561521::1::::<><>::
-::res://assets/cemetery/Models/GLB format/::1703561478
+::res://assets/cemetery/Models/GLB format/::1703563960
 altar-stone.glb::PackedScene::65421386538725424::1703561475::1703561535::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 altar-wood.glb::PackedScene::1813888984226010696::1703561475::1703561536::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 bench-damaged.glb::PackedScene::2225249340637732318::1703561475::1703561536::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
@@ -327,14 +327,11 @@ column-large.glb::PackedScene::3796681651259436688::1703561475::1703561541::1:::
 cross-column.glb::PackedScene::652380352716389971::1703561475::1703561541::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 cross-wood.glb::PackedScene::1186205697655372090::1703561475::1703561541::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 cross.glb::PackedScene::4515914262361779793::1703561475::1703561542::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
-crypt-door.glb::PackedScene::2738219475920339719::1703561476::1703561528::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 crypt-large-roof.glb::PackedScene::8594634944748872446::1703561476::1703561529::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 crypt-large.glb::PackedScene::3658411114879519496::1703561476::1703561529::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 crypt-small-entrance-alternative.glb::PackedScene::6547590077628137117::1703561476::1703561529::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
-crypt-small-entrance.glb::PackedScene::6422564659896654966::1703561476::1703561530::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 crypt-small-roof.glb::PackedScene::8048663313831107458::1703561476::1703561530::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 crypt-small.glb::PackedScene::7729850522332894988::1703561476::1703561530::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
-crypt.glb::PackedScene::1195465838757439674::1703561476::1703561530::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 debris-wood.glb::PackedScene::2177571863279106339::1703561476::1703561531::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 debris.glb::PackedScene::550172205777895363::1703561476::1703561531::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 detail-bowl.glb::PackedScene::4244959966273846262::1703561476::1703561531::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
@@ -396,9 +393,9 @@ stone-wall.glb::PackedScene::859376033238175484::1703561478::1703561548::1::::<>
 trunk-long.glb::PackedScene::8257109373608996917::1703561478::1703561548::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 trunk.glb::PackedScene::4019968983400081950::1703561478::1703561548::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
 urn.glb::PackedScene::1968503150680506802::1703561478::1703561535::1::::<><>::uid://8plgw75lg24u::::res://assets/cemetery/Models/GLB format/Textures/colormap.png
-::res://assets/cemetery/Models/GLB format/Textures/::1703561478
+::res://assets/cemetery/Models/GLB format/Textures/::1703561556
 colormap.png::CompressedTexture2D::2347877314375300730::1703561478::1703561556::1::::<><>::
-::res://assets/cemetery/Models/OBJ format/::1703561483
+::res://assets/cemetery/Models/OBJ format/::1703561528
 altar-stone.obj::Mesh::1227462826301722258::1703561478::1703561523::1::::<><>::uid://p02yujcd17dg::::res://assets/cemetery/Models/OBJ format/Textures/colormap.png
 altar-wood.obj::Mesh::8171591699105704934::1703561478::1703561526::1::::<><>::uid://p02yujcd17dg::::res://assets/cemetery/Models/OBJ format/Textures/colormap.png
 bench-damaged.obj::Mesh::2583314551105211811::1703561478::1703561526::1::::<><>::uid://p02yujcd17dg::::res://assets/cemetery/Models/OBJ format/Textures/colormap.png
@@ -490,10 +487,10 @@ stone-wall.obj::Mesh::3188017450820085918::1703561483::1703561523::1::::<><>::ui
 trunk-long.obj::Mesh::3550220706264634711::1703561483::1703561523::1::::<><>::uid://p02yujcd17dg::::res://assets/cemetery/Models/OBJ format/Textures/colormap.png
 trunk.obj::Mesh::6769160716660865366::1703561483::1703561523::1::::<><>::uid://p02yujcd17dg::::res://assets/cemetery/Models/OBJ format/Textures/colormap.png
 urn.obj::Mesh::4833047070055587936::1703561483::1703561523::1::::<><>::uid://p02yujcd17dg::::res://assets/cemetery/Models/OBJ format/Textures/colormap.png
-::res://assets/cemetery/Models/OBJ format/Textures/::1703561483
+::res://assets/cemetery/Models/OBJ format/Textures/::1703561557
 colormap.png::CompressedTexture2D::1106125380746573676::1703561483::1703561557::1::::<><>::
 ::res://assets/cemetery/Models/Textures/::1698255608
-::res://assets/cemetery/Previews/::1703561485
+::res://assets/cemetery/Previews/::1703561521
 altar-stone.png::CompressedTexture2D::994428803200106488::1703561483::1703561520::1::::<><>::
 altar-wood.png::CompressedTexture2D::5497321082412640213::1703561483::1703561520::1::::<><>::
 bench-damaged.png::CompressedTexture2D::4867629280703385723::1703561483::1703561520::1::::<><>::
@@ -2971,8 +2968,81 @@ item_data.gd::GDScript::-1::1699445685::0::1::::ItemData<>Resource<>::
 ::res://level/::1703561075
 level_1.gd::GDScript::-1::1699445685::0::1::::<>Node3D<>::
 level_1.tscn::PackedScene::5486766862100485142::1703560693::0::1::::<><>::uid://csqg2v0p2s8yw::::res://player/rogue/rogue_hooded.tscn<>uid://dh7eqkenjyvhp::::res://hideout/hideout.tscn<>uid://dawwbik4sgvk7::::res://player/barbarian/barbarian.tscn<>uid://cuinop16et3w1::::res://assets/resources/grass_material.tres<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dcbt3cxtuaj55::::res://player/mage/mage.tscn<>uid://dxh1exxrby0bd::::res://addons/editor-plugin/fonts/Diablo Heavy.ttf<>uid://c3ty78dhu6mmv::::res://assets/panorama/panorama_image.png<>uid://ci7p6fwa6jxd::::res://portal/portal.tscn
-::res://level/cemetery/::1703561078
-cemetery.tscn::PackedScene::314519198158345011::1703561078::0::1::::<><>::
+::res://level/cemetery/::1703564530
+cemetery.tscn::PackedScene::314519198158345011::1703563998::0::1::::<><>::
+::res://level/cemetery/BrickWall/::1703564551
+brickWall.glb::PackedScene::8809856799282199031::1703564530::1703564551::1::::<><>::
+brickWallEnd.glb::PackedScene::6602813304221772118::1703564530::1703564551::1::::<><>::
+brick_wall.tscn::PackedScene::7525324139965433321::1703564531::0::1::::<><>::uid://yf027msktesa::::res://Models/BrickWall/brick_wall_gray.tres<>uid://8m7y3mp57gmh::::res://Models/BrickWall/brick_wall_red.tres
+brick_wall_end.tscn::PackedScene::1051072058968330026::1703564531::0::1::::<><>::uid://yf027msktesa::::res://Models/BrickWall/brick_wall_gray.tres<>uid://8m7y3mp57gmh::::res://Models/BrickWall/brick_wall_red.tres
+brick_wall_gray.tres::StandardMaterial3D::1696421977454480492::1703564531::0::1::::<><>::
+brick_wall_red.tres::StandardMaterial3D::2342991665840373879::1703564531::0::1::::<><>::
+::res://level/cemetery/Crypt/::1703564550
+crypt.glb::PackedScene::2406276607228997042::1703564527::1703564550::1::::<><>::
+Crypt.tscn::PackedScene::5177175579465382791::1703564527::0::1::::<><>::
+cryptDoor.glb::PackedScene::5388204867573779413::1703564527::1703564550::1::::<><>::
+cryptSmallDoorwayAlternative.glb::PackedScene::8661603233542349162::1703564527::1703564550::1::::<><>::
+rocks_dec.tscn::PackedScene::4576511007824361429::1703564527::0::1::::<><>::
+::res://level/cemetery/Decorations/::1703564549
+altar_stone.tscn::PackedScene::412012598850455598::1703564527::0::1::::<><>::
+bench.glb::PackedScene::3780800103028407628::1703564527::1703564549::1::::<><>::
+bench_dec.tscn::PackedScene::1337854304437001890::1703564527::0::1::::<><>::
+debris.glb::PackedScene::7686977023273227437::1703564527::1703564549::1::::<><>::
+pumpkinCarved.glb::PackedScene::8995664893729124936::1703564527::1703564549::1::::<><>::
+pumpkin_carved_dec.tscn::PackedScene::3201295778804825480::1703564527::0::1::::<><>::uid://d1ftj0hiqso7a::::res://Models/Decorations/pumpkinCarved.glb
+rocks.glb::PackedScene::2170916121101598381::1703564527::1703564548::1::::<><>::
+rocksTall.glb::PackedScene::6993548590573514823::1703564527::1703564548::1::::<><>::
+shovelDirt.glb::PackedScene::1484729046086847724::1703564528::1703564548::1::::<><>::
+shovel_dirt_dec.tscn::PackedScene::9193057529279510444::1703564528::0::1::::<><>::
+::res://level/cemetery/Graves/::1703564547
+altarStone.glb::PackedScene::7598178880747448932::1703564528::1703564547::1::::<><>::
+coffin.glb::PackedScene::1280743580441176638::1703564528::1703564547::1::::<><>::
+coffinOld.glb::PackedScene::9043102374710793229::1703564528::1703564547::1::::<><>::
+crossWood.glb::PackedScene::9046406150174329643::1703564528::1703564546::1::::<><>::
+CrossWood.tscn::PackedScene::6600393916238310840::1703564528::0::1::::<><>::
+grave.glb::PackedScene::3281419226494573531::1703564528::1703564546::1::::<><>::
+Grave.tscn::PackedScene::741512568159599557::1703564528::0::1::::<><>::
+GravestoneBevel.tscn::PackedScene::1941212294743157915::1703564528::0::1::::<><>::uid://yf027msktesa::::res://Models/BrickWall/brick_wall_gray.tres
+gravestoneBroken.glb::PackedScene::7184351073158941739::1703564528::1703564546::1::::<><>::
+GravestoneBroken.tscn::PackedScene::437186215935676721::1703564528::0::1::::<><>::uid://yf027msktesa::::res://Models/BrickWall/brick_wall_gray.tres
+gravestoneCross.glb::PackedScene::6338283508381543829::1703564528::1703564545::1::::<><>::
+GravestoneCross.tscn::PackedScene::7762321601562312014::1703564528::0::1::::<><>::uid://dyvyly6iee225::::res://Models/Graves/gravestone_mat.tres
+gravestoneCrossLarge.glb::PackedScene::5870222025825748205::1703564529::1703564545::1::::<><>::
+GravestoneCrossLarge.tscn::PackedScene::6213706502704348317::1703564528::0::1::::<><>::uid://dyvyly6iee225::::res://Models/Graves/gravestone_mat.tres
+gravestoneDebris.glb::PackedScene::367321472431461904::1703564529::1703564545::1::::<><>::
+gravestoneFlat.glb::PackedScene::84818841050452379::1703564529::1703564545::1::::<><>::
+GravestoneFlat.tscn::PackedScene::5326029232857028770::1703564528::0::1::::<><>::uid://beriyxx10vr88::::res://Models/Graves/gravestone_dark_mat.tres
+gravestoneRound.glb::PackedScene::16364871489615260::1703564529::1703564544::1::::<><>::
+GravestoneRound.tscn::PackedScene::7910521075181861300::1703564528::0::1::::<><>::uid://yf027msktesa::::res://Models/BrickWall/brick_wall_gray.tres
+gravestone_dark_mat.tres::StandardMaterial3D::2702800319843226495::1703564529::0::1::::<><>::
+gravestone_mat.tres::StandardMaterial3D::8888624391605043136::1703564529::0::1::::<><>::
+::res://level/cemetery/IronFence/::1703564544
+ironFence.glb::PackedScene::4095798704169046912::1703564529::1703564544::1::::<><>::
+IronFence.tscn::PackedScene::2142538560441309205::1703564529::0::1::::<><>::uid://csmolge7ui80::::res://Models/IronFence/metal.tres
+ironFenceBar.glb::PackedScene::5891565620231134476::1703564529::1703564544::1::::<><>::
+IronFenceBar.tscn::PackedScene::7990723883287164656::1703564529::0::1::::<><>::uid://csmolge7ui80::::res://Models/IronFence/metal.tres
+ironFenceDamaged.glb::PackedScene::1202864981153139901::1703564529::1703564544::1::::<><>::
+IronFenceDamaged.tscn::PackedScene::8948332555687117087::1703564529::0::1::::<><>::uid://csmolge7ui80::::res://Models/IronFence/metal.tres
+metal.tres::StandardMaterial3D::178290679127985851::1703564530::0::1::::<><>::
+::res://level/cemetery/Lights/::1703564543
+Lightpost.tscn::PackedScene::8212926348723524705::1703564530::0::1::::<><>::uid://csmolge7ui80::::res://Models/IronFence/metal.tres
+lightpostSingle.glb::PackedScene::8966965788148652665::1703564530::1703564543::1::::<><>::
+::res://level/cemetery/Road/::1703564543
+road.glb::PackedScene::8442362929020159270::1703564530::1703564543::1::::<><>::
+Road.tscn::PackedScene::7552111988002661144::1703564530::0::1::::<><>::uid://dsjsqpq8xf6so::::res://Models/Road/road.glb
+::res://level/cemetery/Trees/::1703564543
+brown_1.tres::StandardMaterial3D::8317737251633922500::1703564530::0::1::::<><>::
+green_1.tres::StandardMaterial3D::2965277422295981146::1703564530::0::1::::<><>::
+green_2.tres::StandardMaterial3D::5929418671082777454::1703564530::0::1::::<><>::
+pine.glb::PackedScene::2227651395165399110::1703564530::1703564543::1::::<><>::
+pineCrooked.glb::PackedScene::5815144291558463899::1703564530::1703564543::1::::<><>::
+pine_crooked.tscn::PackedScene::5424264137812809782::1703564530::0::1::::<><>::uid://cqqiwob0fubmc::::res://Models/Trees/green_2.tres<>uid://biinxk6d6e72u::::res://Models/Trees/green_1.tres<>uid://dqrf6gnqcac0k::::res://Models/Trees/brown_1.tres
+pine_crooked_decoration.tscn::PackedScene::3059277399322701244::1703564530::0::1::::<><>::uid://co35tu4v314bv::::res://Models/Trees/pineCrooked.glb<>uid://cqqiwob0fubmc::::res://Models/Trees/green_2.tres<>uid://biinxk6d6e72u::::res://Models/Trees/green_1.tres<>uid://dqrf6gnqcac0k::::res://Models/Trees/brown_1.tres
+pine_decoration.tscn::PackedScene::8368718769317912360::1703564530::0::1::::<><>::uid://60ddfr3sfp87::::res://Models/Trees/pine.glb<>uid://biinxk6d6e72u::::res://Models/Trees/green_1.tres<>uid://cqqiwob0fubmc::::res://Models/Trees/green_2.tres<>uid://dqrf6gnqcac0k::::res://Models/Trees/brown_1.tres
+pine_not_crooked.tscn::PackedScene::8428715966715993223::1703564530::0::1::::<><>::uid://biinxk6d6e72u::::res://Models/Trees/green_1.tres<>uid://cqqiwob0fubmc::::res://Models/Trees/green_2.tres<>uid://dqrf6gnqcac0k::::res://Models/Trees/brown_1.tres
+trunk.glb::PackedScene::8116298219549801846::1703564530::1703564542::1::::<><>::
+trunk.tscn::PackedScene::7996010804449768619::1703564530::0::1::::<><>::uid://dqrf6gnqcac0k::::res://Models/Trees/brown_1.tres
+trunkLong.glb::PackedScene::4174627315026845850::1703564530::1703564542::1::::<><>::
 ::res://level/level2/::1703560034
 hideout.tscn::PackedScene::6805561760561017034::1699445685::0::1::::<><>::uid://bg21syiad1wtc::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_broken.gltf.glb<>uid://ccwcvpvx87qby::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_corner.gltf.glb<>uid://dggx6gokxt83::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_doorway_scaffold.glb<>uid://wgsemenw2y41::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall_window_closed.gltf.glb<>uid://lm5n1w1h1fsk::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/wall.gltf.glb
 level_2.gd::GDScript::-1::1703560034::0::1::::<>Node3D<>::
