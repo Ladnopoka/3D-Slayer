@@ -14,13 +14,13 @@ var velocity_var = Vector3.ZERO
 
 @onready var camera_point = $camera_point
 @onready var model = $Rig
+@onready var anim_player = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
-#@onready var anim_state = $AnimationTree.get("parameters/playback")
 @onready var camera_rig = $camera_rig
-#@onready var crossbow = $Rig/RayCast3D
 @onready var transition = $Transition
 @onready var ray_cast_3d = $Rig/RayCast3D
+
 
 #signal
 signal player_hit
@@ -33,8 +33,8 @@ var is_dead = false
 #projectile skills
 var mage_skill = load("res://player/mage/mage_skill.tscn")
 var mage_skill_instance
-var mage_skill_cooldown_time = 1.0005 # Cooldown time in seconds, e.g., 1 arrow per second.
-var mage_skill_last_shot_time = -1.0005 # A variable to keep track of the last shot time.
+var mage_skill_cooldown_time = 0.5 # Cooldown time in seconds, e.g., 1 arrow per second.
+var mage_skill_last_shot_time = -0.5 # A variable to keep track of the last shot time.
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -52,11 +52,6 @@ var rayOrigin
 var rayEnd
 var mouse_position
 var attack_direction
-
-#var arrow = load("res://shooting/arrow.tscn")
-#var arrow_instance
-#var arrow_cooldown_time = 0.0005 # Cooldown time in seconds, e.g., 1 arrow per second.
-#var arrow_last_shot_time = -0.0005 # A variable to keep track of the last shot time.
 
 var current_blend_position = Vector2(0, 0)
 var target_blend_position = Vector2(0, 0)
@@ -126,19 +121,16 @@ func movement_and_attacking(delta):
 		
 
 func attack():
-	print("Mage is attacking")
-	
-	var current_time = Time.get_ticks_msec() / 1000.0
-	if current_time - mage_skill_last_shot_time >= mage_skill_cooldown_time:
-		anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
-		mage_skill_instance = mage_skill.instantiate()
-		mage_skill_instance.position = ray_cast_3d.global_position
-		mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
-		get_parent().add_child(mage_skill_instance)
-		
-#	# Always update orientation, regardless of cooldown
+	# Always update orientation, regardless of cooldown
 	update_orientation()
+	print("Mage is attacking")
+	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
 
+func shoot_projectile():
+	mage_skill_instance = mage_skill.instantiate()
+	mage_skill_instance.position = ray_cast_3d.global_position
+	mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
+	get_parent().add_child(mage_skill_instance)
 
 func update_orientation():
 	# All the logic related to updating the character's orientation goes here
