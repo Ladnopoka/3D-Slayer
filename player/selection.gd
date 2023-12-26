@@ -8,7 +8,7 @@ extends Area3D
 signal character_selected
 
 func _ready() -> void:
-	connect("character_selected", character_selection_scene.character_selected)
+	#connect("character_selected", character_selection_scene.character_selected)
 	animation_player.connect("animation_finished", _on_animation_player_animation_finished)
 
 func _physics_process(delta):
@@ -37,3 +37,11 @@ func hide_selection():
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "Cheer":
 		animation_player.play("Idle")
+
+
+func _on_mouse_entered():
+	print("the mosue has entered")
+
+
+func _on_input_event(camera, event, position, normal, shape_idx):
+	print("ON THE INPUT EVENT YEP")

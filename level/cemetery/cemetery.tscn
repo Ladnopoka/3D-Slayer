@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://eqmc5sl0b1n0"]
+[gd_scene load_steps=29 format=3 uid="uid://eqmc5sl0b1n0"]
 
 [ext_resource type="Texture2D" uid="uid://difglsmbfmw81" path="res://Textures/terrain.jpg" id="1_ftcgo"]
+[ext_resource type="Script" path="res://level/cemetery/cemetery.gd" id="1_wubuy"]
 [ext_resource type="PackedScene" uid="uid://cf04lcfqmpyqp" path="res://level/cemetery/Crypt/Crypt.tscn" id="2_deqkk"]
 [ext_resource type="PackedScene" uid="uid://o8fad0v70syk" path="res://level/cemetery/BrickWall/brick_wall_end.tscn" id="3_yrt82"]
 [ext_resource type="PackedScene" uid="uid://dfhk8voo26lrt" path="res://level/cemetery/BrickWall/brick_wall.tscn" id="4_3lisp"]
@@ -33,6 +34,7 @@ albedo_texture = ExtResource("1_ftcgo")
 uv1_triplanar = true
 
 [node name="Cemetery" type="Node3D"]
+script = ExtResource("1_wubuy")
 
 [node name="Map" type="Node3D" parent="."]
 
@@ -3732,5 +3734,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9, 0, -12)
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 10.1846)
 shadow_enabled = true
 
-[node name="Mage" parent="." instance=ExtResource("26_8x7qm")]
+[node name="Characters" type="Node" parent="."]
+
+[node name="Mage" parent="Characters" instance=ExtResource("26_8x7qm")]
 transform = Transform3D(1, 0, 3.49692e-07, 0, 1, 0, -3.49692e-07, 0, 1, 0, 0, 10.1846)

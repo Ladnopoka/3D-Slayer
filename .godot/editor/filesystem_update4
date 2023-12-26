@@ -1,12 +1,9 @@
 res://level/cemetery/cemetery.tscn
-res://addons/cyclops_level_builder/shaders/outline_shader.tres
-res://addons/cyclops_level_builder/docks/material_palette/thumbnail_selected_theme.tres
-res://addons/cyclops_level_builder/docks/material_palette/thumbnail_normal_theme.tres
 res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd
 res://addons/editor-plugin/plugin.gd
 res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
-res://materials/floor_material - Copy (3).tres
 res://addons/main-screen/main-screen.gd
+res://materials/floor_material - Copy (3).tres
 res://assets/TileMaps/tiles_dungeon_remastered.tres
 res://assets/TileMaps/tiles_medieval.tres
 res://assets/resources/grass_material.tres
@@ -14,10 +11,10 @@ res://assets/resources/ground_material.tres
 res://level/level_1.tscn
 res://player/mage/mage.tscn
 res://level/level2/level_2.tscn
-res://player/barbarian/barbarian.gd
 res://player/selection_area.tscn
-res://player/third_person_player.tscn
 res://player/barbarian/barbarian.tscn
 res://player/rogue/rogue_hooded.tscn
 res://player/camera_rig.tscn
 res://player/selection.gd
+res://level/cemetery/cemetery.gd
+res://scripts/player/camera_rig.gd

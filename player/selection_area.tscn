@@ -20,3 +20,6 @@ shape = SubResource("CapsuleShape3D_g0lii")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.246329, 0)
 mesh = SubResource("TorusMesh_fixms")
 skeleton = NodePath("../..")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
