@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://cjjs3qtbvgvac" path="res://level/cemetery/Trees/pine_crooked.tscn" id="23_7w5aj"]
 [ext_resource type="PackedScene" uid="uid://dsc6yq6mfbvet" path="res://level/cemetery/Trees/pine_not_crooked.tscn" id="24_lgagw"]
 [ext_resource type="PackedScene" uid="uid://dl6len7ofdorj" path="res://level/cemetery/Trees/trunk.tscn" id="25_pof27"]
-[ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue/rogue_hooded.tscn" id="26_tmmnc"]
+[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="26_qddof"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crgnn"]
 albedo_color = Color(0.603922, 0.658824, 0.298039, 1)
@@ -3728,9 +3728,9 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6, 0, -16)
 [node name="pine27" parent="Map/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9, 0, -12)
 
-[node name="Rogue_Hooded" parent="." instance=ExtResource("26_tmmnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.403651, 6.84313)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
+transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 10.1846)
 shadow_enabled = true
+
+[node name="Mage" parent="." instance=ExtResource("26_qddof")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 10.1846)
