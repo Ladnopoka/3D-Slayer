@@ -15,3 +15,9 @@ res://level/level_1.tscn
 res://player/mage/mage.tscn
 res://level/level2/level_2.tscn
 res://player/barbarian/barbarian.gd
+res://player/selection_area.tscn
+res://player/third_person_player.tscn
+res://player/barbarian/barbarian.tscn
+res://player/rogue/rogue_hooded.tscn
+res://player/camera_rig.tscn
+res://player/selection.gd

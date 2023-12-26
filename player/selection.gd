@@ -10,6 +10,10 @@ signal character_selected
 func _ready() -> void:
 	connect("character_selected", character_selection_scene.character_selected)
 	animation_player.connect("animation_finished", _on_animation_player_animation_finished)
+
+func _physics_process(delta):
+	if Input.is_action_just_pressed("right_mouse_clicked"):
+		print("I clicked the damn mouse")
 	
 	
 func _input_event(camera, event, position, normal, shape_idx):
