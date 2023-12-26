@@ -11,3 +11,5 @@ res://level/level_1.tscn
 res://player/mage/mage.tscn
 res://player/barbarian/barbarian.tscn
 res://player/mage/mage.gd
+res://player/barbarian/barbarian.gd
+res://player/rogue/rogue_hooded.tscn
