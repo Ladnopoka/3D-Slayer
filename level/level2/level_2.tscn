@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://level/level2/level_2.gd" id="1_q2mgw"]
 [ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue/rogue_hooded.tscn" id="2_tshh2"]
-[ext_resource type="Material" uid="uid://c6vet0uxh8k4r" path="res://assets/resources/ground_material.tres" id="3_nmykr"]
+[ext_resource type="Material" uid="uid://ddbbx3yl8sa1w" path="res://assets/resources/wall_material.tres" id="3_0et5b"]
 [ext_resource type="PackedScene" uid="uid://cchcp636iid71" path="res://mob/knight.tscn" id="3_wudel"]
 [ext_resource type="PackedScene" uid="uid://muq1yk7w0c1h" path="res://ui/ui.tscn" id="5_hv58u"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="6_qheyw"]
@@ -14,7 +14,7 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Arr
 agent_max_slope = 60.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_h7qkr"]
-material = ExtResource("3_nmykr")
+material = ExtResource("3_0et5b")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_imstk"]
 size = Vector3(2, 2, 0)
