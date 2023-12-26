@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bqr0wi4oisye"
+path="res://.godot/imported/border-pillar.obj-21c388a57b0984bd6ba06a111951b5b9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/border-pillar.obj-21c388a57b0984bd6ba06a111951b5b9.mesh"]
+
+source_file="res://assets/cemetery/Models/OBJ format/border-pillar.obj"
+dest_files=["res://.godot/imported/border-pillar.obj-21c388a57b0984bd6ba06a111951b5b9.mesh", "res://.godot/imported/border-pillar.obj-21c388a57b0984bd6ba06a111951b5b9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

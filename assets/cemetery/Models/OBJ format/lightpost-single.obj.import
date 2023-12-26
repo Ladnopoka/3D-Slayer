@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dnnkea62i3ett"
+path="res://.godot/imported/lightpost-single.obj-116bf088104c8e700bb348d145b709e2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lightpost-single.obj-116bf088104c8e700bb348d145b709e2.mesh"]
+
+source_file="res://assets/cemetery/Models/OBJ format/lightpost-single.obj"
+dest_files=["res://.godot/imported/lightpost-single.obj-116bf088104c8e700bb348d145b709e2.mesh", "res://.godot/imported/lightpost-single.obj-116bf088104c8e700bb348d145b709e2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -13,3 +13,6 @@ res://addons/editor-plugin/dungeon/dungeon_menu.tscn
 res://level/level_1.tscn
 res://player/mage/mage.tscn
 res://player/mage/mage_skill.tscn
+res://addons/cyclops_level_builder/shaders/outline_shader.tres
+res://addons/cyclops_level_builder/docks/material_palette/thumbnail_selected_theme.tres
+res://addons/cyclops_level_builder/docks/material_palette/thumbnail_normal_theme.tres
