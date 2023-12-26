@@ -17,10 +17,11 @@ var velocity_var = Vector3.ZERO
 @onready var anim_player = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
-@onready var camera_rig = $camera_rig
+#@onready var camera_rig = $camera_rig
 @onready var transition = $Transition
 @onready var ray_cast_3d = $Rig/RayCast3D
 
+var camera_rig = preload("res://player/camera_rig.tscn")
 
 #signal
 signal player_hit
@@ -137,8 +138,8 @@ func update_orientation():
 	var space_state = get_world_3d().direct_space_state
 	mouse_position = get_viewport().get_mouse_position()
 
-	rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position)
-	rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000
+	rayOrigin = get_node("camera_rig").get_node("base_camera").project_ray_origin(mouse_position)
+	rayEnd = rayOrigin + get_node("camera_rig").get_node("base_camera").project_ray_normal(mouse_position) * 2000
 
 	var query = PhysicsRayQueryParameters3D.create(rayOrigin, rayEnd); 
 	var intersection = space_state.intersect_ray(query)
