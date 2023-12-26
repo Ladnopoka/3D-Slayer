@@ -4,3 +4,7 @@ res://addons/editor-plugin/plugin.gd
 res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
+res://assets/TileMaps/tiles_dungeon_remastered.tres
+res://assets/TileMaps/tiles_medieval.tres
+res://assets/resources/grass_material.tres
+res://level/level_1.tscn
