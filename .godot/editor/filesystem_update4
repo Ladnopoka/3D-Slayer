@@ -9,3 +9,5 @@ res://assets/TileMaps/tiles_medieval.tres
 res://assets/resources/grass_material.tres
 res://level/level_1.tscn
 res://player/mage/mage.tscn
+res://player/barbarian/barbarian.tscn
+res://player/mage/mage.gd

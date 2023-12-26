@@ -1,3 +1,4 @@
+CharacterBody3D
 WorldEnvironment
 CSGBox3D
 Node3D
@@ -12,4 +13,3 @@ SubViewportContainer
 Button
 MenuButton
 OptionButton
-SpotLight3D
