@@ -93,24 +93,17 @@ func _handle_mouse_click(mouse_position):
 		print(\"Raycast did not hit any object.\")
 		
 func _process_click(collider, position):
-	if collider.name == \"Mage\":
-		# Handle click on Mage character
-		print(\"Mage character was clicked.\")
-		print(\"Collider: \", collider)
-		collider.get_node(\"SelectionArea\").get_node(\"Selection\").visible = false
+	# Hide the selection circle for all characters
+	for character in $Characters.get_children():
+		if character.has_node(\"SelectionArea/Selection\"):
+			character.get_node(\"SelectionArea/Selection\").visible = false
+
+	# Show the selection circle only for the clicked character
+	if collider.has_node(\"SelectionArea/Selection\"):
+		collider.get_node(\"SelectionArea/Selection\").visible = true
 		character_label.text = collider.name
-	elif collider.name == \"Rogue_Hooded\":
-		print(\"Rogue_Hooded character was clicked.\")
-		collider.get_node(\"SelectionArea\").get_node(\"Selection\").visible = false
-		character_label.text = collider.name
-	elif collider.name == \"Barbarian\":
-		print(\"Barbarian character was clicked.\")
-		collider.get_node(\"SelectionArea\").get_node(\"Selection\").visible = false
-		character_label.text = collider.name
-	else:
-		# Handle click on other objects
-		print(collider.name, \" was clicked.\")
-		# Implement other object-specific logic here
+
+	print(collider.name, \" character was clicked.\")
 		
 "
 
