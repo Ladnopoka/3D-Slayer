@@ -1,6 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=16 format=3 uid="uid://ckf3ipmwutb47"]
 
+[ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue/rogue_hooded.tscn" id="2_aurua"]
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
+[ext_resource type="PackedScene" uid="uid://dawwbik4sgvk7" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
 [ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
 [ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="7_kerki"]
@@ -15,8 +17,8 @@ script/source = "extends Node3D
 @onready var score_max = $Score
 @onready var deaths = $Deaths
 @onready var mage = $Characters/Mage
-#@onready var base_camera = $base_camera
 @onready var barbarian = $Characters/Barbarian
+@onready var rogue_hooded = $Characters/Rogue_Hooded
 
 var mage_script = load(\"res://player/mage/mage.gd\")
 
@@ -31,8 +33,8 @@ func _ready():
 	deaths.text = \"Deaths: \" + str(Global.deaths)
 	
 	#mage.set_script(null)
-	#barbarian.set_script(null)
-	#mage.set_script(mage_script)
+	barbarian.set_script(null)
+	rogue_hooded.set_script(null)
 	
 	for character in $Characters.get_children():
 		var selection_area_ins = selection_area.instantiate()
@@ -131,6 +133,12 @@ script = SubResource("GDScript_1jutb")
 environment = SubResource("Environment_wbfuk")
 
 [node name="Characters" type="Node" parent="."]
+
+[node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38612, 0, 3.96283)
+
+[node name="Rogue_Hooded" parent="Characters" instance=ExtResource("2_aurua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.17024, 0, 5.59123)
 
 [node name="Mage" parent="Characters" instance=ExtResource("7_kerki")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 11)
