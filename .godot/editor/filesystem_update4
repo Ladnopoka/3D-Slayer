@@ -1,17 +1,7 @@
-res://level/cemetery/cemetery.tscn
+res://player/barbarian/barbarian.tscn
 res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd
 res://addons/editor-plugin/plugin.gd
 res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
-res://assets/TileMaps/tiles_dungeon_remastered.tres
-res://assets/TileMaps/tiles_medieval.tres
-res://assets/resources/grass_material.tres
-res://assets/resources/ground_material.tres
-res://level/level_1.tscn
 res://player/mage/mage.tscn
-res://level/level2/level_2.tscn
-res://player/selection_area.tscn
-res://player/barbarian/barbarian.tscn
-res://player/rogue/rogue_hooded.tscn
-res://player/camera_rig.tscn

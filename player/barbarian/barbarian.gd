@@ -61,6 +61,7 @@ var attacking = false
 func _ready():
 	GameManager.set_player(self)
 	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
+	print("LOCOMOTIONBLENDPATH: ", locomotionBlendPath)
 	current_hp = hp
 	
 func _physics_process(delta):
@@ -110,6 +111,9 @@ func movement_and_attacking(delta):
 	current_blend_position = current_blend_position.lerp(-target_blend_position, blend_lerp_speed * delta)
 	anim_tree.set(locomotionBlendPath, current_blend_position)
 	move_and_slide()
+	
+	if Input.is_action_pressed("right_mouse_clicked"):
+		print("RM CLICKED")
 	
 	if Input.is_action_pressed("primary_action"):
 		attack()
