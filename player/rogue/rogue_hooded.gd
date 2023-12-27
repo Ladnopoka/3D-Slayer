@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 8.0
+const SPEED = 6.0
 const JUMP_VELOCITY = 6.5
 const ROTATION_SPEED = 7
 const ACCELERATION = 8
@@ -119,6 +119,7 @@ func movement_and_attacking(delta):
 		attack()
 	elif Input.is_action_just_released("primary_action"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)
+		anim_tree.set("parameters/AttackStateMachine/conditions/stop_attack", true)
 	
 	#anim_tree.set("parameters/conditions/run", walking)
 		
@@ -128,6 +129,7 @@ func attack():
 	update_orientation()
 	print("Rogue is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
+	anim_tree.set("parameters/AttackStateMachine/conditions/stop_attack", false)
 	#anim_tree.set("pa")
 
 #func shoot_projectile():
