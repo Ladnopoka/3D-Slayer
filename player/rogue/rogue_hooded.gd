@@ -19,8 +19,10 @@ var velocity_var = Vector3.ZERO
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
 @onready var camera_rig = $camera_rig
 @onready var transition = $Transition
-#@onready var ray_cast_3d = $Rig/RayCast3D
+@onready var ray_cast_3d = $Rig/RayCast3D
 
+const ARROW = preload("res://shooting/arrow.tscn")
+var arrow_inst
 #signal
 signal player_hit
 
@@ -127,9 +129,9 @@ func movement_and_attacking(delta):
 func attack():
 	# Always update orientation, regardless of cooldown
 	update_orientation()
-	print("Rogue is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
 	anim_tree.set("parameters/AttackStateMachine/conditions/stop_attack", false)
+	#shoot_arrow()
 	#anim_tree.set("pa")
 
 #func shoot_projectile():
@@ -158,16 +160,14 @@ func update_orientation():
 			var look_at_pos = model.global_position + direction_to_pos
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
 
-#func shoot_arrow():
-#	# The logic related to shooting an arrow goes here
-#	anim_state.travel(attacks[3])
-#
-#	arrow_instance = arrow.instantiate()
-#	arrow_instance.position = crossbow.global_position
-#	arrow_instance.transform.basis = crossbow.global_transform.basis
-#	arrow_instance.rotate(Vector3(0, 1, 0), deg_to_rad(180))
-#
-#	get_parent().add_child(arrow_instance)
+func shoot_arrow():
+	print("arrow is shooting (supposed to be omegalul)")
+	arrow_inst = ARROW.instantiate()
+	arrow_inst.position = ray_cast_3d.global_position
+	arrow_inst.transform.basis = ray_cast_3d.global_transform.basis
+	arrow_inst.rotate(Vector3(0, 1, 0), deg_to_rad(180))
+
+	get_parent().add_child(arrow_inst)
 	
 #func hit(dir):
 	#emit_signal("player_hit")
