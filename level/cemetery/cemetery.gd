@@ -6,7 +6,7 @@ const BARBARIAN = preload("res://player/barbarian/barbarian.tscn")
 const MAGE = preload("res://player/mage/mage.tscn")
 const ROGUE_HOODED = preload("res://player/rogue/rogue_hooded.tscn")
 
-var spawn_position = Vector3(0, 0, 0) # Update this to your desired spawn location
+var spawn_position = Vector3(0, 0.1, 10.5) # Update this to your desired spawn location
 
 # Called when the node enters the scene tree for the first time. 
 func _ready():
@@ -34,10 +34,14 @@ func load_character(character_name: String):
 			#load_character("Rogue_Hooded")
 		_:
 			print("No matching character name found")
+			return
 	
 	# Add the character instance to the scene
 	if char_instance:
 		add_child(char_instance)
+		char_instance.global_transform.origin = spawn_position
+		# Or use: character_instance.transform.origin = spawn_position
+		# If you need to adjust rotation or scale, you can do that here as well.
 	
 	#for character in $Characters.get_children():
 		#var selection_area_ins = selection_area.instantiate()
