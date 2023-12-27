@@ -38,8 +38,8 @@ func _ready():
 		var selection_area_ins = selection_area.instantiate()
 		var camera_rig_ins = camera_rig.instantiate()
 		character.add_child(selection_area_ins)
-		character.add_child(camera_rig_ins)
-		#print(character.get_children())
+		#character.add_child(camera_rig_ins)
+		print(character.get_children())
 		
 #func _physics_process(delta):
 	#character_selected(\"current_selected_character_name\")
