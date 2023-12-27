@@ -110,7 +110,7 @@ func movement_and_attacking(delta):
 			walking = false
 			idling = true
 	
-	current_blend_position = current_blend_position.lerp(-target_blend_position, blend_lerp_speed * delta)
+	current_blend_position = current_blend_position.lerp(target_blend_position, blend_lerp_speed * delta)
 	anim_tree.set(locomotionBlendPath, current_blend_position)
 	move_and_slide()
 	
@@ -157,7 +157,7 @@ func update_orientation():
 
 		if direction_to_pos.length() > 0.5:
 			direction_to_pos.y = 0
-			var look_at_pos = model.global_position + direction_to_pos
+			var look_at_pos = model.global_position + -direction_to_pos
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
 
 func shoot_arrow():
