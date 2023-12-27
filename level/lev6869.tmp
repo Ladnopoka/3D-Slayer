@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=16 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue/rogue_hooded.tscn" id="2_aurua"]
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="7_kerki"]
 [ext_resource type="FontFile" uid="uid://dxh1exxrby0bd" path="res://addons/editor-plugin/fonts/Diablo Heavy.ttf" id="8_f8y4w"]
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
-[ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_twf6y"]
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
 
 [sub_resource type="GDScript" id="GDScript_1jutb"]
@@ -21,7 +20,6 @@ script/source = "extends Node3D
 @onready var mage = $Characters/Mage
 @onready var barbarian = $Characters/Barbarian
 @onready var rogue_hooded = $Characters/Rogue_Hooded
-@onready var character_label = $CharacterLabel
 
 var mage_script = load(\"res://player/mage/mage.gd\")
 var barbarian_script = load(\"res://player/barbarian/barbarian.gd\")
@@ -98,15 +96,19 @@ func _process_click(collider, position):
 		print(\"Mage character was clicked.\")
 		print(\"Collider: \", collider)
 		collider.get_node(\"SelectionArea\").get_node(\"Selection\").visible = false
-		character_label.text = collider.name
-	elif collider.name == \"Rogue_Hooded\":
-		print(\"Rogue_Hooded character was clicked.\")
-		collider.get_node(\"SelectionArea\").get_node(\"Selection\").visible = false
-		character_label.text = collider.name
+		#collider.set_script(null)
+		#$Characters.move_child(mage, $Characters.get_child_count()-1)
+		#barbarian.set_script(null)
+		#$Characters.move_child(mage, $Characters.get_child_count()-1)
+		# Implement character-specific logic here
+	elif \"Floor\" in collider.name:
+		# Handle click on the floor
+		print(\"Floor was clicked at position: \", position)
+		# Implement movement logic or other floor-related actions here
 	elif collider.name == \"Barbarian\":
 		print(\"Barbarian character was clicked.\")
-		collider.get_node(\"SelectionArea\").get_node(\"Selection\").visible = false
-		character_label.text = collider.name
+		$Characters.move_child(mage, $Characters.get_child_count()-1)
+		barbarian.set_script(barbarian_script)
 	else:
 		# Handle click on other objects
 		print(collider.name, \" was clicked.\")
@@ -192,11 +194,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -20.0
-offset_right = 129.0
-offset_bottom = 94.0
+offset_right = 20.0
+offset_bottom = 23.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("10_twf6y")
-theme_override_font_sizes/font_size = 70
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 7

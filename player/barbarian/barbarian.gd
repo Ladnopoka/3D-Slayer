@@ -65,7 +65,7 @@ func _ready():
 	
 func _physics_process(delta):
 	if !is_dead:
-		HPRegen(delta)
+		#HPRegen(delta)
 		movement_and_attacking(delta)
 	
 func movement_and_attacking(delta):
@@ -185,7 +185,7 @@ func update_orientation():
 		#Global.score = 0
 		#Global.deaths += 1
 	
-func HPRegen(delta):
-	current_hp += hp_regen * delta
-	if current_hp > hp:
-		current_hp = hp
+#func HPRegen(delta):
+	#current_hp += hp_regen * delta
+	#if current_hp > hp:
+		#current_hp = hp
