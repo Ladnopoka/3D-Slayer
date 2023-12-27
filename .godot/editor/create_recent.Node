@@ -1,3 +1,4 @@
+SimpleGrassTextured
 CharacterBody3D
 WorldEnvironment
 CSGBox3D
@@ -11,5 +12,3 @@ SubViewport
 VBoxContainer
 SubViewportContainer
 Button
-MenuButton
-OptionButton

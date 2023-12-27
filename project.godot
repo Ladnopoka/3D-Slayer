@@ -25,6 +25,10 @@ Global="*res://globals/Global.gd"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
+
 [filesystem]
 
 import/fbx/enabled=false

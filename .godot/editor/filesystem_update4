@@ -15,8 +15,3 @@ res://player/selection_area.tscn
 res://player/barbarian/barbarian.tscn
 res://player/rogue/rogue_hooded.tscn
 res://player/camera_rig.tscn
-res://player/selection.gd
-res://level/cemetery/cemetery.gd
-res://scripts/player/camera_rig.gd
-res://player/mage/mage.gd
-res://player/barbarian/barbarian.gd
