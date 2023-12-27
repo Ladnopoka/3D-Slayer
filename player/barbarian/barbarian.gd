@@ -128,6 +128,7 @@ func attack():
 	update_orientation()
 	print("Barbarian is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
+	#anim_tree.set("pa")
 
 #func shoot_projectile():
 	#mage_skill_instance = mage_skill.instantiate()

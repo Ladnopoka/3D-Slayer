@@ -5,3 +5,4 @@ res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
 res://player/mage/mage.tscn
+res://player/barbarian/barbarian.gd
