@@ -6,3 +6,5 @@ res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
 res://player/mage/mage.tscn
 res://player/barbarian/barbarian.gd
+res://player/rogue/rogue_hooded.tscn
+res://player/rogue/rogue_hooded.gd
