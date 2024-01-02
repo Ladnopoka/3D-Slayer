@@ -6,3 +6,4 @@ res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
 res://player/barbarian/barbarian.tscn
 res://player/rogue/rogue_hooded.tscn
+res://mob/zombie.tscn

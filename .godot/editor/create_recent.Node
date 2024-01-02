@@ -1,5 +1,6 @@
-SimpleGrassTextured
+CollisionShape3D
 CharacterBody3D
+SimpleGrassTextured
 WorldEnvironment
 CSGBox3D
 Node3D
