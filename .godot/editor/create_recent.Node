@@ -1,7 +1,7 @@
-NavigationAgent3D
-NavigationRegion3D
 CollisionShape3D
 CharacterBody3D
+NavigationAgent3D
+NavigationRegion3D
 SimpleGrassTextured
 WorldEnvironment
 CSGBox3D
@@ -12,4 +12,3 @@ GPUParticles3D
 RayCast3D
 MeshInstance3D
 SubViewport
-VBoxContainer

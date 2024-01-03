@@ -10,3 +10,6 @@ res://player/mage/mage.tscn
 res://player/barbarian/barbarian.tscn
 res://player/rogue/rogue_hooded.tscn
 res://mob/knight.gd
+res://mob/knight.tscn
+res://mob/zombie/zombie_2.tscn
+res://mob/zombie/zombie_2.gd
