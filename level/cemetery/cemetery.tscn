@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://c2bfxvty67cjp" path="res://mob/zombie/zombie.tscn" id="31_x20a6"]
 [ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="32_fqeky"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_17nm8"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_knoag"]
 render_priority = 0
 shader = ExtResource("27_5i5sr")
 shader_parameter/player_pos = Vector3(1e+06, 1e+06, 1e+06)
@@ -65,7 +65,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_17nm8"),
+"material": SubResource("ShaderMaterial_knoag"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -3805,7 +3805,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6, 0, -16)
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9, 0, -12)
 
 [node name="Zombie" parent="Map/NavigationRegion3D" instance=ExtResource("31_x20a6")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 4.37557)
+transform = Transform3D(-1.59188, 0, 0.161023, 0, 1.6, 0, -0.161023, 0, -1.59188, 0, 0, 2.94638)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 10.1846)
