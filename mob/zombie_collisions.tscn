@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw8wjv47plss6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1gthy"]
+radius = 12.0
+height = 50.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_htlup"]
+radius = 12.0
+height = 70.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e3olk"]
+radius = 12.0
+height = 40.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cu4pl"]
+radius = 12.0
+height = 70.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Physical Bone mixamorig_LeftUpLeg" type="PhysicalBone3D" parent="."]
+transform = Transform3D(-0.989893, 0.133957, -0.0465355, 0.111721, 0.938747, 0.326031, 0.0873539, 0.317525, -0.944204, 12.6442, 238.797, -61.7788)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00540771, -0.14013, 16.1332)
+body_offset = Transform3D(1, 6.70552e-08, -5.17815e-06, 1.17049e-05, 1.00001, 5.30481e-06, 1.49235e-05, 1.37389e-05, 0.999994, 0.00549126, 0.140045, -16.1331)
+bone_name = "mixamorig_LeftUpLeg"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Physical Bone mixamorig_LeftUpLeg"]
+transform = Transform3D(0.936229, 0.0235076, -0.350605, -0.0421554, 0.998068, -0.0456489, 0.348855, 0.057518, 0.93541, 0.565344, 16.2694, 16.0968)
+shape = SubResource("CapsuleShape3D_1gthy")
+
+[node name="Physical Bone mixamorig_LeftLeg" type="PhysicalBone3D" parent="."]
+transform = Transform3D(-0.961769, 0.273746, 0.00758859, 0.226315, 0.778923, 0.584859, 0.154196, 0.564215, -0.811095, 16.0542, 260.239, -46.9929)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000251699, -0.00172715, 24.328)
+body_offset = Transform3D(0.999997, 2.05636e-06, -4.85778e-06, -6.85453e-07, -4.20213e-06, -0.999998, -1.35601e-06, 0.999998, 1.19209e-07, -0.000133514, 24.328, 0.00172424)
+bone_name = "mixamorig_LeftLeg"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Physical Bone mixamorig_LeftLeg"]
+transform = Transform3D(1, 1.49012e-08, 0, -2.98023e-08, 4.47035e-08, 1, 0, -1, 1.49012e-08, -0.415422, -2.32316, -0.487133)
+shape = SubResource("CapsuleShape3D_htlup")
+
+[node name="Physical Bone mixamorig_RightUpLeg" type="PhysicalBone3D" parent="."]
+transform = Transform3D(-0.951279, -0.301513, -0.0642418, -0.284941, 0.780391, 0.556509, -0.117675, 0.547726, -0.828251, -9.84622, 234.081, -63.1951)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000120916, -0.000127922, 16.2691)
+body_offset = Transform3D(0.999985, 4.93228e-06, 3.68059e-06, -1.04308e-06, 0.999963, 2.23517e-06, 0, 7.59959e-06, 0.999917, 6.10352e-05, 9.15527e-05, -16.2678)
+bone_name = "mixamorig_RightUpLeg"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Physical Bone mixamorig_RightUpLeg"]
+transform = Transform3D(0.979997, -0.0176957, 0.198219, 0.0294768, 0.997959, -0.0566409, -0.196813, 0.0613502, 0.97852, 0.257717, 12.6211, 15.2553)
+shape = SubResource("CapsuleShape3D_e3olk")
+
+[node name="Physical Bone mixamorig_RightLeg" type="PhysicalBone3D" parent="."]
+transform = Transform3D(-0.970138, -0.242367, -0.00843824, -0.210077, 0.822529, 0.528489, -0.121146, 0.514476, -0.848898, -20.495, 255.669, -38.199)
+joint_type = 1
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000643077, -0.000505415, 24.326)
+body_offset = Transform3D(0.999988, 4.91738e-07, 3.67314e-06, 4.47035e-08, 6.85453e-07, -1, 7.42078e-06, 0.999991, 5.72205e-06, -0.000732422, 24.326, 0.000366211)
+bone_name = "mixamorig_RightLeg"
+joint_constraints/bias = 0.3
+joint_constraints/damping = 1.0
+joint_constraints/impulse_clamp = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Physical Bone mixamorig_RightLeg"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_cu4pl")

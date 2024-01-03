@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704232307
+::res://::1704301072
 icon.svg::CompressedTexture2D::3540083071793652844::1696266044::1703601703::1::::<><>::
 Ideas.txt::TextFile::-1::1703372453::0::1::::<><>::
 third_person_player.gd::GDScript::-1::1703372457::0::1::::<>CharacterBody3D<>::
@@ -168,21 +168,21 @@ tool_stairs_settings.gd::GDScript::-1::1683755122::0::1::::ToolStairsSettings<>R
 display_mode.gd::GDScript::-1::1683755122::0::1::::DisplayMode<>RefCounted<>::
 general_util.gd::GDScript::-1::1683755122::0::1::::GeneralUtil<>RefCounted<>::
 selection.gd::GDScript::-1::1683755122::0::1::::Selection<>RefCounted<>::
-::res://addons/editor-plugin/::1704232395
+::res://addons/editor-plugin/::1704300810
 panel.tscn::PackedScene::5401244366276246444::1703600294::0::1::::<><>::uid://cg5e10waxsb3x::::res://addons/editor-plugin/fonts/Bildad.ttf
 plugin.cfg::TextFile::-1::1703372453::0::1::::<><>::
-plugin.gd::GDScript::-1::1704232395::0::1::::<>EditorPlugin<>::
+plugin.gd::GDScript::-1::1704300810::0::1::::<>EditorPlugin<>::
 ::res://addons/editor-plugin/documentation/::1703372453
 func_requirements.txt::TextFile::-1::1703372453::0::1::::<><>::
 ::res://addons/editor-plugin/dungeon/::1703600294
 dungeon_menu.tscn::PackedScene::5400237059846558402::1703600294::0::1::::<><>::res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd<>uid://dvlo50v35hurs::::res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
 dungeon_playground_plugin.tscn::PackedScene::1983878074957331744::1703600294::0::1::::<><>::uid://ci66d6nlmqckg::::res://addons/editor-plugin/dungeon/dungeon_menu.tscn
-::res://addons/editor-plugin/dungeon_tiles/::1704232395
-DungeonMenu.gd::GDScript::-1::1704232395::0::1::::<>Node3D<>::
+::res://addons/editor-plugin/dungeon_tiles/::1704300810
+DungeonMenu.gd::GDScript::-1::1704300810::0::1::::<>Node3D<>::
 dungeon_corner_in.tscn::PackedScene::5240666334934246191::1703372453::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
 dungeon_corner_out.tscn::PackedScene::8840036095904652678::1703372453::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
 dungeon_floor.tscn::PackedScene::4084485688624545597::1703372453::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
-dungeon_tiles.tres::MeshLibrary::8656840881325745276::1704232395::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
+dungeon_tiles.tres::MeshLibrary::8656840881325745276::1704300810::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
 dungeon_tiles.tscn::PackedScene::3074746894418519701::1703372453::0::1::::<><>::uid://cs1c54q62868r::::res://assets/TileMaps/dungeon_tiles.glb
 dungeon_wall.tscn::PackedScene::4394341652343579082::1703372453::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
 ::res://addons/editor-plugin/fonts/::1703372453
@@ -190,9 +190,9 @@ Bildad.ttf::FontFile::5256196407549678931::1703372453::1703372453::1::::<><>::
 Diablo Heavy.ttf::FontFile::8789643128362279737::1703372453::1703372453::1::::<><>::
 ::res://addons/editor-plugin/room_template/::1702582455
 room_template.tscn::PackedScene::1473403741818640738::1700157014::0::1::::<><>::
-::res://addons/main-screen/::1704232395
+::res://addons/main-screen/::1704300810
 control.gd::GDScript::-1::1700157014::0::1::::<>VBoxContainer<>::
-main-screen.gd::GDScript::-1::1704232395::0::1::::<>EditorPlugin<>::
+main-screen.gd::GDScript::-1::1704300810::0::1::::<>EditorPlugin<>::
 main-screen.tscn::PackedScene::5610324604663873796::1698854995::0::1::::<><>::res://addons/main-screen/control.gd
 name-generator.gd::GDScript::-1::1696542482::0::1::::NameGenerator<>Node<>::
 plugin.cfg::TextFile::-1::1696542482::0::1::::<><>::
@@ -2764,14 +2764,14 @@ sampleB.png::CompressedTexture2D::4828869052074545339::1703372455::1703372455::1
 sampleC.png::CompressedTexture2D::4441791897100925662::1703372455::1703372455::1::::<><>::
 sampleD.png::CompressedTexture2D::3077589932888247641::1703372455::1703372455::1::::<><>::
 sampleE.png::CompressedTexture2D::4010270310062977134::1703372455::1703372455::1::::<><>::
-::res://assets/Mixamo/::1704235713
+::res://assets/Mixamo/::1704235717
+zombie_mixamo.glb::PackedScene::8804901107864806842::1704234827::1704235713::1::::<><>::uid://b3ksgx8ne40dv::::res://assets/Mixamo/zombie_mixamo_mremireh_body__diffuse.png<>uid://b1cg73sisso8n::::res://assets/Mixamo/zombie_mixamo_mremireh_body_normal.png<>uid://vkrtp4euypqn::::res://assets/Mixamo/zombie_mixamo_mremireh_shoe_diffuse.png<>uid://don5kbts3o628::::res://assets/Mixamo/zombie_mixamo_mremireh_shoe_normal.png
+zombie_mixamo_Image.png::CompressedTexture2D::4474521429477406935::1704234951::1704234951::1::::<><>::
+zombie_mixamo_Image_3.png::CompressedTexture2D::8096171242963575905::1704234955::1704234955::1::::<><>::
+zombie_mixamo_mremireh_body_normal.png::CompressedTexture2D::4215882320000163799::1704234951::1704234956::1::::<><>::
+zombie_mixamo_mremireh_body__diffuse.png::CompressedTexture2D::4373456963344605031::1704234953::1704234956::1::::<><>::
 zombie_mixamo_mremireh_shoe_diffuse.png::CompressedTexture2D::1495676445759510569::1704234955::1704234956::1::::<><>::
 zombie_mixamo_mremireh_shoe_normal.png::CompressedTexture2D::8170582223267052643::1704234955::1704235717::1::::<><>::
-zombie_mixamo_Image_3.png::CompressedTexture2D::8096171242963575905::1704234955::1704234955::1::::<><>::
-zombie_mixamo_mremireh_body__diffuse.png::CompressedTexture2D::4373456963344605031::1704234953::1704234956::1::::<><>::
-zombie_mixamo_mremireh_body_normal.png::CompressedTexture2D::4215882320000163799::1704234951::1704234956::1::::<><>::
-zombie_mixamo_Image.png::CompressedTexture2D::4474521429477406935::1704234951::1704234951::1::::<><>::
-zombie_mixamo.glb::PackedScene::8804901107864806842::1704234827::1704235713::1::::<><>::uid://b3ksgx8ne40dv::::res://assets/Mixamo/zombie_mixamo_mremireh_body__diffuse.png<>uid://b1cg73sisso8n::::res://assets/Mixamo/zombie_mixamo_mremireh_body_normal.png<>uid://vkrtp4euypqn::::res://assets/Mixamo/zombie_mixamo_mremireh_shoe_diffuse.png<>uid://don5kbts3o628::::res://assets/Mixamo/zombie_mixamo_mremireh_shoe_normal.png
 ::res://assets/panorama/::1703372457
 panorama_image.png::CompressedTexture2D::6778868258060571829::1703372457::1703372457::1::::<><>::
 ::res://assets/resources/::1703641127
@@ -3084,18 +3084,19 @@ level_2.gd::GDScript::-1::1703372457::0::1::::<>Node3D<>::
 level_2.tscn::PackedScene::2347473302513341459::1703641888::0::1::::<><>::res://level/level2/level_2.gd<>uid://csqg2v0p2s8yw::::res://player/rogue/rogue_hooded.tscn<>uid://c6vet0uxh8k4r::::res://assets/resources/ground_material.tres<>uid://cchcp636iid71::::res://mob/knight.tscn<>uid://muq1yk7w0c1h::::res://ui/ui.tscn<>uid://ds52ra1i0aaov::::res://transition/transition.tscn<>uid://dxh1exxrby0bd::::res://addons/editor-plugin/fonts/Diablo Heavy.ttf
 ::res://level/level3/::1703372457
 level_3.tscn::PackedScene::8260007237572117946::1703372457::0::1::::<><>::uid://bgon3qk57fki8::::res://dungeon/dungeon.tscn<>uid://mfjjwuf3wno2::::res://player/third_person_player.tscn
-::res://materials/::1704232395
+::res://materials/::1704300810
 floor_material - Copy (2).tres::StandardMaterial3D::4941683408885706279::1698507010::0::1::::<><>::uid://bpn2xpuu8u7ps::::res://assets/textures/Light/texture_09.png
-floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1704232395::0::1::::<><>::
+floor_material - Copy (3).tres::StandardMaterial3D::6095780182570450912::1704300810::0::1::::<><>::
 floor_material - Copy (4).tres::StandardMaterial3D::6326398115674201070::1698507010::0::1::::<><>::uid://bhcqo5inf8ft5::::res://assets/textures/Purple/texture_11.png
 floor_material - Copy.tres::StandardMaterial3D::6506583956968400161::1698507010::0::1::::<><>::uid://c24xbijughc4w::::res://assets/textures/Red/texture_04.png
 floor_material.tres::StandardMaterial3D::324023740436286422::1698509275::0::1::::<><>::uid://crj4j4bysdb1e::::res://assets/textures/Dark/texture_04.png
 wall_material.tres::StandardMaterial3D::2049049828431529787::1698509275::0::1::::<><>::uid://cwajncyw48ps0::::res://assets/textures/Green/texture_11.png
-::res://mob/::1704235398
+::res://mob/::1704301059
 knight.gd::GDScript::-1::1700157016::0::1::::<>CharacterBody3D<>::
 knight.tscn::PackedScene::4927819592732677638::1700157016::0::1::::<><>::uid://c7x1l40dia4qi::::res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Knight_knight_texture.png<>res://mob/knight.gd<>res://mob/mobcollision.gd
 mobcollision.gd::GDScript::-1::1700157016::0::1::::<>Area3D<>::
-zombie.tscn::PackedScene::6670350315065555065::1704235398::0::1::::<><>::uid://dxpfo1wy3rvmg::::res://assets/Mixamo/zombie_mixamo.glb
+zombie.tscn::PackedScene::6670350315065555065::1704300872::0::1::::<><>::uid://b3ksgx8ne40dv::::res://assets/Mixamo/zombie_mixamo_mremireh_body__diffuse.png<>uid://b1cg73sisso8n::::res://assets/Mixamo/zombie_mixamo_mremireh_body_normal.png<>uid://vkrtp4euypqn::::res://assets/Mixamo/zombie_mixamo_mremireh_shoe_diffuse.png<>uid://don5kbts3o628::::res://assets/Mixamo/zombie_mixamo_mremireh_shoe_normal.png
+zombie_collisions.tscn::PackedScene::4000052704863905875::1704301059::0::1::::<><>::
 ::res://player/::1703641889
 camera_rig.tscn::PackedScene::6392152817220939938::1703641889::0::1::::<><>::res://scripts/player/camera_rig.gd<>res://assets/shaders/forground_shader.gdshader
 selection.gd::GDScript::-1::1703612704::0::1::::<>Area3D<>::
