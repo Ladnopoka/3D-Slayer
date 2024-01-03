@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://eqmc5sl0b1n0"]
+[gd_scene load_steps=36 format=3 uid="uid://eqmc5sl0b1n0"]
 
 [ext_resource type="Texture2D" uid="uid://difglsmbfmw81" path="res://Textures/terrain.jpg" id="1_ftcgo"]
 [ext_resource type="Script" path="res://level/cemetery/cemetery.gd" id="1_wubuy"]
@@ -30,10 +30,8 @@
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="28_5fty4"]
 [ext_resource type="Texture2D" uid="uid://i566v0wqsfa" path="res://addons/simplegrasstextured/images/win_pattern.png" id="29_16fhd"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="30_flm77"]
-[ext_resource type="PackedScene" uid="uid://c2bfxvty67cjp" path="res://mob/zombie/zombie.tscn" id="31_x20a6"]
-[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="32_fqeky"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_knoag"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u6wou"]
 render_priority = 0
 shader = ExtResource("27_5i5sr")
 shader_parameter/player_pos = Vector3(1e+06, 1e+06, 1e+06)
@@ -65,7 +63,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_knoag"),
+"material": SubResource("ShaderMaterial_u6wou"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -3804,12 +3802,6 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6, 0, -16)
 [node name="pine27" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9, 0, -12)
 
-[node name="Zombie" parent="Map/NavigationRegion3D" instance=ExtResource("31_x20a6")]
-transform = Transform3D(-1.59188, 0, 0.161023, 0, 1.6, 0, -0.161023, 0, -1.59188, 0, 0, 2.94638)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 10.1846)
 shadow_enabled = true
-
-[node name="Mage" parent="." instance=ExtResource("32_fqeky")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 20.5218)

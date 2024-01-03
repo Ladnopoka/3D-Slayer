@@ -5,9 +5,10 @@ var selection_area = preload("res://player/selection_area.tscn")
 const BARBARIAN = preload("res://player/barbarian/barbarian.tscn")
 const MAGE = preload("res://player/mage/mage.tscn")
 const ROGUE_HOODED = preload("res://player/rogue/rogue_hooded.tscn")
+const ZOMBIE = preload("res://mob/zombie/zombie.tscn")
 
 var spawn_position = Vector3(0, 0.1, 10.5) # Update this to your desired spawn location
-
+var zombie_spawn_position = Vector3(-15.919, 0.1, -3.455)
 # Called when the node enters the scene tree for the first time. 
 func _ready():
 	print("cemetery instantiated: ", GameManager.player_name)
@@ -15,6 +16,7 @@ func _ready():
 
 func load_character(character_name: String):
 	var char_instance
+	var zombie_instance
 	
 	match character_name:
 		"Mage":
@@ -40,11 +42,10 @@ func load_character(character_name: String):
 	if char_instance:
 		add_child(char_instance)
 		char_instance.global_transform.origin = spawn_position
-		# Or use: character_instance.transform.origin = spawn_position
-		# If you need to adjust rotation or scale, you can do that here as well.
-	
-	#for character in $Characters.get_children():
-		#var selection_area_ins = selection_area.instantiate()
-		#character.add_child(selection_area_ins)
-		#print("Mage's children: ", character.get_children())
 		
+	zombie_instance = ZOMBIE.instantiate()
+	zombie_instance.set_player(char_instance)
+	add_child(zombie_instance)
+	zombie_instance.global_transform.origin = zombie_spawn_position
+
+	
