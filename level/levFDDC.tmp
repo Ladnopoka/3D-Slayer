@@ -1,0 +1,334 @@
+[gd_scene load_steps=16 format=3 uid="uid://ckf3ipmwutb47"]
+
+[ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue/rogue_hooded.tscn" id="2_aurua"]
+[ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
+[ext_resource type="PackedScene" uid="uid://dawwbik4sgvk7" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
+[ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
+[ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
+[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="7_kerki"]
+[ext_resource type="FontFile" uid="uid://dxh1exxrby0bd" path="res://addons/editor-plugin/fonts/Diablo Heavy.ttf" id="8_f8y4w"]
+[ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
+[ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
+
+[sub_resource type="GDScript" id="GDScript_1jutb"]
+script/source = "extends Node3D
+
+@onready var transition = $Transition
+@onready var score_max = $Score
+@onready var deaths = $Deaths
+@onready var mage = $Characters/Mage
+#@onready var base_camera = $base_camera
+#@onready var barbarian = $Characters/Barbarian
+@onready var base_camera = $Characters/Barbarian/camera_rig/base_camera
+
+var mage_script = load(\"res://player/mage/mage.gd\")
+
+var current_selected_character_name
+var selection_area = preload(\"res://player/selection_area.tscn\")
+
+# Called when the node enters the scene tree for the first time. 
+func _ready():
+	transition.get_node(\"AnimationPlayer\").play(\"fade_in\")
+	score_max.text = \"Best Score: \" + str(Global.best_score)
+	deaths.text = \"Deaths: \" + str(Global.deaths)
+	
+	#mage.set_script(null)
+	#barbarian.set_script(null)
+	#mage.set_script(mage_script)
+	
+	for character in $Characters.get_children():
+		var selection_area_ins = selection_area.instantiate()
+		character.add_child(selection_area_ins)
+		#print(character.get_children())
+		
+#func _physics_process(delta):
+	#character_selected(\"current_selected_character_name\")
+		
+func character_selected(character_name):
+	current_selected_character_name = character_name
+	$CharacterLabel.text = current_selected_character_name
+	print(current_selected_character_name)
+	for character in $Characters.get_children():
+		print(\"Get child count of \", $CharacterLabel.text, \" and it has \", character.get_child_count()-1, \" Childs\")
+		print(character.get_children())
+		character.get_node(\"SelectionPath\").hide_selection()
+		#character.get_child(character.get_child_count()-1).hide_selection()
+
+
+func _on_button_pressed():
+	if current_selected_character_name:
+		transition.get_node(\"AnimationPlayer\").play(\"fade_out\")
+		await get_tree().create_timer(1).timeout
+		GameManager.set_player_character(current_selected_character_name)
+		get_tree().change_scene_to_file(\"res://level/level2/level_2.tscn\")
+		
+		
+func _input(event):
+	if event is InputEventMouseButton:
+		_handle_mouse_click(event.position)
+
+func _handle_mouse_click(mouse_position):
+	# Convert the 2D mouse position to a 3D ray
+	var ray_origin = base_camera.project_ray_origin(mouse_position)
+	var ray_end = ray_origin + base_camera.project_ray_normal(mouse_position) * 1000
+	
+	var ray_query = PhysicsRayQueryParameters3D.new()
+	ray_query.from = ray_origin
+	ray_query.to = ray_end
+
+	var space_state = get_world_3d().direct_space_state
+	var result = space_state.intersect_ray(ray_query)
+	
+	if result.size() > 0:
+		print(\"Raycast hit: \", result.collider.name, \" at position: \", result.position)
+		_process_click(result.collider, result.position)
+	else:
+		print(\"Raycast did not hit any object.\")
+		
+func _process_click(collider, position):
+	if collider.name == \"Mage\":
+		# Handle click on Mage character
+		print(\"Mage character was clicked.\")
+		print(\"Collider: \", collider)
+		collider.get_node(\"SelectionArea\").get_node(\"Selection\").visible = false
+		collider.set_script(null)
+		
+		# Implement character-specific logic here
+	elif \"Floor\" in collider.name:
+		# Handle click on the floor
+		print(\"Floor was clicked at position: \", position)
+		# Implement movement logic or other floor-related actions here
+	else:
+		# Handle click on other objects
+		print(collider.name, \" was clicked.\")
+		# Implement other object-specific logic here
+		
+"
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_eycid"]
+panorama = ExtResource("9_xeoei")
+
+[sub_resource type="Sky" id="Sky_oax1t"]
+sky_material = SubResource("PanoramaSkyMaterial_eycid")
+
+[sub_resource type="Environment" id="Environment_wbfuk"]
+background_mode = 2
+sky = SubResource("Sky_oax1t")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o8vr5"]
+material = ExtResource("4_vr2du")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lknay"]
+size = Vector3(2, 2, 0)
+
+[node name="Level1" type="Node3D"]
+script = SubResource("GDScript_1jutb")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wbfuk")
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Rogue_Hooded" parent="Characters" instance=ExtResource("2_aurua")]
+transform = Transform3D(-0.688582, 0, -0.725158, 0, 1, 0, 0.725158, 0, -0.688582, -6.52419, 0, 4.73239)
+script = null
+
+[node name="Skeleton3D" parent="Characters/Rogue_Hooded/Rig" index="0"]
+bones/0/position = Vector3(0, 0.000123598, 0)
+bones/0/rotation = Quaternion(-1.06819e-11, -0.000310285, -1.85015e-11, 1)
+bones/1/position = Vector3(4.2898e-19, 0.368339, 1.95114e-19)
+bones/1/rotation = Quaternion(0.00111666, 0.0426621, 8.89809e-05, 0.999089)
+bones/2/rotation = Quaternion(0.00132745, -0.000485269, 1.62544e-05, 0.999999)
+bones/3/rotation = Quaternion(0.000504927, 8.24529e-05, -9.37185e-05, 1)
+bones/4/rotation = Quaternion(-0.550575, -0.0569022, -0.64026, 0.532631)
+bones/5/rotation = Quaternion(4.38408e-08, -3.32593e-08, -0.512315, 0.858797)
+bones/7/rotation = Quaternion(-0.320564, -0.33885, 0.147931, 0.872087)
+bones/8/rotation = Quaternion(0.00121243, 0.00121243, -0.702642, 0.711542)
+bones/10/rotation = Quaternion(-0.609349, 0.0774389, 0.615586, 0.493712)
+bones/11/rotation = Quaternion(5.26756e-08, 5.54071e-08, 0.53482, 0.844966)
+bones/13/rotation = Quaternion(-0.319686, 0.314822, -0.230115, 0.863559)
+bones/14/rotation = Quaternion(0.00374369, 0.00440952, 0.703204, 0.710964)
+bones/19/rotation = Quaternion(-5.8061e-11, -0.0313416, -1.88013e-09, 0.999509)
+bones/21/position = Vector3(0.170945, 0.113587, 8.44422e-05)
+bones/21/rotation = Quaternion(0.989292, 0.0830876, 0.0777161, 0.0914259)
+bones/22/rotation = Quaternion(0.407951, 5.67087e-08, -2.77217e-07, 0.913004)
+bones/23/rotation = Quaternion(-0.623325, -0.198151, 0.0770554, 0.752505)
+bones/24/rotation = Quaternion(-3.04818e-08, 0.920355, -0.391084, 6.94855e-08)
+bones/25/position = Vector3(-0.170945, 0.113587, -8.44143e-05)
+bones/25/rotation = Quaternion(0.9911, -0.0331005, 0.0294572, 0.12553)
+bones/26/rotation = Quaternion(0.442129, -5.8956e-08, 3.10727e-07, 0.896951)
+bones/27/rotation = Quaternion(-0.648878, 0.111078, -0.0236691, 0.752369)
+bones/28/rotation = Quaternion(3.04047e-08, 0.920249, -0.391334, -6.94774e-08)
+bones/29/position = Vector3(0.170945, 0.293195, 0.576697)
+bones/29/rotation = Quaternion(0.707107, -2.29302e-07, -4.60552e-08, 0.707107)
+bones/30/position = Vector3(0.20182, 0.0264811, 0.201225)
+bones/30/rotation = Quaternion(-0.700807, -7.1076e-08, -6.99795e-08, 0.713351)
+bones/31/rotation = Quaternion(9.54712e-09, 1.75913e-09, 0.986047, -0.166466)
+bones/32/rotation = Quaternion(-1.04035e-07, 0.391084, 0.920355, -2.9526e-08)
+bones/34/rotation = Quaternion(1, 8.81481e-12, 1.94707e-07, 1.10423e-12)
+bones/36/position = Vector3(-0.170945, 0.293195, 0.576697)
+bones/36/rotation = Quaternion(0.707107, -3.82385e-08, 1.45009e-07, 0.707107)
+bones/37/position = Vector3(-0.170945, 0.0258215, 0.245931)
+bones/37/rotation = Quaternion(-0.706961, -7.05429e-08, -7.05139e-08, 0.707253)
+bones/38/rotation = Quaternion(-5.76853e-09, 6.36406e-10, 0.994929, 0.100582)
+bones/39/rotation = Quaternion(-1.04035e-07, 0.391084, 0.920355, -2.95261e-08)
+bones/41/rotation = Quaternion(1, 1.01193e-11, 1.9471e-07, -4.41691e-12)
+bones/44/position = Vector3(0.520841, 0.771728, -0.0576374)
+bones/44/rotation = Quaternion(0.794627, -1.11759e-07, 0.607098, -5.96046e-08)
+bones/46/position = Vector3(-0.510844, 0.771728, 0.0597369)
+bones/46/rotation = Quaternion(-0.758253, -1.52737e-07, 0.651961, -1.11759e-08)
+
+[node name="Knife_Offhand" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="0"]
+transform = Transform3D(0.000347555, 0.260525, 0.965466, 0.99982, -0.0183585, 0.00459424, 0.0189217, 0.965292, -0.260485, 0.507227, 0.620463, -0.0159507)
+
+[node name="1H_Crossbow" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="1"]
+transform = Transform3D(0.986513, -0.163661, 0.00228573, -0.000456544, -0.0167154, -0.999859, 0.163677, 0.986374, -0.0165648, -0.489245, 0.729418, 0.0983059)
+
+[node name="2H_Crossbow" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="2"]
+transform = Transform3D(0.986513, -0.163661, 0.00228573, -0.000456544, -0.0167154, -0.999859, 0.163677, 0.986374, -0.0165648, -0.489245, 0.729418, 0.0983059)
+
+[node name="Knife" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="3"]
+transform = Transform3D(-0.00228572, -0.163661, 0.986513, 0.999859, -0.0167152, -0.00045652, 0.0165647, 0.986374, 0.163676, -0.490701, 0.624631, 0.10679)
+
+[node name="Throwable" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="4"]
+transform = Transform3D(-0.00228571, -0.163661, 0.986513, 0.999859, -0.0167152, -0.000456536, 0.0165647, 0.986374, 0.163676, -0.520201, 0.621618, 0.28458)
+
+[node name="Rogue_Cape" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="5"]
+transform = Transform3D(0.99648, 0.000378439, 0.0838254, 0.000115593, 0.999983, -0.00588866, -0.0838261, 0.00587762, 0.996463, 0.000116103, 1.17866, 0.00369208)
+
+[node name="Mage" parent="Characters" instance=ExtResource("7_kerki")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 11)
+
+[node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
+
+[node name="Skeleton3D" parent="Characters/Barbarian/Rig" index="0"]
+bones/0/rotation = Quaternion(-3.02843e-11, -0.00087991, -5.24538e-11, 1)
+bones/1/position = Vector3(2.98558e-18, 0.368569, -2.98558e-18)
+bones/1/rotation = Quaternion(0.000826594, 0.0427949, 0.000152491, 0.999084)
+bones/2/rotation = Quaternion(0.000222219, 0.000956214, -0.000249621, 1)
+bones/3/rotation = Quaternion(8.94585e-05, 0.000255045, -0.000155922, 1)
+bones/4/rotation = Quaternion(-0.550577, -0.0568969, -0.640239, 0.532655)
+bones/5/rotation = Quaternion(4.40481e-08, -3.31691e-08, -0.512354, 0.858775)
+bones/7/rotation = Quaternion(-0.32057, -0.338856, 0.147948, 0.87208)
+bones/8/rotation = Quaternion(0.00121142, 0.00121142, -0.702646, 0.711538)
+bones/11/rotation = Quaternion(-0.60935, 0.077434, 0.615568, 0.493734)
+bones/12/rotation = Quaternion(5.28607e-08, 5.57706e-08, 0.534857, 0.844943)
+bones/14/rotation = Quaternion(-0.319692, 0.314831, -0.230132, 0.86355)
+bones/15/rotation = Quaternion(0.00374058, 0.00440585, 0.703208, 0.710961)
+bones/19/rotation = Quaternion(-5.80608e-11, -0.0313417, -1.88012e-09, 0.999509)
+bones/22/position = Vector3(0.170945, 0.113587, 0.000867393)
+bones/22/rotation = Quaternion(0.989163, 0.0833285, 0.0778419, 0.092488)
+bones/23/rotation = Quaternion(0.398568, 5.70705e-08, -2.7062e-07, 0.917139)
+bones/24/rotation = Quaternion(-0.62407, -0.19873, 0.0773643, 0.751703)
+bones/25/rotation = Quaternion(-3.04909e-08, 0.920355, -0.391084, 6.94662e-08)
+bones/26/rotation = Quaternion(0.991297, -0.0332802, 0.0294947, 0.12391)
+bones/27/rotation = Quaternion(0.446205, -5.8812e-08, 3.13469e-07, 0.894931)
+bones/28/rotation = Quaternion(-0.646999, 0.11153, -0.0233715, 0.753928)
+bones/29/rotation = Quaternion(3.04838e-08, 0.920355, -0.391084, -6.95034e-08)
+bones/30/rotation = Quaternion(0.707107, -2.29302e-07, -4.60552e-08, 0.707107)
+bones/31/position = Vector3(0.201911, 0.0288081, 0.208595)
+bones/31/rotation = Quaternion(-0.70988, -7.02244e-08, -7.08296e-08, 0.704323)
+bones/32/rotation = Quaternion(9.57494e-09, 1.76426e-09, 0.985965, -0.166951)
+bones/33/rotation = Quaternion(-1.04035e-07, 0.391084, 0.920355, -2.9526e-08)
+bones/35/rotation = Quaternion(1, 2.49966e-11, 1.94707e-07, 3.13061e-12)
+bones/37/rotation = Quaternion(0.707107, -3.82385e-08, 1.45009e-07, 0.707107)
+bones/38/position = Vector3(-0.170945, 0.0269657, 0.23953)
+bones/38/rotation = Quaternion(-0.701026, -7.11598e-08, -6.98705e-08, 0.713136)
+bones/39/rotation = Quaternion(-5.78545e-09, 6.38272e-10, 0.994899, 0.100876)
+bones/40/rotation = Quaternion(-1.04035e-07, 0.391084, 0.920355, -2.95261e-08)
+bones/42/rotation = Quaternion(1, 2.86885e-11, 1.94716e-07, -1.25224e-11)
+bones/44/rotation = Quaternion(-0.707107, -7.27951e-08, -7.27951e-08, 0.707107)
+bones/45/position = Vector3(0.520841, 0.771741, -0.0576374)
+bones/45/rotation = Quaternion(0.794627, -1.2666e-07, 0.607098, -5.96046e-08)
+bones/46/rotation = Quaternion(-0.707107, -7.27951e-08, -7.27951e-08, 0.707107)
+bones/47/position = Vector3(-0.510844, 0.771741, 0.0597369)
+bones/47/rotation = Quaternion(-0.758253, -1.82539e-07, 0.651961, -1.11759e-08)
+
+[node name="1H_Axe_Offhand" parent="Characters/Barbarian/Rig/Skeleton3D" index="0"]
+transform = Transform3D(0.00062357, 0.262794, 0.964851, 0.999883, -0.0148775, 0.00340681, 0.0152503, 0.964736, -0.262772, 0.515909, 0.619909, 0.0149913)
+
+[node name="Barbarian_Round_Shield" parent="Characters/Barbarian/Rig/Skeleton3D" index="1"]
+transform = Transform3D(0.000623358, 0.262794, 0.964851, 0.999883, -0.01488, 0.00340771, 0.015253, 0.964736, -0.262772, 0.662032, 0.620682, -0.0416935)
+
+[node name="1H_Axe" parent="Characters/Barbarian/Rig/Skeleton3D" index="2"]
+transform = Transform3D(-0.00201281, -0.161331, 0.986898, 0.999914, -0.0130565, -9.60304e-05, 0.0129014, 0.986813, 0.161343, -0.495859, 0.624827, 0.140802)
+
+[node name="2H_Axe" parent="Characters/Barbarian/Rig/Skeleton3D" index="3"]
+transform = Transform3D(-0.00201281, -0.161331, 0.986898, 0.999914, -0.0130565, -9.60304e-05, 0.0129014, 0.986813, 0.161343, -0.495859, 0.624827, 0.140802)
+
+[node name="Mug" parent="Characters/Barbarian/Rig/Skeleton3D" index="4"]
+transform = Transform3D(-0.00201281, -0.161331, 0.986898, 0.999914, -0.0130565, -9.60304e-05, 0.0129014, 0.986813, 0.161343, -0.487357, 0.324926, 0.0886236)
+
+[node name="Barbarian_Hat" parent="Characters/Barbarian/Rig/Skeleton3D" index="5"]
+transform = Transform3D(0.999722, 0.000624279, 0.0235829, -0.000571836, 0.999997, -0.00223043, -0.0235842, 0.00221632, 0.999719, 0.000218198, 1.17878, 0.00163278)
+
+[node name="Barbarian_Cape" parent="Characters/Barbarian/Rig/Skeleton3D" index="6"]
+transform = Transform3D(0.99628, 0.000624275, 0.0861717, -0.000430967, 0.999997, -0.00226187, -0.0861729, 0.00221632, 0.996278, 0.000216289, 1.17878, 0.00163294)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
+shadow_enabled = true
+
+[node name="Floor2" type="StaticBody3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Floor2"]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
+visible = false
+mesh = SubResource("PlaneMesh_o8vr5")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2"]
+transform = Transform3D(30, 0, 0, 0, -1.31134e-06, 30, 0, -30, -1.31134e-06, 0, 0, 0)
+shape = SubResource("BoxShape3D_lknay")
+
+[node name="Portal" parent="." instance=ExtResource("10_wksuf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21744, 0, 16.0452)
+
+[node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Deaths" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 237.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("8_f8y4w")
+theme_override_font_sizes/font_size = 50
+text = "Deaths:"
+
+[node name="Score" type="Label" parent="."]
+offset_right = 526.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("8_f8y4w")
+theme_override_font_sizes/font_size = 50
+text = "Max Score: 10/10"
+
+[node name="Transition" parent="." instance=ExtResource("5_1qjme")]
+position = Vector2(1, 0)
+
+[node name="CharacterLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -79.0
+offset_right = 114.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Select"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+
+[editable path="Characters/Rogue_Hooded"]
+[editable path="Characters/Barbarian"]
+[editable path="Characters/Barbarian/camera_rig"]

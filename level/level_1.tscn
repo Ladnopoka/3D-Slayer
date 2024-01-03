@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=17 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue/rogue_hooded.tscn" id="2_aurua"]
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="7_kerki"]
 [ext_resource type="FontFile" uid="uid://dxh1exxrby0bd" path="res://addons/editor-plugin/fonts/Diablo Heavy.ttf" id="8_f8y4w"]
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
+[ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_twf6y"]
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
 
 [sub_resource type="GDScript" id="GDScript_1jutb"]
@@ -17,8 +18,18 @@ script/source = "extends Node3D
 @onready var score_max = $Score
 @onready var deaths = $Deaths
 
+@onready var mage = $Characters/Mage
+@onready var barbarian = $Characters/Barbarian
+@onready var rogue_hooded = $Characters/Rogue_Hooded
+@onready var character_label = $CharacterLabel
+
+var mage_script = load(\"res://player/mage/mage.gd\")
+var barbarian_script = load(\"res://player/barbarian/barbarian.gd\")
+var rogue_hooded_script = load(\"res://player/rogue/rogue_hooded.gd\")
+
 var current_selected_character_name
 var selection_area = preload(\"res://player/selection_area.tscn\")
+var camera_rig = preload(\"res://player/camera_rig.tscn\")
 
 # Called when the node enters the scene tree for the first time. 
 func _ready():
@@ -26,17 +37,29 @@ func _ready():
 	score_max.text = \"Best Score: \" + str(Global.best_score)
 	deaths.text = \"Deaths: \" + str(Global.deaths)
 	
+	#mage.set_script(null)
+	barbarian.set_script(null)
+	rogue_hooded.set_script(null)
+	
 	for character in $Characters.get_children():
 		var selection_area_ins = selection_area.instantiate()
+		var camera_rig_ins = camera_rig.instantiate()
 		character.add_child(selection_area_ins)
+		#character.add_child(camera_rig_ins)
+		print(character.get_children())
 		
-func character_selected(character_name):
-	current_selected_character_name = character_name
-	$CharacterLabel.text = current_selected_character_name
-	for character in $Characters.get_children():
-		print(\"Get child count of \", $CharacterLabel.text, \" and it has \", character.get_child_count()-1, \" Childs\")
-		character.get_node(\"SelectionPath\").hide_selection()
-		#character.get_child(character.get_child_count()-1).hide_selection()
+#func _physics_process(delta):
+	#character_selected(\"current_selected_character_name\")
+		
+#func character_selected(character_name):
+	#current_selected_character_name = character_name
+	#$CharacterLabel.text = current_selected_character_name
+	#print(current_selected_character_name)
+	#for character in $Characters.get_children():
+		#print(\"Get child count of \", $CharacterLabel.text, \" and it has \", character.get_child_count()-1, \" Childs\")
+		#print(character.get_children())
+		#character.get_node(\"SelectionPath\").hide_selection()
+		##character.get_child(character.get_child_count()-1).hide_selection()
 
 
 func _on_button_pressed():
@@ -44,7 +67,45 @@ func _on_button_pressed():
 		transition.get_node(\"AnimationPlayer\").play(\"fade_out\")
 		await get_tree().create_timer(1).timeout
 		GameManager.set_player_character(current_selected_character_name)
-		get_tree().change_scene_to_file(\"res://level/level2/level_2.tscn\")
+		#get_tree().change_scene_to_file(\"res://level/level2/level_2.tscn\")
+		get_tree().change_scene_to_file(\"res://level/cemetery/cemetery.tscn\")
+		
+func _input(event):
+	if event is InputEventMouseButton:
+		_handle_mouse_click(event.position)
+
+func _handle_mouse_click(mouse_position):
+	# Convert the 2D mouse position to a 3D ray
+	var ray_origin = mage.get_node(\"camera_rig\").get_node(\"base_camera\").project_ray_origin(mouse_position)
+	var ray_end = ray_origin + mage.get_node(\"camera_rig\").get_node(\"base_camera\").project_ray_normal(mouse_position) * 1000
+	
+	var ray_query = PhysicsRayQueryParameters3D.new()
+	ray_query.from = ray_origin
+	ray_query.to = ray_end
+
+	var space_state = get_world_3d().direct_space_state
+	var result = space_state.intersect_ray(ray_query)
+	
+	if result.size() > 0:
+		print(\"Raycast hit: \", result.collider.name, \" at position: \", result.position)
+		_process_click(result.collider, result.position)
+	else:
+		print(\"Raycast did not hit any object.\")
+		
+func _process_click(collider, position):
+	# Hide the selection circle for all characters
+	for character in $Characters.get_children():
+		if character.has_node(\"SelectionArea/Selection\"):
+			character.get_node(\"SelectionArea/Selection\").visible = false
+
+	# Show the selection circle only for the clicked character
+	if collider.has_node(\"SelectionArea/Selection\"):
+		collider.get_node(\"SelectionArea/Selection\").visible = true
+		character_label.text = collider.name
+		current_selected_character_name = collider.name
+
+	print(collider.name, \" character was clicked.\")
+		
 "
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_eycid"]
@@ -71,105 +132,14 @@ environment = SubResource("Environment_wbfuk")
 
 [node name="Characters" type="Node" parent="."]
 
-[node name="Mage" parent="Characters" instance=ExtResource("7_kerki")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 11)
+[node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38612, 0, 3.96283)
 
 [node name="Rogue_Hooded" parent="Characters" instance=ExtResource("2_aurua")]
-transform = Transform3D(-0.688582, 0, -0.725158, 0, 1, 0, 0.725158, 0, -0.688582, -6.52419, 0, 4.73239)
-script = null
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.17024, 0, 5.59123)
 
-[node name="Skeleton3D" parent="Characters/Rogue_Hooded/Rig" index="0"]
-bones/0/position = Vector3(0, 0.000435251, 0)
-bones/1/position = Vector3(6.97087e-26, 0.39166, -2.9238e-19)
-bones/2/rotation = Quaternion(0.00131955, 0.0012918, -0.000126461, 0.999998)
-bones/3/rotation = Quaternion(0.000495533, 0.000111111, 5.36949e-05, 1)
-bones/4/rotation = Quaternion(-0.55962, -0.0606446, -0.643542, 0.518654)
-bones/5/rotation = Quaternion(2.16888e-08, -4.24013e-08, -0.495853, 0.868407)
-bones/7/rotation = Quaternion(-0.321161, -0.32613, 0.146216, 0.876993)
-bones/8/rotation = Quaternion(7.07736e-05, 7.0775e-05, -0.706847, 0.707366)
-bones/10/rotation = Quaternion(-0.617957, 0.0805224, 0.617666, 0.479724)
-bones/11/rotation = Quaternion(2.97116e-08, 4.74985e-08, 0.519021, 0.854761)
-bones/13/rotation = Quaternion(-0.319396, 0.301148, -0.227724, 0.869159)
-bones/14/rotation = Quaternion(0.000198774, 0.000234123, 0.706901, 0.707313)
-bones/21/position = Vector3(0.170945, 0.113587, 0.000880715)
-bones/21/rotation = Quaternion(0.993729, 0.0828861, 0.0726331, 0.0189024)
-bones/22/rotation = Quaternion(0.205264, 6.43566e-08, -1.34721e-07, 0.978707)
-bones/23/rotation = Quaternion(-0.523285, -0.206771, 0.044962, 0.825468)
-bones/24/rotation = Quaternion(-3.04778e-08, 0.920355, -0.391084, 6.94829e-08)
-bones/25/position = Vector3(-0.170945, 0.113587, -0.000880688)
-bones/25/rotation = Quaternion(0.997185, -0.0292932, 0.0310918, 0.0616165)
-bones/26/rotation = Quaternion(0.28649, -6.37754e-08, 1.99096e-07, 0.958083)
-bones/27/rotation = Quaternion(-0.559374, 0.113201, -0.00879519, 0.821102)
-bones/28/rotation = Quaternion(3.04812e-08, 0.920355, -0.391084, -6.94907e-08)
-bones/29/position = Vector3(0.170945, 0.292543, 0.576045)
-bones/30/position = Vector3(0.20182, 0.0285449, 0.208948)
-bones/30/rotation = Quaternion(-0.709658, -7.02394e-08, -7.08145e-08, 0.704546)
-bones/36/position = Vector3(-0.170945, 0.292543, 0.576045)
-bones/37/position = Vector3(-0.170945, 0.0271868, 0.237805)
-bones/37/rotation = Quaternion(-0.699101, -7.13841e-08, -6.96582e-08, 0.715023)
-bones/44/position = Vector3(0.520841, 0.787586, -0.0576373)
-bones/46/position = Vector3(-0.510844, 0.787585, 0.0597369)
-
-[node name="Knife_Offhand" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="0"]
-transform = Transform3D(0.000449921, 0.264717, 0.964325, 0.999976, -0.00671976, 0.00137849, 0.00684518, 0.964302, -0.264714, 0.507776, 0.637177, -0.0187508)
-
-[node name="1H_Crossbow" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="1"]
-transform = Transform3D(0.988766, -0.149464, -0.00029555, -0.00126915, -0.00641691, -0.999978, 0.149459, 0.988746, -0.00653483, -0.489356, 0.74583, 0.0980111)
-
-[node name="2H_Crossbow" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="2"]
-transform = Transform3D(0.988766, -0.149464, -0.00029555, -0.00126915, -0.00641691, -0.999978, 0.149459, 0.988746, -0.00653483, -0.489356, 0.74583, 0.0980111)
-
-[node name="Knife" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="3"]
-transform = Transform3D(0.000295554, -0.149464, 0.988766, 0.999978, -0.00641677, -0.00126913, 0.00653468, 0.988746, 0.149459, -0.490935, 0.641137, 0.107569)
-
-[node name="Throwable" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="4"]
-transform = Transform3D(0.00029557, -0.149464, 0.988766, 0.999978, -0.00641675, -0.00126914, 0.00653467, 0.988746, 0.149459, -0.517876, 0.639981, 0.285787)
-
-[node name="Rogue_Cape" parent="Characters/Rogue_Hooded/Rig/Skeleton3D" index="5"]
-transform = Transform3D(0.996171, 0.000374374, 0.087423, 0.000136527, 0.999983, -0.00583797, -0.0874236, 0.00582755, 0.996154, 0.00022301, 1.2023, 0.00365588)
-
-[node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
-transform = Transform3D(0.957637, 0, -0.287979, 0, 1, 0, 0.287979, 0, 0.957637, 0.549507, 0, -0.252919)
-
-[node name="Skeleton3D" parent="Characters/Barbarian/Rig" index="0"]
-bones/1/position = Vector3(1.05307e-18, 0.391707, -1.05307e-18)
-bones/4/rotation = Quaternion(-0.55962, -0.0606446, -0.643542, 0.518654)
-bones/5/rotation = Quaternion(2.16888e-08, -4.24013e-08, -0.495853, 0.868407)
-bones/7/rotation = Quaternion(-0.321161, -0.32613, 0.146216, 0.876993)
-bones/8/rotation = Quaternion(7.07736e-05, 7.0775e-05, -0.706847, 0.707366)
-bones/11/rotation = Quaternion(-0.617957, 0.0805224, 0.617666, 0.479724)
-bones/12/rotation = Quaternion(2.97116e-08, 4.74985e-08, 0.519021, 0.854761)
-bones/14/rotation = Quaternion(-0.319396, 0.301148, -0.227724, 0.869159)
-bones/15/rotation = Quaternion(0.000198774, 0.000234123, 0.706901, 0.707313)
-bones/22/rotation = Quaternion(0.993716, 0.0829341, 0.0725757, 0.019556)
-bones/23/rotation = Quaternion(0.204056, 6.4386e-08, -1.33876e-07, 0.978959)
-bones/24/rotation = Quaternion(-0.522986, -0.206789, 0.0448849, 0.825657)
-bones/26/rotation = Quaternion(0.99719, -0.0292955, 0.03109, 0.0615445)
-bones/27/rotation = Quaternion(0.28619, -6.37704e-08, 1.98882e-07, 0.958173)
-bones/28/rotation = Quaternion(-0.559031, 0.113205, -0.00874755, 0.821336)
-bones/45/position = Vector3(0.520841, 0.787586, -0.0576373)
-bones/47/position = Vector3(-0.510844, 0.787585, 0.0597369)
-
-[node name="1H_Axe_Offhand" parent="Characters/Barbarian/Rig/Skeleton3D" index="0"]
-transform = Transform3D(0.000450584, 0.265041, 0.964236, 0.999976, -0.00671464, 0.00137865, 0.00684011, 0.964213, -0.265038, 0.516612, 0.637115, 0.0132099)
-
-[node name="Barbarian_Round_Shield" parent="Characters/Barbarian/Rig/Skeleton3D" index="1"]
-transform = Transform3D(0.000450379, 0.265041, 0.964236, 0.999976, -0.00671716, 0.00137955, 0.00684278, 0.964213, -0.265038, 0.662603, 0.63744, -0.0438196)
-
-[node name="1H_Axe" parent="Characters/Barbarian/Rig/Skeleton3D" index="2"]
-transform = Transform3D(0.000295954, -0.149131, 0.988817, 0.999978, -0.00641218, -0.00126659, 0.0065297, 0.988796, 0.149126, -0.495859, 0.641085, 0.140685)
-
-[node name="2H_Axe" parent="Characters/Barbarian/Rig/Skeleton3D" index="3"]
-transform = Transform3D(0.000295954, -0.149131, 0.988817, 0.999978, -0.00641218, -0.00126659, 0.0065297, 0.988796, 0.149126, -0.495859, 0.641085, 0.140685)
-
-[node name="Mug" parent="Characters/Barbarian/Rig/Skeleton3D" index="4"]
-transform = Transform3D(0.000295954, -0.149131, 0.988817, 0.999978, -0.00641218, -0.00126659, 0.0065297, 0.988796, 0.149126, -0.488649, 0.340839, 0.0903249)
-
-[node name="Barbarian_Hat" parent="Characters/Barbarian/Rig/Skeleton3D" index="5"]
-transform = Transform3D(0.999683, 0.000374566, 0.0251748, -0.00022786, 0.999983, -0.00583013, -0.0251765, 0.00582254, 0.999666, 0.000232892, 1.20246, 0.00365241)
-
-[node name="Barbarian_Cape" parent="Characters/Barbarian/Rig/Skeleton3D" index="6"]
-transform = Transform3D(0.996142, 0.000374563, 0.087758, 0.000137864, 0.999983, -0.00583295, -0.0877587, 0.00582254, 0.996125, 0.000230984, 1.20246, 0.00365258)
+[node name="Mage" parent="Characters" instance=ExtResource("7_kerki")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 11)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
@@ -216,9 +186,11 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+offset_right = 129.0
+offset_bottom = 94.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("10_twf6y")
+theme_override_font_sizes/font_size = 70
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 7
@@ -234,6 +206,3 @@ grow_vertical = 0
 text = "Select"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-
-[editable path="Characters/Rogue_Hooded"]
-[editable path="Characters/Barbarian"]

@@ -17,10 +17,14 @@ var velocity_var = Vector3.ZERO
 @onready var anim_player = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
-@onready var camera_rig = $camera_rig
+#@onready var camera_rig = $camera_rig
 @onready var transition = $Transition
 @onready var ray_cast_3d = $Rig/RayCast3D
+@onready var base_camera = $camera_rig/base_camera
 
+var camera_rig = preload("res://player/camera_rig.tscn")
+var camera_rig_ins
+#var main_camera = camera_rig.get_node("base_camera")
 
 #signal
 signal player_hit
@@ -63,6 +67,7 @@ func _ready():
 	GameManager.set_player(self)
 	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
 	current_hp = hp
+	camera_rig_ins = camera_rig.instantiate()
 	
 func _physics_process(delta):
 	if !is_dead:
@@ -119,11 +124,10 @@ func movement_and_attacking(delta):
 	
 	#anim_tree.set("parameters/conditions/run", walking)
 		
-
 func attack():
 	# Always update orientation, regardless of cooldown
 	update_orientation()
-	print("Mage is attacking")
+	#print("Mage is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
 
 func shoot_projectile():
@@ -137,10 +141,16 @@ func update_orientation():
 	var space_state = get_world_3d().direct_space_state
 	mouse_position = get_viewport().get_mouse_position()
 
-	rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position)
-	rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000
+	#rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position)
+	#rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000
+	
+	#rayOrigin = camera_rig_ins.get_node("camera_rig").get_node("base_camera").project_ray_origin(mouse_position)
+	#rayEnd = rayOrigin + camera_rig_ins.get_node("camera_rig").get_node("base_camera").project_ray_normal(mouse_position) * 2000
+	
+	var ray_origin = base_camera.project_ray_origin(mouse_position)
+	var ray_end = ray_origin + base_camera.project_ray_normal(mouse_position) * 1000
 
-	var query = PhysicsRayQueryParameters3D.create(rayOrigin, rayEnd); 
+	var query = PhysicsRayQueryParameters3D.create(ray_origin, ray_end); 
 	var intersection = space_state.intersect_ray(query)
 
 	if intersection.size() > 0:
@@ -151,17 +161,6 @@ func update_orientation():
 			direction_to_pos.y = 0
 			var look_at_pos = model.global_position + -direction_to_pos
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
-
-#func shoot_arrow():
-#	# The logic related to shooting an arrow goes here
-#	anim_state.travel(attacks[3])
-#
-#	arrow_instance = arrow.instantiate()
-#	arrow_instance.position = crossbow.global_position
-#	arrow_instance.transform.basis = crossbow.global_transform.basis
-#	arrow_instance.rotate(Vector3(0, 1, 0), deg_to_rad(180))
-#
-#	get_parent().add_child(arrow_instance)
 	
 func hit(dir):
 	emit_signal("player_hit")

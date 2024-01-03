@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ca4ftxp881pc7"
+path="res://.godot/imported/urn.obj-6b1f9509f88c83534a01c0083ddb857c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/urn.obj-6b1f9509f88c83534a01c0083ddb857c.mesh"]
+
+source_file="res://assets/cemetery/Models/OBJ format/urn.obj"
+dest_files=["res://.godot/imported/urn.obj-6b1f9509f88c83534a01c0083ddb857c.mesh", "res://.godot/imported/urn.obj-6b1f9509f88c83534a01c0083ddb857c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

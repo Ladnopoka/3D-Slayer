@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dt67eqsk0a7px"
+path="res://.godot/imported/column-large.obj-c1723b81f19ef9339979d955a43dd5ae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/column-large.obj-c1723b81f19ef9339979d955a43dd5ae.mesh"]
+
+source_file="res://assets/cemetery/Models/OBJ format/column-large.obj"
+dest_files=["res://.godot/imported/column-large.obj-c1723b81f19ef9339979d955a43dd5ae.mesh", "res://.godot/imported/column-large.obj-c1723b81f19ef9339979d955a43dd5ae.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

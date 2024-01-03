@@ -17,7 +17,7 @@ var random_number
 func _ready():
 	randomize()
 	random_number = randi() % 2 + 1
-	player = $"../../Rogue_Hooded"
+	player = $"../../../ThirdPersonPlayer"
 	state_machine = animation_tree.get("parameters/playback")
 	
 func _process(delta):
@@ -34,8 +34,8 @@ func _process(delta):
 			look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	
 	#conditions
-	animation_tree.set("parameters/conditions/attack", _target_in_range())
-	animation_tree.set("parameters/conditions/run", !_target_in_range())
+	#animation_tree.set("parameters/conditions/attack", _target_in_range())
+	#animation_tree.set("parameters/conditions/run", !_target_in_range())
 	
 	move_and_slide()
 

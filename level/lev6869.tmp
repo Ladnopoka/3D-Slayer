@@ -1,0 +1,214 @@
+[gd_scene load_steps=16 format=3 uid="uid://ckf3ipmwutb47"]
+
+[ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue/rogue_hooded.tscn" id="2_aurua"]
+[ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
+[ext_resource type="PackedScene" uid="uid://dawwbik4sgvk7" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
+[ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
+[ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
+[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="7_kerki"]
+[ext_resource type="FontFile" uid="uid://dxh1exxrby0bd" path="res://addons/editor-plugin/fonts/Diablo Heavy.ttf" id="8_f8y4w"]
+[ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
+[ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
+
+[sub_resource type="GDScript" id="GDScript_1jutb"]
+script/source = "extends Node3D
+
+@onready var transition = $Transition
+@onready var score_max = $Score
+@onready var deaths = $Deaths
+
+@onready var mage = $Characters/Mage
+@onready var barbarian = $Characters/Barbarian
+@onready var rogue_hooded = $Characters/Rogue_Hooded
+
+var mage_script = load(\"res://player/mage/mage.gd\")
+var barbarian_script = load(\"res://player/barbarian/barbarian.gd\")
+var rogue_hooded_script = load(\"res://player/rogue/rogue_hooded.gd\")
+
+var current_selected_character_name
+var selection_area = preload(\"res://player/selection_area.tscn\")
+var camera_rig = preload(\"res://player/camera_rig.tscn\")
+
+# Called when the node enters the scene tree for the first time. 
+func _ready():
+	transition.get_node(\"AnimationPlayer\").play(\"fade_in\")
+	score_max.text = \"Best Score: \" + str(Global.best_score)
+	deaths.text = \"Deaths: \" + str(Global.deaths)
+	
+	#mage.set_script(null)
+	barbarian.set_script(null)
+	rogue_hooded.set_script(null)
+	
+	for character in $Characters.get_children():
+		var selection_area_ins = selection_area.instantiate()
+		var camera_rig_ins = camera_rig.instantiate()
+		character.add_child(selection_area_ins)
+		#character.add_child(camera_rig_ins)
+		print(character.get_children())
+		
+#func _physics_process(delta):
+	#character_selected(\"current_selected_character_name\")
+		
+func character_selected(character_name):
+	current_selected_character_name = character_name
+	$CharacterLabel.text = current_selected_character_name
+	print(current_selected_character_name)
+	for character in $Characters.get_children():
+		print(\"Get child count of \", $CharacterLabel.text, \" and it has \", character.get_child_count()-1, \" Childs\")
+		print(character.get_children())
+		character.get_node(\"SelectionPath\").hide_selection()
+		#character.get_child(character.get_child_count()-1).hide_selection()
+
+
+func _on_button_pressed():
+	if current_selected_character_name:
+		transition.get_node(\"AnimationPlayer\").play(\"fade_out\")
+		await get_tree().create_timer(1).timeout
+		GameManager.set_player_character(current_selected_character_name)
+		get_tree().change_scene_to_file(\"res://level/level2/level_2.tscn\")
+		
+		
+func _input(event):
+	if event is InputEventMouseButton:
+		_handle_mouse_click(event.position)
+
+func _handle_mouse_click(mouse_position):
+	# Convert the 2D mouse position to a 3D ray
+	var ray_origin = mage.get_node(\"camera_rig\").get_node(\"base_camera\").project_ray_origin(mouse_position)
+	var ray_end = ray_origin + mage.get_node(\"camera_rig\").get_node(\"base_camera\").project_ray_normal(mouse_position) * 1000
+	
+	var ray_query = PhysicsRayQueryParameters3D.new()
+	ray_query.from = ray_origin
+	ray_query.to = ray_end
+
+	var space_state = get_world_3d().direct_space_state
+	var result = space_state.intersect_ray(ray_query)
+	
+	if result.size() > 0:
+		print(\"Raycast hit: \", result.collider.name, \" at position: \", result.position)
+		_process_click(result.collider, result.position)
+	else:
+		print(\"Raycast did not hit any object.\")
+		
+func _process_click(collider, position):
+	if collider.name == \"Mage\":
+		# Handle click on Mage character
+		print(\"Mage character was clicked.\")
+		print(\"Collider: \", collider)
+		collider.get_node(\"SelectionArea\").get_node(\"Selection\").visible = false
+		#collider.set_script(null)
+		#$Characters.move_child(mage, $Characters.get_child_count()-1)
+		#barbarian.set_script(null)
+		#$Characters.move_child(mage, $Characters.get_child_count()-1)
+		# Implement character-specific logic here
+	elif \"Floor\" in collider.name:
+		# Handle click on the floor
+		print(\"Floor was clicked at position: \", position)
+		# Implement movement logic or other floor-related actions here
+	elif collider.name == \"Barbarian\":
+		print(\"Barbarian character was clicked.\")
+		$Characters.move_child(mage, $Characters.get_child_count()-1)
+		barbarian.set_script(barbarian_script)
+	else:
+		# Handle click on other objects
+		print(collider.name, \" was clicked.\")
+		# Implement other object-specific logic here
+		
+"
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_eycid"]
+panorama = ExtResource("9_xeoei")
+
+[sub_resource type="Sky" id="Sky_oax1t"]
+sky_material = SubResource("PanoramaSkyMaterial_eycid")
+
+[sub_resource type="Environment" id="Environment_wbfuk"]
+background_mode = 2
+sky = SubResource("Sky_oax1t")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o8vr5"]
+material = ExtResource("4_vr2du")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lknay"]
+size = Vector3(2, 2, 0)
+
+[node name="Level1" type="Node3D"]
+script = SubResource("GDScript_1jutb")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wbfuk")
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38612, 0, 3.96283)
+
+[node name="Rogue_Hooded" parent="Characters" instance=ExtResource("2_aurua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.17024, 0, 5.59123)
+
+[node name="Mage" parent="Characters" instance=ExtResource("7_kerki")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 11)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
+shadow_enabled = true
+
+[node name="Floor2" type="StaticBody3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Floor2"]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
+visible = false
+mesh = SubResource("PlaneMesh_o8vr5")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2"]
+transform = Transform3D(30, 0, 0, 0, -1.31134e-06, 30, 0, -30, -1.31134e-06, 0, 0, 0)
+shape = SubResource("BoxShape3D_lknay")
+
+[node name="Portal" parent="." instance=ExtResource("10_wksuf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21744, 0, 16.0452)
+
+[node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Deaths" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 237.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("8_f8y4w")
+theme_override_font_sizes/font_size = 50
+text = "Deaths:"
+
+[node name="Score" type="Label" parent="."]
+offset_right = 526.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("8_f8y4w")
+theme_override_font_sizes/font_size = 50
+text = "Max Score: 10/10"
+
+[node name="Transition" parent="." instance=ExtResource("5_1qjme")]
+position = Vector2(1, 0)
+
+[node name="CharacterLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -79.0
+offset_right = 114.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Select"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

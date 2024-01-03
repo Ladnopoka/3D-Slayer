@@ -18,4 +18,3 @@ func _process(delta):
 func resize():
 	background_viewport.size = DisplayServer.window_get_size()
 	foreground_viewport.size = DisplayServer.window_get_size()
-	

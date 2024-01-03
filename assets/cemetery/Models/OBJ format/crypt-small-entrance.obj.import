@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://be2goig82a7nm"
+path="res://.godot/imported/crypt-small-entrance.obj-fa91ad70359d6bedb38b43cc602001c0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/crypt-small-entrance.obj-fa91ad70359d6bedb38b43cc602001c0.mesh"]
+
+source_file="res://assets/cemetery/Models/OBJ format/crypt-small-entrance.obj"
+dest_files=["res://.godot/imported/crypt-small-entrance.obj-fa91ad70359d6bedb38b43cc602001c0.mesh", "res://.godot/imported/crypt-small-entrance.obj-fa91ad70359d6bedb38b43cc602001c0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
