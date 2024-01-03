@@ -3802,6 +3802,38 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6, 0, -16)
 [node name="pine27" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9, 0, -12)
 
+[node name="Spawns" type="Node3D" parent="Map"]
+
+[node name="Spawn1" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3348, 0, -2.84468)
+
+[node name="Spawn2" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3348, 0, -6.85671)
+
+[node name="Spawn3" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3348, 0, -15.0401)
+
+[node name="Spawn4" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6688, 0, -14.9371)
+
+[node name="Spawn5" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6688, 0, -2.82713)
+
+[node name="Spawn6" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.0896, 0, -10.892)
+
+[node name="Spawn7" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.0896, 0, -3.04659)
+
+[node name="Spawn8" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.3024, 0, -2.74658)
+
+[node name="Spawn9" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.3024, 0, -10.8215)
+
+[node name="Spawn10" type="Node3D" parent="Map/Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.3024, 0, -14.9234)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 10.1846)
 shadow_enabled = true
@@ -3819,3 +3851,9 @@ offset_top = -76.0
 offset_right = 587.0
 offset_bottom = 321.0
 color = Color(1, 0, 0, 0.235294)
+
+[node name="ZombieSpawnTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]
