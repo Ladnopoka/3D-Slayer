@@ -17,14 +17,12 @@ var velocity_var = Vector3.ZERO
 @onready var anim_player = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
-#@onready var camera_rig = $camera_rig
 @onready var transition = $Transition
 @onready var ray_cast_3d = $Rig/RayCast3D
 @onready var base_camera = $camera_rig/base_camera
 
 var camera_rig = preload("res://player/camera_rig.tscn")
 var camera_rig_ins
-#var main_camera = camera_rig.get_node("base_camera")
 
 #signal
 signal player_hit
@@ -46,12 +44,6 @@ var jumping = false
 var walking = false
 var idling = false
 var target_angle
-#var attacks = [
-#	"2H_Ranged_Aiming",
-#	"2H_Ranged_Reload",
-#	"2H_Ranged_Shoot",
-#	"2H_Ranged_Shooting"
-#]
 var rayOrigin
 var rayEnd
 var mouse_position
@@ -87,16 +79,11 @@ func movement_and_attacking(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
-
 	var model_rotation = model.rotation.y
+	
 	if direction.length() > 0.01:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-
-		#target_angle = atan2(direction.x, direction.z)
-		#model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
-		#model.rotation.y = model_rotation
 		
 		# Set the blend position in the IWR blend space
 		var vl = velocity * model.transform.basis
@@ -121,13 +108,10 @@ func movement_and_attacking(delta):
 		attack()
 	elif Input.is_action_just_released("primary_action"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)
-	
-	#anim_tree.set("parameters/conditions/run", walking)
-		
+
 func attack():
 	# Always update orientation, regardless of cooldown
 	update_orientation()
-	#print("Mage is attacking")
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
 
 func shoot_projectile():
@@ -141,12 +125,6 @@ func update_orientation():
 	var space_state = get_world_3d().direct_space_state
 	mouse_position = get_viewport().get_mouse_position()
 
-	#rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position)
-	#rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000
-	
-	#rayOrigin = camera_rig_ins.get_node("camera_rig").get_node("base_camera").project_ray_origin(mouse_position)
-	#rayEnd = rayOrigin + camera_rig_ins.get_node("camera_rig").get_node("base_camera").project_ray_normal(mouse_position) * 2000
-	
 	var ray_origin = base_camera.project_ray_origin(mouse_position)
 	var ray_end = ray_origin + base_camera.project_ray_normal(mouse_position) * 1000
 
@@ -175,7 +153,6 @@ func hit(dir):
 func die():
 	is_dead = true
 	print("inside die")
-	#anim_tree.set("parameters/conditions/die", true)
 	await get_tree().create_timer(4.0).timeout
 	transition.get_node("AnimationPlayer").play("fade_out")
 	await get_tree().create_timer(1.0).timeout

@@ -31,24 +31,12 @@ var hp_regen = 0.1
 var current_hp
 var is_dead = false
 
-##projectile skills
-#var mage_skill = load("res://player/mage/mage_skill.tscn")
-#var mage_skill_instance
-#var mage_skill_cooldown_time = 0.5 # Cooldown time in seconds, e.g., 1 arrow per second.
-#var mage_skill_last_shot_time = -0.5 # A variable to keep track of the last shot time.
-
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
 var walking = false
 var idling = false
 var target_angle
-#var attacks = [
-#	"2H_Ranged_Aiming",
-#	"2H_Ranged_Reload",
-#	"2H_Ranged_Shoot",
-#	"2H_Ranged_Shooting"
-#]
 var rayOrigin
 var rayEnd
 var mouse_position
@@ -84,16 +72,11 @@ func movement_and_attacking(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
 
 	var model_rotation = model.rotation.y
 	if direction.length() > 0.01:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-
-		#target_angle = atan2(direction.x, direction.z)
-		#model_rotation = lerp_angle(model_rotation, target_angle, ROTATION_SPEED * delta)
-		#model.rotation.y = model_rotation
 		
 		# Set the blend position in the IWR blend space
 		var vl = velocity * model.transform.basis
@@ -122,23 +105,12 @@ func movement_and_attacking(delta):
 	elif Input.is_action_just_released("primary_action"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)
 		anim_tree.set("parameters/AttackStateMachine/conditions/stop_attack", true)
-	
-	#anim_tree.set("parameters/conditions/run", walking)
-		
 
 func attack():
 	# Always update orientation, regardless of cooldown
 	update_orientation()
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
 	anim_tree.set("parameters/AttackStateMachine/conditions/stop_attack", false)
-	#shoot_arrow()
-	#anim_tree.set("pa")
-
-#func shoot_projectile():
-	#mage_skill_instance = mage_skill.instantiate()
-	#mage_skill_instance.position = ray_cast_3d.global_position
-	#mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
-	#get_parent().add_child(mage_skill_instance)
 
 func update_orientation():
 	# All the logic related to updating the character's orientation goes here
@@ -169,30 +141,29 @@ func shoot_arrow():
 
 	get_parent().add_child(arrow_inst)
 	
-#func hit(dir):
-	#emit_signal("player_hit")
-	#velocity += dir * HIT_STAGGER
-	#
-	#current_hp -= 1
-	#if current_hp <= 0:
-		#die()
-		#current_hp = 0 # so life can't be -1
-	#print(current_hp)
-	#
-#func die():
-	#is_dead = true
-	#print("inside die")
-	##anim_tree.set("parameters/conditions/die", true)
-	#await get_tree().create_timer(4.0).timeout
-	#transition.get_node("AnimationPlayer").play("fade_out")
-	#await get_tree().create_timer(1.0).timeout
-	#get_tree().change_scene_to_file("res://level/level_1.tscn")
-	#if Global.score > Global.best_score:
-		#Global.best_score = Global.score
-		#Global.score = 0
-		#Global.deaths += 1
+func hit(dir):
+	emit_signal("player_hit")
+	velocity += dir * HIT_STAGGER
 	
-#func HPRegen(delta):
-	#current_hp += hp_regen * delta
-	#if current_hp > hp:
-		#current_hp = hp
+	current_hp -= 1
+	if current_hp <= 0:
+		die()
+		current_hp = 0 # so life can't be -1
+	print(current_hp)
+	
+func die():
+	is_dead = true
+	print("inside die")
+	await get_tree().create_timer(4.0).timeout
+	transition.get_node("AnimationPlayer").play("fade_out")
+	await get_tree().create_timer(1.0).timeout
+	get_tree().change_scene_to_file("res://level/level_1.tscn")
+	if Global.score > Global.best_score:
+		Global.best_score = Global.score
+		Global.score = 0
+		Global.deaths += 1
+	
+func HPRegen(delta):
+	current_hp += hp_regen * delta
+	if current_hp > hp:
+		current_hp = hp

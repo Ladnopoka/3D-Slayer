@@ -13,3 +13,5 @@ res://mob/zombie/zombie_2.tscn
 res://level/cemetery/cemetery.gd
 res://mob/zombie/zombie.gd
 res://player/mage/mage.gd
+res://player/barbarian/barbarian.gd
+res://player/rogue/rogue_hooded.gd
