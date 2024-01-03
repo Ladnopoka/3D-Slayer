@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="28_5fty4"]
 [ext_resource type="Texture2D" uid="uid://i566v0wqsfa" path="res://addons/simplegrasstextured/images/win_pattern.png" id="29_16fhd"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="30_flm77"]
-[ext_resource type="PackedScene" uid="uid://c2bfxvty67cjp" path="res://mob/zombie.tscn" id="31_x20a6"]
+[ext_resource type="PackedScene" uid="uid://c2bfxvty67cjp" path="res://mob/zombie/zombie.tscn" id="31_x20a6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qo5wi"]
 render_priority = 0

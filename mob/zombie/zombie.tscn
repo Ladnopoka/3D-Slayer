@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://c2bfxvty67cjp"]
+[gd_scene load_steps=24 format=3 uid="uid://c2bfxvty67cjp"]
 
 [ext_resource type="Texture2D" uid="uid://b3ksgx8ne40dv" path="res://assets/Mixamo/zombie_mixamo_mremireh_body__diffuse.png" id="1_erhi7"]
+[ext_resource type="Script" path="res://mob/zombie/zombie.gd" id="1_m26y1"]
 [ext_resource type="Texture2D" uid="uid://b1cg73sisso8n" path="res://assets/Mixamo/zombie_mixamo_mremireh_body_normal.png" id="2_fy8q8"]
 [ext_resource type="Texture2D" uid="uid://vkrtp4euypqn" path="res://assets/Mixamo/zombie_mixamo_mremireh_shoe_diffuse.png" id="3_ojsc8"]
 [ext_resource type="Texture2D" uid="uid://don5kbts3o628" path="res://assets/Mixamo/zombie_mixamo_mremireh_shoe_normal.png" id="4_62l48"]
@@ -2294,6 +2295,7 @@ _data = {
 height = 1.8
 
 [node name="Zombie" type="CharacterBody3D"]
+script = ExtResource("1_m26y1")
 
 [node name="Armature" type="Node3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
