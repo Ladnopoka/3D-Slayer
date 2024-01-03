@@ -124,7 +124,6 @@ func movement_and_attacking(delta):
 	
 	#anim_tree.set("parameters/conditions/run", walking)
 		
-
 func attack():
 	# Always update orientation, regardless of cooldown
 	update_orientation()
@@ -162,22 +161,6 @@ func update_orientation():
 			direction_to_pos.y = 0
 			var look_at_pos = model.global_position + -direction_to_pos
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
-			
-			
-			
-			
-			
-
-#func shoot_arrow():
-#	# The logic related to shooting an arrow goes here
-#	anim_state.travel(attacks[3])
-#
-#	arrow_instance = arrow.instantiate()
-#	arrow_instance.position = crossbow.global_position
-#	arrow_instance.transform.basis = crossbow.global_transform.basis
-#	arrow_instance.rotate(Vector3(0, 1, 0), deg_to_rad(180))
-#
-#	get_parent().add_child(arrow_instance)
 	
 func hit(dir):
 	emit_signal("player_hit")

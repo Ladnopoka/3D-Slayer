@@ -7,6 +7,8 @@ const MAGE = preload("res://player/mage/mage.tscn")
 const ROGUE_HOODED = preload("res://player/rogue/rogue_hooded.tscn")
 const ZOMBIE = preload("res://mob/zombie/zombie.tscn")
 
+@onready var color_rect = $Control/ColorRect
+
 var spawn_position = Vector3(0, 0.1, 10.5) # Update this to your desired spawn location
 var zombie_spawn_position = Vector3(-15.919, 0.1, -3.455)
 # Called when the node enters the scene tree for the first time. 
@@ -48,4 +50,7 @@ func load_character(character_name: String):
 	add_child(zombie_instance)
 	zombie_instance.global_transform.origin = zombie_spawn_position
 
-	
+func _on_player_player_hit():
+	color_rect.visible = true
+	await get_tree().create_timer(0.2).timeout
+	color_rect.visible = false
