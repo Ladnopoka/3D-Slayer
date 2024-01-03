@@ -1,3 +1,4 @@
+NavigationRegion3D
 CollisionShape3D
 CharacterBody3D
 SimpleGrassTextured
@@ -12,4 +13,3 @@ MeshInstance3D
 SubViewport
 VBoxContainer
 SubViewportContainer
-Button
