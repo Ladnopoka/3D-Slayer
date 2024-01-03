@@ -1,3 +1,4 @@
+NavigationAgent3D
 NavigationRegion3D
 CollisionShape3D
 CharacterBody3D
@@ -12,4 +13,3 @@ RayCast3D
 MeshInstance3D
 SubViewport
 VBoxContainer
-SubViewportContainer

@@ -17,7 +17,7 @@ var random_number
 func _ready():
 	randomize()
 	random_number = randi() % 2 + 1
-	player = $"../../Rogue_Hooded"
+	player = $"../../../ThirdPersonPlayer"
 	state_machine = animation_tree.get("parameters/playback")
 	
 func _process(delta):
