@@ -4,6 +4,7 @@ res://addons/editor-plugin/plugin.gd
 res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
+res://level/cemetery/cemetery.gd
 res://player/barbarian/barbarian.tscn
 res://player/rogue/rogue_hooded.tscn
 res://level/cemetery/cemetery.tscn

@@ -30,6 +30,7 @@ func _process(delta):
 	look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	
 	#Conditions
+	animation_tree.set("parameters/conditions/attack", _target_in_range())
 	animation_tree.set("parameters/conditions/run", !_target_in_range())
 	
 	move_and_slide()
@@ -39,7 +40,6 @@ func set_player(player_node):
 	player = player_node
 	
 func _target_in_range():
-	animation_tree.set("parameters/conditions/attack", _target_in_range())
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
 	
 func _hit_finished():

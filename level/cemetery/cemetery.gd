@@ -59,7 +59,6 @@ func _get_random_child(parent_node):
 	var random_id = randi() % parent_node.get_child_count()
 	return parent_node.get_child(random_id)
 
-
 func _on_zombie_spawn_timer_timeout():
 	var spawn_point = _get_random_child(spawns).global_position
 	zombie_instance = ZOMBIE.instantiate()
