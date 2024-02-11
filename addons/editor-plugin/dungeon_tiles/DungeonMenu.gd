@@ -31,7 +31,6 @@ func visualize_border():
 			grid_map.set_cell_item(Vector3i(border_size, 0, pos1), 0)
 			grid_map.set_cell_item(Vector3i(-1, 0, pos1), 0)
 	
-	
 func generate():
 	room_tiles.clear()
 	room_positions.clear()
@@ -40,9 +39,8 @@ func generate():
 		generate_room(room_recursion)
 	print(room_positions)
 	
-	
 func generate_room(rec: int):
-	if !rec>0:
+	if !rec > 0:
 		return
 	# get random width and heights
 	var width : int = (randi() % (room_size_maximum - room_size_minimum)) + room_size_minimum
@@ -53,8 +51,8 @@ func generate_room(rec: int):
 	start_pos.x = randi() % (border_size - width + 1) # need to have +1 there at the end because of how the mod operator works in godot
 	start_pos.z = randi() % (border_size - height + 1)
 	
-	for r in range(-room_margin, height+room_margin): 
-		for c in range(-room_margin, width+room_margin):	
+	for r in range(-room_margin, height + room_margin): 
+		for c in range(-room_margin, width + room_margin):	
 			var pos : Vector3i = start_pos + Vector3i(c, 0 , r)
 			if grid_map.get_cell_item(pos) == 0:
 				generate_room(rec-1)
@@ -74,4 +72,3 @@ func generate_room(rec: int):
 	var avg_z : float = start_pos.z + (float(height)/2)
 	var pos : Vector3 = Vector3(avg_x, 0, avg_z)
 	room_positions.append(pos)
-	
