@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://i566v0wqsfa" path="res://addons/simplegrasstextured/images/win_pattern.png" id="29_16fhd"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="30_flm77"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lbdoh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5i2l0"]
 render_priority = 0
 shader = ExtResource("27_5i5sr")
 shader_parameter/player_pos = Vector3(1e+06, 1e+06, 1e+06)
@@ -63,7 +63,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_lbdoh"),
+"material": SubResource("ShaderMaterial_5i2l0"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -2385,1227 +2385,2031 @@ size = Vector3(150, 0.002, 150)
 
 [node name="crypt" parent="Map/NavigationRegion3D/LargeDecorations" instance=ExtResource("2_deqkk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="CryptWall" type="Node3D" parent="Map/NavigationRegion3D/LargeDecorations"]
 
 [node name="brickWallEnd" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("3_yrt82")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 6, 0, 2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWallEnd2" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("3_yrt82")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 4.35833, 0, -6.86198)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 6, 0, 0)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall2" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 6, 0, -2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall9" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4, 0, -8.48071)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall10" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, -8.48071)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall11" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -8.48071)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall12" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, -8.48071)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall13" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, -8.48071)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall3" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 6, 0, -4)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall4" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 6, 0, -6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWallEnd3" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("3_yrt82")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, -4, 0, 2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWallEnd4" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("3_yrt82")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -5.64167, 0, -6.86198)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall5" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, -4, 0, 0)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall6" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, -4, 0, -2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall7" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, -4, 0, -4)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall8" parent="Map/NavigationRegion3D/LargeDecorations/CryptWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, -4, 0, -6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="GravesRight" type="Node3D" parent="Map/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="grave" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, 3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave2" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -1)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave3" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave4" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave5" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -13)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave6" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -17)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -12.8655)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound2" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -16.8655)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound3" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -4.86553)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound4" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, 3.13447)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneBroken" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("8_osex8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -8.90293)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneBroken2" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("8_osex8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -0.902927)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave7" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, 3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave8" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -1)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave9" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave10" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave11" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -13)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave12" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -17)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound5" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -8.86553)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound6" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -12.8655)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound7" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -0.865532)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound8" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, 3.13447)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneBroken3" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("8_osex8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -16.9029)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneBroken4" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("8_osex8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -4.90293)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9, 0, -4.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence3" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9, 0, -2.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence5" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence6" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence8" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence16" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.8696, 0, -19.1537)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence17" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.8696, 0, -19.1537)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence21" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8696, 0, -19.1537)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence22" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8696, 0, -19.1537)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence23" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8696, 0, -19.1537)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence9" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence10" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence7" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 26.9, -0.9, 4.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence4" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9, 0, -0.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence11" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0086, 0, -7.27922)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence13" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0086, 0, -13.2792)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence14" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0086, 0, -15.2792)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence12" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0086, 0, -9.27922)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8, 0, -5.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar3" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8704, 0, 4.51201)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar4" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.9096, 0, 4.51201)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar5" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8792, 0, -18.2417)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar6" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8585, 0, -18.2417)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence2" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.7498, 0, -9.2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence24" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.7498, 0, -11.2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence25" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.7498, 0, -13.2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence26" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.7498, 0, -15.2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence27" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.7498, 0, -17.2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar2" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 19.8406, 0, -8.2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9, 0, 1.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged3" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 0.643509, 0.765438, 0, -0.765438, 0.643509, 24.9, -0.722512, 3.9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged4" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged6" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0098, 0, 3.52548)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged10" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0098, 0, -5.27452)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged11" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0098, 0, -11.2745)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged12" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 38.2098, 0.9, -17.2745)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged13" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 36.8794, -0.9, -18.2282)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged7" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(0.5, 0.866025, -3.78552e-08, 0, -4.37114e-08, -1, -0.866025, 0.5, -2.18557e-08, 39.0098, 0.9, 1.42548)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged8" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 40.0098, 0.9, -0.574523)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged9" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-0.766044, 0.642788, -2.80971e-08, 0, -4.37114e-08, -1, -0.642788, -0.766044, 3.34849e-08, 40.5098, 0.9, -2.57452)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged5" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged14" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8707, 0, -19.1532)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged15" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 28.8707, 0.9, -18.4532)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged16" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, -2.98023e-08, -1, 0, 1, -2.98023e-08, 26.8707, 0.9, -18.2532)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged2" parent="Map/NavigationRegion3D/GravesRight" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 19.8, 0.9, 3.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="GravesLeft" type="Node3D" parent="Map/NavigationRegion3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, -13.7)
 
 [node name="grave" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, 3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave2" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -1)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave3" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave4" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave5" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -13)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave6" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -17)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -12.8655)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound2" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -16.8655)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound3" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -4.86553)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound4" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, 3.13447)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneBroken" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("8_osex8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -8.90293)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneBroken2" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("8_osex8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0, -0.902927)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave7" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, 3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave8" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -1)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave9" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave10" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave11" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -13)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave12" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, 0, -17)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound5" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -8.86553)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound6" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -12.8655)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound7" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -0.865532)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneRound8" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("7_ltaa6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, 3.13447)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneBroken3" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("8_osex8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -16.9029)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneBroken4" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("8_osex8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -4.90293)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9, 0, -4.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence3" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9, 0, -2.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence5" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence6" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence8" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence9" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence10" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence7" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 26.9, -0.9, 4.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence4" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9, 0, -0.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence11" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0086, 0, -7.27922)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence13" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0086, 0, -13.2792)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence14" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0086, 0, -15.2792)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence12" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0086, 0, -9.27922)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8, 0, -5.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar3" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8704, 0, 4.51201)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar4" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.9096, 0, 4.51201)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar5" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8792, 0, -18.2417)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar6" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8585, 0, -18.2417)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFence2" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("9_odbw8")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.7498, 0, -9.2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceBar2" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("10_t85kc")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 19.8406, 0, -8.2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.9, 0, 1.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged3" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 0.643509, 0.765438, 0, -0.765438, 0.643509, 24.9, -0.722512, 3.9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged4" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged6" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0098, 0, 3.52548)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged10" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0098, 0, -5.27452)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged11" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.0098, 0, -11.2745)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged12" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 38.2098, 0.9, -17.2745)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged13" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 36.8794, -0.9, -18.2282)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged7" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(0.5, 0.866025, -3.78552e-08, 0, -4.37114e-08, -1, -0.866025, 0.5, -2.18557e-08, 39.0098, 0.9, 1.42548)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged8" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 40.0098, 0.9, -0.574523)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged9" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-0.766044, 0.642788, -2.80971e-08, 0, -4.37114e-08, -1, -0.642788, -0.766044, 3.34849e-08, 40.5098, 0.9, -2.57452)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged5" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9, 0, 3.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged15" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 28.8707, 0.9, -18.4532)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged16" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(1, 0, 0, 0, -2.98023e-08, -1, 0, 1, -2.98023e-08, 26.8707, 0.9, -18.2532)
+collision_layer = 3
+collision_mask = 3
 
 [node name="ironFenceDamaged2" parent="Map/NavigationRegion3D/GravesLeft" instance=ExtResource("11_8uv8g")]
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 19.8, 0.9, 3.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="GravesBack" type="Node3D" parent="Map/NavigationRegion3D"]
 
 [node name="gravestoneCrossLarge" parent="Map/NavigationRegion3D/GravesBack" instance=ExtResource("12_2e6su")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneCross" parent="Map/NavigationRegion3D/GravesBack" instance=ExtResource("13_as7xw")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7, 0, -32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneCross3" parent="Map/NavigationRegion3D/GravesBack" instance=ExtResource("13_as7xw")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 0, -32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneFlat" parent="Map/NavigationRegion3D/GravesBack" instance=ExtResource("14_y52tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -31)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneFlat2" parent="Map/NavigationRegion3D/GravesBack" instance=ExtResource("14_y52tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -30.9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="gravestoneFlat3" parent="Map/NavigationRegion3D/GravesBack" instance=ExtResource("14_y52tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -30.8)
+collision_layer = 3
+collision_mask = 3
 
 [node name="GravesFront" type="Node3D" parent="Map/NavigationRegion3D"]
 
 [node name="crossWood" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 22)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood3" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 28)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood5" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood2" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.9, 22)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood4" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.9, 28)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood6" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.9, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood7" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.9, 22)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood8" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.9, 28)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood9" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.9, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood10" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.9, 22)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood11" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.9, 28)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood12" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.9, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood13" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.9, 22)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood14" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.9, 28)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood15" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.9, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave2" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave3" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave4" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave5" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave6" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave7" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave8" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave9" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave10" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave11" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 0, 32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave12" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1, 0, 32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave13" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave14" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 0, 32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave15" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9, 0, 32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood16" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, -0.9, 22)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood17" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, -0.9, 28)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood18" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, -0.9, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave16" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave17" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave18" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9, 0, 32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood22" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.9, 22)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood23" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.9, 28)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood24" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.9, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave22" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave23" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave24" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9, 0, 32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood25" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.9, 22)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood26" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.9, 28)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood27" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.9, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave25" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave26" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave27" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1, 0, 32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood19" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.9, 22)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood20" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.9, 28)
+collision_layer = 3
+collision_mask = 3
 
 [node name="crossWood21" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("15_egbum")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.9, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave19" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave20" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="grave21" parent="Map/NavigationRegion3D/GravesFront" instance=ExtResource("6_nbdo0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1, 0, 32)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Lightposts" type="Node3D" parent="Map/NavigationRegion3D"]
 
 [node name="lightpostSingle" parent="Map/NavigationRegion3D/Lightposts" instance=ExtResource("16_7t41u")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.8, 0, 2.7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="lightpostSingle3" parent="Map/NavigationRegion3D/Lightposts" instance=ExtResource("16_7t41u")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.6, 0, 3.2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="lightpostSingle4" parent="Map/NavigationRegion3D/Lightposts" instance=ExtResource("16_7t41u")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.6, 0, -16.7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="lightpostSingle7" parent="Map/NavigationRegion3D/Lightposts" instance=ExtResource("16_7t41u")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.6, 0, -20.7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="lightpostSingle8" parent="Map/NavigationRegion3D/Lightposts" instance=ExtResource("16_7t41u")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.4, 0, -20.7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="lightpostSingle5" parent="Map/NavigationRegion3D/Lightposts" instance=ExtResource("16_7t41u")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.4, 0, -16.7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="lightpostSingle6" parent="Map/NavigationRegion3D/Lightposts" instance=ExtResource("16_7t41u")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.4, 0, 3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="lightpostSingle2" parent="Map/NavigationRegion3D/Lightposts" instance=ExtResource("16_7t41u")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.7, 0, 2.7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="OutsideWall" type="Node3D" parent="Map/NavigationRegion3D"]
 
 [node name="brickWall" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 17)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall2" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 15)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall3" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 13)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall4" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 11)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall5" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall6" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall7" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall8" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall9" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 1)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall10" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -1)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall11" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall12" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall13" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall14" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall15" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -11)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall16" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -13)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall17" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -15)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall18" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -17)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall19" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -19)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall20" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -21)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall21" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -23)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall22" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -25)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall23" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -27)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall24" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -29)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall25" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -31)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall26" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -33)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall27" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -35)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall28" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -37)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall29" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -39)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall30" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -41)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall31" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 29)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall32" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 27)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall33" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 25)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall34" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 23)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall35" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 21)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall36" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 19)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall37" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 41)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall38" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 39)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall39" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 37)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall40" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 35)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall41" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 33)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall42" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, 31)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWallEnd" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("3_yrt82")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 45, 0, -43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWallEnd2" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("3_yrt82")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 46.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall88" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 17)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall89" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 15)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall90" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 13)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall91" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 11)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall92" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall93" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall94" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall95" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall96" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 1)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall97" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -1)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall98" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall99" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall100" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall101" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall102" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -11)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall103" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -13)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall104" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -15)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall105" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -17)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall106" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -19)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall107" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -21)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall108" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -23)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall109" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -25)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall110" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -27)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall111" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -29)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall112" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -31)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall113" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -33)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall114" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -35)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall115" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -37)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall116" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -39)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall117" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -41)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall118" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 29)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall119" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 27)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall120" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 25)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall121" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 23)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall122" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 21)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall123" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 19)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall124" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 41)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall125" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 39)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall126" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 37)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall127" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 35)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall128" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 33)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall129" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, 31)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWallEnd3" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("3_yrt82")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -45, 0, -43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWallEnd4" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("3_yrt82")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, -43.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall43" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 44.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall44" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 42.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall45" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 40.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall46" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 38.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall47" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 36.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall48" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 34.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall49" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 32.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall50" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 30.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall51" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 28.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall52" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 26.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall53" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 24.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall54" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 22.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall55" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 20.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall56" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall57" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall58" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall59" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall60" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.6383, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall61" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.63829, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall62" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.63829, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall63" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.63829, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall64" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.63829, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall65" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.63829, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall66" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.36171, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall67" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.36171, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall68" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.36171, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall69" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.36171, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall70" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.36171, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall71" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall72" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall73" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall74" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -17.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall75" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall76" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall77" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -23.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall78" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -25.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall79" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -27.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall80" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -29.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall81" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -31.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall82" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -33.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall83" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall84" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -37.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall85" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -39.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall86" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -41.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall87" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -43.3617, 0, -44.6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall130" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 44.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall131" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 42.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall132" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 40.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall133" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 38.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall134" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 36.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall135" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 34.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall136" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 32.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall137" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 30.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall138" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 28.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall139" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 26.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall140" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 24.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall141" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 22.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall142" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 20.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall143" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall144" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall145" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall146" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall147" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.6383, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall148" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.63829, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall149" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.63829, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall150" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.63829, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall151" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.63829, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall152" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.63829, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall153" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.36171, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall154" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.36171, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall155" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.36171, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall156" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.36171, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall157" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.36171, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall158" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall159" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall160" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall161" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -17.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall162" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall163" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall164" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -23.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall165" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -25.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall166" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -27.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall167" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -29.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall168" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -31.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall169" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -33.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall170" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -35.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall171" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -37.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall172" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -39.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall173" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -41.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="brickWall174" parent="Map/NavigationRegion3D/OutsideWall" instance=ExtResource("4_3lisp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -43.3617, 0, 43)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Decorations" type="Node3D" parent="Map/NavigationRegion3D"]
 
 [node name="bench" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -37, 0, 33)
+collision_layer = 3
+collision_mask = 3
 
 [node name="bench2" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -37, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="bench9" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="bench11" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9)
+collision_layer = 3
+collision_mask = 3
 
 [node name="bench7" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34, 0, 16)
+collision_layer = 3
+collision_mask = 3
 
 [node name="bench8" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34, 0, 23)
+collision_layer = 3
+collision_mask = 3
 
 [node name="bench3" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -27)
+collision_layer = 3
+collision_mask = 3
 
 [node name="bench4" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -27)
+collision_layer = 3
+collision_mask = 3
 
 [node name="bench5" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 3)
+collision_layer = 3
+collision_mask = 3
 
 [node name="bench6" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("19_wdpf5")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -37, 0, -17)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pumpkinCarved" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("20_40e30")]
 transform = Transform3D(-0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, 2, 0.265135, 2)
@@ -3618,159 +4422,261 @@ transform = Transform3D(-0.787846, 0, -0.138919, 0, 0.8, 0, 0.138919, 0, -0.7878
 
 [node name="rocks" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("21_lmuuu")]
 transform = Transform3D(0.208378, 0, 1.18177, 0, 1.2, 0, -1.18177, 0, 0.208378, -28, 0, 42)
+collision_layer = 3
+collision_mask = 3
 
 [node name="rocks2" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("21_lmuuu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 42)
+collision_layer = 3
+collision_mask = 3
 
 [node name="rocks3" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("21_lmuuu")]
 transform = Transform3D(1.03366, 0, -0.376222, 0, 1.1, 0, 0.376222, 0, 1.03366, -29.2, 0, 40.5)
+collision_layer = 3
+collision_mask = 3
 
 [node name="shovelDirt" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("22_wy3vx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked2" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.845723, 0, 0.307818, 0, 0.9, 0, -0.307818, 0, -0.845723, -41, 0, 36)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked3" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.138919, 0, -0.787846, 0, 0.8, 0, 0.787846, 0, -0.138919, -41, 0, 29)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked4" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(0.324919, 0, -0.892708, 0, 0.95, 0, 0.892708, 0, 0.324919, -41, 0, 21)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 38)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine2" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.208378, 0, 1.18177, 0, 1.2, 0, -1.18177, 0, 0.208378, 41, 0, -40)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine3" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.842649, 0, 0.707066, 0, 1.1, 0, -0.707066, 0, 0.842649, 40, 0, -31)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine4" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.845723, 0, 0.307818, 0, 0.9, 0, -0.307818, 0, 0.845723, 41, 0, -25)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine5" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.45, 0, 0.779423, 0, 0.9, 0, -0.779423, 0, 0.45, 33, 0, -30)
+collision_layer = 3
+collision_mask = 3
 
 [node name="trunk" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("25_pof27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -35)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked5" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.191013, 0, 1.08329, 0, 1.1, 0, -1.08329, 0, -0.191013, 31, 0, -38)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked6" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.892708, 0, 0.324919, 0, 0.95, 0, -0.324919, 0, -0.892708, 25, 0, -34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked7" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.68944, 0, 0.578509, 0, 0.9, 0, -0.578509, 0, -0.68944, 21, 0, -39)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked8" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.4, 0, -0.69282, 0, 0.8, 0, 0.69282, 0, -0.4, 18, 0, -33)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked9" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.787846, 0, -0.138919, 0, 0.8, 0, 0.138919, 0, -0.787846, 25, 0, -26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked10" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(0.919253, 0, -0.771345, 0, 1.2, 0, 0.771345, 0, 0.919253, 10, 0, -38)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked11" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(0.55, 0, -0.952628, 0, 1.1, 0, 0.952628, 0, 0.55, 4, 0, -39)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine6" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(-0.842649, 0, -0.707066, 0, 1.1, 0, 0.707066, 0, -0.842649, -3, 0, -37)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked12" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(0.727742, 0, 0.610648, 0, 0.95, 0, -0.610648, 0, 0.727742, -10, 0, -39)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked13" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, -0.984808, -36, 0, -36)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine7" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(-1.08329, 0, -0.191013, 0, 1.1, 0, 0.191013, 0, -1.08329, -37, 0, -29)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked14" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(0.156283, 0, 0.886327, 0, 0.9, 0, -0.886327, 0, 0.156283, -28, 0, -38)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked15" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.147601, 0, 0.837087, 0, 0.85, 0, -0.837087, 0, -0.147601, -29, 0, -31)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine8" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.239414, 0, 0.657785, 0, 0.7, 0, -0.657785, 0, 0.239414, -21, 0, -35)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked16" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("18_sndvp")]
 transform = Transform3D(0.164966, 0, 0.935567, 0, 0.95, 0, -0.935567, 0, 0.164966, 41, 0, 39)
 
 [node name="pine9" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 34)
+collision_layer = 3
+collision_mask = 3
 
 [node name="trunk2" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("25_pof27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 38)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked17" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(0.842649, 0, 0.707066, 0, 1.1, 0, -0.707066, 0, 0.842649, 32, 0, 39)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked18" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(0.34202, 0, -0.939693, 0, 1, 0, 0.939693, 0, 0.34202, 41, 0, 26)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine10" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(-3.93403e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.93403e-08, 35, 0, 29)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine11" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(-3.93403e-08, 0, -0.9, 0, 0.9, 0, 0.9, 0, -3.93403e-08, 39, 0, 20)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked19" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(0.121554, 0, 0.689365, 0, 0.7, 0, -0.689365, 0, 0.121554, 28, 0, 33)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked20" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(-0.75, 0, -6.55671e-08, 0, 0.75, 0, 6.55671e-08, 0, -0.75, 41, 0, 12)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pineCrooked21" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("23_7w5aj")]
 transform = Transform3D(0.459627, 0, 0.385673, 0, 0.6, 0, -0.385673, 0, 0.459627, 36, 0, 10)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine13" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.7, 0, 0)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine14" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.7, 0, -2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine15" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.7, 0, -4)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine16" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.7, 0, -6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine17" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.7, 0, -8)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine19" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.7, 0, 0)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine20" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.7, 0, -2)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine21" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.7, 0, -4)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine22" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.7, 0, -6)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine23" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.7, 0, -8)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine24" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9, 0, -12)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine25" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6, 0, -16)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine26" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6, 0, -16)
+collision_layer = 3
+collision_mask = 3
 
 [node name="pine27" parent="Map/NavigationRegion3D/Decorations" instance=ExtResource("24_lgagw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9, 0, -12)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Spawns" type="Node3D" parent="Map"]
 

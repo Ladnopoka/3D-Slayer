@@ -17,3 +17,7 @@ res://mob/zombie/zombie_2.tscn
 res://blender_stuff/blender_stuff.tscn
 res://level/cemetery/IronFence/IronFence.tscn
 res://player/mage/mage.gd
+res://player/mage/mage_skill.gd
+res://mob/zombie/zombie.gd
+res://mob/zombie/zombie_hit_area.gd
+res://mob/zombie/Area3D.gd
