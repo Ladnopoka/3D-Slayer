@@ -18,7 +18,7 @@ var velocity_var = Vector3.ZERO
 @onready var anim_tree = $AnimationTree
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
 @onready var transition = $Transition
-@onready var ray_cast_3d = $Rig/RayCast3D
+@onready var projectile_shooting_point = $Rig/RayCast3D
 @onready var base_camera = $camera_rig/base_camera
 
 var camera_rig = preload("res://player/camera_rig.tscn")
@@ -116,8 +116,8 @@ func attack():
 
 func shoot_projectile():
 	mage_skill_instance = mage_skill.instantiate()
-	mage_skill_instance.position = ray_cast_3d.global_position
-	mage_skill_instance.transform.basis = ray_cast_3d.global_transform.basis
+	mage_skill_instance.position = projectile_shooting_point.global_position
+	mage_skill_instance.transform.basis = projectile_shooting_point.global_transform.basis
 	get_parent().add_child(mage_skill_instance)
 
 func update_orientation():
