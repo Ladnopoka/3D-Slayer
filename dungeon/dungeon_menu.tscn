@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dj61bixh8n2r4"]
 
-[ext_resource type="Script" path="res://addons/editor-plugin/dungeon_tiles/DungeonMenu.gd" id="1_lrs16"]
+[ext_resource type="Script" path="res://addons/editor-plugin/dungeon/DungeonMenu.gd" id="1_lrs16"]
+
 
 [node name="DungeonMenu" type="Node3D"]
 script = ExtResource("1_lrs16")
