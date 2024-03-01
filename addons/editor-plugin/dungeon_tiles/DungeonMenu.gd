@@ -1,9 +1,9 @@
 @tool
 extends Node3D
-#Reference to pre-defined gridmap
+
 @onready var grid_map : GridMap = $GridMap
-#Export variables are used to definte parameters for what kind of dungeon you want, right in the godot editor.
-@export var start : bool = false : set = set_start #Works as an in-editor button
+
+@export var start : bool = false : set = set_start
 @export var border_size : int = 20 : set = set_border_size
 @export var room_size_minimum : int = 2
 @export var room_size_maximum : int = 4
@@ -14,9 +14,22 @@ extends Node3D
 var room_tiles : Array[PackedVector3Array] = []
 var room_positions : PackedVector3Array
 
-#Start generating when button is pressed in the editor
 func set_start(val:bool):
 	generate() #eventually generate a whole dungeon
+
+func set_border_size(val : int):
+	border_size = val
+	if Engine.is_editor_hint():
+		visualize_border()
+	
+func visualize_border():
+	if grid_map:
+		grid_map.clear() # need to clear every time because the textures stay
+		for pos1 in range(-1, border_size+1):
+			grid_map.set_cell_item(Vector3i(pos1, 0, -1), 0)
+			grid_map.set_cell_item(Vector3i(pos1, 0, border_size), 0)
+			grid_map.set_cell_item(Vector3i(border_size, 0, pos1), 0)
+			grid_map.set_cell_item(Vector3i(-1, 0, pos1), 0)
 	
 func generate():
 	room_tiles.clear()
@@ -25,20 +38,6 @@ func generate():
 	for i in room_number:
 		generate_room(room_recursion)
 	print(room_positions)
-
-func set_border_size(val : int):
-	border_size = val
-	if Engine.is_editor_hint(): #only run when we are in the editor and not game to avoid crashes
-		visualize_border()
-	
-func visualize_border():
-	if grid_map:
-		grid_map.clear() # need to clear every time because the textures stay and overlap
-		for pos1 in range(-1, border_size+1): # Loop to set all 4 borders correctly
-			grid_map.set_cell_item(Vector3i(pos1, 0, -1), 5)
-			grid_map.set_cell_item(Vector3i(pos1, 0, border_size), 5)
-			grid_map.set_cell_item(Vector3i(border_size, 0, pos1), 5)
-			grid_map.set_cell_item(Vector3i(-1, 0, pos1), 5)
 	
 func generate_room(rec: int):
 	if !rec > 0:

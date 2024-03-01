@@ -1,4 +1,3 @@
-MeshInstance3D
 Area3D
 Timer
 Node3D
@@ -13,3 +12,4 @@ CSGBox3D
 GridMap
 GPUParticles3D
 RayCast3D
+MeshInstance3D
