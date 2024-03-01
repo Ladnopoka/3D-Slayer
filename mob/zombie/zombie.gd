@@ -5,6 +5,7 @@ const ATTACK_RANGE = 2.5
 
 var player = null
 var state_machine
+var zombie_hp = 3
 
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
@@ -46,3 +47,8 @@ func _hit_finished():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
 		var dir = global_position.direction_to(player.global_position)
 		player.hit(dir)
+
+func _on_area_3d_zombie_hit(damage):
+	zombie_hp -= damage
+	if zombie_hp <= 0:
+		queue_free()
