@@ -1,5 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://bj2ovq0bkg3hh"]
+[gd_scene load_steps=6 format=3 uid="uid://bj2ovq0bkg3hh"]
 
 [ext_resource type="PackedScene" uid="uid://cs1c54q62868r" path="res://assets/TileMaps/dungeon_tiles.glb" id="1_nfv8i"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_5s2nx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gm0o1"]
+albedo_color = Color(1, 0.0862745, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ippcp"]
+albedo_color = Color(0.372549, 0.266667, 0.129412, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yv07j"]
+albedo_color = Color(1, 0, 1, 1)
+
 [node name="dungeon_tiles" instance=ExtResource("1_nfv8i")]
+
+[node name="TunnelTile" type="MeshInstance3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.08098, 0, 0)
+mesh = SubResource("BoxMesh_5s2nx")
+surface_material_override/0 = SubResource("StandardMaterial3D_gm0o1")
+
+[node name="BorderTile" type="MeshInstance3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.78374, 0, 0)
+mesh = SubResource("BoxMesh_5s2nx")
+surface_material_override/0 = SubResource("StandardMaterial3D_ippcp")
+
+[node name="DoorTile" type="MeshInstance3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.42339, 0, 0)
+mesh = SubResource("BoxMesh_5s2nx")
+surface_material_override/0 = SubResource("StandardMaterial3D_yv07j")
