@@ -1,8 +1,11 @@
-res://addons/editor-plugin/dungeon/dungeon_menu.tscn
+res://player/barbarian/barbarian.tscn
 res://addons/editor-plugin/plugin.gd
-res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tres
+res://addons/editor-plugin/dungeon_tiles/dungeon_tiles_extra.tres
 res://addons/main-screen/main-screen.gd
 res://materials/floor_material - Copy (3).tres
-res://addons/editor-plugin/dungeon_tiles/dungeon_tiles.tscn
-res://addons/editor-plugin/dungeon_tiles/dungeon_tiles_extra.tres
-res://addons/editor-plugin/dungeon/DungeonMenu.gd
+res://mob/knight.tscn
+res://player/rogue/rogue_hooded.tscn
+res://mob/zombie/zombie.tscn
+res://player/mage/mage_skill.tscn
+res://addons/editor-plugin/panel.tscn
+res://addons/editor-plugin/dungeon/dungeon_menu.tscn
