@@ -44,6 +44,7 @@ var target_blend_position = Vector2(0, 0)
 var blend_lerp_speed = 1.0 / CROSSFADE_TIME
 
 var attacking = false
+var is_controlled = false
 
 func _ready():
 	GameManager.set_player(self)
@@ -52,9 +53,10 @@ func _ready():
 	current_hp = hp
 	
 func _physics_process(delta):
-	if !is_dead:
-		HPRegen(delta)
-		movement_and_attacking(delta)
+	if is_controlled:
+		if !is_dead:
+			HPRegen(delta)
+			movement_and_attacking(delta)
 	
 func movement_and_attacking(delta):
 		# Add the gravity.
@@ -155,3 +157,9 @@ func HPRegen(delta):
 	if current_hp > hp:
 		current_hp = hp
 
+func set_controlled(state: bool):
+	is_controlled = state
+	# Optionally, enable/disable the script directly
+	# set_process(state)
+	# set_physics_process(state)
+	# Or if you're using nodes for input handling, you can enable/disable them as needed

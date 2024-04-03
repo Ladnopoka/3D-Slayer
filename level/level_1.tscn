@@ -1,11 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=15 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
 [ext_resource type="PackedScene" uid="uid://dw4mealbcrbin" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
-[ext_resource type="PackedScene" uid="uid://57luam50lff6" path="res://player/rogue/rogue_hooded.tscn" id="4_ojc8u"]
 [ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
-[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="7_kerki"]
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
 [ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_twf6y"]
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
@@ -25,11 +23,14 @@ script/source = "extends Node3D
 
 @onready var blender_stuff = $blender_stuff
 
+const UI = preload(\"res://ui/ui.tscn\")
+
 var mage_script = load(\"res://player/mage/mage.gd\")
 var barbarian_script = load(\"res://player/barbarian/barbarian.gd\")
 var rogue_hooded_script = load(\"res://player/rogue/rogue_hooded.gd\")
 
 var current_selected_character_name
+var current_selected_character
 var selection_area = preload(\"res://player/selection_area.tscn\")
 var camera_rig = preload(\"res://player/camera_rig.tscn\")
 
@@ -47,7 +48,9 @@ func _ready():
 	for character in $Characters.get_children():
 		var selection_area_ins = selection_area.instantiate()
 		var camera_rig_ins = camera_rig.instantiate()
+		var UI_instance = UI.instantiate()
 		character.add_child(selection_area_ins)
+		character.add_child(UI_instance)
 		#character.add_child(camera_rig_ins)
 		print(character.get_children())
 		
@@ -95,20 +98,123 @@ func _handle_mouse_click(mouse_position):
 	else:
 		print(\"Raycast did not hit any object.\")
 		
-func _process_click(collider, position):
-	# Hide the selection circle for all characters
-	for character in $Characters.get_children():
-		if character.has_node(\"SelectionArea/Selection\"):
-			character.get_node(\"SelectionArea/Selection\").visible = false
+#func _process_click(collider, position):
+	## Hide the selection circle for all characters
+	#for character in $Characters.get_children():
+		#if character.has_node(\"SelectionArea/Selection\"):
+			#character.get_node(\"SelectionArea/Selection\").visible = false
+#
+	## Show the selection circle only for the clicked character
+	#if collider.has_node(\"SelectionArea/Selection\"):
+		#collider.get_node(\"SelectionArea/Selection\").visible = true
+		#character_label.text = collider.name
+		#current_selected_character_name = collider.name
+#
+	#print(collider.name, \" character was clicked.\")
+	#
+	#collider.call(\"set_controlled\", true)
 
-	# Show the selection circle only for the clicked character
-	if collider.has_node(\"SelectionArea/Selection\"):
+#func _process_click(collider, position):
+	## First, check if the collider is not null and has the expected node structure
+	#if collider and collider.has_node(\"SelectionArea/Selection\"):
+		## Hide the selection circle for all characters
+		#for character in $Characters.get_children():
+			#if character.has_node(\"SelectionArea/Selection\"):
+				#character.get_node(\"SelectionArea/Selection\").visible = false
+#
+		## Show the selection circle only for the clicked character
+		#collider.get_node(\"SelectionArea/Selection\").visible = true
+		#character_label.text = collider.name
+		#current_selected_character_name = collider.name
+#
+		#print(collider.name, \" character was clicked.\")
+#
+		## Since we've verified collider is correct, it's safe to call the method
+		#collider.call(\"set_controlled\", true)
+	#else:
+		## Handle cases where the collider is null or not a character
+		#print(\"Clicked on a non-character object or the ground\")
+		#collider.call(\"set_controlled\", false)
+		
+#func _process_click(collider, position):
+	#if collider and collider.has_node(\"SelectionArea/Selection\"):
+	## Hide the selection circle for all characters
+		#for character in $Characters.get_children():
+			#if character.has_node(\"SelectionArea/Selection\"):
+				#character.get_node(\"SelectionArea/Selection\").visible = false
+#
+		## Show the selection circle only for the clicked character
+		#collider.get_node(\"SelectionArea/Selection\").visible = true
+		#character_label.text = collider.name
+		#current_selected_character_name = collider.name
+#
+		#print(collider.name, \" character was clicked.\")
+#
+		## Enable control for the clicked character
+		#collider.call(\"set_controlled\", true)
+	#else:
+		## Here, handle clicking on the ground or a non-character object
+		#print(\"Clicked on the ground or a non-character object. Disabling controller.\")
+#
+			## Hide selection circles for all characters as no one is selected
+		#for character in $Characters.get_children():
+			#if character.has_node(\"SelectionArea/Selection\"):
+				#character.get_node(\"SelectionArea/Selection\").visible = false
+#
+		## Optionally reset the character label if you have a UI element displaying the selected character's name
+		#character_label.text = \"\"
+		#current_selected_character_name = \"\"
+		#collider.call(\"set_controlled\", false)
+#
+	## Disable character control here
+	## This might involve calling a method on your game manager or directly on the previously controlled character
+	## Example:
+	##if previous_selected_character:
+	##collider.call(\"set_controlled\", false)
+	## Alternatively, you could signal to your GameManager or a PlayerController to disable control
+	## GameManager.disable_character_control()
+#
+	## Note: Implementation of GameManager.disable_character_control() or the equivalent method depends on your game's architecture
+
+# At the class level, add a variable to keep track of the currently controlled character
+var current_controlled_character = null
+
+func _process_click(collider, position):
+	if collider and collider.has_node(\"SelectionArea/Selection\"):
+		# Hide the selection circle for all characters
+		for character in $Characters.get_children():
+			if character.has_node(\"SelectionArea/Selection\"):
+				character.get_node(\"SelectionArea/Selection\").visible = false
+
+		# Show the selection circle for the clicked character
 		collider.get_node(\"SelectionArea/Selection\").visible = true
 		character_label.text = collider.name
 		current_selected_character_name = collider.name
 
-	print(collider.name, \" character was clicked.\")
+		print(collider.name, \" character was clicked.\")
+
+		# Enable control for the clicked character
+		collider.call(\"set_controlled\", true)
+		#collider.add_node(UI)
+		# Update the reference to the currently controlled character
+		current_controlled_character = collider
+	else:
+		print(\"Clicked on the ground or a non-character object. Disabling controller.\")
 		
+		# Hide selection circles as no character is selected
+		for character in $Characters.get_children():
+			if character.has_node(\"SelectionArea/Selection\"):
+				character.get_node(\"SelectionArea/Selection\").visible = false
+
+		# Reset the character label
+		character_label.text = \"\"
+		current_selected_character_name = \"\"
+
+		# If there's a currently controlled character, disable its control
+		if current_controlled_character:
+			current_controlled_character.call(\"set_controlled\", false)
+			# Reset the reference since no character is now controlled
+			current_controlled_character = null
 "
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_eycid"]
@@ -136,15 +242,6 @@ environment = SubResource("Environment_wbfuk")
 [node name="Characters" type="Node" parent="."]
 
 [node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 3.38612, 0, 3.96283)
-script = null
-
-[node name="Mage" parent="Characters" instance=ExtResource("7_kerki")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 11)
-script = null
-
-[node name="Rogue_Hooded" parent="Characters" instance=ExtResource("4_ojc8u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.2611)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)

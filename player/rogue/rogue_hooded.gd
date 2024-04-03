@@ -167,3 +167,4 @@ func HPRegen(delta):
 	current_hp += hp_regen * delta
 	if current_hp > hp:
 		current_hp = hp
+		

@@ -33,8 +33,8 @@ func _process(delta):
 			look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	
 	#conditions
-	#animation_tree.set("parameters/conditions/attack", _target_in_range())
-	#animation_tree.set("parameters/conditions/run", !_target_in_range())
+	animation_tree.set("parameters/conditions/attack", _target_in_range())
+	animation_tree.set("parameters/conditions/run", !_target_in_range())
 	
 	move_and_slide()
 
