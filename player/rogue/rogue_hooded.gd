@@ -172,7 +172,15 @@ func HPRegen(delta):
 		
 func set_controlled(state: bool):
 	is_controlled = state
-	# Optionally, enable/disable the script directly
-	# set_process(state)
-	# set_physics_process(state)
-	# Or if you're using nodes for input handling, you can enable/disable them as needed
+	if state:
+		anim_tree.active = true  # Ensure AnimationTree is active when the character is controlled
+	else:
+		# Option 1: Deactivate AnimationTree when character is not controlled
+		anim_tree.active = false
+		# Ensure AnimationPlayer plays the idle animation
+		$AnimationPlayer.play("2H_Ranged_Aiming")
+
+		# Option 2: Explicitly set AnimationTree to idle (if keeping it active)
+		# Ensure the blend space is set to the idle position. This might involve setting
+		# the locomotionBlendPath or other parameters to reflect an idle state.
+		# anim_tree.set("parameters/locomotion/blend_position", Vector2.ZERO)
