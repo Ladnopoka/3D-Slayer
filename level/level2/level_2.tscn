@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://8peso6o0rjkd"]
+[gd_scene load_steps=9 format=3 uid="uid://8peso6o0rjkd"]
 
 [ext_resource type="Script" path="res://level/level2/level_2.gd" id="1_q2mgw"]
-[ext_resource type="PackedScene" uid="uid://csqg2v0p2s8yw" path="res://player/rogue/rogue_hooded_.tscn" id="2_tshh2"]
 [ext_resource type="Material" uid="uid://c6vet0uxh8k4r" path="res://assets/resources/ground_material.tres" id="3_nmykr"]
 [ext_resource type="PackedScene" uid="uid://cchcp636iid71" path="res://mob/knight.tscn" id="3_wudel"]
-[ext_resource type="PackedScene" uid="uid://muq1yk7w0c1h" path="res://ui/ui.tscn" id="5_hv58u"]
+[ext_resource type="PackedScene" uid="uid://57luam50lff6" path="res://player/rogue/rogue_hooded.tscn" id="5_ebtjw"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="6_qheyw"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_kmxj8"]
@@ -109,8 +108,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.3352, 0, 24.5392)
 wait_time = 0.1
 autostart = true
 
-[node name="UI" parent="." instance=ExtResource("5_hv58u")]
-
 [node name="Score" type="Label" parent="."]
 offset_right = 736.0
 offset_bottom = 61.0
@@ -122,7 +119,6 @@ text = "Knights Killed: 100/100"
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.7465)
 
-[node name="Rogue_Hooded" parent="." instance=ExtResource("2_tshh2")]
-transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -0.551995, 0, 14.8953)
+[node name="Rogue_Hooded" parent="." instance=ExtResource("5_ebtjw")]
 
 [connection signal="timeout" from="KnightSpawnTimer" to="." method="_on_knight_spawn_timer_timeout"]
