@@ -101,6 +101,14 @@ var current_controlled_character = null
 
 func _process_click(collider, position):
 	if collider and collider.has_node(\"SelectionArea/Selection\"):
+		# If there's a currently controlled character that is not the newly clicked one, disable its control
+		if current_controlled_character and current_controlled_character != collider:
+			current_controlled_character.call(\"set_controlled\", false)
+			# Optionally hide the UI for the previously controlled character
+			if current_controlled_character.has_node(\"SelectionArea/Selection\"):
+				current_controlled_character.get_node(\"SelectionArea/Selection\").visible = false
+				current_controlled_character.get_node(\"UI\").visible = false
+		
 		# Hide the selection circle for all characters
 		for character in $Characters.get_children():
 			if character.has_node(\"SelectionArea/Selection\"):

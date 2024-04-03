@@ -6,13 +6,5 @@ res://assets/resources/grass_material.tres
 res://level/level2/level_2.tscn
 res://level/level_1.tscn
 res://player/rogue/rogue_hooded.tscn
-res://mob/knight.gd
-res://scripts/globals/game_manager.gd
-res://level/level2/level_2.gd
-res://ui/ui.gd
 res://player/mage/mage.tscn
 res://player/barbarian/barbarian.tscn
-res://player/selection.gd
-res://player/rogue/rogue_hooded.gd
-res://scripts/player/camera_rig.gd
-res://player/barbarian/barbarian.gd
