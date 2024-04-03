@@ -10,19 +10,18 @@ const ATTACK_RANGE = 2
 @export var player_path := "/root/Level2/Rogue_Hooded"
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
-@onready var ui = $"../../UI"
+#@onready var ui = $"../../UI"
 
 var random_number
 
 func _ready():
 	randomize()
 	random_number = randi() % 2 + 1
-	player = $"../../Rogue_Hooded"
 	state_machine = animation_tree.get("parameters/playback")
 	
 func _process(delta):
 	velocity = Vector3.ZERO
-	
+	player = GameManager.player
 	match state_machine.get_current_node():
 		"Running_A":
 			#navigation 

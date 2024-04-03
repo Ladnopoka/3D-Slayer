@@ -14,9 +14,9 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_player_character()
-	#var player_ins = player.instantiate()
-	#add_child(player_ins)
-	#player_ins.position = $Marker3D.position
+	var player_ins = player.instantiate()
+	add_child(player_ins)
+	player_ins.position = $Marker3D.position
 	transition.get_node("AnimationPlayer").play("fade_in")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -50,4 +50,6 @@ func get_player_character():
 			#player = load("res://player/mage/mage.tscn")
 		#_:
 			#player = load("res://player/barbarian/barbarian.tscn")
-	pass
+	player = load("res://player/rogue/rogue_hooded.tscn")
+	print(GameManager.player)
+	print("Player Name: ", GameManager.player_name, "Player: ", GameManager.player)

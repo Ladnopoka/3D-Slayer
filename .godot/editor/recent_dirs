@@ -1,10 +1,9 @@
-res://addons/editor-plugin/dungeon_tiles
+res://ui
 res://blender_stuff
 res://mob/zombie
 res://mob
 res://player/rogue
 res://level/cemetery
-res://addons/editor-plugin/dungeon
 res://dungeon
 res://playground
 res://player/mage
