@@ -10,3 +10,4 @@ res://player/mage/mage.tscn
 res://player/barbarian/barbarian.tscn
 res://player/barbarian/barbarian.gd
 res://player/rogue/rogue_hooded.gd
+res://player/mage/mage.gd

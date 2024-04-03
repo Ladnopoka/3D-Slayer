@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=17 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
 [ext_resource type="PackedScene" uid="uid://dw4mealbcrbin" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
 [ext_resource type="PackedScene" uid="uid://57luam50lff6" path="res://player/rogue/rogue_hooded.tscn" id="4_ojc8u"]
+[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="4_u2h3x"]
 [ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
@@ -180,6 +181,9 @@ environment = SubResource("Environment_wbfuk")
 
 [node name="Rogue_Hooded" parent="Characters" instance=ExtResource("4_ojc8u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00319, 0, 5.1326)
+
+[node name="Mage" parent="Characters" instance=ExtResource("4_u2h3x")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 6.18966, 0, 5.06275)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
