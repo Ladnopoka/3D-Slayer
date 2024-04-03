@@ -40,12 +40,14 @@ func _on_knight_spawn_timer_timeout():
 	navigation_region.add_child(knight_instance)
 	
 func get_player_character():
-	match GameManager.player_name:
-		"Rogue_Hooded":
-			player = load("res://player/rogue/rogue_hooded.tscn")
-		"Barbarian":
-			player = load("res://player/barbarian/barbarian.tscn")
-		"Mage":
-			player = load("res://player/mage/mage.tscn")
-		_:
-			player = load("res://player/barbarian/barbarian.tscn")
+	#print("GameManager Player Name: ", GameManager.player_name)
+	#match GameManager.player_name:
+		#"Rogue_Hooded":
+			#player = load("res://player/rogue/rogue_hooded.tscn")
+		#"Barbarian":
+			#player = load("res://player/barbarian/barbarian.tscn")
+		#"Mage":
+			#player = load("res://player/mage/mage.tscn")
+		#_:
+			#player = load("res://player/barbarian/barbarian.tscn")
+	player = load("res://player/rogue/rogue_hooded.tscn")
