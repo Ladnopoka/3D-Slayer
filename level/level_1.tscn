@@ -76,7 +76,7 @@ func _on_button_pressed():
 		#get_tree().change_scene_to_file(\"res://level/cemetery/cemetery.tscn\")
 		
 func _input(event):
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and event.pressed:
 		_handle_mouse_click(event.position)
 
 func _handle_mouse_click(mouse_position):
@@ -92,89 +92,10 @@ func _handle_mouse_click(mouse_position):
 	var result = space_state.intersect_ray(ray_query)
 	
 	if result.size() > 0:
-		print(\"Raycast hit: \", result.collider.name, \" at position: \", result.position)
 		_process_click(result.collider, result.position)
 	else:
 		print(\"Raycast did not hit any object.\")
 		
-#func _process_click(collider, position):
-	## Hide the selection circle for all characters
-	#for character in $Characters.get_children():
-		#if character.has_node(\"SelectionArea/Selection\"):
-			#character.get_node(\"SelectionArea/Selection\").visible = false
-#
-	## Show the selection circle only for the clicked character
-	#if collider.has_node(\"SelectionArea/Selection\"):
-		#collider.get_node(\"SelectionArea/Selection\").visible = true
-		#character_label.text = collider.name
-		#current_selected_character_name = collider.name
-#
-	#print(collider.name, \" character was clicked.\")
-	#
-	#collider.call(\"set_controlled\", true)
-
-#func _process_click(collider, position):
-	## First, check if the collider is not null and has the expected node structure
-	#if collider and collider.has_node(\"SelectionArea/Selection\"):
-		## Hide the selection circle for all characters
-		#for character in $Characters.get_children():
-			#if character.has_node(\"SelectionArea/Selection\"):
-				#character.get_node(\"SelectionArea/Selection\").visible = false
-#
-		## Show the selection circle only for the clicked character
-		#collider.get_node(\"SelectionArea/Selection\").visible = true
-		#character_label.text = collider.name
-		#current_selected_character_name = collider.name
-#
-		#print(collider.name, \" character was clicked.\")
-#
-		## Since we've verified collider is correct, it's safe to call the method
-		#collider.call(\"set_controlled\", true)
-	#else:
-		## Handle cases where the collider is null or not a character
-		#print(\"Clicked on a non-character object or the ground\")
-		#collider.call(\"set_controlled\", false)
-		
-#func _process_click(collider, position):
-	#if collider and collider.has_node(\"SelectionArea/Selection\"):
-	## Hide the selection circle for all characters
-		#for character in $Characters.get_children():
-			#if character.has_node(\"SelectionArea/Selection\"):
-				#character.get_node(\"SelectionArea/Selection\").visible = false
-#
-		## Show the selection circle only for the clicked character
-		#collider.get_node(\"SelectionArea/Selection\").visible = true
-		#character_label.text = collider.name
-		#current_selected_character_name = collider.name
-#
-		#print(collider.name, \" character was clicked.\")
-#
-		## Enable control for the clicked character
-		#collider.call(\"set_controlled\", true)
-	#else:
-		## Here, handle clicking on the ground or a non-character object
-		#print(\"Clicked on the ground or a non-character object. Disabling controller.\")
-#
-			## Hide selection circles for all characters as no one is selected
-		#for character in $Characters.get_children():
-			#if character.has_node(\"SelectionArea/Selection\"):
-				#character.get_node(\"SelectionArea/Selection\").visible = false
-#
-		## Optionally reset the character label if you have a UI element displaying the selected character's name
-		#character_label.text = \"\"
-		#current_selected_character_name = \"\"
-		#collider.call(\"set_controlled\", false)
-#
-	## Disable character control here
-	## This might involve calling a method on your game manager or directly on the previously controlled character
-	## Example:
-	##if previous_selected_character:
-	##collider.call(\"set_controlled\", false)
-	## Alternatively, you could signal to your GameManager or a PlayerController to disable control
-	## GameManager.disable_character_control()
-#
-	## Note: Implementation of GameManager.disable_character_control() or the equivalent method depends on your game's architecture
-
 # At the class level, add a variable to keep track of the currently controlled character
 var current_controlled_character = null
 
@@ -204,23 +125,23 @@ func _process_click(collider, position):
 
 		print(collider.name, \" character was clicked.\")
 	else:
-		print(\"Clicked on the ground or a non-character object. Disabling controller.\")
+		print(\"Clicked on the ground.\")
 		
-		# Hide selection circles as no character is selected
-		for character in $Characters.get_children():
-			if character.has_node(\"SelectionArea/Selection\"):
-				character.get_node(\"SelectionArea/Selection\").visible = false
-				character.get_node(\"UI\").visible = false
-
-		# Reset the character label
-		character_label.text = \"\"
-		current_selected_character_name = \"\"
-
-		# If there's a currently controlled character, disable its control
-		if current_controlled_character:
-			current_controlled_character.call(\"set_controlled\", false)
-			# Reset the reference since no character is now controlled
-			current_controlled_character = null
+		## Hide selection circles as no character is selected
+		#for character in $Characters.get_children():
+			#if character.has_node(\"SelectionArea/Selection\"):
+				#character.get_node(\"SelectionArea/Selection\").visible = false
+				#character.get_node(\"UI\").visible = false
+#
+		## Reset the character label
+		#character_label.text = \"\"
+		#current_selected_character_name = \"\"
+#
+		## If there's a currently controlled character, disable its control
+		#if current_controlled_character:
+			#current_controlled_character.call(\"set_controlled\", false)
+			## Reset the reference since no character is now controlled
+			#current_controlled_character = null
 "
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_eycid"]
