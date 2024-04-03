@@ -19,6 +19,7 @@ anchor_bottom = 1.0
 offset_top = -250.0
 offset_right = 250.0
 grow_vertical = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="GlobeFull" type="TextureRect" parent="HealthGlobe"]
 layout_mode = 1
@@ -30,6 +31,7 @@ offset_bottom = 235.0
 grow_horizontal = 0
 texture = ExtResource("1_ijdx3")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="HealthGlobe/GlobeFull"]
 layout_mode = 1
@@ -48,6 +50,7 @@ value = 70.0
 fill_mode = 3
 nine_patch_stretch = true
 texture_progress = ExtResource("2_aaqas")
+metadata/_edit_use_anchors_ = true
 
 [node name="GlobeTransparent" type="TextureRect" parent="HealthGlobe"]
 layout_mode = 1
@@ -58,6 +61,7 @@ offset_left = -235.0
 offset_bottom = 235.0
 grow_horizontal = 0
 texture = ExtResource("3_hk3rv")
+metadata/_edit_use_anchors_ = true
 
 [node name="DecoCorner" type="TextureRect" parent="HealthGlobe"]
 layout_mode = 1
@@ -70,6 +74,7 @@ grow_vertical = 0
 texture = ExtResource("4_cqeql")
 expand_mode = 1
 flip_v = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="HealthGlobe"]
 layout_mode = 0
@@ -80,6 +85,7 @@ offset_bottom = 13.0
 theme_override_fonts/font = ExtResource("6_xhktb")
 theme_override_font_sizes/font_size = 40
 text = "10/10"
+metadata/_edit_use_anchors_ = true
 
 [node name="ManaGlobe" type="Control" parent="."]
 layout_mode = 3
@@ -92,6 +98,7 @@ offset_left = -250.0
 offset_top = -250.0
 grow_horizontal = 0
 grow_vertical = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="GlobeFull" type="TextureRect" parent="ManaGlobe"]
 layout_mode = 1
@@ -100,6 +107,7 @@ offset_bottom = 235.0
 texture = ExtResource("1_ijdx3")
 expand_mode = 1
 flip_h = true
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="ManaGlobe/GlobeFull"]
 layout_mode = 1
@@ -118,6 +126,7 @@ value = 70.0
 fill_mode = 3
 nine_patch_stretch = true
 texture_progress = ExtResource("5_xyk6f")
+metadata/_edit_use_anchors_ = true
 
 [node name="GlobeTransparent" type="TextureRect" parent="ManaGlobe"]
 layout_mode = 1
@@ -125,6 +134,7 @@ offset_right = 235.0
 offset_bottom = 235.0
 texture = ExtResource("3_hk3rv")
 flip_h = true
+metadata/_edit_use_anchors_ = true
 
 [node name="DecoCorner" type="TextureRect" parent="ManaGlobe"]
 layout_mode = 1
@@ -141,3 +151,4 @@ texture = ExtResource("4_cqeql")
 expand_mode = 1
 flip_h = true
 flip_v = true
+metadata/_edit_use_anchors_ = true

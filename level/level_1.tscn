@@ -48,9 +48,7 @@ func _ready():
 	for character in $Characters.get_children():
 		var selection_area_ins = selection_area.instantiate()
 		var camera_rig_ins = camera_rig.instantiate()
-		var UI_instance = UI.instantiate()
 		character.add_child(selection_area_ins)
-		character.add_child(UI_instance)
 		#character.add_child(camera_rig_ins)
 		print(character.get_children())
 		
