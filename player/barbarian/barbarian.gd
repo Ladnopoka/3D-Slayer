@@ -98,11 +98,8 @@ func movement_and_attacking(delta):
 	move_and_slide()
 	
 	if Input.is_action_pressed("right_mouse_clicked"):
-		print("RM CLICKED")
-	
-	if Input.is_action_pressed("primary_action"):
 		attack()
-	elif Input.is_action_just_released("primary_action"):
+	elif Input.is_action_just_released("right_mouse_clicked"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)	
 
 func attack():

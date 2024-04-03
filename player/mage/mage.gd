@@ -106,10 +106,10 @@ func movement_and_attacking(delta):
 	anim_tree.set(locomotionBlendPath, current_blend_position)
 	move_and_slide()
 	
-	if Input.is_action_pressed("primary_action"):
+	if Input.is_action_pressed("right_mouse_clicked"):
 		attack()
-	elif Input.is_action_just_released("primary_action"):
-		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)
+	elif Input.is_action_just_released("right_mouse_clicked"):
+		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)	
 
 func attack():
 	# Always update orientation, regardless of cooldown
