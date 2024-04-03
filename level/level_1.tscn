@@ -183,9 +183,11 @@ func _process_click(collider, position):
 		for character in $Characters.get_children():
 			if character.has_node(\"SelectionArea/Selection\"):
 				character.get_node(\"SelectionArea/Selection\").visible = false
+				character.get_node(\"UI\").visible = false
 
 		# Show the selection circle for the clicked character
 		collider.get_node(\"SelectionArea/Selection\").visible = true
+		collider.get_node(\"UI\").visible = true
 		character_label.text = collider.name
 		current_selected_character_name = collider.name
 
@@ -203,6 +205,7 @@ func _process_click(collider, position):
 		for character in $Characters.get_children():
 			if character.has_node(\"SelectionArea/Selection\"):
 				character.get_node(\"SelectionArea/Selection\").visible = false
+				character.get_node(\"UI\").visible = false
 
 		# Reset the character label
 		character_label.text = \"\"

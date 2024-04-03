@@ -23,7 +23,7 @@ var velocity_var = Vector3.ZERO
 #signal
 signal player_hit
 
-var hp = 10
+var hp = 25
 var hp_regen = 0.1
 var current_hp
 var is_dead = false

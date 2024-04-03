@@ -6,9 +6,10 @@ extends CanvasLayer
 
 var player
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player = get_parent()
+	player = $".."
 	health_globe.max_value = player.hp
 	health_globe.value = player.hp
 	label.text = str(player.current_hp) + "/" + str(player.hp)
