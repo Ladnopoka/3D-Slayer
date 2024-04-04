@@ -17,6 +17,8 @@ func _ready():
 	var player_ins = player.instantiate()
 	add_child(player_ins)
 	player_ins.position = $Marker3D.position
+	player_ins.get_node("UI").visible = true
+	player_ins.call("set_controlled", true)
 	transition.get_node("AnimationPlayer").play("fade_in")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

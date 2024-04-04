@@ -27,7 +27,7 @@ var camera_rig_ins
 #signal
 signal player_hit
 
-var hp = 10
+var hp = 8
 var hp_regen = 0.1
 var current_hp
 var is_dead = false
