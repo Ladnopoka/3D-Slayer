@@ -14,3 +14,4 @@ res://level/level2/level_2.gd
 res://player/mage/mage.gd
 res://player/rogue/rogue_hooded.gd
 res://player/barbarian/barbarian.gd
+res://mob/knight.gd
