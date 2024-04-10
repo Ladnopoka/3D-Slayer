@@ -1,9 +1,9 @@
+CollisionShape3D
 MeshInstance3D
 Area3D
 Timer
 Node3D
 AnimationTree
-CollisionShape3D
 CharacterBody3D
 NavigationAgent3D
 NavigationRegion3D
@@ -12,4 +12,3 @@ WorldEnvironment
 CSGBox3D
 GridMap
 GPUParticles3D
-RayCast3D
