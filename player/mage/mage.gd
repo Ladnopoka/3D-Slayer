@@ -29,7 +29,7 @@ signal player_hit
 
 var hp = 8
 var hp_regen = 0.1
-var current_hp
+var current_hp : int
 var is_dead = false
 
 #projectile skills

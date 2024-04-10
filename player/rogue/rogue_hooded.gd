@@ -28,7 +28,7 @@ signal player_hit
 
 var hp = 10
 var hp_regen = 0.1
-var current_hp
+var current_hp : int
 var is_dead = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -52,7 +52,6 @@ var is_controlled = false
 func _ready():
 	GameManager.set_player(self)
 	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
-	print("LOCOMOTIONBLENDPATH: ", locomotionBlendPath)
 	current_hp = hp
 	
 func _physics_process(delta):
@@ -135,7 +134,6 @@ func update_orientation():
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
 
 func shoot_arrow():
-	print("arrow is shooting (supposed to be omegalul)")
 	arrow_inst = ARROW.instantiate()
 	arrow_inst.position = ray_cast_3d.global_position
 	arrow_inst.transform.basis = ray_cast_3d.global_transform.basis

@@ -25,7 +25,7 @@ signal player_hit
 
 var hp = 25
 var hp_regen = 0.1
-var current_hp
+var current_hp : int
 var is_dead = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
