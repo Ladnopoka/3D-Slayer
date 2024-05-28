@@ -24,6 +24,8 @@ var velocity_var = Vector3.ZERO
 var camera_rig = preload("res://player/camera_rig.tscn")
 var camera_rig_ins
 
+var lightning_skill_1 = preload("res://skills/vfx/finished_vfx/lightning_vfx.tscn")
+var lightning_skill_1_instance
 #signal
 signal player_hit
 
@@ -121,6 +123,12 @@ func shoot_projectile():
 	mage_skill_instance.position = projectile_shooting_point.global_position
 	mage_skill_instance.transform.basis = projectile_shooting_point.global_transform.basis
 	get_parent().add_child(mage_skill_instance)
+	
+	
+	lightning_skill_1_instance = lightning_skill_1.instantiate()
+	lightning_skill_1_instance.position = projectile_shooting_point.global_position
+	lightning_skill_1_instance.transform.basis = projectile_shooting_point.global_transform.basis
+	get_parent().add_child(lightning_skill_1_instance)
 
 func update_orientation():
 	# All the logic related to updating the character's orientation goes here

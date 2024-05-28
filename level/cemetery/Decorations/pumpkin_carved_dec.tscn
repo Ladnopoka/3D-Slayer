@@ -1,6 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bluy4ycljr8h5"]
-
-[ext_resource type="PackedScene" uid="uid://d1ftj0hiqso7a" path="res://Models/Decorations/pumpkinCarved.glb" id="1_cvmbn"]
+[gd_scene load_steps=4 format=3 uid="uid://bluy4ycljr8h5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7yyf"]
 albedo_color = Color(0.568627, 0.54902, 0, 1)
@@ -14,7 +12,7 @@ albedo_color = Color(1, 0.337255, 0.0666667, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3sntk"]
 albedo_color = Color(0.0509804, 0.427451, 0.0666667, 1)
 
-[node name="pumpkinCarved" instance=ExtResource("1_cvmbn")]
+[node name="pumpkinCarved"]
 
 [node name="pumpkinCarved2" parent="." index="0"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

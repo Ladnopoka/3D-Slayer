@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=16 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
 [ext_resource type="PackedScene" uid="uid://dw4mealbcrbin" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
 [ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_twf6y"]
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
-[ext_resource type="PackedScene" uid="uid://wgbe3fb8schx" path="res://blender_stuff/blender_stuff.tscn" id="11_64j6t"]
 
 [sub_resource type="GDScript" id="GDScript_1jutb"]
 script/source = "extends Node3D
@@ -41,7 +40,7 @@ func _ready():
 	transition.get_node(\"AnimationPlayer\").play(\"fade_in\")
 	score_max.text = \"Best Score: \" + str(Global.best_score)
 	deaths.text = \"Deaths: \" + str(Global.deaths)
-	blender_stuff.get_node(\"AnimationPlayer\").play(\"CubeAction_001\")
+	#blender_stuff.get_node(\"AnimationPlayer\").play(\"CubeAction_001\")
 
 	#mage.set_script(null)
 	#barbarian.set_script(null)
@@ -246,8 +245,5 @@ offset_right = 114.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Select"
-
-[node name="blender_stuff" parent="." instance=ExtResource("11_64j6t")]
-transform = Transform3D(0.141421, 0, 0.141421, 0, 0.2, 0, -0.141421, 0, 0.141421, -11, 0, 12)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

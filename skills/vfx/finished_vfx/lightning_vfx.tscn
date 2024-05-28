@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcrt70ew6k0sw"]
+
+[ext_resource type="ArrayMesh" uid="uid://bsg4jmh8f4gfq" path="res://skills/vfx/blender_vfx/lightning_editable.tres" id="1_i0jpa"]
+
+[sub_resource type="Gradient" id="Gradient_oj500"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nbmep"]
+gradient = SubResource("Gradient_oj500")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mdsw6"]
+lifetime_randomness = 0.1
+particle_flag_rotate_y = true
+emission_shape = 3
+emission_box_extents = Vector3(4, 0, 4)
+angle_min = -180.0
+angle_max = 180.0
+gravity = Vector3(0, 0, 0)
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_nbmep")
+
+[node name="GPUParticles3D" type="GPUParticles3D"]
+amount = 2
+lifetime = 0.25
+process_material = SubResource("ParticleProcessMaterial_mdsw6")
+draw_pass_1 = ExtResource("1_i0jpa")
