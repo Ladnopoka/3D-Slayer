@@ -83,7 +83,7 @@ func movement_and_attacking(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	var model_rotation = model.rotation.y
+	#var model_rotation = model.rotation.y
 	
 	if direction.length() > 0.01:
 		velocity.x = direction.x * SPEED
@@ -110,8 +110,17 @@ func movement_and_attacking(delta):
 	
 	if Input.is_action_pressed("right_mouse_clicked"):
 		attack()
+	if Input.is_action_pressed("skill_Q"):
+		cast_lightning_skill_1()
+	if Input.is_action_just_released("skill_Q"):
+		anim_tree.set("parameters/AttackStateMachine/conditions/cast", false)
 	elif Input.is_action_just_released("right_mouse_clicked"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)	
+
+func cast_lightning_skill_1():
+	# Always update orientation, regardless of cooldown
+	update_orientation()
+	anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
 
 func attack():
 	# Always update orientation, regardless of cooldown
@@ -128,7 +137,9 @@ func shoot_projectile():
 	lightning_skill_1_instance = lightning_skill_1.instantiate()
 	lightning_skill_1_instance.position = projectile_shooting_point.global_position
 	lightning_skill_1_instance.transform.basis = projectile_shooting_point.global_transform.basis
+	#lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
 	get_parent().add_child(lightning_skill_1_instance)
+	lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
 
 func update_orientation():
 	# All the logic related to updating the character's orientation goes here

@@ -22,7 +22,7 @@ script/source = "extends Node3D
 @onready var rogue_hooded = $Characters/Rogue_Hooded
 @onready var character_label = $CharacterLabel
 
-@onready var blender_stuff = $blender_stuff
+#@onready var blender_stuff = $blender_stuff
 
 const UI = preload(\"res://ui/ui.tscn\")
 
