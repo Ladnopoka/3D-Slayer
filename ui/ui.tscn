@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://muq1yk7w0c1h"]
+[gd_scene load_steps=11 format=3 uid="uid://muq1yk7w0c1h"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_cb527"]
 [ext_resource type="Texture2D" uid="uid://befbx2j60m08y" path="res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Bonus_Level_Base.png" id="1_ijdx3"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://lphqff08vli7" path="res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Corner.png" id="4_cqeql"]
 [ext_resource type="Texture2D" uid="uid://b4l1kwkjr5ar3" path="res://assets/HealthGlobe/Globe_Blue.png" id="5_xyk6f"]
 [ext_resource type="FontFile" uid="uid://d0olnmrky3ugd" path="res://globals/Bildad.ttf" id="6_xhktb"]
+[ext_resource type="Texture2D" uid="uid://dx7xx6vfahxlq" path="res://ui/imports/exp_bar/exp_background.png" id="8_s26bw"]
+[ext_resource type="Texture2D" uid="uid://dlx33roiu0vlj" path="res://ui/imports/exp_bar/exp_progress.png" id="9_ynwmp"]
+[ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_hjqlj"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_cb527")
@@ -152,3 +155,33 @@ expand_mode = 1
 flip_h = true
 flip_v = true
 metadata/_edit_use_anchors_ = true
+
+[node name="XP Bar" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Experience Bar" type="TextureProgressBar" parent="XP Bar"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 320.0
+offset_top = 1041.0
+offset_right = 960.0
+offset_bottom = 1061.0
+scale = Vector2(2, 2)
+value = 70.0
+texture_under = ExtResource("8_s26bw")
+texture_progress = ExtResource("9_ynwmp")
+
+[node name="Experience Label" type="Label" parent="XP Bar/Experience Bar"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 540.0
+offset_right = 640.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("10_hjqlj")
+theme_override_font_sizes/font_size = 16
+text = "Level: 1"
+horizontal_alignment = 1
+vertical_alignment = 2

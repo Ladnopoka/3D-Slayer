@@ -14,6 +14,11 @@ const ATTACK_RANGE = 2
 
 var random_number
 
+signal knight_died(xp_reward)
+@export var experience_reward: int = 20 # Amount of XP this enemy gives
+
+var ui
+
 func _ready():
 	randomize()
 	random_number = randi() % 2 + 1
@@ -22,6 +27,7 @@ func _ready():
 func _process(delta):
 	velocity = Vector3.ZERO
 	player = GameManager.player
+	
 	match state_machine.get_current_node():
 		"Running_A":
 			#navigation 
@@ -51,6 +57,7 @@ func _on_area_3d_body_part_hit(dam):
 	health -= dam
 	if health <= 0:
 		Global.score += 1
+		
 		#$CollisionShape3D.disabled = true
 		$Rig/Skeleton3D/Head/Area3D/CollisionShape3D.disabled = true
 		$Rig/Skeleton3D/Body/Area3D/CollisionShape3D.disabled = true
@@ -62,4 +69,7 @@ func _on_area_3d_body_part_hit(dam):
 		else:
 			animation_tree.set("parameters/DeathStateMachine/conditions/die_b", true)
 			await get_tree().create_timer(7.0).timeout
+			
+		emit_signal("knight_died", experience_reward)
+		#player.gain_experience(experience_reward)
 		queue_free()

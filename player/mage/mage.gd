@@ -29,10 +29,13 @@ var lightning_skill_1_instance
 #signal
 signal player_hit
 
-var hp = 8
+var hp : int = 8
 var hp_regen = 0.1
 var current_hp : int
 var is_dead = false
+
+var exp : int = 0
+var current_exp : int
 
 #projectile skills
 var mage_skill = load("res://player/mage/mage_skill.tscn")
@@ -121,6 +124,12 @@ func cast_lightning_skill_1():
 	# Always update orientation, regardless of cooldown
 	update_orientation()
 	anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
+	lightning_skill_1_instance = lightning_skill_1.instantiate()
+	lightning_skill_1_instance.position = projectile_shooting_point.global_position
+	lightning_skill_1_instance.transform.basis = projectile_shooting_point.global_transform.basis
+	#lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
+	get_parent().add_child(lightning_skill_1_instance)
+	lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
 
 func attack():
 	# Always update orientation, regardless of cooldown
@@ -160,7 +169,12 @@ func update_orientation():
 			direction_to_pos.y = 0
 			var look_at_pos = model.global_position + -direction_to_pos
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
-	
+
+func gain_experience(exp):
+	print("gained experience: ", exp)
+	current_exp += exp
+	print("current experience: ", current_exp)
+
 func hit(dir):
 	emit_signal("player_hit")
 	velocity += dir * HIT_STAGGER
@@ -176,12 +190,12 @@ func die():
 	print("inside die")
 	await get_tree().create_timer(4.0).timeout
 	transition.get_node("AnimationPlayer").play("fade_out")
-	await get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_file("res://level/level_1.tscn")
 	if Global.score > Global.best_score:
 		Global.best_score = Global.score
 		Global.score = 0
 		Global.deaths += 1
+	await get_tree().create_timer(1.0).timeout
+	get_tree().change_scene_to_file("res://level/level_1.tscn")
 	
 func HPRegen(delta):
 	current_hp += hp_regen * delta

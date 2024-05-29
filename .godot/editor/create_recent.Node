@@ -1,3 +1,7 @@
+Label
+TextureProgressBar
+Control
+ProgressBar
 Camera3D
 CollisionShape3D
 MeshInstance3D
@@ -9,7 +13,3 @@ CharacterBody3D
 NavigationAgent3D
 NavigationRegion3D
 SimpleGrassTextured
-WorldEnvironment
-CSGBox3D
-GridMap
-GPUParticles3D
