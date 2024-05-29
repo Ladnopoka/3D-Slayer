@@ -15,4 +15,3 @@ res://player/barbarian/barbarian.tscn
 res://mob/knight.tscn
 res://shooting/arrow.tscn
 res://skills/vfx/finished_vfx/lightning_vfx.tscn
-res://player/mage/mage.gd
