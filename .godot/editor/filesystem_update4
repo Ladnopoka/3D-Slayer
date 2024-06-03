@@ -1,11 +1,11 @@
 res://ui/ui.tscn
-res://assets/resources/ground_material.tres
-res://assets/TileMaps/tiles_dungeon_remastered.tres
-res://assets/TileMaps/tiles_medieval.tres
 res://skills/vfx/resources/lightning_shader.tres
 res://skills/vfx/resources/mark_shader.tres
 res://skills/vfx/resources/wave_shader.tres
 res://skills/vfx/blender_vfx/lightning_editable.tres
+res://assets/resources/ground_material.tres
+res://assets/TileMaps/tiles_dungeon_remastered.tres
+res://assets/TileMaps/tiles_medieval.tres
 res://assets/resources/grass_material.tres
 res://level/level2/level_2.tscn
 res://level/level_1.tscn
@@ -15,6 +15,8 @@ res://player/barbarian/barbarian.tscn
 res://mob/knight.tscn
 res://shooting/arrow.tscn
 res://skills/vfx/finished_vfx/lightning_vfx.tscn
-res://ui/ui.gd
 res://mob/knight.gd
 res://player/mage/mage.gd
+res://ui/ui.gd
+res://player/rogue/rogue_hooded.gd
+res://player/barbarian/barbarian.gd

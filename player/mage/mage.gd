@@ -35,7 +35,7 @@ var current_hp : int
 var is_dead = false
 
 var exp : int = 0
-var current_exp : int
+var current_exp : int = 0
 
 #projectile skills
 var mage_skill = load("res://player/mage/mage_skill.tscn")
@@ -60,6 +60,8 @@ var blend_lerp_speed = 1.0 / CROSSFADE_TIME
 
 var attacking = false
 var is_controlled = false
+
+@onready var ui = $UI
 
 func _ready():
 	GameManager.set_player(self)

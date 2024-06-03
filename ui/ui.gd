@@ -35,8 +35,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	UpdateGlobes()
+	UpdateExp()
 	
 func UpdateGlobes():
 	var new_hp = player.current_hp
 	health_globe.value = new_hp
 	label.text = (str(int(new_hp))) + "/" + str(player.hp)
+
+func UpdateExp():
+	var new_exp = player.current_exp
+	experience_bar.value = new_exp

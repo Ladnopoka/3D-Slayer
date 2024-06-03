@@ -49,6 +49,9 @@ var blend_lerp_speed = 1.0 / CROSSFADE_TIME
 var attacking = false
 var is_controlled = false
 
+var exp : int = 0
+var current_exp : int = 0
+
 func _ready():
 	GameManager.set_player(self)
 	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
@@ -182,3 +185,6 @@ func set_controlled(state: bool):
 		# Ensure the blend space is set to the idle position. This might involve setting
 		# the locomotionBlendPath or other parameters to reflect an idle state.
 		# anim_tree.set("parameters/locomotion/blend_position", Vector2.ZERO)
+		
+func gain_experience(exp):
+	current_exp += exp
