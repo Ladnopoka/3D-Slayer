@@ -26,7 +26,8 @@ var inventory
 var camera_rig = preload("res://player/camera_rig.tscn")
 var camera_rig_ins
 
-var lightning_skill_1 = preload("res://skills/vfx/finished_vfx/lightning_vfx.tscn")
+var lightning_skill_1 = preload("res://skills/impact/lightning_skill.tscn")
+
 var lightning_skill_1_instance
 #signal
 signal player_hit
@@ -119,7 +120,7 @@ func movement_and_attacking(delta):
 	
 	if Input.is_action_pressed("right_mouse_clicked"):
 		attack()
-	if Input.is_action_pressed("skill_Q"):
+	if Input.is_action_just_pressed("skill_Q"):
 		cast_lightning_skill_1()
 	if Input.is_action_just_released("skill_Q"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/cast", false)
@@ -127,15 +128,15 @@ func movement_and_attacking(delta):
 		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)	
 
 func cast_lightning_skill_1():
-	# Always update orientation, regardless of cooldown
-	update_orientation()
-	anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
 	lightning_skill_1_instance = lightning_skill_1.instantiate()
 	lightning_skill_1_instance.position = projectile_shooting_point.global_position
 	lightning_skill_1_instance.transform.basis = projectile_shooting_point.global_transform.basis
-	#lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
 	get_parent().add_child(lightning_skill_1_instance)
 	lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
+	
+	# Always update orientation, regardless of cooldown
+	update_orientation()
+	anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
 
 func attack():
 	# Always update orientation, regardless of cooldown
@@ -147,14 +148,6 @@ func shoot_projectile():
 	mage_skill_instance.position = projectile_shooting_point.global_position
 	mage_skill_instance.transform.basis = projectile_shooting_point.global_transform.basis
 	get_parent().add_child(mage_skill_instance)
-	
-	
-	lightning_skill_1_instance = lightning_skill_1.instantiate()
-	lightning_skill_1_instance.position = projectile_shooting_point.global_position
-	lightning_skill_1_instance.transform.basis = projectile_shooting_point.global_transform.basis
-	#lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
-	get_parent().add_child(lightning_skill_1_instance)
-	lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
 
 func update_orientation():
 	# All the logic related to updating the character's orientation goes here
@@ -181,9 +174,7 @@ func gain_experience(exp_received):
 	
 	if current_exp >= 100:
 		level_up()
-	
 
-	
 func level_up():
 	print("You've leveled up!")
 	current_exp = current_exp-100
@@ -194,10 +185,6 @@ func level_up():
 	experience_label_node.text = "Level: " + str(level)
 	await get_tree().create_timer(3.0).timeout
 	level_up_vfx_instance.queue_free()
-	#await get_tree().create_timer(4.0).timeout
-	#level_up_vfx_instance.global_transform.origin = global_transform.origin
-
-	
 
 func hit(dir):
 	emit_signal("player_hit")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqb7wkgovha2l"]
+
+[ext_resource type="PackedScene" uid="uid://dcrt70ew6k0sw" path="res://skills/vfx/finished_vfx/lightning_vfx.tscn" id="1_m6a7h"]
+[ext_resource type="Script" path="res://skills/impact/lightning_skill.gd" id="1_pi7ca"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_raoe2"]
+
+[node name="Lightning Skill" type="Node3D"]
+script = ExtResource("1_pi7ca")
+
+[node name="GPUParticles3D" parent="." instance=ExtResource("1_m6a7h")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(7.89, 0, 0, 0, 7.89, 0, 0, 0, 7.89, 0, 0, 0)
+shape = SubResource("BoxShape3D_raoe2")
+
+[node name="Timer" type="Timer" parent="."]

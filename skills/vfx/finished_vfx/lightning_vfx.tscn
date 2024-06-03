@@ -19,7 +19,7 @@ scale_max = 2.0
 color_ramp = SubResource("GradientTexture1D_nbmep")
 
 [node name="GPUParticles3D" type="GPUParticles3D"]
-amount = 2
+amount = 1
 lifetime = 0.25
 process_material = SubResource("ParticleProcessMaterial_mdsw6")
 draw_pass_1 = ExtResource("1_i0jpa")
