@@ -182,6 +182,6 @@ offset_right = 640.0
 offset_bottom = 20.0
 theme_override_fonts/font = ExtResource("10_hjqlj")
 theme_override_font_sizes/font_size = 16
-text = "Level: 1"
+text = "Level: "
 horizontal_alignment = 1
 vertical_alignment = 2
