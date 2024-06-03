@@ -35,18 +35,28 @@ var current_selected_character
 var selection_area = preload(\"res://player/selection_area.tscn\")
 var camera_rig = preload(\"res://player/camera_rig.tscn\")
 
+var mage_data
+
 # Called when the node enters the scene tree for the first time. 
 func _ready():
 	transition.get_node(\"AnimationPlayer\").play(\"fade_in\")
 	score_max.text = \"Best Score: \" + str(Global.best_score)
 	deaths.text = \"Deaths: \" + str(Global.deaths)
-	#blender_stuff.get_node(\"AnimationPlayer\").play(\"CubeAction_001\")
+	mage_data = MageData.load_player_data()
 
-	#mage.set_script(null)
-	#barbarian.set_script(null)
-	#rogue_hooded.set_script(null)
+	#current_exp = player_data[\"experience\"]
+	#current_health = player_data[\"health\"]
+	#inventory = player_data[\"inventory\"]
+	#global_transform.origin = player_data[\"position\"]
+	# Update UI or any other elements with the loaded data
+
+
 	
 	for character in $Characters.get_children():
+		print(\"mage data experience: \", mage_data[\"experience\"])
+		if character.name == \"Mage\":
+			character.current_exp = mage_data[\"experience\"]
+			character.current_hp = mage_data[\"health\"]
 		var selection_area_ins = selection_area.instantiate()
 		var camera_rig_ins = camera_rig.instantiate()
 		character.add_child(selection_area_ins)

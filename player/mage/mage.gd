@@ -21,6 +21,8 @@ var velocity_var = Vector3.ZERO
 @onready var projectile_shooting_point = $Rig/RayCast3D
 @onready var base_camera = $camera_rig/base_camera
 
+var inventory
+
 var camera_rig = preload("res://player/camera_rig.tscn")
 var camera_rig_ins
 
@@ -172,9 +174,9 @@ func update_orientation():
 			var look_at_pos = model.global_position + -direction_to_pos
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
 
-func gain_experience(exp):
-	print("gained experience: ", exp)
-	current_exp += exp
+func gain_experience(exp_received):
+	print("gained experience: ", exp_received)
+	current_exp += exp_received
 	print("current experience: ", current_exp)
 
 func hit(dir):
@@ -197,6 +199,7 @@ func die():
 		Global.score = 0
 		Global.deaths += 1
 	await get_tree().create_timer(1.0).timeout
+	MageData.save_player_data(current_exp, inventory)
 	get_tree().change_scene_to_file("res://level/level_1.tscn")
 	
 func HPRegen(delta):

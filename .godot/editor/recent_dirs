@@ -1,3 +1,5 @@
+res://globals/player_data
+res://scripts/globals
 res://ui
 res://blender_stuff
 res://mob/zombie
@@ -18,6 +20,5 @@ res://assets/Trolling
 res://assets/resources
 res://cyclops_playground
 res://globals
-res://transition
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin
 C:/Users/ladno/Documents/3D Slayer/addons
