@@ -14,7 +14,7 @@ const ATTACK_RANGE = 2
 
 var random_number
 
-@export var experience_reward: int = 20 # Amount of XP this enemy gives
+@export var experience_reward: int = 50 # Amount of XP this enemy gives
 signal knight_died(experience_reward)
 
 var ui

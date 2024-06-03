@@ -1,3 +1,4 @@
+GPUParticles3D
 Label
 TextureProgressBar
 Control
@@ -12,4 +13,3 @@ AnimationTree
 CharacterBody3D
 NavigationAgent3D
 NavigationRegion3D
-SimpleGrassTextured

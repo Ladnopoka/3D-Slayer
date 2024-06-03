@@ -47,4 +47,4 @@ func UpdateExp():
 	
 	if experience_bar.value >= 100:
 		experience_bar.value = 0
-		experience_label.text = "Level: " + str(level_num)
+		experience_label.text = "Level: " + str(player.level_num)

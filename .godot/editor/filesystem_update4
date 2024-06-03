@@ -17,3 +17,14 @@ res://shooting/arrow.tscn
 res://skills/vfx/finished_vfx/lightning_vfx.tscn
 res://player/mage/mage.gd
 res://ui/ui.gd
+res://vfx/level_up/shader_cylinder_lvlup.tres
+res://vfx/level_up/imports/Shaders/s_simple1.tres
+res://vfx/level_up/imports/Shaders/s_simple2.tres
+res://vfx/level_up/imports/Shaders/s_UpLevel.tres
+res://vfx/level_up/imports/Shaders/s_puff.tres
+res://vfx/level_up/level_up.tscn
+res://vfx/level_up/imports/Scenes/VFX_hit.tscn
+res://vfx/level_up/imports/Scenes/VFX_Level_up.tscn
+res://vfx/level_up/imports/Scenes/VFX_puff_big.tscn
+res://vfx/level_up/imports/Scenes/VFX_Puff_run.tscn
+res://mob/knight.gd

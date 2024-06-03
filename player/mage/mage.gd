@@ -38,6 +38,8 @@ var is_dead = false
 
 var exp : int = 0
 var current_exp : int = 0
+var level : int = 1
+var level_up_vfx = preload("res://vfx/level_up/imports/Scenes/VFX_Level_up.tscn")
 
 #projectile skills
 var mage_skill = load("res://player/mage/mage_skill.tscn")
@@ -175,9 +177,27 @@ func update_orientation():
 			model.look_at(look_at_pos, Vector3(0, 1, 0))
 
 func gain_experience(exp_received):
-	print("gained experience: ", exp_received)
 	current_exp += exp_received
-	print("current experience: ", current_exp)
+	
+	if current_exp >= 100:
+		level_up()
+	
+
+	
+func level_up():
+	print("You've leveled up!")
+	current_exp = current_exp-100
+	level += 1
+	var level_up_vfx_instance = level_up_vfx.instantiate()
+	add_child(level_up_vfx_instance)
+	var experience_label_node = ui.get_child(2).get_child(0).get_child(0)
+	experience_label_node.text = "Level: " + str(level)
+	await get_tree().create_timer(3.0).timeout
+	level_up_vfx_instance.queue_free()
+	#await get_tree().create_timer(4.0).timeout
+	#level_up_vfx_instance.global_transform.origin = global_transform.origin
+
+	
 
 func hit(dir):
 	emit_signal("player_hit")

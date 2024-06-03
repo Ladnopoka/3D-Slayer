@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://k8ouul2kasu0"]
+
+[ext_resource type="Shader" uid="uid://bsvgta0sy53dj" path="res://vfx/level_up/shader_cylinder_lvlup.tres" id="1_bm0m0"]
+[ext_resource type="ArrayMesh" uid="uid://c1iiqluf28bv6" path="res://vfx/level_up/cylinder_long.obj" id="2_beyc0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_08v5x"]
+render_priority = 0
+shader = ExtResource("1_bm0m0")
+
+[sub_resource type="Curve" id="Curve_jxcww"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.248252, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_wr25x"]
+texture_mode = 1
+curve = SubResource("Curve_jxcww")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8e4ti"]
+gravity = Vector3(0, 0, 0)
+scale_min = 4.0
+scale_max = 4.0
+color = Color(0.176471, 0.698039, 0, 1)
+alpha_curve = SubResource("CurveTexture_wr25x")
+
+[node name="Level Up" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+material_override = SubResource("ShaderMaterial_08v5x")
+cast_shadow = 0
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_8e4ti")
+draw_pass_1 = ExtResource("2_beyc0")

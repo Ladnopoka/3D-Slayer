@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5x0n5apxgn23"
+path="res://.godot/imported/sm_cylinder1.obj-5110dd09460552827204dc6379be3461.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sm_cylinder1.obj-5110dd09460552827204dc6379be3461.mesh"]
+
+source_file="res://vfx/level_up/imports/Objects/sm_cylinder1.obj"
+dest_files=["res://.godot/imported/sm_cylinder1.obj-5110dd09460552827204dc6379be3461.mesh", "res://.godot/imported/sm_cylinder1.obj-5110dd09460552827204dc6379be3461.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
