@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckr5jkyou3cqh"]
+
+[ext_resource type="PackedScene" uid="uid://cafmokx404g0l" path="res://assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/spellbook_open.gltf" id="1_h5er8"]
+
+[node name="spellbook_open" instance=ExtResource("1_h5er8")]

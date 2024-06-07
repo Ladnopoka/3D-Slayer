@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr6i2kh8ibs8h"]
+
+[ext_resource type="PackedScene" uid="uid://1dsk2fmaklnd" path="res://assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/sword_2handed.gltf" id="1_wgf8n"]
+
+[node name="sword_2handed" instance=ExtResource("1_wgf8n")]

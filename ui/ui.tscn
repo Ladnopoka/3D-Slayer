@@ -163,7 +163,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Experience Bar" type="TextureProgressBar" parent="XP Bar"]
-unique_name_in_owner = true
 layout_mode = 0
 offset_left = 320.0
 offset_top = 1041.0
@@ -175,7 +174,6 @@ texture_under = ExtResource("8_s26bw")
 texture_progress = ExtResource("9_ynwmp")
 
 [node name="Experience Label" type="Label" parent="XP Bar/Experience Bar"]
-unique_name_in_owner = true
 layout_mode = 0
 offset_left = 540.0
 offset_right = 640.0

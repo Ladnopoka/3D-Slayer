@@ -23,3 +23,7 @@ res://portal/portal.tscn
 res://globals/game_data/GameState.gd
 res://skills/impact/lightning_skill.gd
 res://player/mage/mage.gd
+res://ui/ui.gd
+res://item/staff.gd
+res://item/staff.tscn
+res://item/crossbow_1_handed.tscn

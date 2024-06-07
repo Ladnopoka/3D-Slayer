@@ -176,12 +176,13 @@ func gain_experience(exp_received):
 
 func level_up():
 	print("You've leveled up!")
-	current_exp = current_exp-100
+	current_exp = current_exp-100#
 	level += 1
+	GameState.player_data["level"] = level
 	var level_up_vfx_instance = level_up_vfx.instantiate()
 	add_child(level_up_vfx_instance)
-	var experience_label_node = ui.get_child(2).get_child(0).get_child(0)
-	experience_label_node.text = "Level: " + str(level)
+	#var experience_label_node = ui.get_child(2).get_child(0).get_child(0)
+	#experience_label_node.text = "Level: " + str(level)
 	await get_tree().create_timer(3.0).timeout
 	level_up_vfx_instance.queue_free()
 

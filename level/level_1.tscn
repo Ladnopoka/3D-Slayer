@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=19 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
 [ext_resource type="PackedScene" uid="uid://dw4mealbcrbin" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
@@ -7,8 +7,11 @@
 [ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
+[ext_resource type="PackedScene" uid="uid://c5yj8h7m4bjk7" path="res://item/staff.tscn" id="10_g3c60"]
 [ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_twf6y"]
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
+[ext_resource type="Script" path="res://item/staff.gd" id="11_ko15g"]
+[ext_resource type="PackedScene" uid="uid://d3u422rpbyufs" path="res://item/crossbow_1_handed.tscn" id="12_xvgs8"]
 
 [sub_resource type="GDScript" id="GDScript_1jutb"]
 script/source = "extends Node3D
@@ -211,7 +214,7 @@ transform = Transform3D(30, 0, 0, 0, -1.31134e-06, 30, 0, -30, -1.31134e-06, 0, 
 shape = SubResource("BoxShape3D_lknay")
 
 [node name="Portal" parent="." instance=ExtResource("10_wksuf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21744, 0, 16.0452)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2174, 0, 11.0452)
 
 [node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -255,5 +258,14 @@ offset_right = 114.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Select"
+
+[node name="Floating Weapons" type="Node3D" parent="."]
+
+[node name="Staff" parent="Floating Weapons" instance=ExtResource("10_g3c60")]
+transform = Transform3D(0.0855358, 0, -0.980402, 0, 1.202, 0, 1.49756, 0, 0.0559975, 10.7437, 1, 7.59965)
+script = ExtResource("11_ko15g")
+
+[node name="crossbow_1handed" parent="Floating Weapons" instance=ExtResource("12_xvgs8")]
+transform = Transform3D(1.5, 0, 0, 0, 2.98023e-08, 1.5, 0, -1.5, 2.98023e-08, 14.3221, 1, 7.92958)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -5,11 +5,11 @@ extends CanvasLayer
 @onready var label = $HealthGlobe/Label
 
 var player
-var level_num = 0
+var level_num = 1
 
 #Exp
-@onready var experience_bar = %"Experience Bar"
-@onready var experience_label = %"Experience Label"
+@onready var experience_bar = $"XP Bar/Experience Bar"
+@onready var experience_label = $"XP Bar/Experience Bar/Experience Label"
 
 #func set_expbar(set_value = 1, set_max_value = 100):
 	#experience_bar.value = set_value
@@ -29,7 +29,7 @@ func _ready():
 	health_globe.max_value = player.hp
 	health_globe.value = player.hp
 	label.text = str(player.current_hp) + "/" + str(player.hp)
-	experience_label.text = "Level: " + str(level_num)
+	experience_label.text = "Level: " + str(GameState.player_data["level"])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -44,7 +44,4 @@ func UpdateGlobes():
 func UpdateExp():
 	var new_exp = player.current_exp
 	experience_bar.value = new_exp
-	
-	if experience_bar.value >= 100:
-		experience_bar.value = 0
-		experience_label.text = "Level: " + str(player.level_num)
+	experience_label.text = "Level: " + str(GameState.player_data["level"])
