@@ -78,6 +78,7 @@ func _physics_process(delta):
 		if !is_dead:
 			HPRegen(delta)
 			movement_and_attacking(delta)
+			update_orientation()
 	
 func movement_and_attacking(delta):
 		# Add the gravity.
@@ -134,12 +135,12 @@ func cast_lightning_skill_1():
 	lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
 	
 	# Always update orientation, regardless of cooldown
-	update_orientation()
+	#update_orientation()
 	anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
 
 func attack():
 	# Always update orientation, regardless of cooldown
-	update_orientation()
+	#update_orientation()
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
 
 func shoot_projectile():

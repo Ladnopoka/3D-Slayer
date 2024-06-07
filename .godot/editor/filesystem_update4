@@ -41,3 +41,4 @@ res://globals/game_data/item_data/item.gd
 res://globals/game_data/item_data/resource/staff.tres
 res://item/floating_weapons.gd
 res://globals/game_data/item_data/resource/axe2h.tres
+res://item/floating_weapons.tscn
