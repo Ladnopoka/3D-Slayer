@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717797043
+::res://::1717799161
 icon.svg::CompressedTexture2D::3540083071793652844::1696269644::1703605303::1::::<><>::
 Ideas.txt::TextFile::-1::1703376053::0::1::::<><>::
 third_person_player.gd::GDScript::-1::1703376057::0::1::::<>CharacterBody3D<>::
@@ -2808,19 +2808,19 @@ item.gd::GDScript::-1::1717796857::0::1::::Item<>Resource<>::
 ::res://globals/game_data/item_data/crafting/::1717797043
 ::res://globals/game_data/item_data/crafting/recipes/::1717797103
 recipe.gd::GDScript::-1::1717797083::0::1::::Recipe<>Resource<>::
-::res://globals/game_data/item_data/crafting/recipes/resources/::1717797339
-rune_1.tres::Resource/Recipe::1933006959671312465::1717797136::0::1::::<><>::res://globals/game_data/item_data/crafting/recipes/recipe.gd
-staff.tres::Resource/Recipe::2644515243888888276::1717797339::0::1::::<><>::uid://bt6i1mlrgceb1::::res://globals/game_data/item_data/resource/rune_1.tres<>uid://m4y1wwcitb2i::::res://globals/game_data/item_data/resource/rune_2.tres<>res://globals/game_data/item_data/crafting/recipes/recipe.gd
-::res://globals/game_data/item_data/resource/::1717796860
+::res://globals/game_data/item_data/crafting/recipes/resources/::1717797580
+rune_1.tres::Resource/Recipe::1933006959671312465::1717797580::0::1::::<><>::uid://b8lpy1pfof146::::res://globals/game_data/item_data/resource/axe2h.tres<>res://globals/game_data/item_data/crafting/recipes/recipe.gd<>uid://bt6i1mlrgceb1::::res://globals/game_data/item_data/resource/rune_1.tres<>uid://do3q8yhb7v74j::::res://globals/game_data/item_data/resource/staff.tres
+staff.tres::Resource/Resource::2644515243888888276::1717797339::0::1::::<><>::uid://bt6i1mlrgceb1::::res://globals/game_data/item_data/resource/rune_1.tres<>uid://m4y1wwcitb2i::::res://globals/game_data/item_data/resource/rune_2.tres<>res://globals/game_data/item_data/crafting/recipes/recipe.gd
+::res://globals/game_data/item_data/resource/::1717797580
 axe2h.tres::Resource/Resource::4726315682013325129::1717774222::0::1::::<><>::res://globals/game_data/item_data/item.gd<>uid://deaqmta0ypbbf::::res://assets/Items/Axe 5.png<>uid://cpkpelyalnhx8::::res://item/axe_2_handed.tscn
 rune_1.tres::Resource/Item::3784537237828782236::1717796860::0::1::::<><>::res://globals/game_data/item_data/item.gd<>uid://cuysphxf04nxj::::res://assets/cemetery/Previews/rocks-tall.png<>uid://bh7oqvs1u6546::::res://block/block.tscn
-rune_2.tres::Resource/Resource::903637906593755258::1717796773::0::1::::<><>::uid://btb38ipbh18oc::::res://assets/cemetery/Previews/rocks.png<>uid://b6g5p5u85hdej::::res://level/cemetery/Crypt/rocks_dec.tscn<>res://globals/game_data/item_data/item.gd
+rune_2.tres::Resource/Item::903637906593755258::1717797580::0::1::::<><>::uid://btb38ipbh18oc::::res://assets/cemetery/Previews/rocks.png<>uid://b6g5p5u85hdej::::res://level/cemetery/Crypt/rocks_dec.tscn<>res://globals/game_data/item_data/item.gd
 staff.tres::Resource/Resource::8200740113671651179::1717774446::0::1::::<><>::uid://d1gyvgs8asjtf::::res://assets/Items/Sword 1.png<>res://globals/game_data/item_data/item.gd<>uid://c5yj8h7m4bjk7::::res://item/staff.tscn
 ::res://globals/player_data/::1717434095
 mage_data.gd::GDScript::-1::1717434095::0::1::::<>Node<>::
 ::res://hideout/::1716586128
 hideout.tscn::PackedScene::7716916017365361345::1716586128::0::1::::<><>::uid://bhqof1t0bm717::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bed_floor.gltf.glb<>uid://dwbaq4uhjquy5::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_green.gltf.glb<>uid://j24ungbtfvlc::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_A_labeled_brown.gltf.glb<>uid://bdp6tutkxnjpy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/bottle_C_brown.gltf.glb<>uid://casqreq25pifw::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_large.gltf.glb<>uid://0qo5pqlgjtx1::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small.gltf.glb<>uid://bpadbu3mlppok::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_small_decorated.gltf.glb<>uid://b0s1pm13gntfy::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/box_stacked.gltf.glb<>uid://cbuhnr0vvr062::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chair.gltf.glb<>uid://brjuqiht77plh::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/chest.glb<>uid://d2buip5jlkbok::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/coin.gltf.glb<>uid://b5n23ue5nwjwg::::res://assets/TileMaps/tiles_dungeon_remastered.tres<>uid://gomynnst5h3f::::res://assets/TileMaps/tiles_medieval.tres<>uid://b2ggx6v8a0fah::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/keg_decorated.gltf.glb<>uid://chnbfpgsef1t4::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_A.gltf.glb<>uid://v0g3wjjembau::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/plate_food_B.gltf.glb<>uid://dguci4kg4lvkn::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_large.gltf.glb<>uid://bx1h7nu55x7g2::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/rubble_half.gltf.glb<>uid://cbvkgdxcy2odg::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/stool.gltf.glb<>uid://cnoqyh6t6jkvf::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_long_decorated_A.gltf.glb<>uid://b1dnt7amvfebe::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_medium_tablecloth_decorated_B.gltf.glb<>uid://cti6h2pnckd5n::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/table_small_decorated_A.gltf.glb<>uid://b0a83hrm81gfq::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_B.gltf.glb<>uid://dp584c61xh6q4::::res://assets/KayKit_DungeonRemastered_1.0_FREE/Assets/gltf/trunk_large_A.gltf.glb
-::res://inventory/::1717792717
+::res://inventory/::1717798563
 inventory.gd::GDScript::-1::1717772655::0::1::::Inventory<>RefCounted<>::
 inventory_data.gd::GDScript::-1::1700160616::0::1::::InventoryData<>Resource<>::
 inventory_dialog.gd::GDScript::-1::1717792569::0::1::::InventoryDialog<>PanelContainer<>::
@@ -3042,9 +3042,14 @@ dungeon_tiles.tscn::PackedScene::1197996864231951588::1716586139::0::1::::<><>::
 dungeon_wall.tscn::PackedScene::736270479419838036::1717434095::0::1::::<><>::uid://ch3woy2gqbe7y::::res://assets/TileMaps/dungeon_tiles_atlas.png<>uid://cyjamtf15en82::::res://assets/TileMaps/dungeon_tiles_atlas_n.png
 ::res://transition/::1716586140
 transition.tscn::PackedScene::8486262327048564225::1716586140::0::1::::<><>::
-::res://ui/::1717792717
+::res://ui/::1717797454
 ui.gd::GDScript::-1::1717792717::0::1::::<>CanvasLayer<>::
 ui.tscn::PackedScene::884572858756141227::1717792717::0::1::::<><>::res://ui/ui.gd<>uid://befbx2j60m08y::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Bonus_Level_Base.png<>uid://ddk1b7fdnqiry::::res://assets/HealthGlobe/Globe_Red.png<>uid://v43dje64fmy4::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Main_Button_Overlay.png<>uid://lphqff08vli7::::res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Corner.png<>uid://b4l1kwkjr5ar3::::res://assets/HealthGlobe/Globe_Blue.png<>uid://d0olnmrky3ugd::::res://globals/Bildad.ttf<>uid://dx7xx6vfahxlq::::res://ui/imports/exp_bar/exp_background.png<>uid://dlx33roiu0vlj::::res://ui/imports/exp_bar/exp_progress.png<>uid://5llhkrp8644y::::res://globals/Diablo Heavy.ttf<>uid://q3r6iat7s13d::::res://inventory/inventory_dialog.tscn
+::res://ui/crafting_dialogue/::1717799161
+crafting_dialog.gd::GDScript::-1::1717798844::0::1::::CraftingDialog<>PanelContainer<>::
+crafting_dialog.tscn::PackedScene::4221565722706653904::1717798705::0::1::::<><>::res://ui/crafting_dialogue/crafting_dialog.gd
+::res://ui/crafting_dialogue/item_grid/::1717799161
+ingredients_container.tscn::PackedScene::6006652367823181208::1717799087::0::1::::<><>::
 ::res://ui/imports/::1717434095
 huh.txt::TextFile::-1::1717434095::0::1::::<><>::
 ::res://ui/imports/dividing_bars/::1717434095

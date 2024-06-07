@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1e7tnx15hktk"]
+[gd_scene load_steps=2 format=3 uid="uid://b1e7tnx15hktk"]
 
-[ext_resource type="Script" path="res://inventory/inventory_dialog.gd" id="1_k156x"]
-[ext_resource type="PackedScene" uid="uid://hlncvc5cdu7y" path="res://item/item_slot.tscn" id="2_qw4da"]
+[ext_resource type="Script" path="res://ui/crafting_dialogue/crafting_dialog.gd" id="1_mwo8k"]
 
 [node name="CraftingDialog" type="PanelContainer"]
 anchors_preset = 8
@@ -15,8 +14,7 @@ offset_right = -280.0
 offset_bottom = 269.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_k156x")
-slot_scene = ExtResource("2_qw4da")
+script = ExtResource("1_mwo8k")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -46,6 +44,7 @@ layout_mode = 2
 text = "Recipes"
 
 [node name="RecipeList" type="ItemList" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_vertical = 3
@@ -61,7 +60,8 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "Ingredients"
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="IngredientsContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 columns = 5
 
@@ -69,7 +69,8 @@ columns = 5
 layout_mode = 2
 text = "Results"
 
-[node name="GridContainer2" type="GridContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="ResultsContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 columns = 5
 
