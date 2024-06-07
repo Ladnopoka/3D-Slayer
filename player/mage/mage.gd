@@ -21,13 +21,12 @@ var velocity_var = Vector3.ZERO
 @onready var projectile_shooting_point = $Rig/RayCast3D
 @onready var base_camera = $camera_rig/base_camera
 
-var inventory
+var inventory = []
 
 var camera_rig = preload("res://player/camera_rig.tscn")
 var camera_rig_ins
 
 var lightning_skill_1 = preload("res://skills/impact/lightning_skill.tscn")
-
 var lightning_skill_1_instance
 #signal
 signal player_hit
@@ -206,7 +205,7 @@ func die():
 		Global.score = 0
 		Global.deaths += 1
 	await get_tree().create_timer(1.0).timeout
-	MageData.save_player_data(current_exp, inventory)
+	GameState.update_player_data(current_exp, level, hp, inventory)
 	get_tree().change_scene_to_file("res://level/level_1.tscn")
 	
 func HPRegen(delta):

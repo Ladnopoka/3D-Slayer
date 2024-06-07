@@ -19,7 +19,8 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scripts/globals/game_manager.gd"
 Global="*res://globals/Global.gd"
-MageData="*res://globals/player_data/mage_data.gd"
+MageData="res://globals/player_data/mage_data.gd"
+GameState="*res://globals/game_data/GameState.gd"
 
 [display]
 

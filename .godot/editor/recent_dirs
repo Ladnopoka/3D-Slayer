@@ -1,3 +1,4 @@
+res://globals/game_data
 res://skills/impact
 res://vfx/level_up
 res://globals/player_data
@@ -19,6 +20,5 @@ res://tilemaps
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin/documentation
 res://level/level3
 res://assets/Trolling
-res://assets/resources
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin
 C:/Users/ladno/Documents/3D Slayer/addons
