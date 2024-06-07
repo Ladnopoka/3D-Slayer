@@ -229,5 +229,5 @@ func set_controlled(state: bool):
 		# the locomotionBlendPath or other parameters to reflect an idle state.
 		# anim_tree.set("parameters/locomotion/blend_position", Vector2.ZERO)
 		
-func on_item_picked_up(item_id):
-	print("I got a new item!: ", Items.Database[item_id].name)
+func on_item_picked_up(item:Item):
+	print("I got a new item!: ", item.name)

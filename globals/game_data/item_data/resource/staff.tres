@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://do3q8yhb7v74j"]
+
+[ext_resource type="Script" path="res://globals/game_data/item_data/item.gd" id="1_stp5h"]
+[ext_resource type="PackedScene" uid="uid://c5yj8h7m4bjk7" path="res://item/staff.tscn" id="1_t22io"]
+
+[resource]
+script = ExtResource("1_stp5h")
+name = "Staff"
+scene = ExtResource("1_t22io")

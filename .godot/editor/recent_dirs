@@ -1,3 +1,4 @@
+res://globals/game_data/item_data/resource
 res://item
 res://globals/game_data
 res://skills/impact
@@ -19,6 +20,5 @@ res://player
 res://assets/TileMaps
 res://tilemaps
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin/documentation
-res://level/level3
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin
 C:/Users/ladno/Documents/3D Slayer/addons

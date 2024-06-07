@@ -1,0 +1,91 @@
+[gd_scene load_steps=24 format=3 uid="uid://bys7ecntquilo"]
+
+[ext_resource type="Script" path="res://item/floating_weapons.gd" id="1_nclvn"]
+[ext_resource type="Resource" uid="uid://do3q8yhb7v74j" path="res://globals/game_data/item_data/resource/staff.tres" id="2_s3i8x"]
+[ext_resource type="PackedScene" uid="uid://c5yj8h7m4bjk7" path="res://item/staff.tscn" id="3_rsqor"]
+[ext_resource type="Script" path="res://item/staff.gd" id="4_nvy41"]
+[ext_resource type="PackedScene" uid="uid://d3u422rpbyufs" path="res://item/crossbow_1_handed.tscn" id="5_fbxy8"]
+[ext_resource type="Script" path="res://item/crossbow_1_handed.gd" id="6_gsx4d"]
+[ext_resource type="PackedScene" uid="uid://5b6sld8r70kl" path="res://item/wand.tscn" id="7_sxret"]
+[ext_resource type="Script" path="res://item/wand.gd" id="8_wcl10"]
+[ext_resource type="PackedScene" uid="uid://dtc0s0s8i0u1h" path="res://item/dagger.tscn" id="9_yob0f"]
+[ext_resource type="Script" path="res://item/dagger.gd" id="10_fvm3f"]
+[ext_resource type="PackedScene" uid="uid://cpkpelyalnhx8" path="res://item/axe_2_handed.tscn" id="11_dxbtx"]
+[ext_resource type="Script" path="res://item/axe_2_handed.gd" id="12_6jmo0"]
+[ext_resource type="PackedScene" uid="uid://cr6i2kh8ibs8h" path="res://item/sword_2_handed.tscn" id="13_ompep"]
+[ext_resource type="Script" path="res://item/sword_2_handed.gd" id="14_4jwqg"]
+[ext_resource type="PackedScene" uid="uid://ckr5jkyou3cqh" path="res://item/spellbook_open.tscn" id="15_lij3r"]
+[ext_resource type="Script" path="res://item/spellbook_open.gd" id="16_5iwh7"]
+[ext_resource type="PackedScene" uid="uid://d28guf767oai6" path="res://item/shield_spikes.tscn" id="17_ua6ds"]
+[ext_resource type="Script" path="res://item/shield_spikes.gd" id="18_l2pd6"]
+[ext_resource type="PackedScene" uid="uid://b51qacqs622dg" path="res://item/smokebomb.tscn" id="19_utxrp"]
+[ext_resource type="Script" path="res://item/smokebomb.gd" id="20_0yhgu"]
+[ext_resource type="PackedScene" uid="uid://cd2vyivewmydi" path="res://item/shield_round_barbarian.tscn" id="21_ai55x"]
+[ext_resource type="Script" path="res://item/shield_round_barbarian.gd" id="22_8dqjv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrbcv"]
+
+[node name="Floating Weapons" type="Node3D"]
+script = ExtResource("1_nclvn")
+item = ExtResource("2_s3i8x")
+
+[node name="Staff" parent="." instance=ExtResource("3_rsqor")]
+transform = Transform3D(-0.00155102, -0.411719, -0.922596, 0.250799, 1.11332, -0.331788, 1.47888, -0.189236, 0.0552991, 10.7437, 1, 6.93471)
+visible = false
+script = ExtResource("4_nvy41")
+
+[node name="crossbow_1handed" parent="." instance=ExtResource("5_fbxy8")]
+transform = Transform3D(1.4673, 0.0661697, 0.3044, -0.311509, 0.311678, 1.43381, 0, -1.46577, 0.318625, 13.8082, 1, 7.05307)
+visible = false
+script = ExtResource("6_gsx4d")
+
+[node name="wand" parent="." instance=ExtResource("7_sxret")]
+transform = Transform3D(1.56285, -0.342786, -7.10543e-16, 0.315302, 1.43754, -0.627739, 0.134488, 0.613164, 1.47171, 13.7942, 0.972758, 9.47955)
+visible = false
+script = ExtResource("8_wcl10")
+
+[node name="dagger" parent="." instance=ExtResource("9_yob0f")]
+transform = Transform3D(1.25542, -0.337517, 0, 0.323072, 1.20169, 0.376241, -0.0976827, -0.363339, 1.24436, 13.9132, 0.738851, 12.4522)
+visible = false
+script = ExtResource("10_fvm3f")
+
+[node name="axe_2handed" parent="." instance=ExtResource("11_dxbtx")]
+transform = Transform3D(0.808884, -0.199676, 0.553025, 0.300913, 0.948643, -0.0976139, -0.505132, 0.245371, 0.827426, 13.85, 0.452703, 14.7783)
+visible = false
+script = ExtResource("12_6jmo0")
+
+[node name="sword_2handed" parent="." instance=ExtResource("13_ompep")]
+transform = Transform3D(0.988137, 0.149498, 0.0351388, -0.153572, 0.961923, 0.226095, 0, -0.22881, 0.973471, 11.5118, 0.287, 14.7976)
+visible = false
+script = ExtResource("14_4jwqg")
+
+[node name="spellbook_open" parent="." instance=ExtResource("15_lij3r")]
+transform = Transform3D(0.803649, 0.483207, 0.34736, -0.595103, 0.65254, 0.469088, 0, -0.583697, 0.811971, 8.90198, 1, 14.7653)
+visible = false
+script = ExtResource("16_5iwh7")
+
+[node name="shield_spikes" parent="." instance=ExtResource("17_ua6ds")]
+transform = Transform3D(-0.724101, -0.308021, 0.617091, -0.234627, 0.95138, 0.199567, -0.648558, -0.000279253, -0.761165, 6.83076, 0, 14.7496)
+visible = false
+script = ExtResource("18_l2pd6")
+
+[node name="smokebomb" parent="." instance=ExtResource("19_utxrp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.53447, 0, 13.0928)
+visible = false
+script = ExtResource("20_0yhgu")
+
+[node name="shield_round_barbarian" parent="." instance=ExtResource("21_ai55x")]
+transform = Transform3D(0.682122, -0.443337, 0.581517, -0.181777, 0.667481, 0.722099, -0.708285, -0.598266, 0.374715, 6.70483, 0, 12.4525)
+visible = false
+script = ExtResource("22_8dqjv")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(-0.00155108, -0.513793, -1.40926, 0.250799, 1.38933, -0.506804, 1.47888, -0.236151, 0.0844691, 10.7437, 1, 6.93471)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_xrbcv")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+
+[editable path="Staff"]
+[editable path="sword_2handed"]
