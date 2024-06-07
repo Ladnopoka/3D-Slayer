@@ -121,11 +121,11 @@ func _process_click(collider, position):
 				current_controlled_character.get_node(\"SelectionArea/Selection\").visible = false
 				current_controlled_character.get_node(\"UI\").visible = false
 		
-		# Hide the selection circle for all characters
-		for character in $Characters.get_children():
-			if character.has_node(\"SelectionArea/Selection\"):
-				character.get_node(\"SelectionArea/Selection\").visible = false
-				character.get_node(\"UI\").visible = false
+		## Hide the selection circle for all characters
+		#for character in $Characters.get_children():
+			#if character.has_node(\"SelectionArea/Selection\"):
+				#character.get_node(\"SelectionArea/Selection\").visible = false
+				#character.get_node(\"UI\").visible = false
 
 		# Show the selection circle for the clicked character
 		collider.get_node(\"SelectionArea/Selection\").visible = true
@@ -189,9 +189,11 @@ environment = SubResource("Environment_wbfuk")
 [node name="Characters" type="Node" parent="."]
 
 [node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
+locomotionBlendPath = ""
 
 [node name="Rogue_Hooded" parent="Characters" instance=ExtResource("4_ojc8u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5313, 0, 4.35114)
+locomotionBlendPath = ""
 
 [node name="Mage" parent="Characters" instance=ExtResource("4_u2h3x")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -7.05131, 0, 4.63611)
