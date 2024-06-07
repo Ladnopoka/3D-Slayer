@@ -228,3 +228,6 @@ func set_controlled(state: bool):
 		# Ensure the blend space is set to the idle position. This might involve setting
 		# the locomotionBlendPath or other parameters to reflect an idle state.
 		# anim_tree.set("parameters/locomotion/blend_position", Vector2.ZERO)
+		
+func on_item_picked_up(item_id):
+	print("I got a new item!: ", Items.Database[item_id].name)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=37 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
 [ext_resource type="PackedScene" uid="uid://dw4mealbcrbin" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
@@ -198,6 +198,8 @@ material = ExtResource("4_vr2du")
 [sub_resource type="BoxShape3D" id="BoxShape3D_lknay"]
 size = Vector3(2, 2, 0)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrbcv"]
+
 [node name="Level1" type="Node3D"]
 script = SubResource("GDScript_1jutb")
 
@@ -281,6 +283,12 @@ text = "Select"
 [node name="Staff" parent="Floating Weapons" instance=ExtResource("10_g3c60")]
 transform = Transform3D(-0.00155102, -0.411719, -0.922596, 0.250799, 1.11332, -0.331788, 1.47888, -0.189236, 0.0552991, 10.7437, 1, 6.93471)
 script = ExtResource("11_ko15g")
+item_id = "staff"
+
+[node name="Area3D" type="Area3D" parent="Floating Weapons/Staff"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floating Weapons/Staff/Area3D"]
+shape = SubResource("BoxShape3D_xrbcv")
 
 [node name="crossbow_1handed" parent="Floating Weapons" instance=ExtResource("12_xvgs8")]
 transform = Transform3D(1.4673, 0.0661697, 0.3044, -0.311509, 0.311678, 1.43381, 0, -1.46577, 0.318625, 13.8082, 1, 7.05307)
@@ -319,3 +327,7 @@ transform = Transform3D(0.682122, -0.443337, 0.581517, -0.181777, 0.667481, 0.72
 script = ExtResource("29_2bjew")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="body_entered" from="Floating Weapons/Staff/Area3D" to="Floating Weapons/Staff" method="_on_area_3d_body_entered"]
+
+[editable path="Floating Weapons/Staff"]
+[editable path="Floating Weapons/sword_2handed"]

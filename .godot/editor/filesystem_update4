@@ -36,3 +36,4 @@ res://item/spellbook_open.gd
 res://item/shield_spikes.gd
 res://item/smokebomb.gd
 res://item/shield_round_barbarian.gd
+res://globals/game_data/item_data/items.gd
