@@ -1,10 +1,11 @@
+ItemList
+Label
+VBoxContainer
+HBoxContainer
 TextureRect
 PanelContainer
-VBoxContainer
 GridContainer
 Button
-Label
-HBoxContainer
 CollisionShape3D
 Area3D
 Node3D
@@ -12,4 +13,3 @@ Timer
 GPUParticles3D
 TextureProgressBar
 Control
-ProgressBar

@@ -1,3 +1,4 @@
+res://ui/crafting_dialogue
 res://globals/game_data/item_data/crafting/recipes/resources
 res://globals/game_data/item_data/resource
 res://item
@@ -19,7 +20,6 @@ res://player/mage
 res://tilemaps/dungeon_tiles
 res://button_themes
 res://player
-res://assets/TileMaps
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin/documentation
 C:/Users/ladno/Documents/3D Slayer/addons/editor-plugin
 C:/Users/ladno/Documents/3D Slayer/addons

@@ -15,3 +15,6 @@ res://vfx/level_up/shader_cylinder_lvlup.tres
 res://globals/game_data/item_data/resource/rune_1.tres
 res://materials/floor_material - Copy (3).tres
 res://globals/game_data/item_data/crafting/recipes/recipe.gd
+res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres
+res://globals/game_data/item_data/resource/rune_2.tres
+res://ui/crafting_dialogue/crafting_dialog.tscn
