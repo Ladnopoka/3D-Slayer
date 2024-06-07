@@ -4,7 +4,6 @@ extends GridContainer
 @export var slot_scene:PackedScene
 
 func display(items:Array[Item]):
-	
 	for child in get_children():
 		child.queue_free()
 	

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1e7tnx15hktk"]
+[gd_scene load_steps=3 format=3 uid="uid://b1e7tnx15hktk"]
 
 [ext_resource type="Script" path="res://ui/crafting_dialogue/crafting_dialog.gd" id="1_mwo8k"]
+[ext_resource type="PackedScene" uid="uid://crtwxmcrpjfue" path="res://ui/crafting_dialogue/item_grid/item_grid.tscn" id="2_17k4h"]
 
 [node name="CraftingDialog" type="PanelContainer"]
 anchors_preset = 8
@@ -60,19 +61,17 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "Ingredients"
 
-[node name="IngredientsContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="IngredientsContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer2" instance=ExtResource("2_17k4h")]
 unique_name_in_owner = true
 layout_mode = 2
-columns = 5
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
 layout_mode = 2
 text = "Results"
 
-[node name="ResultsContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="ResultsContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer2" instance=ExtResource("2_17k4h")]
 unique_name_in_owner = true
 layout_mode = 2
-columns = 5
 
 [node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
 layout_mode = 2

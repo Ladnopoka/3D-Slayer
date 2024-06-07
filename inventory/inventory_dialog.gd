@@ -2,7 +2,7 @@ class_name InventoryDialog
 extends PanelContainer
 
 @export var slot_scene:PackedScene
-@onready var grid_container:GridContainer = %GridContainer
+@onready var grid_container:ItemGrid = %GridContainer
 
 func open(inventory:Inventory):
 	show()

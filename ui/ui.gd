@@ -7,10 +7,16 @@ extends CanvasLayer
 var player
 var level_num = 1
 @onready var inventory_dialog = %InventoryDialog
+@onready var crafting_dialog = %CraftingDialog
 
 #Exp
 @onready var experience_bar = $"XP Bar/Experience Bar"
 @onready var experience_label = $"XP Bar/Experience Bar/Experience Label"
+
+const RUNE_1:Recipe = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres")
+const STAFF:Recipe = preload("res://globals/game_data/item_data/crafting/recipes/resources/staff.tres")
+#const AXE_2H:Recipe = preload("res://globals/game_data/item_data/resource/axe2h.tres")
+#const RUNE_2:Recipe = preload("res://globals/game_data/item_data/resource/rune_2.tres")
 
 func _unhandled_input(event):
 	if event.is_action_released("inventory") && player == GameManager.player:
@@ -18,6 +24,12 @@ func _unhandled_input(event):
 			inventory_dialog.hide()
 		else:
 			inventory_dialog.open(player.inventory)
+			
+	if event.is_action_released("crafting") && player == GameManager.player:
+		if crafting_dialog.is_visible():
+			crafting_dialog.hide()
+		else:
+			crafting_dialog.open([], player.inventory)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

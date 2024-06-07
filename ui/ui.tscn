@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://muq1yk7w0c1h"]
+[gd_scene load_steps=13 format=3 uid="uid://muq1yk7w0c1h"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_cb527"]
 [ext_resource type="Texture2D" uid="uid://befbx2j60m08y" path="res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Bonus_Level_Base.png" id="1_ijdx3"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dlx33roiu0vlj" path="res://ui/imports/exp_bar/exp_progress.png" id="9_ynwmp"]
 [ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_hjqlj"]
 [ext_resource type="PackedScene" uid="uid://q3r6iat7s13d" path="res://inventory/inventory_dialog.tscn" id="11_wpj68"]
+[ext_resource type="PackedScene" uid="uid://b1e7tnx15hktk" path="res://ui/crafting_dialogue/crafting_dialog.tscn" id="12_g7n0t"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_cb527")
@@ -188,3 +189,9 @@ vertical_alignment = 2
 [node name="InventoryDialog" parent="." instance=ExtResource("11_wpj68")]
 unique_name_in_owner = true
 visible = false
+
+[node name="CraftingDialog" parent="." instance=ExtResource("12_g7n0t")]
+unique_name_in_owner = true
+visible = false
+offset_right = -291.0
+offset_bottom = 249.0

@@ -18,6 +18,8 @@ func open(recipes:Array[Recipe], inventory:Inventory):
 func _on_close_button_pressed():
 	hide()
 
-
 func _on_recipe_list_item_selected(index):
 	var recipe:Recipe = recipe_list.get_item_metadata(index)
+	ingredients_container.display(recipe.ingredients)
+	results_container.display(recipe.results)
+	
