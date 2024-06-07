@@ -42,3 +42,8 @@ res://globals/game_data/item_data/resource/staff.tres
 res://item/floating_weapons.gd
 res://globals/game_data/item_data/resource/axe2h.tres
 res://item/floating_weapons.tscn
+res://inventory/inventory.gd
+res://inventory/inventory_dialog.tscn
+res://inventory/inventory_dialog.gd
+res://item/item_slot.tscn
+res://item/item_slot.gd

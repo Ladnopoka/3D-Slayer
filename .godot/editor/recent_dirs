@@ -1,5 +1,6 @@
-res://globals/game_data/item_data/resource
 res://item
+res://inventory
+res://globals/game_data/item_data/resource
 res://globals/game_data
 res://skills/impact
 res://vfx/level_up
