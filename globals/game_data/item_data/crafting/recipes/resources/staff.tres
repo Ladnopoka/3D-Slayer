@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=4 format=3 uid="uid://bdxa1rli7s317"]
+
+[ext_resource type="Resource" uid="uid://bt6i1mlrgceb1" path="res://globals/game_data/item_data/resource/rune_1.tres" id="1_l7n0b"]
+[ext_resource type="Resource" uid="uid://m4y1wwcitb2i" path="res://globals/game_data/item_data/resource/rune_2.tres" id="2_7i7uv"]
+[ext_resource type="Script" path="res://globals/game_data/item_data/crafting/recipes/recipe.gd" id="3_n3ss5"]
+
+[resource]
+script = ExtResource("3_n3ss5")
+name = "Rune 1"
+ingredients = Array[Resource("res://globals/game_data/item_data/item.gd")]([ExtResource("1_l7n0b"), ExtResource("1_l7n0b"), ExtResource("1_l7n0b")])
+results = Array[Resource("res://globals/game_data/item_data/item.gd")]([ExtResource("2_7i7uv"), ExtResource("2_7i7uv")])

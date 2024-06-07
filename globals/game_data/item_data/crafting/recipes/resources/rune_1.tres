@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=2 format=3 uid="uid://2smlvuhprhc0"]
+
+[ext_resource type="Script" path="res://globals/game_data/item_data/crafting/recipes/recipe.gd" id="1_qbb2v"]
+
+[resource]
+script = ExtResource("1_qbb2v")
+name = ""
+ingredients = Array[Resource("res://globals/game_data/item_data/item.gd")]([])
+results = Array[Resource("res://globals/game_data/item_data/item.gd")]([])

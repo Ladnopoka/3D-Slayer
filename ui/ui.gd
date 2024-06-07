@@ -14,7 +14,10 @@ var level_num = 1
 
 func _unhandled_input(event):
 	if event.is_action_released("inventory") && player == GameManager.player:
-		inventory_dialog.open(player.inventory)
+		if inventory_dialog.is_visible():
+			inventory_dialog.hide()
+		else:
+			inventory_dialog.open(player.inventory)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

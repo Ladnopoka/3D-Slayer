@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://m4y1wwcitb2i"]
+
+[ext_resource type="Texture2D" uid="uid://btb38ipbh18oc" path="res://assets/cemetery/Previews/rocks.png" id="1_70awr"]
+[ext_resource type="PackedScene" uid="uid://b6g5p5u85hdej" path="res://level/cemetery/Crypt/rocks_dec.tscn" id="2_4gekm"]
+[ext_resource type="Script" path="res://globals/game_data/item_data/item.gd" id="3_o4l6m"]
+
+[resource]
+script = ExtResource("3_o4l6m")
+name = "Rune 1"
+scene = ExtResource("2_4gekm")
+icon = ExtResource("1_70awr")
