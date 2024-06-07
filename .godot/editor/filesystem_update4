@@ -25,3 +25,4 @@ res://assets/TileMaps/tiles_dungeon_remastered.tres
 res://assets/TileMaps/tiles_medieval.tres
 res://assets/resources/grass_material.tres
 res://level/level_1.tscn
+res://inventory/inventory_dialog.gd
