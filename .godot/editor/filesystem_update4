@@ -27,3 +27,12 @@ res://ui/ui.gd
 res://item/staff.gd
 res://item/staff.tscn
 res://item/crossbow_1_handed.tscn
+res://item/crossbow_1_handed.gd
+res://item/wand.gd
+res://item/dagger.gd
+res://item/axe_2_handed.gd
+res://item/sword_2_handed.gd
+res://item/spellbook_open.gd
+res://item/shield_spikes.gd
+res://item/smokebomb.gd
+res://item/shield_round_barbarian.gd

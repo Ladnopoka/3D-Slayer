@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=36 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
 [ext_resource type="PackedScene" uid="uid://dw4mealbcrbin" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
@@ -12,6 +12,23 @@
 [ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
 [ext_resource type="Script" path="res://item/staff.gd" id="11_ko15g"]
 [ext_resource type="PackedScene" uid="uid://d3u422rpbyufs" path="res://item/crossbow_1_handed.tscn" id="12_xvgs8"]
+[ext_resource type="Script" path="res://item/crossbow_1_handed.gd" id="13_2lvut"]
+[ext_resource type="PackedScene" uid="uid://5b6sld8r70kl" path="res://item/wand.tscn" id="14_6y8dx"]
+[ext_resource type="Script" path="res://item/wand.gd" id="15_kiy7e"]
+[ext_resource type="PackedScene" uid="uid://dtc0s0s8i0u1h" path="res://item/dagger.tscn" id="16_3q5wu"]
+[ext_resource type="Script" path="res://item/dagger.gd" id="17_pe5w1"]
+[ext_resource type="PackedScene" uid="uid://cpkpelyalnhx8" path="res://item/axe_2_handed.tscn" id="17_vb4op"]
+[ext_resource type="PackedScene" uid="uid://cr6i2kh8ibs8h" path="res://item/sword_2_handed.tscn" id="18_gjgfy"]
+[ext_resource type="Script" path="res://item/axe_2_handed.gd" id="19_8v612"]
+[ext_resource type="PackedScene" uid="uid://ckr5jkyou3cqh" path="res://item/spellbook_open.tscn" id="19_bv18a"]
+[ext_resource type="PackedScene" uid="uid://d28guf767oai6" path="res://item/shield_spikes.tscn" id="20_401ny"]
+[ext_resource type="PackedScene" uid="uid://b51qacqs622dg" path="res://item/smokebomb.tscn" id="21_gjubc"]
+[ext_resource type="Script" path="res://item/sword_2_handed.gd" id="21_h78hl"]
+[ext_resource type="PackedScene" uid="uid://cd2vyivewmydi" path="res://item/shield_round_barbarian.tscn" id="22_q2eb6"]
+[ext_resource type="Script" path="res://item/spellbook_open.gd" id="23_gnsvx"]
+[ext_resource type="Script" path="res://item/shield_spikes.gd" id="25_pmnvh"]
+[ext_resource type="Script" path="res://item/smokebomb.gd" id="27_mt1xn"]
+[ext_resource type="Script" path="res://item/shield_round_barbarian.gd" id="29_2bjew"]
 
 [sub_resource type="GDScript" id="GDScript_1jutb"]
 script/source = "extends Node3D
@@ -262,10 +279,43 @@ text = "Select"
 [node name="Floating Weapons" type="Node3D" parent="."]
 
 [node name="Staff" parent="Floating Weapons" instance=ExtResource("10_g3c60")]
-transform = Transform3D(0.0855358, 0, -0.980402, 0, 1.202, 0, 1.49756, 0, 0.0559975, 10.7437, 1, 7.59965)
+transform = Transform3D(-0.00155102, -0.411719, -0.922596, 0.250799, 1.11332, -0.331788, 1.47888, -0.189236, 0.0552991, 10.7437, 1, 6.93471)
 script = ExtResource("11_ko15g")
 
 [node name="crossbow_1handed" parent="Floating Weapons" instance=ExtResource("12_xvgs8")]
-transform = Transform3D(1.5, 0, 0, 0, 2.98023e-08, 1.5, 0, -1.5, 2.98023e-08, 14.3221, 1, 7.92958)
+transform = Transform3D(1.4673, 0.0661697, 0.3044, -0.311509, 0.311678, 1.43381, 0, -1.46577, 0.318625, 13.8082, 1, 7.05307)
+script = ExtResource("13_2lvut")
+
+[node name="wand" parent="Floating Weapons" instance=ExtResource("14_6y8dx")]
+transform = Transform3D(1.56285, -0.342786, -7.10543e-16, 0.315302, 1.43754, -0.627739, 0.134488, 0.613164, 1.47171, 13.7942, 0.972758, 9.47955)
+script = ExtResource("15_kiy7e")
+
+[node name="dagger" parent="Floating Weapons" instance=ExtResource("16_3q5wu")]
+transform = Transform3D(1.25542, -0.337517, 0, 0.323072, 1.20169, 0.376241, -0.0976827, -0.363339, 1.24436, 13.9132, 0.738851, 12.4522)
+script = ExtResource("17_pe5w1")
+
+[node name="axe_2handed" parent="Floating Weapons" instance=ExtResource("17_vb4op")]
+transform = Transform3D(0.808884, -0.199676, 0.553025, 0.300913, 0.948643, -0.0976139, -0.505132, 0.245371, 0.827426, 13.85, 0.452703, 14.7783)
+script = ExtResource("19_8v612")
+
+[node name="sword_2handed" parent="Floating Weapons" instance=ExtResource("18_gjgfy")]
+transform = Transform3D(0.988137, 0.149498, 0.0351388, -0.153572, 0.961923, 0.226095, 0, -0.22881, 0.973471, 11.5118, 0.287, 14.7976)
+script = ExtResource("21_h78hl")
+
+[node name="spellbook_open" parent="Floating Weapons" instance=ExtResource("19_bv18a")]
+transform = Transform3D(0.803649, 0.483207, 0.34736, -0.595103, 0.65254, 0.469088, 0, -0.583697, 0.811971, 8.90198, 1, 14.7653)
+script = ExtResource("23_gnsvx")
+
+[node name="shield_spikes" parent="Floating Weapons" instance=ExtResource("20_401ny")]
+transform = Transform3D(-0.724101, -0.308021, 0.617091, -0.234627, 0.95138, 0.199567, -0.648558, -0.000279253, -0.761165, 6.83076, 0, 14.7496)
+script = ExtResource("25_pmnvh")
+
+[node name="smokebomb" parent="Floating Weapons" instance=ExtResource("21_gjubc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.53447, 0, 13.0928)
+script = ExtResource("27_mt1xn")
+
+[node name="shield_round_barbarian" parent="Floating Weapons" instance=ExtResource("22_q2eb6")]
+transform = Transform3D(0.682122, -0.443337, 0.581517, -0.181777, 0.667481, 0.722099, -0.708285, -0.598266, 0.374715, 6.70483, 0, 12.4525)
+script = ExtResource("29_2bjew")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
