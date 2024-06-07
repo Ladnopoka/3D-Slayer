@@ -119,7 +119,7 @@ func _process_click(collider, position):
 			# Optionally hide the UI for the previously controlled character
 			if current_controlled_character.has_node(\"SelectionArea/Selection\"):
 				current_controlled_character.get_node(\"SelectionArea/Selection\").visible = false
-				current_controlled_character.get_node(\"UI\").visible = false
+				#current_controlled_character.get_node(\"UI\").visible = false
 		
 		## Hide the selection circle for all characters
 		#for character in $Characters.get_children():
@@ -129,7 +129,7 @@ func _process_click(collider, position):
 
 		# Show the selection circle for the clicked character
 		collider.get_node(\"SelectionArea/Selection\").visible = true
-		collider.get_node(\"UI\").visible = true
+		#collider.get_node(\"UI\").visible = true
 		character_label.text = collider.name
 		current_selected_character_name = collider.name
 
@@ -189,14 +189,15 @@ environment = SubResource("Environment_wbfuk")
 [node name="Characters" type="Node" parent="."]
 
 [node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
-locomotionBlendPath = ""
+script = null
 
 [node name="Rogue_Hooded" parent="Characters" instance=ExtResource("4_ojc8u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5313, 0, 4.35114)
-locomotionBlendPath = ""
+script = null
 
 [node name="Mage" parent="Characters" instance=ExtResource("4_u2h3x")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -7.05131, 0, 4.63611)
+locomotionBlendPath = ""
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)

@@ -4,7 +4,8 @@ extends CanvasLayer
 @onready var mana_globe = get_node("ManaGlobe/GlobeFull/TextureProgressBar")
 @onready var label = $HealthGlobe/Label
 
-var player #= preload("res://player/mage/mage.tscn")
+var player_preload = preload("res://player/mage/mage.tscn")
+var player
 var level_num = 1
 
 @onready var inventory_dialog:InventoryDialog = %InventoryDialog
@@ -19,7 +20,8 @@ var level_num = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player = $".."
+	player = player_preload.instantiate()
+	print("PLAYER: ", player)
 	health_globe.max_value = player.hp
 	health_globe.value = player.hp
 	label.text = str(player.current_hp) + "/" + str(player.hp)
