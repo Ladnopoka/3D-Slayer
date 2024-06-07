@@ -8,13 +8,8 @@ res://skills/vfx/blender_vfx/lightning_editable.tres
 res://vfx/level_up/imports/Shaders/s_UpLevel.tres
 res://vfx/level_up/imports/Shaders/s_simple1.tres
 res://assets/resources/ground_material.tres
-res://assets/TileMaps/tiles_dungeon_remastered.tres
-res://assets/TileMaps/tiles_medieval.tres
-res://assets/resources/grass_material.tres
 res://vfx/level_up/shader_cylinder_lvlup.tres
 res://level/level2/level_2.tscn
-res://level/level_1.tscn
-res://player/mage/mage.tscn
 res://mob/knight.tscn
 res://skills/vfx/finished_vfx/lightning_vfx.tscn
 res://shooting/arrow.tscn
@@ -24,4 +19,3 @@ res://inventory/inventory_dialog.tscn
 res://item/item_slot.tscn
 res://player/barbarian/barbarian.tscn
 res://player/rogue/rogue_hooded.tscn
-res://ui/ui.gd
