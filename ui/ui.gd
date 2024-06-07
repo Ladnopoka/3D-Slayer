@@ -6,22 +6,15 @@ extends CanvasLayer
 
 var player
 var level_num = 1
+@onready var inventory_dialog = %InventoryDialog
 
 #Exp
 @onready var experience_bar = $"XP Bar/Experience Bar"
 @onready var experience_label = $"XP Bar/Experience Bar/Experience Label"
 
-#func set_expbar(set_value = 1, set_max_value = 100):
-	#experience_bar.value = set_value
-	#experience_bar.max_value = set_max_value
-#
-#func _on_knight_died(xp_reward: int):
-	#player.gain_experience(xp_reward)
-	#_update_experience_bar()
-
-#func _update_experience_bar():
-	#experience_bar.max_value = 100
-	#experience_bar.value = player.current_exp
+func _unhandled_input(event):
+	if event.is_action_released("inventory") && player == GameManager.player:
+		inventory_dialog.open(player.inventory)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

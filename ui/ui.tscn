@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://muq1yk7w0c1h"]
+[gd_scene load_steps=12 format=3 uid="uid://muq1yk7w0c1h"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_cb527"]
 [ext_resource type="Texture2D" uid="uid://befbx2j60m08y" path="res://assets/HealthGlobe/Foozle_UI_0001_RPG_Set_1/Bonus_Level_Base.png" id="1_ijdx3"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dx7xx6vfahxlq" path="res://ui/imports/exp_bar/exp_background.png" id="8_s26bw"]
 [ext_resource type="Texture2D" uid="uid://dlx33roiu0vlj" path="res://ui/imports/exp_bar/exp_progress.png" id="9_ynwmp"]
 [ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_hjqlj"]
+[ext_resource type="PackedScene" uid="uid://q3r6iat7s13d" path="res://inventory/inventory_dialog.tscn" id="11_wpj68"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_cb527")
@@ -183,3 +184,7 @@ theme_override_font_sizes/font_size = 16
 text = "Level: "
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="InventoryDialog" parent="." instance=ExtResource("11_wpj68")]
+unique_name_in_owner = true
+visible = false

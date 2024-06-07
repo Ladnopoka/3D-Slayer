@@ -59,11 +59,16 @@ func _ready():
 		if character.name == \"Mage\":
 			character.current_exp = GameState.player_data[\"experience\"]
 			character.current_hp = GameState.player_data[\"health\"]
-		var selection_area_ins = selection_area.instantiate()
-		var camera_rig_ins = camera_rig.instantiate()
-		character.add_child(selection_area_ins)
+			var selection_area_ins = selection_area.instantiate()
+			var camera_rig_ins = camera_rig.instantiate()
+			character.add_child(selection_area_ins)
+		
+		#THIS IS NEEDED TO SELECT OTHER CHARACTERS BESIDE MAGE
+		#var selection_area_ins = selection_area.instantiate()
+		#var camera_rig_ins = camera_rig.instantiate()
+		#character.add_child(selection_area_ins)
 		#character.add_child(camera_rig_ins)
-		print(character.get_children())
+		#print(character.get_children())
 		
 #func _physics_process(delta):
 	#character_selected(\"current_selected_character_name\")
