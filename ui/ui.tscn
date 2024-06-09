@@ -188,14 +188,25 @@ vertical_alignment = 2
 
 [node name="InventoryDialog" parent="." instance=ExtResource("11_wpj68")]
 unique_name_in_owner = true
-visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -356.0
+offset_top = -398.0
+offset_right = -26.0
+offset_bottom = 208.0
+grow_horizontal = 0
+size_flags_horizontal = 8
 
 [node name="CraftingDialog" parent="." instance=ExtResource("12_g7n0t")]
 unique_name_in_owner = true
-visible = false
-offset_left = -330.5
-offset_top = -390.0
-offset_right = 330.5
-offset_bottom = 390.0
+anchors_preset = 4
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 25.0
+offset_top = -409.0
+offset_right = 628.0
+offset_bottom = 233.0
+grow_horizontal = 1
 size_flags_horizontal = 4
 size_flags_vertical = 4

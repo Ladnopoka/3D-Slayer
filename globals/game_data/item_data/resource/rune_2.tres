@@ -6,6 +6,6 @@
 
 [resource]
 script = ExtResource("3_o4l6m")
-name = "Rune 1"
+name = "Rune 2"
 scene = ExtResource("2_4gekm")
 icon = ExtResource("1_70awr")

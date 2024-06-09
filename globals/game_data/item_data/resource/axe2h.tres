@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b8lpy1pfof146"]
 
 [ext_resource type="Script" path="res://globals/game_data/item_data/item.gd" id="1_i70vi"]
-[ext_resource type="Texture2D" uid="uid://deaqmta0ypbbf" path="res://assets/Items/Axe 5.png" id="1_pk5hi"]
 [ext_resource type="PackedScene" uid="uid://cpkpelyalnhx8" path="res://item/axe_2_handed.tscn" id="1_spggt"]
+[ext_resource type="Texture2D" uid="uid://beyx5iy5gw87p" path="res://assets/Items/Axe 8.png" id="1_upmr2"]
 
 [resource]
 script = ExtResource("1_i70vi")
 name = "Axe"
 scene = ExtResource("1_spggt")
-icon = ExtResource("1_pk5hi")
+icon = ExtResource("1_upmr2")

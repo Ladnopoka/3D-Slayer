@@ -19,7 +19,7 @@ func _on_close_button_pressed():
 	hide()
 	
 func _on_recipe_list_item_selected(index):
-	var recipe = recipe_list.get_item_metadata(index) #as Recipe
+	var recipe = recipe_list.get_item_metadata(index) as Recipe
 	if recipe:
 		print("Selected recipe: ", recipe.name)
 		ingredients_container.display(recipe.ingredients)

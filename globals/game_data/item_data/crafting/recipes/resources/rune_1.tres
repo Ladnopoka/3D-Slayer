@@ -8,5 +8,5 @@
 [resource]
 script = ExtResource("1_qbb2v")
 name = "Rune 1"
-ingredients = Array[Resource("res://globals/game_data/item_data/item.gd")]([ExtResource("1_i1hwe"), ExtResource("2_6turp")])
-results = Array[Resource("res://globals/game_data/item_data/item.gd")]([ExtResource("3_x36rg")])
+ingredients = Array[Resource("res://globals/game_data/item_data/item.gd")]([ExtResource("1_i1hwe"), ExtResource("3_x36rg")])
+results = Array[Resource("res://globals/game_data/item_data/item.gd")]([ExtResource("2_6turp")])

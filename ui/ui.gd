@@ -16,7 +16,7 @@ var level_num = 1
 const RUNE_1 = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres")
 const RUNE_2 = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_2.tres")
 const RUNE_3 = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_3.tres")
-const STAFF = preload("res://globals/game_data/item_data/crafting/recipes/resources/staff.tres")
+const RUNE_4 = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_4.tres")
 
 func _unhandled_input(event):
 	if event.is_action_pressed("inventory") && player == GameManager.player:
@@ -29,7 +29,7 @@ func _unhandled_input(event):
 		if crafting_dialog.is_visible():
 			crafting_dialog.hide()
 		else:
-			crafting_dialog.open_crafting([RUNE_1, RUNE_2, RUNE_3], player.inventory)
+			crafting_dialog.open_crafting([RUNE_1, RUNE_2, RUNE_3, RUNE_4], player.inventory)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

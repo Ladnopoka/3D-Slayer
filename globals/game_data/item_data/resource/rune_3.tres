@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://baqjlp8lk0mtx"]
+
+[ext_resource type="Texture2D" uid="uid://ckhvv1hsyghor" path="res://assets/cemetery/Previews/brick-wall.png" id="1_acfdx"]
+[ext_resource type="PackedScene" uid="uid://dfhk8voo26lrt" path="res://level/cemetery/BrickWall/brick_wall.tscn" id="2_m8eyp"]
+[ext_resource type="Script" path="res://globals/game_data/item_data/item.gd" id="3_iw7ad"]
+
+[resource]
+script = ExtResource("3_iw7ad")
+name = "Rune 3"
+scene = ExtResource("2_m8eyp")
+icon = ExtResource("1_acfdx")

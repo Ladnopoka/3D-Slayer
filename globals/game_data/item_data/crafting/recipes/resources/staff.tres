@@ -6,6 +6,6 @@
 
 [resource]
 script = ExtResource("3_n3ss5")
-name = "Rune 1"
-ingredients = Array[Resource("res://globals/game_data/item_data/item.gd")]([ExtResource("1_l7n0b"), ExtResource("1_l7n0b"), ExtResource("1_l7n0b")])
+name = "Staff"
+ingredients = Array[Resource("res://globals/game_data/item_data/item.gd")]([ExtResource("1_l7n0b"), ExtResource("1_l7n0b")])
 results = Array[Resource("res://globals/game_data/item_data/item.gd")]([ExtResource("2_7i7uv"), ExtResource("2_7i7uv")])
