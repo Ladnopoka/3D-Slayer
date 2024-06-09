@@ -35,3 +35,4 @@ res://globals/game_data/item_data/crafting/recipes/resources/rune_4.tres
 res://globals/game_data/item_data/resource/rune_4.tres
 res://level/level2/level_2.gd
 res://item/item_slot.gd
+res://globals/game_data/item_data/resource/rune_0.tres

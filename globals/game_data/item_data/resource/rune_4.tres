@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dpi55so0rlbg2"]
 
-[ext_resource type="Texture2D" uid="uid://cdctnvmyaip15" path="res://assets/cemetery/Previews/brick-wall-curve.png" id="1_hjc1l"]
-[ext_resource type="PackedScene" uid="uid://o8fad0v70syk" path="res://level/cemetery/BrickWall/brick_wall_end.tscn" id="2_y845y"]
+[ext_resource type="Texture2D" uid="uid://ct1dbcnkcic7b" path="res://item/imported_items/runes/rune_pack_15.png" id="1_e4xvo"]
+[ext_resource type="PackedScene" uid="uid://bh7oqvs1u6546" path="res://block/block.tscn" id="2_0lwsv"]
 [ext_resource type="Script" path="res://globals/game_data/item_data/item.gd" id="3_uac7f"]
 
 [resource]
 script = ExtResource("3_uac7f")
 name = "Rune 4"
-scene = ExtResource("2_y845y")
-icon = ExtResource("1_hjc1l")
+scene = ExtResource("2_0lwsv")
+icon = ExtResource("1_e4xvo")
