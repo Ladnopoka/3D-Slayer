@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://ui/crafting_dialogue/item_grid/item_grid.gd" id="1_315sj"]
 [ext_resource type="PackedScene" uid="uid://hlncvc5cdu7y" path="res://item/item_slot.tscn" id="2_5gd64"]
 
-[node name="Item Grid" type="GridContainer"]
+[node name="ItemGrid" type="GridContainer"]
 columns = 5
 script = ExtResource("1_315sj")
 slot_scene = ExtResource("2_5gd64")

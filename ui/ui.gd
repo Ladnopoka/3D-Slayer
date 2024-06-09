@@ -13,23 +13,23 @@ var level_num = 1
 @onready var experience_bar = $"XP Bar/Experience Bar"
 @onready var experience_label = $"XP Bar/Experience Bar/Experience Label"
 
-const RUNE_1:Recipe = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres")
-const STAFF:Recipe = preload("res://globals/game_data/item_data/crafting/recipes/resources/staff.tres")
-#const AXE_2H:Recipe = preload("res://globals/game_data/item_data/resource/axe2h.tres")
-#const RUNE_2:Recipe = preload("res://globals/game_data/item_data/resource/rune_2.tres")
+const RUNE_1 = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres")
+const RUNE_2 = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_2.tres")
+const RUNE_3 = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_3.tres")
+const STAFF = preload("res://globals/game_data/item_data/crafting/recipes/resources/staff.tres")
 
 func _unhandled_input(event):
-	if event.is_action_released("inventory") && player == GameManager.player:
+	if event.is_action_pressed("inventory") && player == GameManager.player:
 		if inventory_dialog.is_visible():
 			inventory_dialog.hide()
 		else:
 			inventory_dialog.open(player.inventory)
 			
-	if event.is_action_released("crafting") && player == GameManager.player:
+	if event.is_action_pressed("crafting") && player == GameManager.player:
 		if crafting_dialog.is_visible():
 			crafting_dialog.hide()
 		else:
-			crafting_dialog.open([], player.inventory)
+			crafting_dialog.open_crafting([RUNE_1, RUNE_2, RUNE_3], player.inventory)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -2,12 +2,12 @@ class_name CraftingDialog
 extends PanelContainer
 
 @export var slot_scene:PackedScene
-@onready var grid_container:GridContainer = %GridContainer
-@onready var recipe_list = %RecipeList
-@onready var ingredients_container = %IngredientsContainer
-@onready var results_container = %ResultsContainer
+#@onready var grid_container:GridContainer = %GridContainer
+@onready var recipe_list:ItemList = %RecipeList
+@onready var ingredients_container:GridContainer = %IngredientsContainer
+@onready var results_container:GridContainer = %ResultsContainer
 
-func open(recipes:Array[Recipe], inventory:Inventory):
+func open_crafting(recipes, inventory:Inventory):
 	show()
 	
 	recipe_list.clear()
@@ -17,9 +17,13 @@ func open(recipes:Array[Recipe], inventory:Inventory):
 
 func _on_close_button_pressed():
 	hide()
-
-func _on_recipe_list_item_selected(index):
-	var recipe:Recipe = recipe_list.get_item_metadata(index)
-	ingredients_container.display(recipe.ingredients)
-	results_container.display(recipe.results)
 	
+func _on_recipe_list_item_selected(index):
+	var recipe = recipe_list.get_item_metadata(index) #as Recipe
+	if recipe:
+		print("Selected recipe: ", recipe.name)
+		ingredients_container.display(recipe.ingredients)
+		results_container.display(recipe.results)
+	else:
+		print("Error: Could not cast to Recipe")
+		
