@@ -37,6 +37,7 @@ text = "X"
 
 [node name="GridContainer" parent="VBoxContainer" instance=ExtResource("3_2aq4o")]
 unique_name_in_owner = true
+clip_contents = true
 layout_mode = 2
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]

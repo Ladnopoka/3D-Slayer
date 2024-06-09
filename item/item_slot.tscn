@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://hu88wwynpgnv" path="res://assets/Items/Axe 2.png" id="1_k7oy0"]
 
 [node name="ItemSlot" type="PanelContainer"]
+offset_right = 32.0
+offset_bottom = 32.0
 script = ExtResource("1_g55d0")
 
 [node name="TextureRect" type="TextureRect" parent="."]

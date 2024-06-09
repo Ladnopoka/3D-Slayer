@@ -200,6 +200,7 @@ size_flags_horizontal = 8
 
 [node name="CraftingDialog" parent="." instance=ExtResource("12_g7n0t")]
 unique_name_in_owner = true
+visible = false
 anchors_preset = 4
 anchor_left = 0.0
 anchor_right = 0.0
@@ -210,3 +211,5 @@ offset_bottom = 233.0
 grow_horizontal = 1
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[editable path="InventoryDialog"]
