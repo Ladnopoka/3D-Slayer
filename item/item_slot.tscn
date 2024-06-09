@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://hlncvc5cdu7y"]
 
 [ext_resource type="Script" path="res://item/item_slot.gd" id="1_g55d0"]
-[ext_resource type="Texture2D" uid="uid://hu88wwynpgnv" path="res://assets/Items/Axe 2.png" id="1_k7oy0"]
+[ext_resource type="Texture2D" uid="uid://8hlup1p1gjqk" path="res://item/imported_items/32x64/Crossbow-64x32px.png" id="2_5uqu5"]
 
 [node name="ItemSlot" type="PanelContainer"]
 offset_right = 32.0
@@ -11,4 +11,4 @@ script = ExtResource("1_g55d0")
 [node name="TextureRect" type="TextureRect" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-texture = ExtResource("1_k7oy0")
+texture = ExtResource("2_5uqu5")
