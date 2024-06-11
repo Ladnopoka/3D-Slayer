@@ -22,3 +22,15 @@ res://vfx/level_up/imports/Shaders/s_UpLevel.tres
 res://vfx/level_up/imports/Shaders/s_simple1.tres
 res://assets/resources/grass_material.tres
 res://vfx/level_up/shader_cylinder_lvlup.tres
+res://globals/game_data/item_data/resource/rune_3.tres
+res://globals/game_data/item_data/resource/staff.tres
+res://globals/game_data/item_data/resource/axe2h.tres
+res://globals/game_data/item_data/crafting/recipes/recipe.gd
+res://placeholders/item_placeholder_1.tscn
+res://level/level2/level_2.tscn
+res://level/level_1.tscn
+res://player/mage/mage.tscn
+res://inventory/inventory_dialog.tscn
+res://ui/crafting_dialogue/crafting_dialog.tscn
+res://item/item_slot.tscn
+res://ui/crafting_dialogue/item_grid/item_grid.tscn

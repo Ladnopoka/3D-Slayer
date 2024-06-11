@@ -9,3 +9,4 @@ script = ExtResource("1_stp5h")
 name = "Staff"
 scene = ExtResource("1_t22io")
 icon = ExtResource("1_v06cm")
+cost = 8
