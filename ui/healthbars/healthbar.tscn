@@ -8,6 +8,7 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rsxy"]
+resource_local_to_scene = true
 bg_color = Color(0.196078, 0.721569, 0, 1)
 
 [node name="Healthbar" type="SubViewportContainer"]

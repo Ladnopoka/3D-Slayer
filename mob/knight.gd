@@ -23,6 +23,7 @@ func _ready():
 	randomize()
 	random_number = randi() % 2 + 1
 	state_machine = animation_tree.get("parameters/playback")
+	health_bar.max_value = health
 	
 func _process(delta):
 	velocity = Vector3.ZERO
@@ -55,6 +56,8 @@ func _hit_finished():
 func _on_area_3d_body_part_hit(dam):
 	random_number = randi() % 2 + 1
 	health -= dam
+	health_bar.value = health
+	
 	if health <= 0:
 		Global.score += 1
 		# Connect the knight_died signal to the player's gain_experience function

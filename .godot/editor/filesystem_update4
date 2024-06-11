@@ -34,3 +34,4 @@ res://placeholders/item_placeholder_6.tscn
 res://ui/healthbars/healthbar.tscn
 res://ui/healthbars/health_bar_colours.tres
 res://mob/knight.gd
+res://ui/healthbars/progress_bar.gd
