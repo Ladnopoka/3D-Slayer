@@ -15,7 +15,7 @@ func save_game_data():
 	var file = FileAccess.open(save_file_path, FileAccess.WRITE)
 	if file:
 		var json_instance = JSON.new()
-		var json_string = json_instance.stringify(player_data)
+		var json_string = JSON.stringify(player_data)
 		file.store_string(json_string)
 		file.close()
 		print("Game data saved successfully.")

@@ -19,6 +19,9 @@ func _ready():
 	player_ins.position = $Marker3D.position
 	player_ins.get_node("UI").visible = true
 	player_ins.call("set_controlled", true)
+	player_ins.current_exp = GameState.player_data["experience"]
+	player_ins.current_hp = GameState.player_data["health"]
+	player_ins.level = GameState.player_data["level"]
 	transition.get_node("AnimationPlayer").play("fade_in")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

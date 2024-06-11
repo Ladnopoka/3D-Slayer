@@ -30,3 +30,9 @@ res://placeholders/item_placeholder_3.tscn
 res://placeholders/item_placeholder_4.tscn
 res://placeholders/item_placeholder_5.tscn
 res://placeholders/item_placeholder_6.tscn
+res://scripts/globals/game_manager.gd
+res://globals/Global.gd
+res://player/barbarian/barbarian.gd
+res://globals/game_data/GameState.gd
+res://player/mage/mage.gd
+res://level/level2/level_2.gd
