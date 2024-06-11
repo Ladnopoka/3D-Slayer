@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var all_recipes:ResourceGroup
+
 @onready var health_globe = get_node("HealthGlobe/GlobeFull/TextureProgressBar")
 @onready var mana_globe = get_node("ManaGlobe/GlobeFull/TextureProgressBar")
 @onready var label = $HealthGlobe/Label
@@ -18,6 +20,8 @@ const RUNE_2 = preload("res://globals/game_data/item_data/crafting/recipes/resou
 const RUNE_3 = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_3.tres")
 const RUNE_4 = preload("res://globals/game_data/item_data/crafting/recipes/resources/rune_4.tres")
 
+var _all_recipes:Array[Recipe] = []
+
 func _unhandled_input(event):
 	if event.is_action_pressed("inventory") && player == GameManager.player:
 		if inventory_dialog.is_visible():
@@ -29,7 +33,7 @@ func _unhandled_input(event):
 		if crafting_dialog.is_visible():
 			crafting_dialog.hide()
 		else:
-			crafting_dialog.open_crafting([RUNE_1, RUNE_2, RUNE_3, RUNE_4], player.inventory)
+			crafting_dialog.open_crafting(_all_recipes, player.inventory)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -38,6 +42,13 @@ func _ready():
 	health_globe.value = player.hp
 	label.text = str(player.current_hp) + "/" + str(player.hp)
 	experience_label.text = "Level: " + str(GameState.player_data["level"])
+	
+	all_recipes.load_all_into(_all_recipes)
+	
+	#for file in DirAccess.get_files_at("res://globals/game_data/item_data/crafting/recipes/resources/"):
+		#var resource_file = "res://globals/game_data/item_data/crafting/recipes/resources/" + file
+		#var recipe:Recipe = load(resource_file) as Recipe
+		#_all_recipes.append(recipe)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

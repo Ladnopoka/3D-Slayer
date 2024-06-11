@@ -1,3 +1,4 @@
+ResourceGroup
 Recipe
 Item
 StandardMaterial3D

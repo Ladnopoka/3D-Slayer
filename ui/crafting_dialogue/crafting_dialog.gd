@@ -6,6 +6,7 @@ extends PanelContainer
 @onready var recipe_list:ItemList = %RecipeList
 @onready var ingredients_container:GridContainer = %IngredientsContainer
 @onready var results_container:GridContainer = %ResultsContainer
+@onready var craft_button:Button = %"CraftButton"
 
 var _inventory:Inventory
 var _selected_recipe:Recipe
@@ -34,9 +35,13 @@ func _on_recipe_list_item_selected(index):
 	else:
 		print("Error: Could not cast to Recipe")
 		
+	craft_button.disabled = not _inventory.has_all(_selected_recipe.ingredients)
+		
 func _on_craft_button_pressed():
 	for item in _selected_recipe.ingredients:
 		_inventory.remove_item(item)
 		
 	for item in _selected_recipe.results:
 		_inventory.add_item(item)
+		
+	craft_button.disabled = not _inventory.has_all(_selected_recipe.ingredients)

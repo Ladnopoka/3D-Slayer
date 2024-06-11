@@ -1,8 +1,9 @@
 C:/Users/ladno/Desktop/Stairway to HELL
+res://globals/game_data/item_data/crafting/recipes/resources
+res://globals/game_data/item_data/crafting/recipes
 res://
 C:/Users/ladno/Desktop/Stairway to HELL/rcedit
 res://ui/crafting_dialogue
-res://globals/game_data/item_data/crafting/recipes/resources
 res://globals/game_data/item_data/resource
 res://item
 res://inventory
@@ -19,5 +20,3 @@ res://player/rogue
 res://level/cemetery
 res://dungeon
 res://playground
-res://player/mage
-res://tilemaps/dungeon_tiles

@@ -77,11 +77,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Craft Button" type="Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="CraftButton" type="Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Craft"
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="item_selected" from="VBoxContainer/HBoxContainer2/VBoxContainer/RecipeList" to="." method="_on_recipe_list_item_selected"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/VBoxContainer2/Craft Button" to="." method="_on_craft_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/VBoxContainer2/CraftButton" to="." method="_on_craft_button_pressed"]

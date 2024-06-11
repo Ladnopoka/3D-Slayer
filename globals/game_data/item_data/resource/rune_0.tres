@@ -9,3 +9,4 @@ script = ExtResource("3_h4b83")
 name = "Rune 1"
 scene = ExtResource("2_5s7kw")
 icon = ExtResource("1_158pm")
+cost = 1
