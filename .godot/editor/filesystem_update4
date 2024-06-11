@@ -32,3 +32,5 @@ res://placeholders/item_placeholder_4.tscn
 res://placeholders/item_placeholder_5.tscn
 res://placeholders/item_placeholder_6.tscn
 res://ui/healthbars/healthbar.tscn
+res://ui/healthbars/health_bar_colours.tres
+res://mob/knight.gd

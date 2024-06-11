@@ -10,7 +10,7 @@ const ATTACK_RANGE = 2
 @export var player_path := "/root/Level2/Rogue_Hooded"
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
-#@onready var ui = $"../../UI"
+@onready var health_bar = $SubViewport/ProgressBar
 
 var random_number
 
