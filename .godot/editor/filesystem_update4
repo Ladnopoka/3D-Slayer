@@ -1,6 +1,5 @@
 res://ui/ui.tscn
 res://item/floating_weapons.gd
-res://ui/crafting_dialogue/item_grid/item_grid.gd
 res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres
 res://globals/game_data/item_data/crafting/recipes/resources/rune_2.tres
 res://globals/game_data/item_data/crafting/recipes/resources/rune_3.tres
@@ -31,6 +30,3 @@ res://placeholders/item_placeholder_3.tscn
 res://placeholders/item_placeholder_4.tscn
 res://placeholders/item_placeholder_5.tscn
 res://placeholders/item_placeholder_6.tscn
-res://inventory/inventory.gd
-res://inventory/inventory_dialog.gd
-res://ui/crafting_dialogue/crafting_dialog.gd
