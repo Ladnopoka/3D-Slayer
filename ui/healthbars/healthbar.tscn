@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://foo7df23fd71"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kr4ms"]
+bg_color = Color(0, 0, 0, 0.501961)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rsxy"]
+bg_color = Color(0.196078, 0.721569, 0, 1)
+
+[node name="Healthbar" type="SubViewportContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(256, 256)
+render_target_update_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -8.0
+offset_right = 64.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_kr4ms")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4rsxy")
+value = 50.0
+show_percentage = false

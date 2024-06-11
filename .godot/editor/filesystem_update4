@@ -1,4 +1,4 @@
-res://ui/ui.tscn
+res://mob/knight.tscn
 res://item/floating_weapons.gd
 res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres
 res://globals/game_data/item_data/crafting/recipes/resources/rune_2.tres
@@ -17,6 +17,7 @@ res://vfx/level_up/imports/Shaders/s_UpLevel.tres
 res://vfx/level_up/imports/Shaders/s_simple1.tres
 res://assets/resources/grass_material.tres
 res://vfx/level_up/shader_cylinder_lvlup.tres
+res://ui/ui.tscn
 res://level/level2/level_2.tscn
 res://level/level_1.tscn
 res://player/mage/mage.tscn
@@ -30,9 +31,4 @@ res://placeholders/item_placeholder_3.tscn
 res://placeholders/item_placeholder_4.tscn
 res://placeholders/item_placeholder_5.tscn
 res://placeholders/item_placeholder_6.tscn
-res://scripts/globals/game_manager.gd
-res://globals/Global.gd
-res://player/barbarian/barbarian.gd
-res://globals/game_data/GameState.gd
-res://player/mage/mage.gd
-res://level/level2/level_2.gd
+res://ui/healthbars/healthbar.tscn

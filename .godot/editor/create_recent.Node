@@ -1,4 +1,7 @@
 Sprite3D
+ProgressBar
+SubViewport
+SubViewportContainer
 MeshInstance2D
 Area2D
 Control
@@ -9,7 +12,3 @@ VBoxContainer
 ItemList
 HBoxContainer
 TextureRect
-PanelContainer
-CollisionShape3D
-Area3D
-Node3D
