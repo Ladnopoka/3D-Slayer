@@ -2,10 +2,13 @@ res://ui/ui.tscn
 res://item/floating_weapons.gd
 res://ui/crafting_dialogue/item_grid/item_grid.gd
 res://materials/floor_material - Copy (3).tres
+res://globals/game_data/item_data/resource/rune_0.tres
 res://globals/game_data/item_data/resource/rune_1.tres
 res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres
-res://globals/game_data/item_data/resource/rune_2.tres
-res://globals/game_data/item_data/crafting/recipes/resources/staff.tres
+res://globals/game_data/item_data/crafting/recipes/resources/rune_2.tres
+res://globals/game_data/item_data/crafting/recipes/resources/rune_3.tres
+res://globals/game_data/item_data/resource/rune_4.tres
+res://globals/game_data/item_data/crafting/recipes/resources/rune_4.tres
 res://assets/resources/ground_material.tres
 res://assets/TileMaps/tiles_dungeon_remastered.tres
 res://assets/TileMaps/tiles_medieval.tres
@@ -16,6 +19,7 @@ res://skills/vfx/blender_vfx/lightning_editable.tres
 res://vfx/level_up/imports/Shaders/s_UpLevel.tres
 res://vfx/level_up/imports/Shaders/s_simple1.tres
 res://assets/resources/grass_material.tres
+res://globals/game_data/item_data/resource/staff.tres
 res://vfx/level_up/shader_cylinder_lvlup.tres
 res://level/level2/level_2.tscn
 res://level/level_1.tscn
@@ -24,15 +28,6 @@ res://inventory/inventory_dialog.tscn
 res://ui/crafting_dialogue/crafting_dialog.tscn
 res://item/item_slot.tscn
 res://ui/crafting_dialogue/item_grid/item_grid.tscn
-res://ui/ui.gd
-res://globals/game_data/item_data/resource/staff.tres
 res://ui/crafting_dialogue/crafting_dialog.gd
-res://globals/game_data/item_data/crafting/recipes/resources/rune_2.tres
-res://globals/game_data/item_data/resource/axe2h.tres
-res://globals/game_data/item_data/crafting/recipes/resources/rune_3.tres
-res://globals/game_data/item_data/resource/rune_3.tres
-res://globals/game_data/item_data/crafting/recipes/resources/rune_4.tres
-res://globals/game_data/item_data/resource/rune_4.tres
-res://level/level2/level_2.gd
-res://item/item_slot.gd
-res://globals/game_data/item_data/resource/rune_0.tres
+res://globals/game_data/item_data/item.gd
+res://inventory/inventory.gd

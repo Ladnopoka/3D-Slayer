@@ -10,3 +10,6 @@ func remove_item(item:Item):
 	
 func get_items() -> Array[Item]:
 	return _content
+
+func has_all(items:Array[Item]) -> bool:
+	return false
