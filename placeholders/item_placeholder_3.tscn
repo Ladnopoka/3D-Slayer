@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://lpg6os37m1kv"]
+
+[ext_resource type="Texture2D" uid="uid://kxsfpwr0evtx" path="res://item/imported_items/runes/rune_pack_2.png" id="1_a0uo1"]
+
+[node name="ItemPlaceholder3" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1.26638, 1.54799, 0, -1.54799, 1.26638, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("1_a0uo1")

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bbkqodd5vsows"]
 
 [ext_resource type="Texture2D" uid="uid://d0hysipidcfxy" path="res://item/imported_items/runes/rune_pack_57.png" id="1_158pm"]
-[ext_resource type="PackedScene" uid="uid://dqvukuapcb81p" path="res://placeholders/item_placeholder_1.tscn" id="2_74vbs"]
+[ext_resource type="PackedScene" uid="uid://cqopvp8q4276c" path="res://placeholders/item_placeholder_2.tscn" id="2_fl0ww"]
 [ext_resource type="Script" path="res://globals/game_data/item_data/item.gd" id="3_h4b83"]
 
 [resource]
 script = ExtResource("3_h4b83")
 name = "Rune 1"
-scene = ExtResource("2_74vbs")
+scene = ExtResource("2_fl0ww")
 icon = ExtResource("1_158pm")
 cost = 1
