@@ -6,18 +6,26 @@ extends PanelContainer
 
 var _inventory:Inventory
 
-func open(inventory:Inventory):
+func open(inventory:Inventory):	
 	_inventory = inventory
 	show()
 	
-	# Connect signals
-	_inventory.connect("item_added",  _on_item_changed)
-	_inventory.connect("item_removed", _on_item_changed)
-	
+	if _inventory:
+		if not _inventory.is_connected("item_added", _on_item_changed):
+			_inventory.connect("item_added", _on_item_changed)
+		if not _inventory.is_connected("item_removed", _on_item_changed):
+			_inventory.connect("item_removed", _on_item_changed)
+			
 	grid_container.display(inventory.get_items())
 
 func _on_close_button_pressed():
 	hide()
+	# Disconnect signals when dialog is closed
+	if _inventory:
+		if _inventory.is_connected("item_added", _on_item_changed):
+			_inventory.disconnect("item_added", _on_item_changed)
+		if _inventory.is_connected("item_removed", _on_item_changed):
+			_inventory.disconnect("item_removed", _on_item_changed)
 
 func _on_item_changed(item:Item):
 	# Refresh the inventory display

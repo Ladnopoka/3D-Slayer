@@ -15,6 +15,12 @@ func open_crafting(recipes, inventory:Inventory):
 	_inventory = inventory
 	show()
 	
+	# Connect signals if not already connected
+	if not _inventory.is_connected("item_added", _on_inventory_changed):
+		_inventory.connect("item_added", _on_inventory_changed)
+	if not _inventory.is_connected("item_removed", _on_inventory_changed):
+		_inventory.connect("item_removed", _on_inventory_changed)
+	
 	recipe_list.clear()
 	for recipe in recipes:
 		var index = recipe_list.add_item(recipe.name)
@@ -25,6 +31,17 @@ func open_crafting(recipes, inventory:Inventory):
 
 func _on_close_button_pressed():
 	hide()
+	
+		# Disconnect signals when dialog is closed
+	if _inventory:
+		if _inventory.is_connected("item_added", _on_inventory_changed):
+			_inventory.disconnect("item_added", _on_inventory_changed)
+		if _inventory.is_connected("item_removed", _on_inventory_changed):
+			_inventory.disconnect("item_removed", _on_inventory_changed)
+	## Disconnect signals when dialog is closed
+	#if _inventory:
+		#_inventory.disconnect("item_added", _on_inventory_changed)
+		#_inventory.disconnect("item_removed", _on_inventory_changed)
 	
 func _on_recipe_list_item_selected(index):
 	_selected_recipe = recipe_list.get_item_metadata(index) as Recipe
@@ -45,3 +62,12 @@ func _on_craft_button_pressed():
 		_inventory.add_item(item)
 		
 	craft_button.disabled = not _inventory.has_all(_selected_recipe.ingredients)
+	
+func _on_inventory_changed(item:Item):
+	# Update the Craft button state whenever the inventory changes
+	if _selected_recipe:
+		craft_button.disabled = not _inventory.has_all(_selected_recipe.ingredients)
+		
+#func _on_item_changed(item:Item):
+	## Refresh the inventory display
+	#grid_container.display(_inventory.get_items())

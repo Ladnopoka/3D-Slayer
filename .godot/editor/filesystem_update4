@@ -33,3 +33,4 @@ res://placeholders/item_placeholder_5.tscn
 res://placeholders/item_placeholder_6.tscn
 res://inventory/inventory.gd
 res://inventory/inventory_dialog.gd
+res://ui/crafting_dialogue/crafting_dialog.gd
