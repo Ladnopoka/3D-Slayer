@@ -121,22 +121,21 @@ func movement_and_attacking(delta):
 	if Input.is_action_pressed("right_mouse_clicked"):
 		attack()
 	if Input.is_action_just_pressed("skill_Q"):
-		cast_lightning_skill_1()
+		anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
 	if Input.is_action_just_released("skill_Q"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/cast", false)
 	elif Input.is_action_just_released("right_mouse_clicked"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)	
 
 func cast_lightning_skill_1():
+	#anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
+	
 	lightning_skill_1_instance = lightning_skill_1.instantiate()
 	lightning_skill_1_instance.position = projectile_shooting_point.global_position
 	lightning_skill_1_instance.transform.basis = projectile_shooting_point.global_transform.basis
 	get_parent().add_child(lightning_skill_1_instance)
 	lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
-	
-	# Always update orientation, regardless of cooldown
-	#update_orientation()
-	anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
+
 
 func attack():
 	# Always update orientation, regardless of cooldown

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cetusicasheve"]
+
+[ext_resource type="PackedScene" uid="uid://cagifk0u682ws" path="res://mob/imp/imp.glb" id="1_3fm1d"]
+
+[node name="imp" instance=ExtResource("1_3fm1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" parent="imp/StaticBody3D" index="0"]
+visible = false
