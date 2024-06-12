@@ -1,3 +1,4 @@
+res://sounds/global
 res://mob/imp
 res://ui/healthbars
 res://placeholders
@@ -19,4 +20,3 @@ res://ui
 res://blender_stuff
 res://mob/zombie
 res://mob
-res://player/rogue
