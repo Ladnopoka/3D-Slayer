@@ -1,3 +1,4 @@
+Timer
 AudioStreamPlayer
 Sprite3D
 ProgressBar
@@ -12,4 +13,3 @@ Label
 VBoxContainer
 ItemList
 HBoxContainer
-TextureRect

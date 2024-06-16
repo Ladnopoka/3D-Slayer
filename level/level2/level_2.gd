@@ -43,12 +43,12 @@ func _get_random_child(parent_node):
 
 func _on_knight_spawn_timer_timeout():
 	var spawn_point = _get_random_child(spawns).global_position
-	imp_instance = IMP.instantiate()
-	imp_instance.position = spawn_point
-	navigation_region.add_child(imp_instance)
-	#knight_instance = knight.instantiate()
-	#knight_instance.position = spawn_point
-	#navigation_region.add_child(knight_instance)
+	#imp_instance = IMP.instantiate()
+	#imp_instance.position = spawn_point
+	#navigation_region.add_child(imp_instance)
+	knight_instance = knight.instantiate()
+	knight_instance.position = spawn_point
+	navigation_region.add_child(knight_instance)
 	
 func get_player_character():
 	print("GameManager Player Name: ", GameManager.player_name)

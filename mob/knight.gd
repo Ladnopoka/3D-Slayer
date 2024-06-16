@@ -3,6 +3,7 @@ extends CharacterBody3D
 var player = null
 var state_machine
 var health = 3
+var current_health = health
 
 const SPEED = 7.0
 const ATTACK_RANGE = 2
@@ -61,13 +62,14 @@ func _on_area_3d_body_part_hit(dam):
 	if health <= 0:
 		Global.score += 1
 		# Connect the knight_died signal to the player's gain_experience function
-		knight_died.connect(Callable(player, "gain_experience"))	
+		if not knight_died.is_connected(Callable(player, "gain_experience")):
+			knight_died.connect(Callable(player, "gain_experience")) 
 		knight_died.emit(experience_reward)
 		
 		#$CollisionShape3D.disabled = true
-		$Rig/Skeleton3D/Head/Area3D/CollisionShape3D.disabled = true
-		$Rig/Skeleton3D/Body/Area3D/CollisionShape3D.disabled = true
-		$Rig/Skeleton3D/Sword/Area3D/CollisionShape3D.disabled = true
+		$Rig/Skeleton3D/Head/Area3D/CollisionShape3D.call_deferred("set_disabled", true)
+		$Rig/Skeleton3D/Body/Area3D/CollisionShape3D.call_deferred("set_disabled", true)
+		$Rig/Skeleton3D/Sword/Area3D/CollisionShape3D.call_deferred("set_disabled", true)
 		animation_tree.set("parameters/conditions/die", true)
 		if random_number == 1:
 			animation_tree.set("parameters/DeathStateMachine/conditions/die_a", true)
@@ -77,3 +79,12 @@ func _on_area_3d_body_part_hit(dam):
 			await get_tree().create_timer(7.0).timeout
 
 		queue_free()
+		
+func hit(dir):
+	emit_signal("knight_hit")
+	
+	current_health -= 1
+	if current_health <= 0:
+		#die()
+		current_health = 0 # so life can't be -1
+	print(current_health)
