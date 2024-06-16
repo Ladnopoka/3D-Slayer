@@ -32,4 +32,3 @@ res://skills/impact/lightning_skill.tscn
 res://mob/imp/imp.tscn
 res://skills/vfx/finished_vfx/lightning_vfx.tscn
 res://sounds/global/music_player.tscn
-res://sounds/global/music_player.gd
