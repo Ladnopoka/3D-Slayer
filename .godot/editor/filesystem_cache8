@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718714544
+::res://::1718725398
 export_presets.cfg::TextFile::-1::1718113039::0::1::::<><>::
 icon.svg::CompressedTexture2D::3540083071793652844::1696269644::1703605303::1::::<><>::
 Ideas.txt::TextFile::-1::1703376053::0::1::::<><>::
@@ -17,7 +17,7 @@ resource_group_background_loader.gd::GDScript::-1::1718112548::0::1::::ResourceG
 resource_group_scanner.gd::GDScript::-1::1718112548::0::1::::<>RefCounted<>::
 resource_scanner.gd::GDScript::-1::1718112548::0::1::::<>RefCounted<>::
 ::res://addons/godot_resource_groups/csharp/::1718112547
-::res://addons/resources_spreadsheet_view/::1718714544
+::res://addons/resources_spreadsheet_view/::1718725398
 editor_color_setter.gd::GDScript::-1::1718113371::0::1::::<>Control<>::
 editor_icon_button.gd::GDScript::-1::1718113371::0::1::::<>Button<>::
 editor_view.gd::GDScript::-1::1718113371::0::1::::<>Control<>::
@@ -25,7 +25,7 @@ editor_view.tscn::PackedScene::1359036348667950850::1718123432::0::1::::<><>::re
 LICENSE.md::TextFile::-1::1718113371::0::1::::<><>::
 plugin.cfg::TextFile::-1::1718113372::0::1::::<><>::
 plugin.gd::GDScript::-1::1718113372::0::1::::<>EditorPlugin<>::
-saved_state.json::JSON::-1::1718714544::0::1::::<><>::
+saved_state.json::JSON::-1::1718725398::0::1::::<><>::
 settings_grid.gd::GDScript::-1::1718113372::0::1::::<>GridContainer<>::
 settings_grid.tscn::PackedScene::226255947765552484::1718123432::0::1::::<><>::res://addons/resources_spreadsheet_view/settings_grid.gd
 text_editing_utils.gd::GDScript::-1::1718113372::0::1::::<>RefCounted<>::
@@ -2883,8 +2883,8 @@ GameState.gd::GDScript::-1::1718124427::0::1::::<>Node<>::
 ::res://globals/game_data/item_data/::1718113255
 item.gd::GDScript::-1::1718113255::0::1::::Item<>Resource<>::
 ::res://globals/game_data/item_data/crafting/::1717797043
-::res://globals/game_data/item_data/crafting/recipes/::1718714541
-all_recipes.tres::Resource/ResourceGroup::6152188971824252054::1718714541::0::1::::<><>::res://addons/godot_resource_groups/resource_group.gd
+::res://globals/game_data/item_data/crafting/recipes/::1718722012
+all_recipes.tres::Resource/ResourceGroup::6152188971824252054::1718722012::0::1::::<><>::res://addons/godot_resource_groups/resource_group.gd
 recipe.gd::GDScript::-1::1718114680::0::1::::Recipe<>Resource<>::
 ::res://globals/game_data/item_data/crafting/recipes/resources/::1718712213
 rune_1.tres::Resource/Recipe::1933006959671312465::1718712213::0::1::::<><>::uid://bbkqodd5vsows::::res://globals/game_data/item_data/resource/rune_0.tres<>res://globals/game_data/item_data/crafting/recipes/recipe.gd<>uid://bt6i1mlrgceb1::::res://globals/game_data/item_data/resource/rune_1.tres

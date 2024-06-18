@@ -47,7 +47,7 @@ var attacking = false
 var is_controlled = false
 var ui_enabled = false
 
-var exp : int = 0
+#var experience : int = 0
 var current_exp : int = 0
 
 func _ready():

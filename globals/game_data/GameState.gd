@@ -14,7 +14,7 @@ var save_file_path = "C://Users//ladno//Desktop//godot_gamesave_files"
 func save_game_data():
 	var file = FileAccess.open(save_file_path, FileAccess.WRITE)
 	if file:
-		var json_instance = JSON.new()
+		#var json_instance = JSON.new()
 		var json_string = JSON.stringify(player_data)
 		file.store_string(json_string)
 		file.close()

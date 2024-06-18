@@ -1,4 +1,4 @@
-res://level/level_1.tscn
+res://ui/ui.tscn
 res://item/floating_weapons.gd
 res://skills/impact/lightning_skill.gd
 res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres
@@ -19,8 +19,8 @@ res://vfx/level_up/imports/Shaders/s_UpLevel.tres
 res://vfx/level_up/imports/Shaders/s_simple1.tres
 res://assets/resources/grass_material.tres
 res://vfx/level_up/shader_cylinder_lvlup.tres
-res://ui/ui.tscn
 res://level/level2/level_2.tscn
+res://level/level_1.tscn
 res://player/mage/mage.tscn
 res://inventory/inventory_dialog.tscn
 res://ui/crafting_dialogue/crafting_dialog.tscn
@@ -32,3 +32,6 @@ res://skills/impact/lightning_skill.tscn
 res://mob/imp/imp.tscn
 res://skills/vfx/finished_vfx/lightning_vfx.tscn
 res://sounds/global/music_player.tscn
+res://player/barbarian/barbarian.gd
+res://globals/game_data/GameState.gd
+res://sounds/global/music_player.gd

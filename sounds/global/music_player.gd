@@ -14,9 +14,9 @@ func play_music_level():
 	print("inside play_music_level")
 	_play_music(DANHEIM_BERSERKIR)
 	
-func play_FX(stream: AudioStream, volume = 0.0):
+func play_FX(stream_in: AudioStream, volume = 0.0):
 	var fx_player = AudioStreamPlayer.new()
-	fx_player.stream = stream
+	fx_player.stream = stream_in
 	fx_player.name = "FX_PLAYER"
 	fx_player.volume_db = volume
 	add_child(fx_player)
