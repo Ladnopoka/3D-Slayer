@@ -63,7 +63,7 @@ func _on_craft_button_pressed():
 		
 	craft_button.disabled = not _inventory.has_all(_selected_recipe.ingredients)
 	
-func _on_inventory_changed(item:Item):
+func _on_inventory_changed(_item:Item):
 	# Update the Craft button state whenever the inventory changes
 	if _selected_recipe:
 		craft_button.disabled = not _inventory.has_all(_selected_recipe.ingredients)

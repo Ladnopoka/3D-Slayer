@@ -35,3 +35,14 @@ res://sounds/global/music_player.tscn
 res://player/barbarian/barbarian.gd
 res://globals/game_data/GameState.gd
 res://sounds/global/music_player.gd
+res://scripts/player/camera_rig.gd
+res://player/rogue/rogue_hooded.gd
+res://ui/crafting_dialogue/crafting_dialog.gd
+res://inventory/inventory_dialog.gd
+res://player/mage/mage.gd
+res://portal/portal.gd
+res://player/selection.gd
+res://ui/ui.gd
+res://mob/knight.gd
+res://level/level2/level_2.gd
+res://mob/mobcollision.gd

@@ -49,7 +49,7 @@ var blend_lerp_speed = 1.0 / CROSSFADE_TIME
 var attacking = false
 var is_controlled = false
 
-var exp : int = 0
+#var exp : int = 0
 var current_exp : int = 0
 
 func _ready():
@@ -75,9 +75,9 @@ func movement_and_attacking(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
-	var model_rotation = model.rotation.y
+	#var model_rotation = model.rotation.y
 	if direction.length() > 0.01:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -186,5 +186,5 @@ func set_controlled(state: bool):
 		# the locomotionBlendPath or other parameters to reflect an idle state.
 		# anim_tree.set("parameters/locomotion/blend_position", Vector2.ZERO)
 		
-func gain_experience(exp):
-	current_exp += exp
+func gain_experience(exp_incoming):
+	current_exp += exp_incoming

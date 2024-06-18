@@ -51,7 +51,7 @@ func _ready():
 		#_all_recipes.append(recipe)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	UpdateGlobes()
 	UpdateExp()
 	

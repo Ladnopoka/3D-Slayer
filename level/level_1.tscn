@@ -67,7 +67,7 @@ func _ready():
 			character.current_hp = GameState.player_data[\"health\"]
 			character.level = GameState.player_data[\"level\"]
 			var selection_area_ins = selection_area.instantiate()
-			var camera_rig_ins = camera_rig.instantiate()
+			#var camera_rig_ins = camera_rig.instantiate()
 			character.add_child(selection_area_ins)
 		
 		#THIS IS NEEDED TO SELECT OTHER CHARACTERS BESIDE MAGE
@@ -123,7 +123,7 @@ func _handle_mouse_click(mouse_position):
 # At the class level, add a variable to keep track of the currently controlled character
 var current_controlled_character = null
 
-func _process_click(collider, position):
+func _process_click(collider, _position):
 	if collider and collider.has_node(\"SelectionArea/Selection\"):
 		# If there's a currently controlled character that is not the newly clicked one, disable its control
 		if current_controlled_character and current_controlled_character != collider:

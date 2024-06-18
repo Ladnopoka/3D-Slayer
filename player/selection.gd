@@ -11,12 +11,12 @@ func _ready() -> void:
 	#connect("character_selected", character_selection_scene.character_selected)
 	animation_player.connect("animation_finished", _on_animation_player_animation_finished)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("right_mouse_clicked"):
 		print("I clicked the damn mouse")
 	
 	
-func _input_event(camera, event, position, normal, shape_idx):
+func _input_event(_camera, _event, _position, _normal, _shape_idx):
 	print("hover over character")
 	#printt("Event: ", event, event.is_action_type(), event.is_pressed(), event.is_released())
 
@@ -43,5 +43,5 @@ func _on_mouse_entered():
 	print("the mosue has entered")
 
 
-func _on_input_event(camera, event, position, normal, shape_idx):
+func _on_input_event(_camera, _event, _position, _normal, _shape_idx):
 	print("ON THE INPUT EVENT YEP")

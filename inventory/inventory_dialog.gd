@@ -27,6 +27,6 @@ func _on_close_button_pressed():
 		if _inventory.is_connected("item_removed", _on_item_changed):
 			_inventory.disconnect("item_removed", _on_item_changed)
 
-func _on_item_changed(item:Item):
+func _on_item_changed(_item:Item):
 	# Refresh the inventory display
 	grid_container.display(_inventory.get_items())

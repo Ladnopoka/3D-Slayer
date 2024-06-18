@@ -36,7 +36,7 @@ var hp_regen = 0.1
 var current_hp : int
 var is_dead = false
 
-var exp : int = 0
+var experience : int = 0
 var current_exp : int = 0
 var level : int = 1
 var level_up_vfx = preload("res://vfx/level_up/imports/Scenes/VFX_Level_up.tscn")
@@ -92,7 +92,7 @@ func movement_and_attacking(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	#var model_rotation = model.rotation.y
 	
 	if direction.length() > 0.01:

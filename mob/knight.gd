@@ -80,7 +80,7 @@ func _on_area_3d_body_part_hit(dam):
 
 		queue_free()
 		
-func hit(dir):
+func hit(_dir):
 	emit_signal("knight_hit")
 	
 	current_health -= 1

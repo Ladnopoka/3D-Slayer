@@ -14,15 +14,16 @@ func _ready():
 	#timer.start(0.25)  # Adjust as needed for your strike interval	
 	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
 	
 func _on_timer_timeout():
-	area.monitoring = true
-	await 0.1
+	pass
+	#area.monitoring = true
+	#await 0.1
 	#yield(get_tree().create_timer(0.1), "timeout")
-	
-	area.monitoring = false
+	#
+	#area.monitoring = false
 
 func _on_area_3d_body_entered(body):
 	print("!!!BODY ENTERED!!!  ", body)

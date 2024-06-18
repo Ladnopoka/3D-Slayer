@@ -28,7 +28,7 @@ func _ready():
 	transition.get_node("AnimationPlayer").play("fade_in")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	score.text = "Knights Killed: " + str(Global.score) + "/100"
 
 
