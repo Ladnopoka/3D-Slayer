@@ -9,6 +9,8 @@
 script = ExtResource("1_pi7ca")
 
 [node name="GPUParticles3D" parent="." instance=ExtResource("1_m6a7h")]
+layers = 17
+collision_base_size = 0.03
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 16
