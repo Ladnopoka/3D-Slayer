@@ -15,3 +15,15 @@ res://skills/vfx/blender_vfx/lightning_editable.tres
 res://vfx/level_up/imports/Shaders/s_UpLevel.tres
 res://vfx/level_up/imports/Shaders/s_simple1.tres
 res://vfx/level_up/shader_cylinder_lvlup.tres
+res://ui/ui.tscn
+res://level/level2/level_2.tscn
+res://mob/knight.tscn
+res://skills/impact/lightning_skill.tscn
+res://addons/minos_damage_numbers/example_2d.tscn
+res://addons/minos_damage_numbers/example_3d.tscn
+res://addons/minos_damage_numbers/DamageNumbersLabel3D.tscn
+res://player/barbarian/barbarian.tscn
+res://player/mage/mage.tscn
+res://player/rogue/rogue_hooded.tscn
+res://hideout/hideout.tscn
+res://level/level_1.tscn
