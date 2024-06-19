@@ -1,4 +1,4 @@
-res://hideout/hideout.tscn
+res://portal/portal.tscn
 res://item/floating_weapons.gd
 res://skills/impact/lightning_skill.gd
 res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres
@@ -25,5 +25,5 @@ res://addons/minos_damage_numbers/DamageNumbersLabel3D.tscn
 res://player/barbarian/barbarian.tscn
 res://player/mage/mage.tscn
 res://player/rogue/rogue_hooded.tscn
+res://hideout/hideout.tscn
 res://level/level_1.tscn
-res://portal/portal.tscn
