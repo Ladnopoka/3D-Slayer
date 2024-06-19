@@ -28,6 +28,11 @@ var hp_regen = 0.1
 var current_hp : int
 var is_dead = false
 
+var experience : int = 0
+var current_exp : int = 0
+var level : int = 1
+var level_up_vfx = preload("res://vfx/level_up/imports/Scenes/VFX_Level_up.tscn")
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var jumping = false
@@ -46,9 +51,6 @@ var blend_lerp_speed = 1.0 / CROSSFADE_TIME
 var attacking = false
 var is_controlled = false
 var ui_enabled = false
-
-#var experience : int = 0
-var current_exp : int = 0
 
 func _ready():
 	GameManager.set_player(self)

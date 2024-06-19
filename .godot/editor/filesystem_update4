@@ -27,3 +27,5 @@ res://mob/knight.tscn
 res://addons/minos_damage_numbers/example_2d.tscn
 res://addons/minos_damage_numbers/example_3d.tscn
 res://addons/minos_damage_numbers/DamageNumbersLabel3D.tscn
+res://player/rogue/rogue_hooded.gd
+res://player/barbarian/barbarian.gd
