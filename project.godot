@@ -32,6 +32,8 @@ Global="*res://globals/Global.gd"
 MageData="res://globals/player_data/mage_data.gd"
 GameState="*res://globals/game_data/GameState.gd"
 MusicPlayer="*res://sounds/global/music_player.tscn"
+MinosDamageNumbers2D="*res://addons/minos_damage_numbers/MinosDamageNumbers2D.gd"
+MinosDamageNumbers3D="*res://addons/minos_damage_numbers/MinosDamageNumbers3D.gd"
 
 [display]
 
@@ -40,7 +42,7 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_resource_groups/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_resource_groups/plugin.cfg", "res://addons/minos_damage_numbers/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
 
 [filesystem]
 
