@@ -157,8 +157,6 @@ func cast_lightning_skill_1():
 			material.collision_use_scale = true  # Enable collision scaling
 
 		get_parent().add_child(lightning_skill_1_instance)
-		
-
 
 func attack():
 	# Always update orientation, regardless of cooldown

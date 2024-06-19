@@ -32,3 +32,4 @@ res://player/barbarian/barbarian.gd
 res://player/mage/mage_skill.tscn
 res://player/barbarian/barbarian.tscn
 res://player/rogue/rogue_hooded.tscn
+res://player/mage/mage.gd
