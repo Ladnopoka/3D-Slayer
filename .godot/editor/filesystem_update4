@@ -29,3 +29,6 @@ res://addons/minos_damage_numbers/example_3d.tscn
 res://addons/minos_damage_numbers/DamageNumbersLabel3D.tscn
 res://player/rogue/rogue_hooded.gd
 res://player/barbarian/barbarian.gd
+res://player/mage/mage_skill.tscn
+res://player/barbarian/barbarian.tscn
+res://player/rogue/rogue_hooded.tscn
