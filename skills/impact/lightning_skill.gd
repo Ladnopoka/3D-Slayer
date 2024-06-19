@@ -8,14 +8,19 @@ extends Node3D
 @onready var particles = $GPUParticles3D
 @onready var area = $Area3D
 
-func _ready():
-	pass
+# Variables for collision detection
+var enemies : Array = []
 
-func _process(_delta):
+func _ready():
+	# Ensure particles are emitting at the start
+	particles.emitting = true
+
+func _physics_process(_delta):
 	pass
 
 func _on_area_3d_body_entered(body):
 	print("!!!BODY ENTERED!!!  ", body)
+	enemies.append(body)
 	
 	if body.is_in_group("enemy"):
 		var random_damage = randi() % (damage_max - damage_min + 1) + damage_min
