@@ -32,10 +32,10 @@ func _process(_delta):
 	score.text = "Knights Killed: " + str(Global.score) + "/100"
 
 
-func _on_rogue_hooded_player_hit():
-	hit_rect.visible = true
-	await get_tree().create_timer(0.2).timeout
-	hit_rect.visible = false
+#func _on_rogue_hooded_player_hit():
+	#hit_rect.visible = true
+	#await get_tree().create_timer(0.2).timeout
+	#hit_rect.visible = false
 
 func _get_random_child(parent_node):
 	var random_id = randi() % parent_node.get_child_count()
