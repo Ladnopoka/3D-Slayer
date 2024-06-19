@@ -18,21 +18,22 @@ var usedLabels : Array[Label3D] = []
 var unusedLabels : Array[Label3D] = []
 
 # Colors
-var normalColor : Color = Color(248, 248, 242, 255)
-var criticalColor : Color = Color(255, 85, 85, 255)
+var normalColor : Color = Color(248 / 255.0, 248 / 255.0, 242 / 255.0, 1.0)#255)
+var criticalColor : Color = Color(255 / 255.0, 85 / 255.0, 85 / 255.0, 1.0)#255)
 
 # Tween
-var upTweenAmount : float = 0.5
+var upTweenAmount : float = 1
 var upTweenLength : float = 2.0
 var downTweenLength : float = 1.0
 
+const DIABLO_HEAVY = preload("res://globals/Diablo Heavy.ttf")
+const BILDAD = preload("res://globals/Bildad.ttf")
 
 func _get_label() -> Label3D:
 	var newLabel : Label3D
 	
-	if usedLabels.size() != 0:
-		newLabel = usedLabels[0]
-		unusedLabels.erase(newLabel)
+	if unusedLabels.size() != 0:
+		newLabel = unusedLabels.pop_back()
 		usedLabels.append(newLabel)
 		newLabel.visible = true
 	else:
@@ -47,16 +48,19 @@ func display_number(_value : int, _position : Vector3, _damageType : DamageType 
 	var numberLabel : Label3D = _get_label()
 	numberLabel.global_position = _position
 	numberLabel.text = str(_value)
-	numberLabel.font_size = 500
+	numberLabel.font_size = 200
+	numberLabel.outline_size = 50
+	numberLabel.font = DIABLO_HEAVY
 	
 	match _damageType:
 		DamageType.NORMAL:
-			numberLabel.modulate = normalColor / 255
+			numberLabel.modulate = normalColor
 		DamageType.CRITICAL_HIT:
-			numberLabel.modulate = criticalColor / 255
+			numberLabel.modulate = criticalColor
 		_:
-			numberLabel.modulate = normalColor / 255
+			numberLabel.modulate = normalColor
 	
+	#label_targets[numberLabel] = _position
 	_animate_display(numberLabel)
 
 
@@ -71,6 +75,7 @@ func _animate_display(_currentDisplay : Label3D) -> void:
 	await tween.finished
 	
 	_currentDisplay.visible = false
+	usedLabels.erase(_currentDisplay)
 	unusedLabels.append(_currentDisplay)
 
 

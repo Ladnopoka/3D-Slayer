@@ -128,13 +128,36 @@ func movement_and_attacking(delta):
 		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)	
 
 func cast_lightning_skill_1():
-	#anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
-	
-	lightning_skill_1_instance = lightning_skill_1.instantiate()
-	lightning_skill_1_instance.position = projectile_shooting_point.global_position
-	lightning_skill_1_instance.transform.basis = projectile_shooting_point.global_transform.basis
-	get_parent().add_child(lightning_skill_1_instance)
-	lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
+	# All the logic related to updating the character's orientation goes here
+	var space_state = get_world_3d().direct_space_state
+	mouse_position = get_viewport().get_mouse_position()
+
+	var ray_origin = base_camera.project_ray_origin(mouse_position)
+	var ray_end = ray_origin + base_camera.project_ray_normal(mouse_position) * 1000
+
+	var query = PhysicsRayQueryParameters3D.create(ray_origin, ray_end); 
+	var intersection = space_state.intersect_ray(query)
+
+	if intersection.size() > 0:
+		var collision_point = intersection.position
+
+		# Instantiate and position the lightning skill at the collision point
+		var lightning_skill_1_instance = lightning_skill_1.instantiate()
+		lightning_skill_1_instance.position = collision_point
+		
+		# Find the GPUParticles3D node within the instantiated lightning skill
+		var particles = lightning_skill_1_instance.get_node("GPUParticles3D")
+		
+		# Adjust the particle material settings
+		var material = particles.process_material
+		if material:
+			material.scale_min = 0.5  # Adjust scale as needed
+			material.scale_max = 0.5  # Ensure uniform scaling
+			material.collision_mode = ParticleProcessMaterial.COLLISION_RIGID # Use the RIGID collision mode
+			material.collision_use_scale = true  # Enable collision scaling
+
+		get_parent().add_child(lightning_skill_1_instance)
+		
 
 
 func attack():

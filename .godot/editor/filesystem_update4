@@ -29,3 +29,4 @@ res://addons/minos_damage_numbers/example_2d.tscn
 res://mob/knight.gd
 res://addons/minos_damage_numbers/MinosDamageNumbers3D.gd
 res://addons/minos_damage_numbers/DamageNumbersLabel3D.tscn
+res://player/mage/mage.gd

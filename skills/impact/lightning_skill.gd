@@ -7,23 +7,12 @@ extends Node3D
 
 @onready var particles = $GPUParticles3D
 @onready var area = $Area3D
-@onready var timer = $Timer
 
 func _ready():
-	#timer.connect("timeout", _on_timer_timeout)
-	#timer.start(0.25)  # Adjust as needed for your strike interval	
 	pass
 
 func _process(_delta):
 	pass
-	
-func _on_timer_timeout():
-	pass
-	#area.monitoring = true
-	#await 0.1
-	#yield(get_tree().create_timer(0.1), "timeout")
-	#
-	#area.monitoring = false
 
 func _on_area_3d_body_entered(body):
 	print("!!!BODY ENTERED!!!  ", body)

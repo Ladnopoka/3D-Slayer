@@ -1,3 +1,4 @@
+Label3D
 RayCast3D
 Timer
 AudioStreamPlayer
@@ -12,4 +13,3 @@ Button
 GridContainer
 Label
 VBoxContainer
-ItemList

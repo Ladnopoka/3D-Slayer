@@ -47,11 +47,11 @@ func _process(delta):
 	
 	move_and_slide()
 
-func _on_normal_damage_taken():
-	MinosDamageNumbers3D.display_number(5, marker_3d.global_position)
+func _on_normal_damage_taken(damage):
+	MinosDamageNumbers3D.display_number(damage, marker_3d.global_position)
 
-func _on_critical_damage_taken():
-	MinosDamageNumbers3D.display_number(5, marker_3d.global_position, MinosDamageNumbers3D.DamageType.CRITICAL_HIT)
+func _on_critical_damage_taken(damage):
+	MinosDamageNumbers3D.display_number(damage, marker_3d.global_position, MinosDamageNumbers3D.DamageType.CRITICAL_HIT)
 
 func _target_in_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
@@ -65,7 +65,7 @@ func _on_area_3d_body_part_hit(dam):
 	random_number = randi() % 2 + 1
 	health -= dam
 	health_bar.value = health
-	_on_normal_damage_taken()
+	_on_critical_damage_taken(dam)
 	
 	if health <= 0:
 		Global.score += 1
