@@ -1,8 +1,9 @@
+C:/Users/ladno/Desktop/Stairway to HELL
+res://icons
 res://sounds/global
 res://mob/imp
 res://ui/healthbars
 res://placeholders
-C:/Users/ladno/Desktop/Stairway to HELL
 res://globals/game_data/item_data/crafting/recipes/resources
 res://globals/game_data/item_data/crafting/recipes
 res://
@@ -17,6 +18,5 @@ res://vfx/level_up
 res://globals/player_data
 res://scripts/globals
 res://ui
-res://blender_stuff
 res://mob/zombie
 res://mob

@@ -14,3 +14,6 @@ res://globals/game_data/item_data/resource/rune_4.tres
 res://globals/game_data/item_data/crafting/recipes/resources/rune_4.tres
 res://vfx/level_up/shader_cylinder_lvlup.tres
 res://globals/game_data/item_data/crafting/recipes/all_recipes.tres
+res://ui/healthbars/health_bar_colours.tres
+res://vfx/level_up/imports/Shaders/s_simple2.tres
+res://vfx/level_up/imports/Shaders/s_puff.tres
