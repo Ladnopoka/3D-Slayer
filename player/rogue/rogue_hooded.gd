@@ -17,7 +17,8 @@ var velocity_var = Vector3.ZERO
 @onready var anim_player = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
-@onready var camera_rig = $camera_rig
+var camera_rig = preload("res://player/camera_rig.tscn")
+var camera_rig_ins
 @onready var transition = $Transition
 @onready var ray_cast_3d = $Rig/RayCast3D
 
@@ -58,6 +59,7 @@ func _ready():
 	GameManager.set_player(self)
 	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
 	current_hp = hp
+	camera_rig_ins = camera_rig.instantiate()
 	
 func _physics_process(delta):
 	if is_controlled:
