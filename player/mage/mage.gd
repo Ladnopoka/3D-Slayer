@@ -151,8 +151,8 @@ func cast_lightning_skill_1():
 		# Adjust the particle material settings
 		var material = particles.process_material
 		if material:
-			material.scale_min = 0.5  # Adjust scale as needed
-			material.scale_max = 0.5  # Ensure uniform scaling
+			material.scale_min = 0.2  # Adjust scale as needed
+			material.scale_max = 1.0  # Ensure uniform scaling
 			material.collision_mode = ParticleProcessMaterial.COLLISION_RIGID # Use the RIGID collision mode
 			material.collision_use_scale = true  # Enable collision scaling
 
