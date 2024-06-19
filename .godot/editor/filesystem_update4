@@ -1,3 +1,4 @@
+res://hideout/hideout.tscn
 res://item/floating_weapons.gd
 res://skills/impact/lightning_skill.gd
 res://globals/game_data/item_data/resource/rune_4.tres
@@ -13,3 +14,4 @@ res://skills/vfx/resources/mark_shader.tres
 res://skills/vfx/resources/wave_shader.tres
 res://skills/vfx/blender_vfx/lightning_editable.tres
 res://vfx/level_up/shader_cylinder_lvlup.tres
+res://level/level_1.tscn
