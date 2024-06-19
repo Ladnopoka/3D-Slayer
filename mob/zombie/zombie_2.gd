@@ -18,7 +18,4 @@ func _process(delta):
 
 	look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	
-
-	
 	move_and_slide()
-

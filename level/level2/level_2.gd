@@ -12,6 +12,9 @@ var knight_instance
 const IMP = preload("res://mob/imp/imp.tscn")
 var imp_instance
 
+const ZOMBIE = preload("res://mob/zombie/zombie.tscn")
+var zombie_instance
+
 var player
 
 # Called when the node enters the scene tree for the first time.
@@ -46,9 +49,12 @@ func _on_knight_spawn_timer_timeout():
 	#imp_instance = IMP.instantiate()
 	#imp_instance.position = spawn_point
 	#navigation_region.add_child(imp_instance)
-	knight_instance = knight.instantiate()
-	knight_instance.position = spawn_point
-	navigation_region.add_child(knight_instance)
+	#knight_instance = knight.instantiate()
+	#knight_instance.position = spawn_point
+	#navigation_region.add_child(knight_instance)
+	zombie_instance = ZOMBIE.instantiate()
+	zombie_instance.position = spawn_point
+	navigation_region.add_child(zombie_instance)
 	
 func get_player_character():
 	print("GameManager Player Name: ", GameManager.player_name)
