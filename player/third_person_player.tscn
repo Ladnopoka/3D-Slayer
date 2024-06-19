@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://mfjjwuf3wno2"]
 
-[ext_resource type="Script" path="res://third_person_player.gd" id="1_3f8sx"]
+[ext_resource type="Script" path="res://player/first_person/third_person_player.gd" id="1_3f8sx"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6c5nr"]
 
