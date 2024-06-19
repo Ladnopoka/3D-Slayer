@@ -1,12 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=19 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
-[ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
 [ext_resource type="PackedScene" uid="uid://bys7ecntquilo" path="res://item/floating_weapons.tscn" id="10_flqbf"]
 [ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_twf6y"]
-[ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
 [ext_resource type="Resource" uid="uid://b8lpy1pfof146" path="res://globals/game_data/item_data/resource/axe2h.tres" id="11_wvsp3"]
 [ext_resource type="Resource" uid="uid://bbkqodd5vsows" path="res://globals/game_data/item_data/resource/rune_0.tres" id="12_6hbab"]
 [ext_resource type="Resource" uid="uid://bt6i1mlrgceb1" path="res://globals/game_data/item_data/resource/rune_1.tres" id="13_71nau"]
@@ -206,8 +204,11 @@ sky_material = SubResource("PanoramaSkyMaterial_eycid")
 background_mode = 2
 sky = SubResource("Sky_oax1t")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_34jwe"]
+transparency = 4
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_o8vr5"]
-material = ExtResource("4_vr2du")
+material = SubResource("StandardMaterial3D_34jwe")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lknay"]
 size = Vector3(2, 2, 0)
@@ -235,9 +236,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2"]
 transform = Transform3D(30, 0, 0, 0, -1.31134e-06, 30, 0, -30, -1.31134e-06, 0, 0, 0)
 shape = SubResource("BoxShape3D_lknay")
-
-[node name="Portal" parent="." instance=ExtResource("10_wksuf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2174, 0, 11.0452)
 
 [node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
