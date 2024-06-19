@@ -8,7 +8,7 @@ var current_health = health
 const SPEED = 7.0
 const ATTACK_RANGE = 2
 
-@export var player_path := "/root/Level2/Rogue_Hooded"
+#@export var player_path := "/root/Level2/Rogue_Hooded"
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
 @onready var health_bar = $SubViewport/ProgressBar
@@ -26,6 +26,8 @@ func _ready():
 	random_number = randi() % 2 + 1
 	state_machine = animation_tree.get("parameters/playback")
 	health_bar.max_value = health
+	health_bar.value = health
+	player = GameManager.player
 	
 func _process(delta):
 	velocity = Vector3.ZERO

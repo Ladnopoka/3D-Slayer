@@ -8,7 +8,7 @@ var current_health = health
 const SPEED = 7.0
 const ATTACK_RANGE = 2
 
-@export var player_path := "/root/Level2/Rogue_Hooded"
+#@export var player_path := "/root/Level2/Rogue_Hooded"
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animation_tree = $AnimationTree
 @onready var health_bar = $SubViewport/ProgressBar
