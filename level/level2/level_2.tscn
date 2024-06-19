@@ -73,9 +73,6 @@ color = Color(1, 0, 0, 0.478431)
 
 [node name="Spawns" type="Node3D" parent="."]
 
-[node name="Spawn4" type="Node3D" parent="Spawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82736, 9.89286, 20.1403)
-
 [node name="Spawn6" type="Node3D" parent="Spawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.839, 0, 10.7148)
 
