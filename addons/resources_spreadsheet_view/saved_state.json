@@ -1,0 +1,32 @@
+{
+  "hidden_columns": {
+    "res://globals/game_data/item_data/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://globals/game_data/item_data/crafting/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://globals/game_data/item_data/crafting/recipes/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://globals/game_data/item_data/resource/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    }
+  },
+  "recent_paths": [
+    "res://block/",
+    "res://globals/game_data/item_data/resource/"
+  ],
+  "table_functions": {
+    "filter": [
+      "return true"
+    ],
+    "process": [
+      "return value"
+    ]
+  }
+}

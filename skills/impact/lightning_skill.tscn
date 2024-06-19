@@ -1,7 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqb7wkgovha2l"]
+[gd_scene load_steps=7 format=3 uid="uid://cqb7wkgovha2l"]
 
 [ext_resource type="PackedScene" uid="uid://dcrt70ew6k0sw" path="res://skills/vfx/finished_vfx/lightning_vfx.tscn" id="1_m6a7h"]
 [ext_resource type="Script" path="res://skills/impact/lightning_skill.gd" id="1_pi7ca"]
+
+[sub_resource type="Gradient" id="Gradient_oj500"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nbmep"]
+gradient = SubResource("Gradient_oj500")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dl431"]
+lifetime_randomness = 0.1
+particle_flag_rotate_y = true
+emission_shape = 3
+emission_box_extents = Vector3(4, 0, 4)
+angle_min = -180.0
+angle_max = 180.0
+gravity = Vector3(0, 0, 0)
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_nbmep")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_raoe2"]
 
@@ -9,11 +25,20 @@
 script = ExtResource("1_pi7ca")
 
 [node name="GPUParticles3D" parent="." instance=ExtResource("1_m6a7h")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+layers = 17
+collision_base_size = 0.03
+visibility_aabb = AABB(-18.0132, -1.02892, -15.4757, 36.0265, 2.05783, 30.9513)
+process_material = SubResource("ParticleProcessMaterial_dl431")
 
 [node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 16
+collision_mask = 16
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(7.89, 0, 0, 0, 7.89, 0, 0, 0, 7.89, 0, 0, 0)
 shape = SubResource("BoxShape3D_raoe2")
 
-[node name="Timer" type="Timer" parent="."]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

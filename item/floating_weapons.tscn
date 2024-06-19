@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bys7ecntquilo"]
+
+[ext_resource type="Script" path="res://item/floating_weapons.gd" id="1_nclvn"]
+[ext_resource type="Resource" uid="uid://do3q8yhb7v74j" path="res://globals/game_data/item_data/resource/staff.tres" id="2_s3i8x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrbcv"]
+
+[node name="Floating Weapons" type="Node3D"]
+script = ExtResource("1_nclvn")
+item = ExtResource("2_s3i8x")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(-0.00155108, -0.513793, -1.40926, 0.250799, 1.38933, -0.506804, 1.47888, -0.236151, 0.0844691, 10.7437, 1, 6.93471)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_xrbcv")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

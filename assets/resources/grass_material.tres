@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cuinop16et3w1"]
-
-[ext_resource type="Texture2D" uid="uid://y8p8i87e5o1g" path="res://assets/bricks_and_ground/4k JPEG/Grass 02/Grass03_Base Color.jpg" id="1_1svhn"]
-
-[resource]
-transparency = 4
-albedo_texture = ExtResource("1_1svhn")

@@ -21,13 +21,12 @@ var velocity_var = Vector3.ZERO
 @onready var projectile_shooting_point = $Rig/RayCast3D
 @onready var base_camera = $camera_rig/base_camera
 
-var inventory
+var inventory:Inventory = Inventory.new()
 
 var camera_rig = preload("res://player/camera_rig.tscn")
 var camera_rig_ins
 
 var lightning_skill_1 = preload("res://skills/impact/lightning_skill.tscn")
-
 var lightning_skill_1_instance
 #signal
 signal player_hit
@@ -37,7 +36,7 @@ var hp_regen = 0.1
 var current_hp : int
 var is_dead = false
 
-var exp : int = 0
+var experience : int = 0
 var current_exp : int = 0
 var level : int = 1
 var level_up_vfx = preload("res://vfx/level_up/imports/Scenes/VFX_Level_up.tscn")
@@ -79,6 +78,7 @@ func _physics_process(delta):
 		if !is_dead:
 			HPRegen(delta)
 			movement_and_attacking(delta)
+			update_orientation()
 	
 func movement_and_attacking(delta):
 		# Add the gravity.
@@ -92,7 +92,7 @@ func movement_and_attacking(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	#var model_rotation = model.rotation.y
 	
 	if direction.length() > 0.01:
@@ -121,26 +121,46 @@ func movement_and_attacking(delta):
 	if Input.is_action_pressed("right_mouse_clicked"):
 		attack()
 	if Input.is_action_just_pressed("skill_Q"):
-		cast_lightning_skill_1()
+		anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
 	if Input.is_action_just_released("skill_Q"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/cast", false)
 	elif Input.is_action_just_released("right_mouse_clicked"):
 		anim_tree.set("parameters/AttackStateMachine/conditions/attack", false)	
 
 func cast_lightning_skill_1():
-	lightning_skill_1_instance = lightning_skill_1.instantiate()
-	lightning_skill_1_instance.position = projectile_shooting_point.global_position
-	lightning_skill_1_instance.transform.basis = projectile_shooting_point.global_transform.basis
-	get_parent().add_child(lightning_skill_1_instance)
-	lightning_skill_1_instance.scale = Vector3(0.1, 0.1, 0.1)
-	
-	# Always update orientation, regardless of cooldown
-	update_orientation()
-	anim_tree.set("parameters/AttackStateMachine/conditions/cast", true)
+	# All the logic related to updating the character's orientation goes here
+	var space_state = get_world_3d().direct_space_state
+	mouse_position = get_viewport().get_mouse_position()
+
+	var ray_origin = base_camera.project_ray_origin(mouse_position)
+	var ray_end = ray_origin + base_camera.project_ray_normal(mouse_position) * 1000
+
+	var query = PhysicsRayQueryParameters3D.create(ray_origin, ray_end); 
+	var intersection = space_state.intersect_ray(query)
+
+	if intersection.size() > 0:
+		var collision_point = intersection.position
+
+		# Instantiate and position the lightning skill at the collision point
+		var lightning_skill_1_instance = lightning_skill_1.instantiate()
+		lightning_skill_1_instance.position = collision_point
+		
+		# Find the GPUParticles3D node within the instantiated lightning skill
+		var particles = lightning_skill_1_instance.get_node("GPUParticles3D")
+		
+		# Adjust the particle material settings
+		var material = particles.process_material
+		if material:
+			material.scale_min = 0.2  # Adjust scale as needed
+			material.scale_max = 1.0  # Ensure uniform scaling
+			material.collision_mode = ParticleProcessMaterial.COLLISION_RIGID # Use the RIGID collision mode
+			material.collision_use_scale = true  # Enable collision scaling
+
+		get_parent().add_child(lightning_skill_1_instance)
 
 func attack():
 	# Always update orientation, regardless of cooldown
-	update_orientation()
+	#update_orientation()
 	anim_tree.set("parameters/AttackStateMachine/conditions/attack", true)
 
 func shoot_projectile():
@@ -177,12 +197,13 @@ func gain_experience(exp_received):
 
 func level_up():
 	print("You've leveled up!")
-	current_exp = current_exp-100
+	current_exp = current_exp-100#
 	level += 1
+	GameState.player_data["level"] = level
 	var level_up_vfx_instance = level_up_vfx.instantiate()
 	add_child(level_up_vfx_instance)
-	var experience_label_node = ui.get_child(2).get_child(0).get_child(0)
-	experience_label_node.text = "Level: " + str(level)
+	#var experience_label_node = ui.get_child(2).get_child(0).get_child(0)
+	#experience_label_node.text = "Level: " + str(level)
 	await get_tree().create_timer(3.0).timeout
 	level_up_vfx_instance.queue_free()
 
@@ -206,7 +227,7 @@ func die():
 		Global.score = 0
 		Global.deaths += 1
 	await get_tree().create_timer(1.0).timeout
-	MageData.save_player_data(current_exp, inventory)
+	GameState.update_player_data(current_exp, level, hp, [])
 	get_tree().change_scene_to_file("res://level/level_1.tscn")
 	
 func HPRegen(delta):
@@ -228,3 +249,7 @@ func set_controlled(state: bool):
 		# Ensure the blend space is set to the idle position. This might involve setting
 		# the locomotionBlendPath or other parameters to reflect an idle state.
 		# anim_tree.set("parameters/locomotion/blend_position", Vector2.ZERO)
+		
+func on_item_picked_up(item:Item):
+	print("I got a new item!: ", item.name)
+	inventory.add_item(item)

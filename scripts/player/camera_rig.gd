@@ -12,7 +12,7 @@ func _ready():
 	GameManager.connect("active_character_changed", _on_active_character_changed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if GameManager.player:
 		background_camera.global_transform = GameManager.player.camera_point.global_transform
 		foreground_camera.global_transform = GameManager.player.camera_point.global_transform

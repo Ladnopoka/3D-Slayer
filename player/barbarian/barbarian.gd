@@ -17,8 +17,10 @@ var velocity_var = Vector3.ZERO
 @onready var anim_player = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var anim_tree_sm = anim_tree.get("parameters/AttackStateMachine/playback")
-@onready var camera_rig = $camera_rig
+var camera_rig = preload("res://player/camera_rig.tscn")
+var camera_rig_ins
 @onready var transition = $Transition
+@onready var base_camera = $camera_rig/base_camera
 
 #signal
 signal player_hit
@@ -27,6 +29,13 @@ var hp = 25
 var hp_regen = 0.1
 var current_hp : int
 var is_dead = false
+
+var experience : int = 0
+var current_exp : int = 0
+var level : int = 1
+var level_up_vfx = preload("res://vfx/level_up/imports/Scenes/VFX_Level_up.tscn")
+
+var inventory:Inventory = Inventory.new()
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -47,20 +56,18 @@ var attacking = false
 var is_controlled = false
 var ui_enabled = false
 
-var exp : int = 0
-var current_exp : int = 0
-
 func _ready():
 	GameManager.set_player(self)
 	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
-	print("LOCOMOTIONBLENDPATH: ", locomotionBlendPath)
 	current_hp = hp
+	camera_rig_ins = camera_rig.instantiate()
 	
 func _physics_process(delta):
 	if is_controlled:
 		if !is_dead:
 			HPRegen(delta)
 			movement_and_attacking(delta)
+			update_orientation()
 	
 func movement_and_attacking(delta):
 		# Add the gravity.
@@ -74,9 +81,9 @@ func movement_and_attacking(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	var model_rotation = model.rotation.y
+	#var model_rotation = model.rotation.y
 	if direction.length() > 0.01:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -116,10 +123,10 @@ func update_orientation():
 	var space_state = get_world_3d().direct_space_state
 	mouse_position = get_viewport().get_mouse_position()
 
-	rayOrigin = camera_rig.get_node("base_camera").project_ray_origin(mouse_position)
-	rayEnd = rayOrigin + camera_rig.get_node("base_camera").project_ray_normal(mouse_position) * 2000
+	var ray_origin = base_camera.project_ray_origin(mouse_position)
+	var ray_end = ray_origin + base_camera.project_ray_normal(mouse_position) * 1000
 
-	var query = PhysicsRayQueryParameters3D.create(rayOrigin, rayEnd); 
+	var query = PhysicsRayQueryParameters3D.create(ray_origin, ray_end); 
 	var intersection = space_state.intersect_ray(query)
 
 	if intersection.size() > 0:
@@ -146,12 +153,13 @@ func die():
 	print("inside die")
 	await get_tree().create_timer(4.0).timeout
 	transition.get_node("AnimationPlayer").play("fade_out")
-	await get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_file("res://level/level_1.tscn")
 	if Global.score > Global.best_score:
 		Global.best_score = Global.score
 		Global.score = 0
 		Global.deaths += 1
+	await get_tree().create_timer(1.0).timeout
+	GameState.update_player_data(current_exp, level, hp, [])
+	get_tree().change_scene_to_file("res://level/level_1.tscn")
 	
 func HPRegen(delta):
 	current_hp += hp_regen * delta
@@ -174,5 +182,24 @@ func set_controlled(state: bool):
 		# the locomotionBlendPath or other parameters to reflect an idle state.
 		# anim_tree.set("parameters/locomotion/blend_position", Vector2.ZERO)
 
-func gain_experience(exp):
-	current_exp += exp
+func gain_experience(exp_received):
+	current_exp += exp_received
+	
+	if current_exp >= 100:
+		level_up()
+		
+func level_up():
+	print("You've leveled up!")
+	current_exp = current_exp-100#
+	level += 1
+	GameState.player_data["level"] = level
+	var level_up_vfx_instance = level_up_vfx.instantiate()
+	add_child(level_up_vfx_instance)
+	#var experience_label_node = ui.get_child(2).get_child(0).get_child(0)
+	#experience_label_node.text = "Level: " + str(level)
+	await get_tree().create_timer(3.0).timeout
+	level_up_vfx_instance.queue_free()
+	
+func on_item_picked_up(item:Item):
+	print("I got a new item!: ", item.name)
+	inventory.add_item(item)

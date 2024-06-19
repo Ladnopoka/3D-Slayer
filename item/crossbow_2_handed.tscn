@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://h5xg0ohuvivh"]
+
+[ext_resource type="PackedScene" uid="uid://s3eprp1kbmxk" path="res://assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/crossbow_2handed.gltf" id="1_4gc1p"]
+
+[node name="crossbow_2handed" instance=ExtResource("1_4gc1p")]

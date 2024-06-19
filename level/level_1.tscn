@@ -1,14 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=19 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
-[ext_resource type="PackedScene" uid="uid://dw4mealbcrbin" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
-[ext_resource type="PackedScene" uid="uid://57luam50lff6" path="res://player/rogue/rogue_hooded.tscn" id="4_ojc8u"]
-[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="4_u2h3x"]
-[ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
+[ext_resource type="PackedScene" uid="uid://bys7ecntquilo" path="res://item/floating_weapons.tscn" id="10_flqbf"]
 [ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_twf6y"]
-[ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
+[ext_resource type="Resource" uid="uid://b8lpy1pfof146" path="res://globals/game_data/item_data/resource/axe2h.tres" id="11_wvsp3"]
+[ext_resource type="Resource" uid="uid://bbkqodd5vsows" path="res://globals/game_data/item_data/resource/rune_0.tres" id="12_6hbab"]
+[ext_resource type="Resource" uid="uid://bt6i1mlrgceb1" path="res://globals/game_data/item_data/resource/rune_1.tres" id="13_71nau"]
+[ext_resource type="Resource" uid="uid://m4y1wwcitb2i" path="res://globals/game_data/item_data/resource/rune_2.tres" id="14_ipt2d"]
+[ext_resource type="Resource" uid="uid://baqjlp8lk0mtx" path="res://globals/game_data/item_data/resource/rune_3.tres" id="15_8evl0"]
+[ext_resource type="Resource" uid="uid://dpi55so0rlbg2" path="res://globals/game_data/item_data/resource/rune_4.tres" id="16_rpmpa"]
 
 [sub_resource type="GDScript" id="GDScript_1jutb"]
 script/source = "extends Node3D
@@ -18,11 +20,10 @@ script/source = "extends Node3D
 @onready var deaths = $Deaths
 
 #@onready var mage = $Characters/Mage
-@onready var barbarian = $Characters/Barbarian
-@onready var rogue_hooded = $Characters/Rogue_Hooded
+#@onready var barbarian = $Characters/Barbarian
+#@onready var rogue_hooded = $Characters/Rogue_Hooded
 @onready var character_label = $CharacterLabel
-
-#@onready var blender_stuff = $blender_stuff
+@onready var characters = $Characters
 
 const UI = preload(\"res://ui/ui.tscn\")
 
@@ -35,37 +36,40 @@ var current_selected_character
 var selection_area = preload(\"res://player/selection_area.tscn\")
 var camera_rig = preload(\"res://player/camera_rig.tscn\")
 
-var mage_data
+#var mage_data
 
 # Called when the node enters the scene tree for the first time. 
 func _ready():
+	MusicPlayer.play_music_level()
 	transition.get_node(\"AnimationPlayer\").play(\"fade_in\")
 	score_max.text = \"Best Score: \" + str(Global.best_score)
 	deaths.text = \"Deaths: \" + str(Global.deaths)
-	mage_data = MageData.load_player_data()
 
-	#current_exp = player_data[\"experience\"]
-	#current_health = player_data[\"health\"]
-	#inventory = player_data[\"inventory\"]
-	#global_transform.origin = player_data[\"position\"]
-	# Update UI or any other elements with the loaded data
+	# Instantiate and add characters to the Characters node
+	instantiate_character(\"res://player/mage/mage.tscn\", \"Mage\")
+	instantiate_character(\"res://player/barbarian/barbarian.tscn\", \"Barbarian\")
+	instantiate_character(\"res://player/rogue/rogue_hooded.tscn\", \"Rogue_Hooded\")
 
-
-	
 	for character in $Characters.get_children():
-		print(\"mage data experience: \", mage_data[\"experience\"])
-		if character.name == \"Mage\":
-			character.current_exp = mage_data[\"experience\"]
-			character.current_hp = mage_data[\"health\"]
+		character.current_exp = GameState.player_data[\"experience\"]
+		character.current_hp = GameState.player_data[\"health\"]
+		character.level = GameState.player_data[\"level\"]
+		
 		var selection_area_ins = selection_area.instantiate()
 		var camera_rig_ins = camera_rig.instantiate()
 		character.add_child(selection_area_ins)
-		#character.add_child(camera_rig_ins)
-		print(character.get_children())
+		character.add_child(camera_rig_ins)
 		
-#func _physics_process(delta):
+		## Ensure animation player is set up correctly
+		#var anim_player = character.get_node(\"AnimationPlayer\")
+		#if anim_player:
+			#anim_player.play(\"idle\")  # Start with idle animation
+		
+func _physics_process(delta):
+	pass
+	
 	#character_selected(\"current_selected_character_name\")
-		
+		#
 #func character_selected(character_name):
 	#current_selected_character_name = character_name
 	#$CharacterLabel.text = current_selected_character_name
@@ -73,8 +77,36 @@ func _ready():
 	#for character in $Characters.get_children():
 		#print(\"Get child count of \", $CharacterLabel.text, \" and it has \", character.get_child_count()-1, \" Childs\")
 		#print(character.get_children())
-		#character.get_node(\"SelectionPath\").hide_selection()
+		#if character.has_node(\"SelectionPath\"):
+			#character.get_node(\"SelectionPath\").hide_selection()
 		##character.get_child(character.get_child_count()-1).hide_selection()
+		
+func instantiate_character(character_path, character_name):
+	var character_scene = load(character_path)
+	if character_scene:
+		var character_instance = character_scene.instantiate()
+		characters.add_child(character_instance)
+		
+		character_instance.name = character_name  # Set the character's name
+		character_instance.position = get_spawn_position(character_instance.name)  # Set initial position as needed
+		
+		
+		character_instance.get_node(\"UI\").visible = true
+		character_instance.call(\"set_controlled\", false)  # Initially, no character is controlled
+		
+
+func get_spawn_position(character_name: String):
+	print(\"THIS IS THE CHARACTER NAME: \", character_name)
+	
+	if character_name == \"Mage\":
+		return Vector3(-7.051, 0, 4.636)
+	elif character_name == \"Rogue_Hooded\":
+		return Vector3(6.531, 0, 4.351)
+	elif character_name == \"Barbarian\":
+		return Vector3(0, 0, 0)
+		
+	return Vector3(0, 0, 0)
+
 
 
 func _on_button_pressed():
@@ -109,7 +141,7 @@ func _handle_mouse_click(mouse_position):
 # At the class level, add a variable to keep track of the currently controlled character
 var current_controlled_character = null
 
-func _process_click(collider, position):
+func _process_click(collider, _position):
 	if collider and collider.has_node(\"SelectionArea/Selection\"):
 		# If there's a currently controlled character that is not the newly clicked one, disable its control
 		if current_controlled_character and current_controlled_character != collider:
@@ -172,8 +204,11 @@ sky_material = SubResource("PanoramaSkyMaterial_eycid")
 background_mode = 2
 sky = SubResource("Sky_oax1t")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_34jwe"]
+transparency = 4
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_o8vr5"]
-material = ExtResource("4_vr2du")
+material = SubResource("StandardMaterial3D_34jwe")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lknay"]
 size = Vector3(2, 2, 0)
@@ -185,14 +220,6 @@ script = SubResource("GDScript_1jutb")
 environment = SubResource("Environment_wbfuk")
 
 [node name="Characters" type="Node" parent="."]
-
-[node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
-
-[node name="Rogue_Hooded" parent="Characters" instance=ExtResource("4_ojc8u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5313, 0, 4.35114)
-
-[node name="Mage" parent="Characters" instance=ExtResource("4_u2h3x")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -7.05131, 0, 4.63611)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
@@ -209,9 +236,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2"]
 transform = Transform3D(30, 0, 0, 0, -1.31134e-06, 30, 0, -30, -1.31134e-06, 0, 0, 0)
 shape = SubResource("BoxShape3D_lknay")
-
-[node name="Portal" parent="." instance=ExtResource("10_wksuf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21744, 0, 16.0452)
 
 [node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -255,5 +279,47 @@ offset_right = 114.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Select"
+
+[node name="Floating Weapons" parent="." instance=ExtResource("10_flqbf")]
+
+[node name="Floating Weapons2" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.40065, 0, 0)
+item = ExtResource("11_wvsp3")
+
+[node name="Floating Weapons3" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, -0.253538, 0, 1.10875)
+item = ExtResource("12_6hbab")
+
+[node name="Floating Weapons4" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, -0.253538, 0, 4.20277)
+item = ExtResource("12_6hbab")
+
+[node name="Floating Weapons5" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, -0.253538, 0, 7.13467)
+item = ExtResource("12_6hbab")
+
+[node name="Floating Weapons6" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 5.7188, 0, 1.10875)
+item = ExtResource("13_71nau")
+
+[node name="Floating Weapons7" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 5.7188, 0, 4.20277)
+item = ExtResource("14_ipt2d")
+
+[node name="Floating Weapons8" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 5.7188, 0, 7.13467)
+item = ExtResource("15_8evl0")
+
+[node name="Floating Weapons9" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 11.9897, 0, 1.10875)
+item = ExtResource("16_rpmpa")
+
+[node name="Floating Weapons10" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 11.9897, 0, 4.20277)
+item = ExtResource("16_rpmpa")
+
+[node name="Floating Weapons11" parent="." instance=ExtResource("10_flqbf")]
+transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 11.9897, 0, 7.13467)
+item = ExtResource("14_ipt2d")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

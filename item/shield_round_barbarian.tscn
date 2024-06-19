@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd2vyivewmydi"]
+
+[ext_resource type="PackedScene" uid="uid://b3svthka0gqil" path="res://assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/shield_round_barbarian.gltf" id="1_fpbs7"]
+
+[node name="shield_round_barbarian" instance=ExtResource("1_fpbs7")]

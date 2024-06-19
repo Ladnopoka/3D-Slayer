@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtc0s0s8i0u1h"]
+
+[ext_resource type="PackedScene" uid="uid://dj1v0rb5jojgt" path="res://assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/dagger.gltf" id="1_v4h6b"]
+
+[node name="dagger" instance=ExtResource("1_v4h6b")]

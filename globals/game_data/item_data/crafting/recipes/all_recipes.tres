@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3 uid="uid://ctwfwhp7fgjyc"]
+
+[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_b82qh"]
+
+[resource]
+script = ExtResource("1_b82qh")
+base_folder = "res://globals/game_data/item_data/crafting/recipes/resources"
+includes = Array[String](["*.tres"])
+excludes = Array[String]([])
+paths = Array[String](["res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres", "res://globals/game_data/item_data/crafting/recipes/resources/rune_2.tres", "res://globals/game_data/item_data/crafting/recipes/resources/rune_3.tres", "res://globals/game_data/item_data/crafting/recipes/resources/rune_4.tres", "res://globals/game_data/item_data/crafting/recipes/resources/staff.tres"])

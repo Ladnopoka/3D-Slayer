@@ -9,6 +9,9 @@ extends Node3D
 var knight = load("res://mob/knight.tscn")
 var knight_instance
 
+const IMP = preload("res://mob/imp/imp.tscn")
+var imp_instance
+
 var player
 
 # Called when the node enters the scene tree for the first time.
@@ -19,17 +22,20 @@ func _ready():
 	player_ins.position = $Marker3D.position
 	player_ins.get_node("UI").visible = true
 	player_ins.call("set_controlled", true)
+	player_ins.current_exp = GameState.player_data["experience"]
+	player_ins.current_hp = GameState.player_data["health"]
+	player_ins.level = GameState.player_data["level"]
 	transition.get_node("AnimationPlayer").play("fade_in")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	score.text = "Knights Killed: " + str(Global.score) + "/100"
 
 
-func _on_rogue_hooded_player_hit():
-	hit_rect.visible = true
-	await get_tree().create_timer(0.2).timeout
-	hit_rect.visible = false
+#func _on_rogue_hooded_player_hit():
+	#hit_rect.visible = true
+	#await get_tree().create_timer(0.2).timeout
+	#hit_rect.visible = false
 
 func _get_random_child(parent_node):
 	var random_id = randi() % parent_node.get_child_count()
@@ -37,6 +43,9 @@ func _get_random_child(parent_node):
 
 func _on_knight_spawn_timer_timeout():
 	var spawn_point = _get_random_child(spawns).global_position
+	#imp_instance = IMP.instantiate()
+	#imp_instance.position = spawn_point
+	#navigation_region.add_child(imp_instance)
 	knight_instance = knight.instantiate()
 	knight_instance.position = spawn_point
 	navigation_region.add_child(knight_instance)

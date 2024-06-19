@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d28guf767oai6"]
+
+[ext_resource type="PackedScene" uid="uid://bx7uy1m6scebe" path="res://assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/shield_spikes.gltf" id="1_f0kb0"]
+
+[node name="shield_spikes" instance=ExtResource("1_f0kb0")]

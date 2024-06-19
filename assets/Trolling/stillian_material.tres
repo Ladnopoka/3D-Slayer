@@ -1,6 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bt6m0mc8f1ruy"]
-
-[ext_resource type="Texture2D" uid="uid://c727nd8pc45c2" path="res://assets/Trolling/stillimon.png" id="1_k7cug"]
-
-[resource]
-albedo_texture = ExtResource("1_k7cug")

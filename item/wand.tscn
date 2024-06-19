@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://5b6sld8r70kl"]
+
+[ext_resource type="PackedScene" uid="uid://ckcvpyfc6mt6n" path="res://assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/wand.gltf" id="1_cr0gg"]
+
+[node name="wand" instance=ExtResource("1_cr0gg")]

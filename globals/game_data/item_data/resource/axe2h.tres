@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b8lpy1pfof146"]
+
+[ext_resource type="Texture2D" uid="uid://6ssr4r245m8c" path="res://item/imported_items/32x64/Axe.png" id="1_76gh3"]
+[ext_resource type="Script" path="res://globals/game_data/item_data/item.gd" id="1_i70vi"]
+[ext_resource type="PackedScene" uid="uid://cpkpelyalnhx8" path="res://item/axe_2_handed.tscn" id="1_spggt"]
+
+[resource]
+script = ExtResource("1_i70vi")
+name = "Axe"
+scene = ExtResource("1_spggt")
+icon = ExtResource("1_76gh3")
+cost = 10

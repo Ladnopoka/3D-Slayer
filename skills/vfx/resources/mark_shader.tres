@@ -14,14 +14,15 @@ input_name = "color"
 operator = 2
 
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_4clsn"]
+expanded_output_ports = [0]
 parameter_name = "mark_color"
-default_value_enabled = true
+default_value = Color(0.492, 0.491826, 5.77569e-07, 1)
 
 [resource]
 code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx, unshaded;
 
-uniform vec4 mark_color : source_color = vec4(1.000000, 1.000000, 1.000000, 1.000000);
+uniform vec4 mark_color : source_color;
 uniform sampler2D tex_frg_2;
 
 
@@ -59,7 +60,7 @@ nodes/fragment/2/position = Vector2(-100, 440)
 nodes/fragment/3/node = SubResource("VisualShaderNodeInput_gkno4")
 nodes/fragment/3/position = Vector2(-20, 280)
 nodes/fragment/4/node = SubResource("VisualShaderNodeFloatOp_eiagn")
-nodes/fragment/4/position = Vector2(320, 340)
+nodes/fragment/4/position = Vector2(400, 480)
 nodes/fragment/5/node = SubResource("VisualShaderNodeColorParameter_4clsn")
-nodes/fragment/5/position = Vector2(480, 140)
+nodes/fragment/5/position = Vector2(480, 120)
 nodes/fragment/connections = PackedInt32Array(3, 1, 4, 0, 2, 1, 4, 1, 4, 0, 0, 1, 5, 0, 0, 0)

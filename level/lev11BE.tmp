@@ -1,0 +1,336 @@
+[gd_scene load_steps=39 format=3 uid="uid://ckf3ipmwutb47"]
+
+[ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
+[ext_resource type="PackedScene" uid="uid://dw4mealbcrbin" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
+[ext_resource type="PackedScene" uid="uid://57luam50lff6" path="res://player/rogue/rogue_hooded.tscn" id="4_ojc8u"]
+[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="4_u2h3x"]
+[ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
+[ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
+[ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
+[ext_resource type="Script" path="res://item/floating_weapons.gd" id="10_bblwh"]
+[ext_resource type="PackedScene" uid="uid://c5yj8h7m4bjk7" path="res://item/staff.tscn" id="10_g3c60"]
+[ext_resource type="FontFile" uid="uid://5llhkrp8644y" path="res://globals/Diablo Heavy.ttf" id="10_twf6y"]
+[ext_resource type="PackedScene" uid="uid://ci7p6fwa6jxd" path="res://portal/portal.tscn" id="10_wksuf"]
+[ext_resource type="Script" path="res://item/staff.gd" id="11_ko15g"]
+[ext_resource type="Resource" uid="uid://do3q8yhb7v74j" path="res://globals/game_data/item_data/resource/staff.tres" id="11_vd4un"]
+[ext_resource type="PackedScene" uid="uid://d3u422rpbyufs" path="res://item/crossbow_1_handed.tscn" id="12_xvgs8"]
+[ext_resource type="Script" path="res://item/crossbow_1_handed.gd" id="13_2lvut"]
+[ext_resource type="PackedScene" uid="uid://5b6sld8r70kl" path="res://item/wand.tscn" id="14_6y8dx"]
+[ext_resource type="Script" path="res://item/wand.gd" id="15_kiy7e"]
+[ext_resource type="PackedScene" uid="uid://dtc0s0s8i0u1h" path="res://item/dagger.tscn" id="16_3q5wu"]
+[ext_resource type="Script" path="res://item/dagger.gd" id="17_pe5w1"]
+[ext_resource type="PackedScene" uid="uid://cpkpelyalnhx8" path="res://item/axe_2_handed.tscn" id="17_vb4op"]
+[ext_resource type="PackedScene" uid="uid://cr6i2kh8ibs8h" path="res://item/sword_2_handed.tscn" id="18_gjgfy"]
+[ext_resource type="Script" path="res://item/axe_2_handed.gd" id="19_8v612"]
+[ext_resource type="PackedScene" uid="uid://ckr5jkyou3cqh" path="res://item/spellbook_open.tscn" id="19_bv18a"]
+[ext_resource type="PackedScene" uid="uid://d28guf767oai6" path="res://item/shield_spikes.tscn" id="20_401ny"]
+[ext_resource type="PackedScene" uid="uid://b51qacqs622dg" path="res://item/smokebomb.tscn" id="21_gjubc"]
+[ext_resource type="Script" path="res://item/sword_2_handed.gd" id="21_h78hl"]
+[ext_resource type="PackedScene" uid="uid://cd2vyivewmydi" path="res://item/shield_round_barbarian.tscn" id="22_q2eb6"]
+[ext_resource type="Script" path="res://item/spellbook_open.gd" id="23_gnsvx"]
+[ext_resource type="Script" path="res://item/shield_spikes.gd" id="25_pmnvh"]
+[ext_resource type="Script" path="res://item/smokebomb.gd" id="27_mt1xn"]
+[ext_resource type="Script" path="res://item/shield_round_barbarian.gd" id="29_2bjew"]
+
+[sub_resource type="GDScript" id="GDScript_1jutb"]
+script/source = "extends Node3D
+
+@onready var transition = $Transition
+@onready var score_max = $Score
+@onready var deaths = $Deaths
+
+#@onready var mage = $Characters/Mage
+@onready var barbarian = $Characters/Barbarian
+@onready var rogue_hooded = $Characters/Rogue_Hooded
+@onready var character_label = $CharacterLabel
+
+#@onready var blender_stuff = $blender_stuff
+
+const UI = preload(\"res://ui/ui.tscn\")
+
+var mage_script = load(\"res://player/mage/mage.gd\")
+var barbarian_script = load(\"res://player/barbarian/barbarian.gd\")
+var rogue_hooded_script = load(\"res://player/rogue/rogue_hooded.gd\")
+
+var current_selected_character_name
+var current_selected_character
+var selection_area = preload(\"res://player/selection_area.tscn\")
+var camera_rig = preload(\"res://player/camera_rig.tscn\")
+
+var mage_data
+
+# Called when the node enters the scene tree for the first time. 
+func _ready():
+	transition.get_node(\"AnimationPlayer\").play(\"fade_in\")
+	score_max.text = \"Best Score: \" + str(Global.best_score)
+	deaths.text = \"Deaths: \" + str(Global.deaths)
+	#mage_data = GameState.load_game_data()
+
+	#current_exp = player_data[\"experience\"]
+	#current_health = player_data[\"health\"]
+	#inventory = player_data[\"inventory\"]
+	#global_transform.origin = player_data[\"position\"]
+	# Update UI or any other elements with the loaded data
+
+
+	
+	for character in $Characters.get_children():
+		print(\"mage data experience: \", GameState.player_data[\"experience\"])
+		if character.name == \"Mage\":
+			character.current_exp = GameState.player_data[\"experience\"]
+			character.current_hp = GameState.player_data[\"health\"]
+		var selection_area_ins = selection_area.instantiate()
+		var camera_rig_ins = camera_rig.instantiate()
+		character.add_child(selection_area_ins)
+		#character.add_child(camera_rig_ins)
+		print(character.get_children())
+		
+#func _physics_process(delta):
+	#character_selected(\"current_selected_character_name\")
+		
+#func character_selected(character_name):
+	#current_selected_character_name = character_name
+	#$CharacterLabel.text = current_selected_character_name
+	#print(current_selected_character_name)
+	#for character in $Characters.get_children():
+		#print(\"Get child count of \", $CharacterLabel.text, \" and it has \", character.get_child_count()-1, \" Childs\")
+		#print(character.get_children())
+		#character.get_node(\"SelectionPath\").hide_selection()
+		##character.get_child(character.get_child_count()-1).hide_selection()
+
+
+func _on_button_pressed():
+	if current_selected_character_name:
+		transition.get_node(\"AnimationPlayer\").play(\"fade_out\")
+		await get_tree().create_timer(1).timeout
+		GameManager.set_player_character(current_selected_character_name)
+		get_tree().change_scene_to_file(\"res://level/level2/level_2.tscn\")
+		#get_tree().change_scene_to_file(\"res://level/cemetery/cemetery.tscn\")
+		
+func _input(event):
+	if event is InputEventMouseButton and event.pressed:
+		_handle_mouse_click(event.position)
+
+func _handle_mouse_click(mouse_position):
+	# Convert the 2D mouse position to a 3D ray
+	var ray_origin = GameManager.player.get_node(\"camera_rig\").get_node(\"base_camera\").project_ray_origin(mouse_position)
+	var ray_end = ray_origin + GameManager.player.get_node(\"camera_rig\").get_node(\"base_camera\").project_ray_normal(mouse_position) * 1000
+	
+	var ray_query = PhysicsRayQueryParameters3D.new()
+	ray_query.from = ray_origin
+	ray_query.to = ray_end
+
+	var space_state = get_world_3d().direct_space_state
+	var result = space_state.intersect_ray(ray_query)
+	
+	if result.size() > 0:
+		_process_click(result.collider, result.position)
+	else:
+		print(\"Raycast did not hit any object.\")
+		
+# At the class level, add a variable to keep track of the currently controlled character
+var current_controlled_character = null
+
+func _process_click(collider, position):
+	if collider and collider.has_node(\"SelectionArea/Selection\"):
+		# If there's a currently controlled character that is not the newly clicked one, disable its control
+		if current_controlled_character and current_controlled_character != collider:
+			current_controlled_character.call(\"set_controlled\", false)
+			# Optionally hide the UI for the previously controlled character
+			if current_controlled_character.has_node(\"SelectionArea/Selection\"):
+				current_controlled_character.get_node(\"SelectionArea/Selection\").visible = false
+				current_controlled_character.get_node(\"UI\").visible = false
+		
+		# Hide the selection circle for all characters
+		for character in $Characters.get_children():
+			if character.has_node(\"SelectionArea/Selection\"):
+				character.get_node(\"SelectionArea/Selection\").visible = false
+				character.get_node(\"UI\").visible = false
+
+		# Show the selection circle for the clicked character
+		collider.get_node(\"SelectionArea/Selection\").visible = true
+		collider.get_node(\"UI\").visible = true
+		character_label.text = collider.name
+		current_selected_character_name = collider.name
+
+		print(collider.name, \" character was clicked.\")
+
+		# Enable control for the clicked character
+		collider.call(\"set_controlled\", true)
+		#collider.add_node(UI)
+		# Update the reference to the currently controlled character
+		current_controlled_character = collider
+		# Assuming 'GameManager' is a globally accessible singleton. If not, you'll need to obtain a reference to it.
+		GameManager.set_active_character(collider)
+
+		print(collider.name, \" character was clicked.\")
+	else:
+		print(\"Clicked on the ground.\")
+		
+		## Hide selection circles as no character is selected
+		#for character in $Characters.get_children():
+			#if character.has_node(\"SelectionArea/Selection\"):
+				#character.get_node(\"SelectionArea/Selection\").visible = false
+				#character.get_node(\"UI\").visible = false
+#
+		## Reset the character label
+		#character_label.text = \"\"
+		#current_selected_character_name = \"\"
+#
+		## If there's a currently controlled character, disable its control
+		#if current_controlled_character:
+			#current_controlled_character.call(\"set_controlled\", false)
+			## Reset the reference since no character is now controlled
+			#current_controlled_character = null
+"
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_eycid"]
+panorama = ExtResource("9_xeoei")
+
+[sub_resource type="Sky" id="Sky_oax1t"]
+sky_material = SubResource("PanoramaSkyMaterial_eycid")
+
+[sub_resource type="Environment" id="Environment_wbfuk"]
+background_mode = 2
+sky = SubResource("Sky_oax1t")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o8vr5"]
+material = ExtResource("4_vr2du")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lknay"]
+size = Vector3(2, 2, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrbcv"]
+
+[node name="Level1" type="Node3D"]
+script = SubResource("GDScript_1jutb")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wbfuk")
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
+
+[node name="Rogue_Hooded" parent="Characters" instance=ExtResource("4_ojc8u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5313, 0, 4.35114)
+
+[node name="Mage" parent="Characters" instance=ExtResource("4_u2h3x")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -7.05131, 0, 4.63611)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
+shadow_enabled = true
+
+[node name="Floor2" type="StaticBody3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Floor2"]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
+visible = false
+mesh = SubResource("PlaneMesh_o8vr5")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2"]
+transform = Transform3D(30, 0, 0, 0, -1.31134e-06, 30, 0, -30, -1.31134e-06, 0, 0, 0)
+shape = SubResource("BoxShape3D_lknay")
+
+[node name="Portal" parent="." instance=ExtResource("10_wksuf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2174, 0, 11.0452)
+
+[node name="Hideout" parent="." instance=ExtResource("3_uheyo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Deaths" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 237.0
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 50
+text = "Deaths:"
+
+[node name="Score" type="Label" parent="."]
+offset_right = 526.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 50
+text = "Max Score: 10/10"
+
+[node name="Transition" parent="." instance=ExtResource("5_1qjme")]
+position = Vector2(1, 0)
+
+[node name="CharacterLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 129.0
+offset_bottom = 94.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("10_twf6y")
+theme_override_font_sizes/font_size = 70
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -79.0
+offset_right = 114.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Select"
+
+[node name="Floating Weapons" type="Node3D" parent="."]
+script = ExtResource("10_bblwh")
+item = ExtResource("11_vd4un")
+
+[node name="Staff" parent="Floating Weapons" instance=ExtResource("10_g3c60")]
+transform = Transform3D(-0.00155102, -0.411719, -0.922596, 0.250799, 1.11332, -0.331788, 1.47888, -0.189236, 0.0552991, 10.7437, 1, 6.93471)
+script = ExtResource("11_ko15g")
+
+[node name="Area3D" type="Area3D" parent="Floating Weapons/Staff"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floating Weapons/Staff/Area3D"]
+shape = SubResource("BoxShape3D_xrbcv")
+
+[node name="crossbow_1handed" parent="Floating Weapons" instance=ExtResource("12_xvgs8")]
+transform = Transform3D(1.4673, 0.0661697, 0.3044, -0.311509, 0.311678, 1.43381, 0, -1.46577, 0.318625, 13.8082, 1, 7.05307)
+script = ExtResource("13_2lvut")
+
+[node name="wand" parent="Floating Weapons" instance=ExtResource("14_6y8dx")]
+transform = Transform3D(1.56285, -0.342786, -7.10543e-16, 0.315302, 1.43754, -0.627739, 0.134488, 0.613164, 1.47171, 13.7942, 0.972758, 9.47955)
+script = ExtResource("15_kiy7e")
+
+[node name="dagger" parent="Floating Weapons" instance=ExtResource("16_3q5wu")]
+transform = Transform3D(1.25542, -0.337517, 0, 0.323072, 1.20169, 0.376241, -0.0976827, -0.363339, 1.24436, 13.9132, 0.738851, 12.4522)
+script = ExtResource("17_pe5w1")
+
+[node name="axe_2handed" parent="Floating Weapons" instance=ExtResource("17_vb4op")]
+transform = Transform3D(0.808884, -0.199676, 0.553025, 0.300913, 0.948643, -0.0976139, -0.505132, 0.245371, 0.827426, 13.85, 0.452703, 14.7783)
+script = ExtResource("19_8v612")
+
+[node name="sword_2handed" parent="Floating Weapons" instance=ExtResource("18_gjgfy")]
+transform = Transform3D(0.988137, 0.149498, 0.0351388, -0.153572, 0.961923, 0.226095, 0, -0.22881, 0.973471, 11.5118, 0.287, 14.7976)
+script = ExtResource("21_h78hl")
+
+[node name="spellbook_open" parent="Floating Weapons" instance=ExtResource("19_bv18a")]
+transform = Transform3D(0.803649, 0.483207, 0.34736, -0.595103, 0.65254, 0.469088, 0, -0.583697, 0.811971, 8.90198, 1, 14.7653)
+script = ExtResource("23_gnsvx")
+
+[node name="shield_spikes" parent="Floating Weapons" instance=ExtResource("20_401ny")]
+transform = Transform3D(-0.724101, -0.308021, 0.617091, -0.234627, 0.95138, 0.199567, -0.648558, -0.000279253, -0.761165, 6.83076, 0, 14.7496)
+script = ExtResource("25_pmnvh")
+
+[node name="smokebomb" parent="Floating Weapons" instance=ExtResource("21_gjubc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.53447, 0, 13.0928)
+script = ExtResource("27_mt1xn")
+
+[node name="shield_round_barbarian" parent="Floating Weapons" instance=ExtResource("22_q2eb6")]
+transform = Transform3D(0.682122, -0.443337, 0.581517, -0.181777, 0.667481, 0.722099, -0.708285, -0.598266, 0.374715, 6.70483, 0, 12.4525)
+script = ExtResource("29_2bjew")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="body_entered" from="Floating Weapons/Staff/Area3D" to="Floating Weapons/Staff" method="_on_area_3d_body_entered"]
+
+[editable path="Floating Weapons/Staff"]
+[editable path="Floating Weapons/sword_2handed"]

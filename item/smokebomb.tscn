@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b51qacqs622dg"]
+
+[ext_resource type="PackedScene" uid="uid://1s506f4mi3r7" path="res://assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/smokebomb.gltf" id="1_tnedr"]
+
+[node name="smokebomb" instance=ExtResource("1_tnedr")]

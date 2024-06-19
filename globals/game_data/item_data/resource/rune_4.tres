@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dpi55so0rlbg2"]
+
+[ext_resource type="Texture2D" uid="uid://bn0r0uuebf2ht" path="res://item/imported_items/runes/rune_pack_16.png" id="1_middf"]
+[ext_resource type="PackedScene" uid="uid://cbiulkjj0yxqw" path="res://placeholders/item_placeholder_6.tscn" id="2_gvqqi"]
+[ext_resource type="Script" path="res://globals/game_data/item_data/item.gd" id="3_uac7f"]
+
+[resource]
+script = ExtResource("3_uac7f")
+name = "Rune 4"
+scene = ExtResource("2_gvqqi")
+icon = ExtResource("1_middf")
+cost = 5
