@@ -1,9 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://ckf3ipmwutb47"]
+[gd_scene load_steps=20 format=3 uid="uid://ckf3ipmwutb47"]
 
 [ext_resource type="PackedScene" uid="uid://dh7eqkenjyvhp" path="res://hideout/hideout.tscn" id="3_uheyo"]
-[ext_resource type="PackedScene" uid="uid://dw4mealbcrbin" path="res://player/barbarian/barbarian.tscn" id="3_wd3uh"]
-[ext_resource type="PackedScene" uid="uid://57luam50lff6" path="res://player/rogue/rogue_hooded.tscn" id="4_ojc8u"]
-[ext_resource type="PackedScene" uid="uid://dcbt3cxtuaj55" path="res://player/mage/mage.tscn" id="4_u2h3x"]
 [ext_resource type="Material" uid="uid://cuinop16et3w1" path="res://assets/resources/grass_material.tres" id="4_vr2du"]
 [ext_resource type="PackedScene" uid="uid://ds52ra1i0aaov" path="res://transition/transition.tscn" id="5_1qjme"]
 [ext_resource type="Texture2D" uid="uid://c3ty78dhu6mmv" path="res://assets/panorama/panorama_image.png" id="9_xeoei"]
@@ -24,9 +21,9 @@ script/source = "extends Node3D
 @onready var score_max = $Score
 @onready var deaths = $Deaths
 
-@onready var mage = $Characters/Mage
-@onready var barbarian = $Characters/Barbarian
-@onready var rogue_hooded = $Characters/Rogue_Hooded
+#@onready var mage = $Characters/Mage
+#@onready var barbarian = $Characters/Barbarian
+#@onready var rogue_hooded = $Characters/Rogue_Hooded
 @onready var character_label = $CharacterLabel
 @onready var characters = $Characters
 
@@ -49,11 +46,11 @@ func _ready():
 	transition.get_node(\"AnimationPlayer\").play(\"fade_in\")
 	score_max.text = \"Best Score: \" + str(Global.best_score)
 	deaths.text = \"Deaths: \" + str(Global.deaths)
-	
+
 	# Instantiate and add characters to the Characters node
-	instantiate_character(\"res://player/mage/mage.tscn\")
-	instantiate_character(\"res://player/barbarian/barbarian.tscn\")
-	instantiate_character(\"res://player/rogue/rogue_hooded.tscn\")
+	instantiate_character(\"res://player/mage/mage.tscn\", \"Mage\")
+	instantiate_character(\"res://player/barbarian/barbarian.tscn\", \"Barbarian\")
+	instantiate_character(\"res://player/rogue/rogue_hooded.tscn\", \"Rogue_Hooded\")
 
 	for character in $Characters.get_children():
 		character.current_exp = GameState.player_data[\"experience\"]
@@ -65,10 +62,10 @@ func _ready():
 		character.add_child(selection_area_ins)
 		character.add_child(camera_rig_ins)
 		
-		# Ensure animation player is set up correctly
-		var anim_player = character.get_node(\"AnimationPlayer\")
-		if anim_player:
-			anim_player.play(\"idle\")  # Start with idle animation
+		## Ensure animation player is set up correctly
+		#var anim_player = character.get_node(\"AnimationPlayer\")
+		#if anim_player:
+			#anim_player.play(\"idle\")  # Start with idle animation
 		
 func _physics_process(delta):
 	pass
@@ -86,18 +83,32 @@ func _physics_process(delta):
 			#character.get_node(\"SelectionPath\").hide_selection()
 		##character.get_child(character.get_child_count()-1).hide_selection()
 		
-func instantiate_character(character_path):
+func instantiate_character(character_path, character_name):
 	var character_scene = load(character_path)
 	if character_scene:
 		var character_instance = character_scene.instantiate()
 		characters.add_child(character_instance)
-		character_instance.position = get_spawn_position()  # Set initial position as needed
+		
+		character_instance.name = character_name  # Set the character's name
+		character_instance.position = get_spawn_position(character_instance.name)  # Set initial position as needed
+		
+		
 		character_instance.get_node(\"UI\").visible = true
 		character_instance.call(\"set_controlled\", false)  # Initially, no character is controlled
+		
 
-func get_spawn_position():
-	# Implement your logic to determine spawn positions for characters
-	return Vector3(randf() * 10, 0, randf() * 10)  # Example: random positions, replace with actual logic
+func get_spawn_position(character_name: String):
+	print(\"THIS IS THE CHARACTER NAME: \", character_name)
+	
+	if character_name == \"Mage\":
+		return Vector3(-7.051, 0, 4.636)
+	elif character_name == \"Rogue_Hooded\":
+		return Vector3(6.531, 0, 4.351)
+	elif character_name == \"Barbarian\":
+		return Vector3(0, 0, 0)
+		
+	return Vector3(0, 0, 0)
+
 
 
 func _on_button_pressed():
@@ -209,67 +220,6 @@ environment = SubResource("Environment_wbfuk")
 
 [node name="Characters" type="Node" parent="."]
 
-[node name="Barbarian" parent="Characters" instance=ExtResource("3_wd3uh")]
-locomotionBlendPath = ""
-
-[node name="Rogue_Hooded" parent="Characters" instance=ExtResource("4_ojc8u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5313, 0, 4.35114)
-locomotionBlendPath = ""
-
-[node name="Mage" parent="Characters" instance=ExtResource("4_u2h3x")]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -7.05131, 0, 4.63611)
-
-[node name="Skeleton3D" parent="Characters/Mage/Rig" index="0"]
-bones/0/position = Vector3(0, 0.000358027, 0)
-bones/1/position = Vector3(1.58117e-25, 0.370315, -6.63191e-19)
-bones/1/rotation = Quaternion(0.00114969, 0.0426623, 9.03835e-05, 0.999089)
-bones/2/rotation = Quaternion(0.00132074, 0.00116498, -0.000116967, 0.999999)
-bones/3/rotation = Quaternion(0.000496183, 0.000109136, 4.35275e-05, 1)
-bones/4/rotation = Quaternion(-0.551682, -0.0564866, -0.637657, 0.534649)
-bones/5/rotation = Quaternion(3.6857e-08, -6.79722e-08, -0.516209, 0.856463)
-bones/7/rotation = Quaternion(-0.321473, -0.338578, 0.150084, 0.87149)
-bones/8/rotation = Quaternion(0.000959704, 0.000959703, -0.703575, 0.71062)
-bones/11/rotation = Quaternion(-0.610252, 0.0770107, 0.613253, 0.495563)
-bones/12/rotation = Quaternion(1.71903e-08, 4.85151e-08, 0.538549, 0.842594)
-bones/14/rotation = Quaternion(-0.320544, 0.314797, -0.232282, 0.86267)
-bones/15/rotation = Quaternion(0.00301671, 0.00355324, 0.703965, 0.710219)
-bones/21/position = Vector3(0.170945, 0.113587, 0.0011172)
-bones/21/rotation = Quaternion(0.989257, 0.0832478, 0.0772116, 0.0920792)
-bones/22/rotation = Quaternion(0.393664, 6.09395e-08, -2.65995e-07, 0.919254)
-bones/23/rotation = Quaternion(-0.620542, -0.198537, 0.0759562, 0.754812)
-bones/24/rotation = Quaternion(-3.04826e-08, 0.920355, -0.391084, 6.94804e-08)
-bones/25/position = Vector3(-0.170945, 0.113587, -0.00111717)
-bones/25/rotation = Quaternion(0.991638, -0.0329443, 0.0294919, 0.121244)
-bones/26/rotation = Quaternion(0.43976, -5.80424e-08, 3.06075e-07, 0.898115)
-bones/27/rotation = Quaternion(-0.642035, 0.111329, -0.0225456, 0.758214)
-bones/28/rotation = Quaternion(2.98078e-08, 0.919956, -0.392022, -6.93496e-08)
-bones/29/position = Vector3(0.170945, 0.292702, 0.576204)
-bones/30/position = Vector3(0.20182, 0.0293619, 0.20966)
-bones/30/rotation = Quaternion(-0.709641, -7.018e-08, -7.08449e-08, 0.704564)
-bones/36/position = Vector3(-0.170945, 0.292702, 0.576204)
-bones/37/position = Vector3(-0.170945, 0.027161, 0.237786)
-bones/37/rotation = Quaternion(-0.699272, -7.13385e-08, -6.97151e-08, 0.714855)
-bones/44/position = Vector3(0.520841, 0.774973, -0.0576374)
-bones/46/position = Vector3(-0.510844, 0.774973, 0.0597369)
-
-[node name="Spellbook" parent="Characters/Mage/Rig/Skeleton3D" index="0"]
-transform = Transform3D(-0.00038598, 0.964587, 0.263762, -0.999867, 0.00391172, -0.0157654, -0.0162394, -0.263733, 0.964458, 0.577433, 0.620374, 0.238972)
-
-[node name="Spellbook_open" parent="Characters/Mage/Rig/Skeleton3D" index="1"]
-transform = Transform3D(-0.00038598, 0.964587, 0.263762, -0.999867, 0.00391172, -0.0157654, -0.0162394, -0.263733, 0.964458, 0.545689, 0.622271, 0.122897)
-
-[node name="1H_Wand" parent="Characters/Mage/Rig/Skeleton3D" index="2"]
-transform = Transform3D(-0.00173212, -0.158146, 0.987414, 0.999892, -0.0146263, -0.000589474, 0.0145359, 0.987307, 0.158154, -0.490253, 0.628752, 0.108761)
-
-[node name="2H_Staff" parent="Characters/Mage/Rig/Skeleton3D" index="3"]
-transform = Transform3D(-0.00173212, -0.158146, 0.987414, 0.999892, -0.0146263, -0.000589474, 0.0145359, 0.987307, 0.158154, -0.490253, 0.628752, 0.108761)
-
-[node name="Mage_Hat" parent="Characters/Mage/Rig/Skeleton3D" index="4"]
-transform = Transform3D(0.999698, -0.00599951, 0.023841, -0.000229955, 0.967441, 0.253096, -0.0245832, -0.253025, 0.967147, 0.000429425, 1.74909, 0.00708409)
-
-[node name="Mage_Cape" parent="Characters/Mage/Rig/Skeleton3D" index="5"]
-transform = Transform3D(0.996194, 0.000375416, 0.0871668, 0.000141416, 0.999982, -0.00592297, -0.0871675, 0.00591275, 0.996176, 0.000216096, 1.18087, 0.0037243)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.998572, 0.0477985, -0.0238551, -0.0170119, 0.707835, 0.706173, 0.0506395, -0.704759, 0.707637, 0.289022, 8.21207, 0)
 shadow_enabled = true
@@ -375,8 +325,3 @@ transform = Transform3D(1.36, 0, 0, 0, 1.36, 0, 0, 0, 1.36, 11.9897, 0, 7.13467)
 item = ExtResource("14_ipt2d")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-
-[editable path="Characters/Mage"]
-[editable path="Characters/Mage/camera_rig"]
-[editable path="Characters/Mage/UI"]
-[editable path="Characters/Mage/UI/InventoryDialog"]
