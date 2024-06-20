@@ -30,3 +30,4 @@ res://shooting/arrow.gd
 res://mob/zombie/Area3D.gd
 res://mob/mobcollision.gd
 res://player/mage/mage.tscn
+res://player/mage/mage.gd

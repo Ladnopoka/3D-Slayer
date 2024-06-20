@@ -20,6 +20,8 @@ var velocity_var = Vector3.ZERO
 @onready var transition = $Transition
 @onready var projectile_shooting_point = $Rig/RayCast3D
 @onready var base_camera = $camera_rig/base_camera
+@onready var ui = $UI
+@onready var ground_ray_cast = $GroundRayCast
 
 var inventory:Inventory = Inventory.new()
 
@@ -65,8 +67,6 @@ var blend_lerp_speed = 1.0 / CROSSFADE_TIME
 var attacking = false
 var is_controlled = false
 
-@onready var ui = $UI
-
 func _ready():
 	GameManager.set_player(self)
 	anim_tree.set(locomotionBlendPath, Vector2(0, 0))
@@ -79,6 +79,12 @@ func _physics_process(delta):
 			HPRegen(delta)
 			movement_and_attacking(delta)
 			update_orientation()
+			align_to_ground()
+			
+func align_to_ground():
+	if ground_ray_cast.is_colliding():
+		var ground_position = ground_ray_cast.get_collision_point()
+		global_transform.origin.y = ground_position.y
 	
 func movement_and_attacking(delta):
 		# Add the gravity.
