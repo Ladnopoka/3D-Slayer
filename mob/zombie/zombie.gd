@@ -28,6 +28,10 @@ func _ready():
 	health_bar.max_value = health
 	
 func _process(delta):
+	if !is_on_floor():
+		velocity.y = 0.0
+		
+	
 	velocity = Vector3.ZERO
 	player = GameManager.player
 	

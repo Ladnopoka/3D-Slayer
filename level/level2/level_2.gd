@@ -80,18 +80,20 @@ func spawn_wave():
 		enemy_instance.global_transform.origin = spawn_point
 		
 func choose_random_enemy():
-	var enemies = [ZOMBIE] # Add all your enemy types here IMP, ZOMBIE, knight
+	var enemies = [knight] # Add all your enemy types here IMP, ZOMBIE, knight
 	return enemies[randi() % enemies.size()]		
 
 func get_spawn_position():
 	var camera_pos = camera.global_transform.origin
 	var camera_dir = camera.global_transform.basis.z.normalized()
-	var spawn_distance = 20  # Distance from the camera to spawn enemies outside the view
+	var spawn_distance = 20 # Distance from the camera to spawn enemies outside the view
 
 	var spawn_direction = randf() * 2 * PI  # Random direction
 	var spawn_x = sin(spawn_direction) * spawn_distance
 	var spawn_z = cos(spawn_direction) * spawn_distance
 
-	var spawn_position = Vector3(camera_pos.x + spawn_x, camera_pos.y, camera_pos.z + spawn_z)
+	# Adjust y to be the ground level
+	var ground_level = 0
+	var spawn_position = Vector3(camera_pos.x + spawn_x, ground_level, camera_pos.z + spawn_z)
 
 	return spawn_position
