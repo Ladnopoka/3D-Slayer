@@ -18,3 +18,5 @@ res://vfx/level_up/shader_cylinder_lvlup.tres
 res://level/level_1.tscn
 res://hideout/hideout.tscn
 res://mob/knight.tscn
+res://level/level2/level_2.tscn
+res://level/level2/level_2.gd

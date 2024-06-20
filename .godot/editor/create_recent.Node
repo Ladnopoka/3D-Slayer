@@ -1,7 +1,8 @@
+MeshInstance3D
+Timer
 GPUParticlesCollisionBox3D
 Label3D
 RayCast3D
-Timer
 AudioStreamPlayer
 Sprite3D
 ProgressBar
@@ -11,4 +12,3 @@ MeshInstance2D
 Area2D
 Control
 Button
-GridContainer
