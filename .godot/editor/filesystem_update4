@@ -22,3 +22,8 @@ res://level/level2/level_2.tscn
 res://level/level2/level_2.gd
 res://mob/zombie/zombie.gd
 res://skills/impact/lightning_skill.tscn
+res://mob/knight.gd
+res://player/mage/mage_skill.tscn
+res://player/mage/mage_skill.gd
+res://shooting/arrow.tscn
+res://shooting/arrow.gd

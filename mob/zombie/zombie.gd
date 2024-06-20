@@ -95,13 +95,15 @@ func _on_area_3d_body_part_hit(dam):
 		queue_free()
 		
 func hit(_dir):
+	print("I@M HIT HOH NOOWW!!!@: ", _dir)
 	emit_signal("zombie_hit")
+	_on_area_3d_body_part_hit(_dir)
 	
-	current_health -= 1
-	if current_health <= 0:
-		#die()
-		current_health = 0 # so life can't be -1
-	print(current_health)
+	#current_health -= 1
+	#if current_health <= 0:
+		##die()
+		#current_health = 0 # so life can't be -1
+	#print(current_health)
 
 
 
@@ -171,7 +173,8 @@ func hit(_dir):
 
 
 func _on_area_3d_zombie_hit(damage):
-	random_number = randi() % 2 + 1
-	health -= damage
-	health_bar.value = health
-	_on_critical_damage_taken(damage)
+	_on_area_3d_body_part_hit(damage)
+	#random_number = randi() % 2 + 1
+	#health -= damage
+	#health_bar.value = health
+	#_on_critical_damage_taken(damage)
