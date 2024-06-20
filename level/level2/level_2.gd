@@ -42,26 +42,6 @@ func _ready():
 		wave_timer.connect("timeout", _on_wave_timer_timeout)
 	wave_timer.start()
 
-func _on_wave_timer_timeout():
-	if wave_number < max_waves:
-		wave_number += 1
-		spawn_wave()
-		wave_timer.start()  # Restart the timer for the next wave
-		
-func spawn_wave():
-	var spawn_count = wave_number * 2  # Adjust based on desired difficulty scaling
-	for i in range(spawn_count):
-		var spawn_point = _get_random_child(spawns).global_position
-		var enemy_instance = choose_random_enemy().instantiate()
-		enemy_instance.position = spawn_point
-		navigation_region.add_child(enemy_instance)
-		
-func choose_random_enemy():
-	var enemies = [ZOMBIE] # Add all your enemy types here IMP, ZOMBIE, knight
-	return enemies[randi() % enemies.size()]		
-		
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	score.text = "Knights Killed: " + str(Global.score) + "/100"
@@ -95,3 +75,21 @@ func get_player_character():
 			player = load("res://player/mage/mage.tscn")
 		_:
 			player = load("res://player/barbarian/barbarian.tscn")
+			
+func _on_wave_timer_timeout():
+	if wave_number < max_waves:
+		wave_number += 1
+		spawn_wave()
+		wave_timer.start()  # Restart the timer for the next wave
+		
+func spawn_wave():
+	var spawn_count = wave_number * 2  # Adjust based on desired difficulty scaling
+	for i in range(spawn_count):
+		var spawn_point = _get_random_child(spawns).global_position
+		var enemy_instance = choose_random_enemy().instantiate()
+		enemy_instance.position = spawn_point
+		navigation_region.add_child(enemy_instance)
+		
+func choose_random_enemy():
+	var enemies = [ZOMBIE] # Add all your enemy types here IMP, ZOMBIE, knight
+	return enemies[randi() % enemies.size()]		
