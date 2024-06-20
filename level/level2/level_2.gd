@@ -17,6 +17,7 @@ const ZOMBIE = preload("res://mob/zombie/zombie.tscn")
 var zombie_instance
 
 var player
+var camera
 
 var wave_interval = 2  # seconds between each wave
 var current_time = 0
@@ -28,6 +29,7 @@ func _ready():
 	get_player_character()
 	var player_ins = player.instantiate()
 	add_child(player_ins)
+	camera = player_ins.get_node("camera_rig/base_camera")
 	player_ins.position = $Marker3D.position
 	player_ins.get_node("UI").visible = true
 	player_ins.call("set_controlled", true)
@@ -50,19 +52,6 @@ func _process(_delta):
 func _get_random_child(parent_node):
 	var random_id = randi() % parent_node.get_child_count()
 	return parent_node.get_child(random_id) 
-
-func _on_knight_spawn_timer_timeout():
-	#var spawn_point = _get_random_child(spawns).global_position
-	#imp_instance = IMP.instantiate()
-	#imp_instance.position = spawn_point
-	#navigation_region.add_child(imp_instance)
-	#knight_instance = knight.instantiate()
-	#knight_instance.position = spawn_point
-	#navigation_region.add_child(knight_instance)
-	#zombie_instance = ZOMBIE.instantiate()
-	#zombie_instance.position = spawn_point
-	#navigation_region.add_child(zombie_instance)
-	pass
 	
 func get_player_character():
 	print("GameManager Player Name: ", GameManager.player_name)
@@ -85,11 +74,24 @@ func _on_wave_timer_timeout():
 func spawn_wave():
 	var spawn_count = wave_number * 2  # Adjust based on desired difficulty scaling
 	for i in range(spawn_count):
-		var spawn_point = _get_random_child(spawns).global_position
+		var spawn_point = get_spawn_position()
 		var enemy_instance = choose_random_enemy().instantiate()
-		enemy_instance.position = spawn_point
 		navigation_region.add_child(enemy_instance)
+		enemy_instance.global_transform.origin = spawn_point
 		
 func choose_random_enemy():
 	var enemies = [ZOMBIE] # Add all your enemy types here IMP, ZOMBIE, knight
 	return enemies[randi() % enemies.size()]		
+
+func get_spawn_position():
+	var camera_pos = camera.global_transform.origin
+	var camera_dir = camera.global_transform.basis.z.normalized()
+	var spawn_distance = 20  # Distance from the camera to spawn enemies outside the view
+
+	var spawn_direction = randf() * 2 * PI  # Random direction
+	var spawn_x = sin(spawn_direction) * spawn_distance
+	var spawn_z = cos(spawn_direction) * spawn_distance
+
+	var spawn_position = Vector3(camera_pos.x + spawn_x, camera_pos.y, camera_pos.z + spawn_z)
+
+	return spawn_position
