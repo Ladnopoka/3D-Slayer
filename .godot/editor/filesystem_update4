@@ -1,6 +1,5 @@
-res://level/level2/level_2.tscn
+res://mob/zombie/zombie.tscn
 res://item/floating_weapons.gd
-res://ui/healthbars/health_bar_colours.tres
 res://skills/impact/lightning_skill.gd
 res://globals/game_data/item_data/resource/rune_4.tres
 res://globals/game_data/item_data/crafting/recipes/resources/rune_1.tres
@@ -8,6 +7,7 @@ res://globals/game_data/item_data/crafting/recipes/resources/rune_2.tres
 res://globals/game_data/item_data/crafting/recipes/resources/rune_3.tres
 res://globals/game_data/item_data/crafting/recipes/resources/rune_4.tres
 res://globals/game_data/item_data/crafting/recipes/all_recipes.tres
+res://ui/healthbars/health_bar_colours.tres
 res://vfx/level_up/imports/Shaders/s_UpLevel.tres
 res://vfx/level_up/imports/Shaders/s_simple1.tres
 res://skills/vfx/resources/lightning_shader.tres
@@ -17,8 +17,4 @@ res://skills/vfx/blender_vfx/lightning_editable.tres
 res://vfx/level_up/shader_cylinder_lvlup.tres
 res://level/level_1.tscn
 res://hideout/hideout.tscn
-res://mob/zombie/zombie_2.tscn
 res://mob/knight.tscn
-res://mob/zombie/zombie.tscn
-res://mob/zombie/zombie.gd
-res://mob/knight.gd
