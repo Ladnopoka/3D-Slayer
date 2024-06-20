@@ -87,12 +87,3 @@ func _on_area_3d_body_part_hit(dam):
 			await get_tree().create_timer(7.0).timeout
 
 		queue_free()
-		
-#func hit(_dir):
-	#emit_signal("knight_hit")
-	#
-	#current_health -= 1
-	#if current_health <= 0:
-		##die()
-		#current_health = 0 # so life can't be -1
-	#print(current_health)

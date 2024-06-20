@@ -26,6 +26,8 @@ func _on_area_3d_body_entered(body):
 		var random_damage = randi() % (damage_max - damage_min + 1) + damage_min
 		if body.has_method("_on_area_3d_body_part_hit"):
 			body._on_area_3d_body_part_hit(random_damage)
+		elif body.has_method("_on_area_3d_zombie_hit"):
+			body._on_area_3d_zombie_hit(random_damage)
 		particles.emitting = true
 
 

@@ -27,3 +27,5 @@ res://player/mage/mage_skill.tscn
 res://player/mage/mage_skill.gd
 res://shooting/arrow.tscn
 res://shooting/arrow.gd
+res://mob/zombie/Area3D.gd
+res://mob/mobcollision.gd
