@@ -57,7 +57,7 @@ func spawn_wave():
 		navigation_region.add_child(enemy_instance)
 		
 func choose_random_enemy():
-	var enemies = [ZOMBIE, knight] # Add all your enemy types here IMP, ZOMBIE, knight
+	var enemies = [ZOMBIE] # Add all your enemy types here IMP, ZOMBIE, knight
 	return enemies[randi() % enemies.size()]		
 		
 

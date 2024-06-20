@@ -20,3 +20,5 @@ res://hideout/hideout.tscn
 res://mob/knight.tscn
 res://level/level2/level_2.tscn
 res://level/level2/level_2.gd
+res://mob/zombie/zombie.gd
+res://skills/impact/lightning_skill.tscn

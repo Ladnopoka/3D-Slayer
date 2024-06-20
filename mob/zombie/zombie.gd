@@ -63,11 +63,12 @@ func _hit_finished():
 		var dir = global_position.direction_to(player.global_position)
 		player.hit(dir)
 
-#func _on_area_3d_body_part_hit(dam):
-	#random_number = randi() % 2 + 1
-	#health -= dam
-	#health_bar.value = health
-	#_on_critical_damage_taken(dam)
+func _on_area_3d_body_part_hit(dam):
+	#pass
+	random_number = randi() % 2 + 1
+	health -= dam
+	health_bar.value = health
+	_on_critical_damage_taken(dam)
 	#
 	#if health <= 0:
 		#Global.score += 1
@@ -90,14 +91,14 @@ func _hit_finished():
 #
 		#queue_free()
 		#
-#func hit(_dir):
-	#emit_signal("zombie_hit")
-	#
-	#current_health -= 1
-	#if current_health <= 0:
-		##die()
-		#current_health = 0 # so life can't be -1
-	#print(current_health)
+func hit(_dir):
+	emit_signal("zombie_hit")
+	
+	current_health -= 1
+	if current_health <= 0:
+		#die()
+		current_health = 0 # so life can't be -1
+	print(current_health)
 
 
 
@@ -164,3 +165,10 @@ func _hit_finished():
 	#zombie_hp -= damage
 	#if zombie_hp <= 0:
 		#queue_free()
+
+
+func _on_area_3d_zombie_hit(damage):
+	random_number = randi() % 2 + 1
+	health -= damage
+	health_bar.value = health
+	_on_critical_damage_taken(damage)

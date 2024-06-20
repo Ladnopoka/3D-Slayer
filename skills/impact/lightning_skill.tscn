@@ -20,6 +20,7 @@ scale_max = 2.0
 color_ramp = SubResource("GradientTexture1D_nbmep")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_raoe2"]
+size = Vector3(1, 2.37793, 1)
 
 [node name="Lightning Skill" type="Node3D"]
 script = ExtResource("1_pi7ca")
@@ -37,7 +38,7 @@ collision_layer = 16
 collision_mask = 16
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(7.89, 0, 0, 0, 7.89, 0, 0, 0, 7.89, 0, 0, 0)
+transform = Transform3D(7.89, 0, 0, 0, 7.89, 0, 0, 0, 7.89, 0, 5.43593, 0)
 shape = SubResource("BoxShape3D_raoe2")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
