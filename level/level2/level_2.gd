@@ -80,7 +80,7 @@ func spawn_wave():
 		enemy_instance.global_transform.origin = spawn_point
 		
 func choose_random_enemy():
-	var enemies = [knight] # Add all your enemy types here IMP, ZOMBIE, knight
+	var enemies = [ZOMBIE, knight] # Add all your enemy types here IMP, ZOMBIE, knight
 	return enemies[randi() % enemies.size()]		
 
 func get_spawn_position():
