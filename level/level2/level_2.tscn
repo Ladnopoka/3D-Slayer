@@ -37,23 +37,6 @@ offset_right = 587.0
 offset_bottom = 321.0
 color = Color(1, 0, 0, 0.478431)
 
-[node name="Spawns" type="Node3D" parent="."]
-
-[node name="Spawn6" type="Node3D" parent="Spawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2197, 0, 10.7148)
-
-[node name="Spawn7" type="Node3D" parent="Spawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3886, 0, 10.7148)
-
-[node name="Spawn9" type="Node3D" parent="Spawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.32263, 0, 24.5392)
-
-[node name="Spawn10" type="Node3D" parent="Spawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46523, 0, 24.5392)
-
-[node name="Spawn11" type="Node3D" parent="Spawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.645149, 0, 13.0788)
-
 [node name="Transition" parent="." instance=ExtResource("6_qheyw")]
 
 [node name="Marker3D" type="Marker3D" parent="."]

@@ -24,3 +24,5 @@ res://mob/knight.tscn
 res://mob/zombie/zombie.tscn
 res://level/level2/level_2.gd
 res://ui/ui.tscn
+res://mob/zombie/Area3D.gd
+res://player/mage/mage.gd

@@ -148,7 +148,7 @@ func cast_lightning_skill_1():
 		var collision_point = intersection.position
 
 		# Instantiate and position the lightning skill at the collision point
-		var lightning_skill_1_instance = lightning_skill_1.instantiate()
+		lightning_skill_1_instance = lightning_skill_1.instantiate()
 		lightning_skill_1_instance.position = collision_point
 		
 		# Find the GPUParticles3D node within the instantiated lightning skill

@@ -1,7 +1,6 @@
 extends Node3D
 
 @onready var hit_rect = $Control/ColorRect
-@onready var spawns = $Spawns
 @onready var navigation_region = $NavigationRegion3D
 @onready var transition = $Transition
 @onready var score = $Score
@@ -10,7 +9,7 @@ extends Node3D
 const BILDAD = preload("res://globals/Bildad.ttf")
 const DIABLO_HEAVY = preload("res://globals/Diablo Heavy.ttf")
 
-var knight = load("res://mob/knight.tscn")
+var KNIGHT = preload("res://mob/knight.tscn")
 var knight_instance
 
 const IMP = preload("res://mob/imp/imp.tscn")
@@ -22,7 +21,7 @@ var zombie_instance
 var player
 var camera
 
-var wave_interval = 2  # seconds between each wave
+var wave_interval = 4  # seconds between each wave
 var current_time = 0
 var wave_number = 0
 var max_waves = 10  # Adjust based on your game's design
@@ -48,11 +47,13 @@ func _ready():
 	wave_timer.start()
 	
 	score.move_to_front()
+	spawn_wave()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	score.text = "Knights Killed: " + str(Global.score) + "/100
-					Wave " + str(wave_number) + "/10"
+	score.text = 	"   LEVEL 1
+					Enemies Killed: " + str(Global.score) + "/100
+					Wave " + str(wave_number) + "/" + str(max_waves)
 	current_time += _delta  # Increment the current time
 
 func _get_random_child(parent_node):
@@ -86,12 +87,20 @@ func spawn_wave():
 		enemy_instance.global_transform.origin = spawn_point
 		
 func choose_random_enemy():
-	var enemies = [ZOMBIE, knight] # Add all your enemy types here IMP, ZOMBIE, knight
-	return enemies[randi() % enemies.size()]		
+	#var enemies = [ZOMBIE, KNIGHT] # Add all your enemy types here IMP, ZOMBIE, knight
+	#return enemies[randi() % enemies.size()]
+	
+	if wave_number <= 3:
+		return KNIGHT
+	elif wave_number <= 10:
+		return ZOMBIE
+	else:
+		print("BOSS Should spawn now")
+
 
 func get_spawn_position():
 	var camera_pos = camera.global_transform.origin
-	var camera_dir = camera.global_transform.basis.z.normalized()
+	#var camera_dir = camera.global_transform.basis.z.normalized()
 	var spawn_distance = 35 # Distance from the camera to spawn enemies outside the view
 
 	var spawn_direction = randf() * 2 * PI  # Random direction
