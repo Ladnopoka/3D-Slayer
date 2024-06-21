@@ -7,6 +7,9 @@ extends Node3D
 @onready var score = $Score
 @onready var wave_timer = $WaveTimer
 
+const BILDAD = preload("res://globals/Bildad.ttf")
+const DIABLO_HEAVY = preload("res://globals/Diablo Heavy.ttf")
+
 var knight = load("res://mob/knight.tscn")
 var knight_instance
 
@@ -43,10 +46,13 @@ func _ready():
 	if !wave_timer.is_connected("timeout", _on_wave_timer_timeout):
 		wave_timer.connect("timeout", _on_wave_timer_timeout)
 	wave_timer.start()
+	
+	score.move_to_front()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	score.text = "Knights Killed: " + str(Global.score) + "/100"
+	score.text = "Knights Killed: " + str(Global.score) + "/100
+					Wave " + str(wave_number) + "/10"
 	current_time += _delta  # Increment the current time
 
 func _get_random_child(parent_node):
@@ -86,7 +92,7 @@ func choose_random_enemy():
 func get_spawn_position():
 	var camera_pos = camera.global_transform.origin
 	var camera_dir = camera.global_transform.basis.z.normalized()
-	var spawn_distance = 20 # Distance from the camera to spawn enemies outside the view
+	var spawn_distance = 35 # Distance from the camera to spawn enemies outside the view
 
 	var spawn_direction = randf() * 2 * PI  # Random direction
 	var spawn_x = sin(spawn_direction) * spawn_distance
