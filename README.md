@@ -30,8 +30,6 @@ Slayer is an exciting top-down isometric roguelike game that immerses players in
 3. Run the executable file to start playing. <br>
 
 # Contact
-##### For any inquiries or feedback, feel free to reach out to:
-
 **Jevgenij Ivanov** <br>
 **Email**: ladnopokaa@gmail.com <br>
 **GitHub**: Ladnopoka
