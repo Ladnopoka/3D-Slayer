@@ -32,7 +32,7 @@ Slayer is an exciting top-down isometric roguelike game that immerses players in
 # Contact
 **Jevgenij Ivanov** <br>
 **Email**: ladnopokaa@gmail.com <br><br>
-**GitHub**: Ladnopoka <br>
+**GitHub**: https://github.com/Ladnopoka <br>
 **itch.io**: https://ladnogames.itch.io/ <br>
 **YouTube**: https://www.youtube.com/@LadnoDev <br>
 **X**: https://x.com/Ladnopokaa <br>
