@@ -1,6 +1,9 @@
 # Overview
 Slayer is an exciting top-down isometric roguelike game that immerses players in a world of strategic combat and character progression. Choose from three distinct classes—Mage, Barbarian, and Rogue—and embark on thrilling adventures, battling fierce enemies and mastering powerful abilities.
 
+The demonstration of the application can be viewed below:
+[![Watch the video](https://img.youtube.com/vi/NKe8HLG3dlM&t/maxresdefault.jpg)](https://www.youtube.com/watch?v=NKe8HLG3dlM&t)
+
 # Features
 #### Three Playable Classes:
 * **Mage**: Harness the power of magic to unleash devastating spells like the Lightning Storm.<br>
@@ -24,15 +27,13 @@ Slayer is an exciting top-down isometric roguelike game that immerses players in
 * **Attack**: Mouse click <br>
 * **Special Ability (Mage)**: Q key <br>
 
-# Installation
-1. Download the game from Slayer on itch.io.
-2. Extract the downloaded files.
-3. Run the executable file to start playing. <br>
-
 # Contact
+##### For any inquiries or feedback, feel free to reach out to:
+
 **Jevgenij Ivanov** <br>
 **Email**: ladnopokaa@gmail.com <br><br>
 **GitHub**: https://github.com/Ladnopoka <br>
 **itch.io**: https://ladnogames.itch.io/ <br>
 **YouTube**: https://www.youtube.com/@LadnoDev <br>
 **X**: https://x.com/Ladnopokaa <br>
+**Discord**: https://discord.gg/BPsncTZe
