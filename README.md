@@ -2,7 +2,7 @@
 Slayer is an exciting top-down isometric roguelike game that immerses players in a world of strategic combat and character progression. Choose from three distinct classes—Mage, Barbarian, and Rogue—and embark on thrilling adventures, battling fierce enemies and mastering powerful abilities.
 
 The demonstration of the application can be viewed below:
-[![Watch the video](https://img.youtube.com/vi/NKe8HLG3dlM&t/maxresdefault.jpg)](https://www.youtube.com/watch?v=NKe8HLG3dlM&t)
+[![Watch the video](https://img.youtube.com/vi/NKe8HLG3dlM/maxresdefault.jpg)](https://www.youtube.com/watch?v=NKe8HLG3dlM&t)
 
 # Features
 #### Three Playable Classes:
